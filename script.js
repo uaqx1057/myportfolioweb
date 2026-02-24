@@ -39,6 +39,25 @@ const applyLanguage = (lang) => {
     document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
     document.body.classList.toggle('lang-ar', isArabic);
 
+    const logoName = document.getElementById('logoName');
+    if (logoName) {
+        logoName.textContent = isArabic ? logoName.dataset.ar : logoName.dataset.en;
+    }
+
+    const heroName = document.getElementById('heroName');
+    if (heroName) {
+        heroName.textContent = isArabic ? heroName.dataset.ar : heroName.dataset.en;
+    }
+
+    const titleElement = document.querySelector('title[data-en][data-ar]');
+    if (titleElement) {
+        document.title = isArabic ? titleElement.dataset.ar : titleElement.dataset.en;
+    }
+
+    document.querySelectorAll('meta[data-en-content][data-ar-content]').forEach((meta) => {
+        meta.setAttribute('content', isArabic ? meta.dataset.arContent : meta.dataset.enContent);
+    });
+
     if (langToggle) {
         langToggle.textContent = isArabic ? 'EN' : 'AR';
         langToggle.setAttribute('aria-label', isArabic ? 'Switch to English' : 'Switch to Arabic');

@@ -219,7 +219,7 @@ html[dir="ltr"] .navbar .container {
 }
 
 html[dir="rtl"] .navbar .container {
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 
 .logo h2 {
@@ -1306,26 +1306,36 @@ html[dir="rtl"] .blog-card {
     align-items: start;
 }
 
+.contact-info {
+    grid-column: 2;
+    align-self: start;
+}
+
+.contact-form-wrapper {
+    grid-column: 1;
+    align-self: start;
+}
+
 /* Explicit LTR contact layout */
 html[dir="ltr"] .contact-info {
-    order: 1;
+    grid-column: 2;
     padding-right: 0;
 }
 
 html[dir="ltr"] .contact-form-wrapper {
-    order: 2;
+    grid-column: 1;
     padding-left: 0;
 }
 
 /* RTL contact layout */
 html[dir="rtl"] .contact-info {
-    order: 2;
-    padding-right: 6px;
+    grid-column: 2;
+    padding-right: 0;
 }
 
 html[dir="rtl"] .contact-form-wrapper {
-    order: 1;
-    padding-left: 6px;
+    grid-column: 1;
+    padding-left: 0;
 }
 
 .contact-item {
@@ -1355,10 +1365,6 @@ html[dir="rtl"] .contact-item {
 }
 
 /* LTR contact text alignment */
-html[dir="ltr"] .contact-content {
-    direction: ltr;
-}
-
 html[dir="ltr"] .contact-info,
 html[dir="ltr"] .contact-form-wrapper {
     text-align: left;
@@ -1366,7 +1372,7 @@ html[dir="ltr"] .contact-form-wrapper {
 
 /* RTL contact text alignment */
 html[dir="rtl"] .contact-content {
-    direction: rtl;
+    grid-template-columns: 1fr 1fr;
 }
 
 html[dir="rtl"] .contact-info,
@@ -1717,6 +1723,24 @@ html[data-theme="light"] .footer-bottom {
     }
 
     .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        grid-column: 1;
+        align-self: start;
+    }
+
+    .contact-form-wrapper {
+        grid-row: 1;
+    }
+
+    .contact-info {
+        grid-row: 2;
+    }
+
+    html[dir="rtl"] .contact-content {
         grid-template-columns: 1fr;
     }
 
