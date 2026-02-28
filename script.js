@@ -33,6 +33,58 @@ const getBrowserLanguage = () => {
     return preferred.toLowerCase();
 };
 
+const syncContactInfoOrder = (isArabic) => {
+    const contactInfo = document.querySelector('.contact-info');
+    if (!contactInfo) {
+        return;
+    }
+
+    const items = Array.from(contactInfo.children).filter((el) => el.classList.contains('contact-item'));
+    if (items.length === 0) {
+        return;
+    }
+
+    if (!contactInfo.dataset.orderInitialized) {
+        items.forEach((item, index) => {
+            item.dataset.orderIndex = String(index);
+        });
+        contactInfo.dataset.orderInitialized = 'true';
+    }
+
+    const ordered = items
+        .slice()
+        .sort((a, b) => Number(a.dataset.orderIndex) - Number(b.dataset.orderIndex));
+
+    const finalOrder = isArabic ? ordered.reverse() : ordered;
+    finalOrder.forEach((item) => contactInfo.appendChild(item));
+};
+
+const syncNavMenuOrder = (isArabic) => {
+    const navMenuElement = document.querySelector('.nav-menu');
+    if (!navMenuElement) {
+        return;
+    }
+
+    const items = Array.from(navMenuElement.children).filter((el) => el.tagName === 'LI');
+    if (items.length === 0) {
+        return;
+    }
+
+    if (!navMenuElement.dataset.orderInitialized) {
+        items.forEach((item, index) => {
+            item.dataset.orderIndex = String(index);
+        });
+        navMenuElement.dataset.orderInitialized = 'true';
+    }
+
+    const ordered = items
+        .slice()
+        .sort((a, b) => Number(a.dataset.orderIndex) - Number(b.dataset.orderIndex));
+
+    const finalOrder = isArabic ? ordered.reverse() : ordered;
+    finalOrder.forEach((item) => navMenuElement.appendChild(item));
+};
+
 const applyLanguage = (lang) => {
     const isArabic = lang.startsWith('ar');
     document.documentElement.lang = isArabic ? 'ar' : 'en';
@@ -72,6 +124,9 @@ const applyLanguage = (lang) => {
     document.querySelectorAll('[data-en-placeholder][data-ar-placeholder]').forEach((el) => {
         el.setAttribute('placeholder', isArabic ? el.dataset.arPlaceholder : el.dataset.enPlaceholder);
     });
+
+    syncNavMenuOrder(isArabic);
+    syncContactInfoOrder(isArabic);
 };
 
 const savedLang = localStorage.getItem('lang');
