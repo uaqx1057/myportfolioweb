@@ -1,5 +1,14 @@
 AddDefaultCharset UTF-8
 
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteCond %{HTTP_HOST} ^(codewithusman\.com|www\.codewithusman\.com|usman\.dobs\.cloud|www\.usman\.dobs\.cloud)$ [NC]
+    RewriteCond %{HTTP_HOST} !^www\.codewithusman\.com$ [NC,OR]
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://www.codewithusman.com%{REQUEST_URI} [R=301,L]
+</IfModule>
+
 <IfModule mod_mime.c>
     AddType "text/html; charset=UTF-8" .html .htm
     AddCharset UTF-8 .html .htm .css .js .json .xml .txt
