@@ -70,13 +70,14 @@
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link" data-en="Skip to main content" data-ar="تخطي إلى المحتوى الرئيسي">Skip to main content</a>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary navigation">
         <div class="container">
             <div class="logo">
                 <p id="logoName" class="logo-name" data-en="Usman Asif Qureshi" data-ar="عثمان آصف قريشي">Usman Asif Qureshi</p>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="primary-navigation">
                 <li><a href="#about" data-en="About" data-ar="نبذة عني">About</a></li>
                 <li><a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a></li>
                 <li><a href="#experience" data-en="Experience" data-ar="الخبرات">Experience</a></li>
@@ -86,11 +87,11 @@
                 <li><a href="#portfolio" data-en="Portfolio" data-ar="الأعمال">Portfolio</a></li>
                 <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button class="hamburger" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation menu" data-en-aria="Toggle navigation menu" data-ar-aria="تبديل قائمة التنقل">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
             <div class="nav-actions">
                 <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
                     EN
@@ -102,7 +103,7 @@
         </div>
     </nav>
 
-    <main>
+    <main id="main-content" tabindex="-1">
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -663,25 +664,25 @@
                     </div>
                 </div>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/usmanasif1057/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/usmanasif1057" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/usmanasif1057" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/usmanasif1057/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" data-en-aria="LinkedIn profile" data-ar-aria="ملف لينكدإن"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/usmanasif1057" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile" data-en-aria="Facebook profile" data-ar-aria="ملف فيسبوك"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/usmanasif1057" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile" data-en-aria="Instagram profile" data-ar-aria="ملف إنستغرام"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                 </div>
                 <div class="contact-form-wrapper">
                     <p class="contact-form-title" data-en="Ready to Share Your Thoughts? Let's Start!" data-ar="جاهز لمشاركة فكرتك؟ لنبدأ!">Ready to Share Your Thoughts? Let's Start!</p>
                     <p data-en="Got an innovative idea? Share your thoughts and let's collaborate to turn your vision into reality." data-ar="لديك فكرة مبتكرة؟ شاركها لنتعاون ونحوّل رؤيتك إلى واقع.">Got an innovative idea? Share your thoughts and let's collaborate to turn your vision into reality.</p>
-                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xrbwdkqb" method="POST">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xrbwdkqb" method="POST" aria-label="Contact form" data-en-aria="Contact form" data-ar-aria="نموذج التواصل">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" data-en-placeholder="Your Name" data-ar-placeholder="اسمك الكامل" required>
+                            <input type="text" name="name" placeholder="Your Name" data-en-placeholder="Your Name" data-ar-placeholder="اسمك الكامل" aria-label="Name" data-en-aria="Name" data-ar-aria="الاسم" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" data-en-placeholder="Your Email" data-ar-placeholder="بريدك الإلكتروني" required>
+                            <input type="email" name="email" placeholder="Your Email" data-en-placeholder="Your Email" data-ar-placeholder="بريدك الإلكتروني" aria-label="Email" data-en-aria="Email" data-ar-aria="البريد الإلكتروني" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject" data-en-placeholder="Subject" data-ar-placeholder="الموضوع" required>
+                            <input type="text" name="subject" placeholder="Subject" data-en-placeholder="Subject" data-ar-placeholder="الموضوع" aria-label="Subject" data-en-aria="Subject" data-ar-aria="الموضوع" required>
                         </div>
                         <div class="form-group">
-                            <textarea rows="5" name="message" placeholder="Your Message" data-en-placeholder="Your Message" data-ar-placeholder="رسالتك" required></textarea>
+                            <textarea rows="5" name="message" placeholder="Your Message" data-en-placeholder="Your Message" data-ar-placeholder="رسالتك" aria-label="Message" data-en-aria="Message" data-ar-aria="الرسالة" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">
                             <span data-en="Send Message" data-ar="إرسال الرسالة">Send Message</span> <i class="fas fa-paper-plane"></i>
