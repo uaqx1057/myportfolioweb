@@ -817,6 +817,7 @@ if (contactForm) {
         e.preventDefault();
 
         const formData = new FormData(contactForm);
+        formData.set('lang', document.documentElement.lang === 'ar' ? 'ar' : 'en');
         const action = contactForm.getAttribute('action');
 
         if (!action) {
