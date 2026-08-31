@@ -9,6 +9,7 @@ A modern, responsive portfolio website inspired by professional designs. Built w
 - ✨ Smooth scrolling and animations
 - 🌙 Dark theme with gradient accents
 - 💼 Multiple sections: Hero, About, Skills, Services, Portfolio, Reviews, Contact
+- 📄 Live CV maker with PDF download and ATS text export
 - 📧 Contact form with validation
 - 🎯 Intersection Observer for scroll animations
 - 🔗 Social media integration
@@ -24,6 +25,33 @@ A modern, responsive portfolio website inspired by professional designs. Built w
 6. **Reviews Section** - Client testimonials
 7. **Contact Section** - Contact form and information
 8. **Footer** - Quick links and social media
+
+## Live CV Maker
+
+The website includes a separate generated CV page at `cv.html`. The public portfolio design stays unchanged, but the CV page reads the latest content from `index.html` and turns it into:
+
+- A designed PDF CV using the existing CV-inspired layout
+- An ATS-friendly plain text export
+- English or Arabic output based on the current website language
+
+To update the CV, edit the matching website content in `index.html`:
+
+- Experience: update `.experience-card` entries
+- Projects: update `.portfolio-item` entries and `.project-link` URLs
+- Certifications: update `.cert-card` entries
+- Education: update `.education-card` entries
+- Skills: update `.skill-card` entries
+- Contact details: update the contact section
+
+The homepage Download CV button opens `cv.html?lang=en&download=pdf` or `cv.html?lang=ar&download=pdf`. If the browser blocks automatic PDF saving, the CV page shows a Download PDF button as a fallback.
+
+The PDF generator uses the browser-based `jsPDF` library loaded in `cv.html`, so no server-side PDF service is required. The ATS Text button creates a plain `.txt` export for recruiters or applicant tracking systems.
+
+When changing `cv.css` or `cv-builder.js`, update the version query strings in `cv.html` so visitors do not receive cached CV assets. When changing `script.js`, regenerate `script.min.js`:
+
+```bash
+npx terser script.js -o script.min.js --compress --mangle --format comments=false
+```
 
 ## Customization Guide
 
@@ -98,6 +126,9 @@ Replace placeholder icons with actual images:
 portfolio/
 │
 ├── index.html          # Main HTML file
+├── cv.html             # Generated CV preview and download page
+├── cv.css              # CV page styles and print styles
+├── cv-builder.js       # CV content extraction and PDF/text export
 ├── style.css           # Stylesheet
 ├── script.js           # JavaScript functionality
 ├── assets/             # Assets folder

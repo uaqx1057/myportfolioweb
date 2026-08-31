@@ -38,11 +38,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="assets/images/profile-hero.webp" as="image" type="image/webp" fetchpriority="high">
-    <link rel="preload" href="style.min.css" as="style">
+    <link rel="preload" href="style.min.css?v=20260831-9" as="style">
     <link rel="preload" href="assets/fonts/fa-solid-subset.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Rajdhani:wght@500;600;700&family=Sora:wght@300;400;500;600&family=Tajawal:wght@300;400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Rajdhani:wght@500;600;700&family=Sora:wght@300;400;500;600&family=Tajawal:wght@300;400;500;700&display=swap"></noscript>
-    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="style.min.css?v=20260831-9">
     <link rel="stylesheet" href="assets/fonts/icons.css">
     <script type="application/ld+json">
         {
@@ -96,6 +96,41 @@
                         "@type": "Organization",
                         "name": "iLab Information Technologies"
                     },
+                    "hasOccupation": [
+                        {
+                            "@type": "Occupation",
+                            "name": "Project Manager",
+                            "occupationalCategory": "Project management"
+                        },
+                        {
+                            "@type": "Occupation",
+                            "name": "Full-Stack Developer",
+                            "occupationalCategory": "Software development"
+                        }
+                    ],
+                    "makesOffer": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Full-stack web and mobile development"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Project delivery and technical team leadership"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "WordPress, Laravel, Python/Flask, and Flutter development"
+                            }
+                        }
+                    ],
                     "alumniOf": {
                         "@type": "CollegeOrUniversity",
                         "name": "Iqra University",
@@ -129,6 +164,7 @@
             </div>
             <ul class="nav-menu" id="primary-navigation">
                 <li><a href="#about" data-en="About" data-ar="نبذة عني">About</a></li>
+                <li><a href="#hire" data-en="Hire Me" data-ar="وظفني">Hire Me</a></li>
                 <li><a href="#skills" data-en="Skills" data-ar="المهارات">Skills</a></li>
                 <li><a href="#experience" data-en="Experience" data-ar="الخبرات">Experience</a></li>
                 <li><a href="#education" data-en="Education" data-ar="التعليم">Education</a></li>
@@ -143,11 +179,11 @@
                 <span aria-hidden="true"></span>
             </button>
             <div class="nav-actions">
-                <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+                <button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">
                     EN
                 </button>
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
@@ -171,8 +207,9 @@
                     Flutter-based driver app.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary"><span data-en="Get In Touch" data-ar="تواصل معي">Get In Touch</span></a>
-                    <a href="Usman_Asif_Qureshi_CV.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><span data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</span></a>
+                    <a href="#hire" class="btn btn-primary"><span data-en="Hire Me" data-ar="وظفني">Hire Me</span></a>
+                    <a href="https://wa.me/966568465058" class="btn btn-whatsapp whatsapp-contact-link" data-en-message="Hello Usman, I viewed your portfolio and would like to discuss an opportunity." data-ar-message="مرحباً عثمان، اطلعت على ملف أعمالك وأود مناقشة فرصة معك." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-en="WhatsApp" data-ar="واتساب">WhatsApp</span></a>
+                    <a href="cv.html?lang=en&download=pdf" class="btn btn-secondary cv-download-link" id="cvDownloadLink" target="_blank" rel="noopener noreferrer"><span data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</span></a>
                 </div>
             </div>
             <div class="hero-image">
@@ -217,6 +254,59 @@
                         My focus: reliable delivery and fast, secure experiences.
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hire Section -->
+    <section id="hire" class="hire">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="WHY HIRE ME" data-ar="لماذا توظفني">WHY HIRE ME</h2>
+                <div class="underline"></div>
+                <p class="section-subtitle" data-en="A practical mix of project ownership, full-stack delivery, and client communication" data-ar="مزيج عملي من ملكية المشروع، تطوير فل ستاك، والتواصل مع العملاء">A practical mix of project ownership, full-stack delivery, and client communication</p>
+            </div>
+            <div class="hire-layout">
+                <article class="hire-lead">
+                    <span class="hire-kicker" data-en="Available for freelance and full-time roles" data-ar="متاح للعمل الحر والوظائف الثابتة">Available for freelance and full-time roles</span>
+                    <h3 data-en="I manage delivery and build production systems." data-ar="أدير التسليم وأبني أنظمة إنتاجية.">I manage delivery and build production systems.</h3>
+                    <p data-en="You get someone who can understand business requirements, coordinate teams, write full-stack code, and keep delivery moving without losing the technical details." data-ar="تحصل على شخص يفهم متطلبات العمل، ينسق الفرق، يكتب كود فل ستاك، ويحافظ على تقدم التسليم دون فقدان التفاصيل التقنية.">You get someone who can understand business requirements, coordinate teams, write full-stack code, and keep delivery moving without losing the technical details.</p>
+                    <div class="hire-actions">
+                        <a href="https://wa.me/966568465058" class="btn btn-primary whatsapp-contact-link" data-en-message="Hello Usman, I am interested in hiring you for a project or role." data-ar-message="مرحباً عثمان، أرغب في توظيفك لمشروع أو وظيفة." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-en="Message on WhatsApp" data-ar="راسلني على واتساب">Message on WhatsApp</span></a>
+                        <a href="#portfolio" class="btn btn-secondary"><span data-en="View Case Studies" data-ar="عرض دراسات الأعمال">View Case Studies</span></a>
+                    </div>
+                </article>
+                <div class="hire-grid">
+                    <article class="hire-card">
+                        <i class="fas fa-diagram-project" aria-hidden="true"></i>
+                        <h3 data-en="PM + Developer" data-ar="مدير مشاريع + مطور">PM + Developer</h3>
+                        <p data-en="I bridge stakeholders and developers, so scope, delivery, and implementation stay aligned." data-ar="أربط بين أصحاب المصلحة والمطورين حتى يبقى النطاق والتسليم والتنفيذ متوافقين.">I bridge stakeholders and developers, so scope, delivery, and implementation stay aligned.</p>
+                    </article>
+                    <article class="hire-card">
+                        <i class="fas fa-layer-group" aria-hidden="true"></i>
+                        <h3 data-en="Business Systems" data-ar="أنظمة أعمال">Business Systems</h3>
+                        <p data-en="I build operational platforms like DOBS, DMS, dashboards, WordPress sites, and mobile workflows." data-ar="أبني منصات تشغيلية مثل DOBS و DMS ولوحات التحكم ومواقع WordPress وتدفقات الموبايل.">I build operational platforms like DOBS, DMS, dashboards, WordPress sites, and mobile workflows.</p>
+                    </article>
+                    <article class="hire-card">
+                        <i class="fas fa-gauge-high" aria-hidden="true"></i>
+                        <h3 data-en="Performance Mindset" data-ar="تركيز على الأداء">Performance Mindset</h3>
+                        <p data-en="I care about speed, SEO, security, responsive UX, and maintainable code after launch." data-ar="أهتم بالسرعة و SEO والأمان وتجربة المستخدم المتجاوبة والكود القابل للصيانة بعد الإطلاق.">I care about speed, SEO, security, responsive UX, and maintainable code after launch.</p>
+                    </article>
+                    <article class="hire-card">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        <h3 data-en="Clear Communication" data-ar="تواصل واضح">Clear Communication</h3>
+                        <p data-en="Clients get direct updates, practical options, and realistic timelines from planning to release." data-ar="يحصل العملاء على تحديثات مباشرة، خيارات عملية، وجداول زمنية واقعية من التخطيط حتى الإطلاق.">Clients get direct updates, practical options, and realistic timelines from planning to release.</p>
+                    </article>
+                </div>
+            </div>
+            <div class="hire-match" aria-label="Best-fit roles" data-en-aria="Best-fit roles" data-ar-aria="الأدوار الأنسب">
+                <span data-en="Best-fit roles:" data-ar="الأدوار الأنسب:">Best-fit roles:</span>
+                <strong data-en="Project Manager" data-ar="مدير مشاريع">Project Manager</strong>
+                <strong data-en="Full-Stack Developer" data-ar="مطور فل ستاك">Full-Stack Developer</strong>
+                <strong data-en="Laravel / PHP Developer" data-ar="مطور Laravel / PHP">Laravel / PHP Developer</strong>
+                <strong data-en="Python / Flask Developer" data-ar="مطور Python / Flask">Python / Flask Developer</strong>
+                <strong data-en="WordPress / Elementor Specialist" data-ar="متخصص WordPress / Elementor">WordPress / Elementor Specialist</strong>
+                <strong data-en="Flutter App Support" data-ar="دعم تطبيقات Flutter">Flutter App Support</strong>
             </div>
         </div>
     </section>
@@ -301,15 +391,15 @@
             <div class="experience-grid">
                 <div class="experience-card">
                     <div class="experience-header">
-                        <h3 class="experience-title" data-en="Project Manager & Team Lead" data-ar="مدير مشاريع وقائد فريق">Project Manager & Team Lead</h3>
+                        <h3 class="experience-title" data-en="Project Manager & Full-Stack Developer" data-ar="مدير مشاريع ومطور فل ستاك">Project Manager & Full-Stack Developer</h3>
                         <span class="experience-period" data-en="March 2024 - Present" data-ar="مارس 2024 - الحالي">March 2024 - Present</span>
                     </div>
-                    <p class="experience-company" data-en="iLab Information Technologies - Al Khobar, Saudi Arabia" data-ar="iLab لتقنية المعلومات - الخبر، السعودية">iLab Information Technologies - Al Khobar, Saudi Arabia</p>
+                    <p class="experience-company" data-en="iLab Information Technologies / SpeedLogi - Al Khobar, Saudi Arabia" data-ar="iLab لتقنية المعلومات / SpeedLogi - الخبر، السعودية">iLab Information Technologies / SpeedLogi - Al Khobar, Saudi Arabia</p>
                     <ul>
-                        <li data-en="Leading development teams for DOBS using Python/Flask" data-ar="قيادة فرق تطوير نظام DOBS باستخدام Python/Flask">Leading development teams for DOBS using Python/Flask</li>
-                        <li data-en="Managing DMS project built with PHP" data-ar="إدارة مشروع DMS المبني بـ PHP">Managing DMS project built with PHP</li>
-                        <li data-en="Overseeing Flutter-based driver mobile application development" data-ar="الإشراف على تطوير تطبيق موبايل للسائقين باستخدام Flutter">Overseeing Flutter-based driver mobile application development</li>
-                        <li data-en="Coordinating cross-functional teams and on-time delivery" data-ar="تنسيق الفرق متعددة التخصصات وضمان التسليم في الوقت المحدد">Coordinating cross-functional teams and on-time delivery</li>
+                        <li data-en="Managing SpeedLogi technology projects from planning through delivery" data-ar="إدارة مشاريع SpeedLogi التقنية من التخطيط حتى التسليم">Managing SpeedLogi technology projects from planning through delivery</li>
+                        <li data-en="Developing and maintaining internal systems as a full-stack developer" data-ar="تطوير وصيانة الأنظمة الداخلية كمطور فل ستاك">Developing and maintaining internal systems as a full-stack developer</li>
+                        <li data-en="Building DOBS using Python/Flask and supporting DMS modules with PHP/Laravel" data-ar="تطوير نظام DOBS باستخدام Python/Flask ودعم وحدات DMS باستخدام PHP/Laravel">Building DOBS using Python/Flask and supporting DMS modules with PHP/Laravel</li>
+                        <li data-en="Coordinating teams, requirements, releases, and on-time delivery across web and mobile systems" data-ar="تنسيق الفرق والمتطلبات والإصدارات والتسليم في الوقت المحدد عبر أنظمة الويب والموبايل">Coordinating teams, requirements, releases, and on-time delivery across web and mobile systems</li>
                     </ul>
                 </div>
                 <div class="experience-card">
@@ -498,6 +588,31 @@
                 <div class="underline"></div>
                 <p class="section-subtitle" data-en="Check out my projects, from experiments to finished creations" data-ar="مجموعة من المشاريع التي قمت بتنفيذها">Check out my projects, from experiments to finished creations</p>
             </div>
+            <article class="featured-case">
+                <div class="featured-case-content">
+                    <span class="featured-label" data-en="Featured Case Study" data-ar="دراسة عمل مميزة">Featured Case Study</span>
+                    <h3 data-en="SpeedLogi Operations Systems" data-ar="أنظمة تشغيل SpeedLogi">SpeedLogi Operations Systems</h3>
+                    <p data-en="At iLab / SpeedLogi, I combine project management and full-stack development to deliver DOBS, DMS, and supporting logistics workflows for real operational teams." data-ar="في iLab / SpeedLogi، أجمع بين إدارة المشاريع والتطوير فل ستاك لتسليم DOBS و DMS وتدفقات لوجستية داعمة لفرق تشغيل حقيقية.">At iLab / SpeedLogi, I combine project management and full-stack development to deliver DOBS, DMS, and supporting logistics workflows for real operational teams.</p>
+                    <div class="featured-case-actions">
+                        <a href="https://dobs.speedlogi.sa/" class="project-link" target="_blank" rel="noopener noreferrer"><span data-en="View DOBS" data-ar="عرض DOBS">View DOBS</span> <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://dms.speedlogi.sa/" class="project-link" target="_blank" rel="noopener noreferrer"><span data-en="View DMS" data-ar="عرض DMS">View DMS</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="featured-case-proof">
+                    <div>
+                        <span data-en="Role" data-ar="الدور">Role</span>
+                        <strong data-en="PM + Full-Stack Developer" data-ar="مدير مشاريع + مطور فل ستاك">PM + Full-Stack Developer</strong>
+                    </div>
+                    <div>
+                        <span data-en="Systems" data-ar="الأنظمة">Systems</span>
+                        <strong data-en="DOBS, DMS, Flutter Driver App" data-ar="DOBS و DMS وتطبيق السائق Flutter">DOBS, DMS, Flutter Driver App</strong>
+                    </div>
+                    <div>
+                        <span data-en="Value" data-ar="القيمة">Value</span>
+                        <strong data-en="Delivery ownership + hands-on engineering" data-ar="ملكية التسليم + تطوير عملي">Delivery ownership + hands-on engineering</strong>
+                    </div>
+                </div>
+            </article>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-image">
@@ -505,8 +620,12 @@
                     </div>
                     <div class="portfolio-info">
                         <h3 class="portfolio-title" data-en="DOBS - Driver Onboarding/Offboarding System" data-ar="DOBS - نظام تسجيل وإيقاف السائقين">DOBS - Driver Onboarding/Offboarding System</h3>
-                        <p data-en="Built end-to-end in Python/Flask to manage driver registration and onboarding for speed.sa." data-ar="نظام متكامل بـ Python/Flask لإدارة تسجيل السائقين وعمليات الانضمام في speed.sa.">Built end-to-end in Python/Flask to manage driver registration and onboarding for speed.sa.</p>
-                        <a href="https://dobs.dobs.cloud/" class="project-link" target="_blank" rel="noopener noreferrer"><span data-en="View Project" data-ar="عرض المشروع">View Project</span> <i class="fas fa-arrow-right"></i></a>
+                        <p data-en="Built and managed a SpeedLogi operations system for driver onboarding/offboarding, reducing manual coordination with one central workflow." data-ar="تطوير وإدارة نظام تشغيلي لـ SpeedLogi لتسجيل وإيقاف السائقين، وتقليل التنسيق اليدوي عبر تدفق مركزي واحد.">Built and managed a SpeedLogi operations system for driver onboarding/offboarding, reducing manual coordination with one central workflow.</p>
+                        <ul class="project-proof">
+                            <li data-en="Role: Project Manager & Full-Stack Developer" data-ar="الدور: مدير مشاريع ومطور فل ستاك">Role: Project Manager & Full-Stack Developer</li>
+                            <li data-en="Stack: Python, Flask, MySQL, operational workflows" data-ar="التقنيات: Python و Flask و MySQL وتدفقات تشغيلية">Stack: Python, Flask, MySQL, operational workflows</li>
+                        </ul>
+                        <a href="https://dobs.speedlogi.sa/" class="project-link" target="_blank" rel="noopener noreferrer"><span data-en="View Project" data-ar="عرض المشروع">View Project</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="portfolio-item">
@@ -515,8 +634,12 @@
                     </div>
                     <div class="portfolio-info">
                         <h3 class="portfolio-title" data-en="DMS - Driver Management System" data-ar="DMS - نظام إدارة السائقين">DMS - Driver Management System</h3>
-                        <p data-en="Laravel platform where I contributed modules and led project delivery as PM." data-ar="منصة Laravel ساهمت في تطوير وحداتها وقُدت تسليم المشروع كمدير مشروع.">Laravel platform where I contributed modules and led project delivery as PM.</p>
-                        <a href="https://dms.dobs.cloud/" class="project-link" target="_blank" rel="noopener noreferrer"><span data-en="View Project" data-ar="عرض المشروع">View Project</span> <i class="fas fa-arrow-right"></i></a>
+                        <p data-en="Managed delivery and supported development for a Laravel-based driver management platform used in daily operations." data-ar="إدارة التسليم ودعم التطوير لمنصة إدارة سائقين مبنية بـ Laravel ومستخدمة في العمليات اليومية.">Managed delivery and supported development for a Laravel-based driver management platform used in daily operations.</p>
+                        <ul class="project-proof">
+                            <li data-en="Role: Project delivery, modules, releases" data-ar="الدور: تسليم المشروع والوحدات والإصدارات">Role: Project delivery, modules, releases</li>
+                            <li data-en="Stack: Laravel, PHP, database-driven workflows" data-ar="التقنيات: Laravel و PHP وتدفقات تعتمد على قواعد البيانات">Stack: Laravel, PHP, database-driven workflows</li>
+                        </ul>
+                        <a href="https://dms.speedlogi.sa/" class="project-link" target="_blank" rel="noopener noreferrer"><span data-en="View Project" data-ar="عرض المشروع">View Project</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="portfolio-item">
@@ -525,7 +648,10 @@
                     </div>
                     <div class="portfolio-info">
                         <h3 class="portfolio-title" data-en="iLab Information Technologies" data-ar="iLab لتقنية المعلومات">iLab Information Technologies</h3>
-                        <p data-en="Corporate website with site speed optimization and SEO improvements." data-ar="موقع شركة مع تحسين سرعة الموقع وتحسينات SEO.">Corporate website with site speed optimization and SEO improvements.</p>
+                        <p data-en="Corporate website work focused on credibility, site speed, SEO structure, and service presentation." data-ar="عمل على موقع الشركة مع التركيز على المصداقية وسرعة الموقع وبنية SEO وعرض الخدمات.">Corporate website work focused on credibility, site speed, SEO structure, and service presentation.</p>
+                        <ul class="project-proof">
+                            <li data-en="Focus: Speed, SEO, responsive UX" data-ar="التركيز: السرعة و SEO وتجربة متجاوبة">Focus: Speed, SEO, responsive UX</li>
+                        </ul>
                         <a href="https://ilab.sa/" class="project-link" target="_blank" rel="noopener noreferrer"><span data-en="View Project" data-ar="عرض المشروع">View Project</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -535,8 +661,11 @@
                     </div>
                     <div class="portfolio-info">
                         <h3 class="portfolio-title" data-en="Speed" data-ar="Speed">Speed</h3>
-                        <p data-en="Website build with performance optimization and SEO enhancements." data-ar="موقع مع تحسين الأداء وتعزيزات SEO.">Website build with performance optimization and SEO enhancements.</p>
-                        <a href="https://speed.sa/" class="project-link" target="_blank" rel="noopener noreferrer"><span data-en="View Project" data-ar="عرض المشروع">View Project</span> <i class="fas fa-arrow-right"></i></a>
+                        <p data-en="SpeedLogi website improvements for brand presence, performance, and clearer logistics service discovery." data-ar="تحسينات موقع SpeedLogi للحضور التجاري والأداء وتوضيح خدمات الخدمات اللوجستية.">SpeedLogi website improvements for brand presence, performance, and clearer logistics service discovery.</p>
+                        <ul class="project-proof">
+                            <li data-en="Focus: Business website, SEO, performance" data-ar="التركيز: موقع أعمال و SEO وأداء">Focus: Business website, SEO, performance</li>
+                        </ul>
+                        <a href="https://speedlogi.sa/" class="project-link" target="_blank" rel="noopener noreferrer"><span data-en="View Project" data-ar="عرض المشروع">View Project</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="portfolio-item">
@@ -545,7 +674,10 @@
                     </div>
                     <div class="portfolio-info">
                         <h3 class="portfolio-title" data-en="SpeedPoint" data-ar="SpeedPoint">SpeedPoint</h3>
-                        <p data-en="Platform addition for Speed ecosystem with operational flow and delivery-oriented UX." data-ar="إضافة ضمن منظومة Speed مع تدفق تشغيلي وتجربة مستخدم موجهة للتسليم.">Platform addition for Speed ecosystem with operational flow and delivery-oriented UX.</p>
+                        <p data-en="Operational platform addition for the SpeedLogi ecosystem with delivery-oriented UX and structured workflows." data-ar="إضافة منصة تشغيلية ضمن منظومة SpeedLogi مع تجربة موجهة للتسليم وتدفقات منظمة.">Operational platform addition for the SpeedLogi ecosystem with delivery-oriented UX and structured workflows.</p>
+                        <ul class="project-proof">
+                            <li data-en="Focus: Operations, UX, delivery flow" data-ar="التركيز: العمليات وتجربة المستخدم وتدفق التسليم">Focus: Operations, UX, delivery flow</li>
+                        </ul>
                         <a href="https://speedpoint.dobs.cloud/" class="project-link" target="_blank" rel="noopener noreferrer"><span data-en="View Project" data-ar="عرض المشروع">View Project</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -570,6 +702,13 @@
                     </div>
                 </div>
             </div>
+            <div class="portfolio-next-step">
+                <p data-en="Have a similar system, operational challenge, or delivery role in mind?" data-ar="لديك نظام مشابه أو تحدٍ تشغيلي أو دور تسليم تحتاج إلى تنفيذه؟">Have a similar system, operational challenge, or delivery role in mind?</p>
+                <div class="portfolio-next-actions">
+                    <a href="#contact" class="btn btn-primary"><span data-en="Discuss Your Project" data-ar="ناقش مشروعك">Discuss Your Project</span> <i class="fas fa-comments" aria-hidden="true"></i></a>
+                    <a href="cv.html?lang=en&download=pdf" class="btn btn-secondary cv-download-link" target="_blank" rel="noopener noreferrer"><span data-en="Review My CV" data-ar="راجع سيرتي الذاتية">Review My CV</span> <i class="fas fa-file-pdf" aria-hidden="true"></i></a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -579,24 +718,24 @@
             <div class="section-header">
                 <h2 data-en="KEY NUMBERS" data-ar="أرقام مهمة">KEY NUMBERS</h2>
                 <div class="underline"></div>
-                <p class="section-subtitle" data-en="Replace these placeholders with your real achievements" data-ar="استبدل هذه القيم بإنجازاتك الفعلية">Replace these placeholders with your real achievements</p>
+                <p class="section-subtitle" data-en="A quick, verifiable view of my experience, delivery scope, and client trust" data-ar="نظرة سريعة وموثوقة على خبرتي ونطاق التسليم وثقة العملاء">A quick, verifiable view of my experience, delivery scope, and client trust</p>
             </div>
             <div class="stats-grid">
                 <div class="stat-card">
-                    <p class="stat-value" data-en="50+" data-ar="+50">50+</p>
-                    <p data-en="Projects Delivered" data-ar="مشروع تم تسليمه">Projects Delivered</p>
+                    <p class="stat-value" data-en="7" data-ar="7">7</p>
+                    <p data-en="Projects Showcased" data-ar="مشاريع معروضة">Projects Showcased</p>
                 </div>
                 <div class="stat-card">
                     <p class="stat-value" data-en="6+" data-ar="+6">6+</p>
                     <p data-en="Years Experience" data-ar="سنوات خبرة">Years Experience</p>
                 </div>
                 <div class="stat-card">
-                    <p class="stat-value" data-en="20+" data-ar="+20">20+</p>
-                    <p data-en="Clients Served" data-ar="عميل تم خدمته">Clients Served</p>
+                    <p class="stat-value" data-en="10" data-ar="10">10</p>
+                    <p data-en="Team Members Managed" data-ar="أعضاء فريق تمت إدارتهم">Team Members Managed</p>
                 </div>
                 <div class="stat-card">
-                    <p class="stat-value" data-en="99%" data-ar="99٪">99%</p>
-                    <p data-en="Client Satisfaction" data-ar="رضا العملاء">Client Satisfaction</p>
+                    <p class="stat-value" data-en="9" data-ar="9">9</p>
+                    <p data-en="Client Testimonials" data-ar="شهادات عملاء">Client Testimonials</p>
                 </div>
             </div>
         </div>
@@ -608,7 +747,7 @@
             <div class="section-header">
                 <h2 data-en="MY PROCESS" data-ar="منهجيتي في العمل">MY PROCESS</h2>
                 <div class="underline"></div>
-                <p class="section-subtitle" data-en="A clear workflow you can customize for your services" data-ar="خطوات عمل واضحة يمكنك تخصيصها لخدماتك">A clear workflow you can customize for your services</p>
+                <p class="section-subtitle" data-en="A clear delivery workflow from requirements to launch and support" data-ar="منهجية تسليم واضحة من المتطلبات حتى الإطلاق والدعم">A clear delivery workflow from requirements to launch and support</p>
             </div>
             <div class="process-grid">
                 <div class="process-step">
@@ -756,6 +895,17 @@
                 <p class="section-subtitle" data-en="Looking to grow your business? Let's chat!" data-ar="هل ترغب بتطوير عملك؟ لنتحدث!">Looking to grow your business? Let's chat!</p>
             </div>
             <div class="contact-content">
+                <article class="contact-cta">
+                    <div>
+                        <span class="featured-label" data-en="Ready for your next build" data-ar="جاهز لمشروعك القادم">Ready for your next build</span>
+                        <h3 data-en="Need a developer who can also manage delivery?" data-ar="تحتاج مطوراً يستطيع أيضاً إدارة التسليم؟">Need a developer who can also manage delivery?</h3>
+                        <p data-en="Send the project idea, current issue, or role requirements. I can respond with a practical next step, timeline, and technical direction." data-ar="أرسل فكرة المشروع أو المشكلة الحالية أو متطلبات الوظيفة، وسأرد بخطوة عملية وجدول زمني واتجاه تقني واضح.">Send the project idea, current issue, or role requirements. I can respond with a practical next step, timeline, and technical direction.</p>
+                    </div>
+                    <div class="contact-cta-actions">
+                        <a href="https://wa.me/966568465058" class="btn btn-primary whatsapp-contact-link" data-en-message="Hello Usman, I would like to discuss my project requirements with you." data-ar-message="مرحباً عثمان، أود مناقشة متطلبات مشروعي معك." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-en="Start on WhatsApp" data-ar="ابدأ عبر واتساب">Start on WhatsApp</span></a>
+                        <a href="cv.html?lang=en&download=pdf" class="btn btn-secondary cv-download-link" target="_blank" rel="noopener noreferrer"><span data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV</span></a>
+                    </div>
+                </article>
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">
@@ -783,7 +933,8 @@
                         </div>
                         <div>
                             <p class="contact-label" data-en="Location" data-ar="الموقع">Location</p>
-                            <p data-en="Al Khobar, Saudi Arabia" data-ar="الخبر، السعودية">Al Khobar, Saudi Arabia</p>
+                            <p class="contact-location" data-en="Al Khobar, Saudi Arabia" data-ar="الخبر، السعودية">Al Khobar, Saudi Arabia</p>
+                            <p class="contact-status" data-en="Transferable Iqama" data-ar="إقامة قابلة للتحويل"><strong>Transferable Iqama</strong></p>
                         </div>
                     </div>
                 </div>
@@ -798,20 +949,21 @@
                     <form class="contact-form" id="contactForm" action="contact.php" method="POST" aria-label="Contact form" data-en-aria="Contact form" data-ar-aria="نموذج التواصل">
                         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" data-en-placeholder="Your Name" data-ar-placeholder="اسمك الكامل" aria-label="Name" data-en-aria="Name" data-ar-aria="الاسم" required>
+                            <input type="text" name="name" maxlength="100" placeholder="Your Name" data-en-placeholder="Your Name" data-ar-placeholder="اسمك الكامل" aria-label="Name" data-en-aria="Name" data-ar-aria="الاسم" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" data-en-placeholder="Your Email" data-ar-placeholder="بريدك الإلكتروني" aria-label="Email" data-en-aria="Email" data-ar-aria="البريد الإلكتروني" required>
+                            <input type="email" name="email" maxlength="254" placeholder="Your Email" data-en-placeholder="Your Email" data-ar-placeholder="بريدك الإلكتروني" aria-label="Email" data-en-aria="Email" data-ar-aria="البريد الإلكتروني" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="subject" placeholder="Subject" data-en-placeholder="Subject" data-ar-placeholder="الموضوع" aria-label="Subject" data-en-aria="Subject" data-ar-aria="الموضوع" required>
+                            <input type="text" name="subject" maxlength="160" placeholder="Subject" data-en-placeholder="Subject" data-ar-placeholder="الموضوع" aria-label="Subject" data-en-aria="Subject" data-ar-aria="الموضوع" required>
                         </div>
                         <div class="form-group">
-                            <textarea rows="5" name="message" placeholder="Your Message" data-en-placeholder="Your Message" data-ar-placeholder="رسالتك" aria-label="Message" data-en-aria="Message" data-ar-aria="الرسالة" required></textarea>
+                            <textarea rows="5" name="message" maxlength="5000" placeholder="Your Message" data-en-placeholder="Your Message" data-ar-placeholder="رسالتك" aria-label="Message" data-en-aria="Message" data-ar-aria="الرسالة" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">
-                            <span data-en="Send Message" data-ar="إرسال الرسالة">Send Message</span> <i class="fas fa-paper-plane"></i>
+                            <span data-en="Send Message" data-ar="إرسال الرسالة">Send Message</span> <i class="fas fa-paper-plane" aria-hidden="true"></i>
                         </button>
+                        <p class="form-status" id="contactFormStatus" aria-live="polite"></p>
                     </form>
                 </div>
             </div>
@@ -829,6 +981,6 @@
         </div>
     </footer>
 
-    <script src="script.min.js" defer></script>
+    <script src="script.min.js?v=20260831-9" defer></script>
 </body>
 </html>

@@ -34,7 +34,12 @@ $subject = clean_header_value($_POST['subject'] ?? '');
 $message = trim($_POST['message'] ?? '');
 $lang = ($_POST['lang'] ?? '') === 'ar' ? 'ar' : 'en';
 
-if ($name === '' || $email === '' || $subject === '' || $message === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+$hasInvalidLength = strlen($name) > 100
+    || strlen($email) > 254
+    || strlen($subject) > 160
+    || strlen($message) > 5000;
+
+if ($name === '' || $email === '' || $subject === '' || $message === '' || $hasInvalidLength || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     http_response_code(422);
     echo json_encode(['ok' => false, 'error' => 'Invalid input']);
     exit;

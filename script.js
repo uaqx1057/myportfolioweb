@@ -3,16 +3,26 @@
 const themeToggle = document.getElementById('themeToggle');
 const rootElement = document.documentElement;
 
+const updateThemeToggle = (theme) => {
+    if (!themeToggle) {
+        return;
+    }
+
+    const isArabic = rootElement.lang === 'ar';
+    const switchToLight = theme === 'dark';
+    themeToggle.innerHTML = switchToLight
+        ? '<i class="fas fa-sun" aria-hidden="true"></i>'
+        : '<i class="fas fa-moon" aria-hidden="true"></i>';
+    themeToggle.setAttribute('aria-label', isArabic
+        ? (switchToLight ? 'التبديل إلى الوضع الفاتح' : 'التبديل إلى الوضع الداكن')
+        : (switchToLight ? 'Switch to light theme' : 'Switch to dark theme'));
+    themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
+};
+
 const setTheme = (theme) => {
     rootElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-
-    if (themeToggle) {
-        themeToggle.innerHTML = theme === 'dark'
-            ? '<i class="fas fa-sun"></i>'
-            : '<i class="fas fa-moon"></i>';
-        themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
-    }
+    updateThemeToggle(theme);
 };
 
 const savedTheme = localStorage.getItem('theme');
@@ -49,6 +59,17 @@ const getBrowserLanguage = () => {
         ? navigator.languages[0]
         : (navigator.language || 'en');
     return preferred.toLowerCase();
+};
+
+const getUrlLanguage = () => {
+    const lang = new URLSearchParams(window.location.search).get('lang');
+    return lang === 'ar' || lang === 'en' ? lang : null;
+};
+
+const syncLanguageUrl = (lang) => {
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lang);
+    window.history.replaceState({}, '', url);
 };
 
 const syncContactInfoOrder = (isArabic) => {
@@ -108,6 +129,16 @@ const applyLanguage = (lang) => {
     document.documentElement.lang = isArabic ? 'ar' : 'en';
     document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
     document.body.classList.toggle('lang-ar', isArabic);
+    updateThemeToggle(rootElement.getAttribute('data-theme') || 'dark');
+
+    document.querySelectorAll('.cv-download-link').forEach((cvDownloadLink) => {
+        cvDownloadLink.href = `cv.html?lang=${isArabic ? 'ar' : 'en'}&download=pdf`;
+    });
+
+    document.querySelectorAll('.whatsapp-contact-link').forEach((whatsappLink) => {
+        const message = isArabic ? whatsappLink.dataset.arMessage : whatsappLink.dataset.enMessage;
+        whatsappLink.href = `https://wa.me/966568465058?text=${encodeURIComponent(message || '')}`;
+    });
 
     const logoName = document.getElementById('logoName');
     if (logoName) {
@@ -153,13 +184,14 @@ const applyLanguage = (lang) => {
 };
 
 const savedLang = localStorage.getItem('lang');
-applyLanguage(savedLang || getBrowserLanguage());
+applyLanguage(getUrlLanguage() || savedLang || getBrowserLanguage());
 
 if (langToggle) {
     langToggle.addEventListener('click', () => {
         const current = document.documentElement.lang || 'en';
         const nextLang = current === 'ar' ? 'en' : 'ar';
         localStorage.setItem('lang', nextLang);
+        syncLanguageUrl(nextLang);
         applyLanguage(nextLang);
     });
 }
@@ -238,7 +270,9 @@ document.querySelectorAll('.experience-card').forEach((card) => {
     const company = card.querySelector('.experience-company')?.textContent || '';
     const list = card.querySelector('ul');
 
-    if (title.includes('Team Lead')) {
+    if (title.includes('Full-Stack Developer') && company.includes('SpeedLogi')) {
+        addTechStack(card, ['Python', 'Flask', 'PHP', 'Flutter', 'Management'], list);
+    } else if (title.includes('Team Lead')) {
         addTechStack(card, ['Python', 'Flask', 'PHP', 'Flutter', 'Management'], list);
     } else if (title.includes('Senior WordPress')) {
         addTechStack(card, ['WordPress', 'Elementor', 'JavaScript', 'SEO', 'Delivery'], list);
@@ -813,17 +847,34 @@ if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const formStatus = document.getElementById('contactFormStatus');
+
+    const setFormStatus = (message, state = '') => {
+        if (!formStatus) {
+            return;
+        }
+
+        formStatus.textContent = message;
+        formStatus.dataset.state = state;
+    };
+
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
+        const isArabic = document.documentElement.lang === 'ar';
         const formData = new FormData(contactForm);
-        formData.set('lang', document.documentElement.lang === 'ar' ? 'ar' : 'en');
+        formData.set('lang', isArabic ? 'ar' : 'en');
         const action = contactForm.getAttribute('action');
 
         if (!action) {
-            alert('Form action is not configured.');
+            setFormStatus(isArabic ? 'نموذج التواصل غير مهيأ حالياً.' : 'The contact form is not configured right now.', 'error');
             return;
         }
+
+        submitButton?.setAttribute('disabled', '');
+        submitButton?.setAttribute('aria-busy', 'true');
+        setFormStatus(isArabic ? 'جار إرسال رسالتك...' : 'Sending your message...', 'pending');
 
         try {
             const response = await fetch(action, {
@@ -835,16 +886,16 @@ if (contactForm) {
             });
 
             if (response.ok) {
-                const isArabic = document.documentElement.lang === 'ar';
-                alert(isArabic ? 'شكراً لرسالتك! سأتواصل معك قريباً.' : 'Thank you for your message! I will get back to you soon.');
+                setFormStatus(isArabic ? 'شكراً لرسالتك! سأتواصل معك قريباً.' : 'Thank you for your message! I will get back to you soon.', 'success');
                 contactForm.reset();
             } else {
-                const isArabic = document.documentElement.lang === 'ar';
-                alert(isArabic ? 'حدث خطأ ما. حاول مرة أخرى لاحقاً.' : 'Something went wrong. Please try again later.');
+                setFormStatus(isArabic ? 'حدث خطأ ما. حاول مرة أخرى لاحقاً.' : 'Something went wrong. Please try again later.', 'error');
             }
         } catch (error) {
-            const isArabic = document.documentElement.lang === 'ar';
-            alert(isArabic ? 'تعذّر إرسال الرسالة حالياً. حاول مرة أخرى لاحقاً.' : 'Unable to send the message right now. Please try again later.');
+            setFormStatus(isArabic ? 'تعذّر إرسال الرسالة حالياً. حاول مرة أخرى لاحقاً.' : 'Unable to send the message right now. Please try again later.', 'error');
+        } finally {
+            submitButton?.removeAttribute('disabled');
+            submitButton?.removeAttribute('aria-busy');
         }
     });
 }
