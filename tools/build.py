@@ -139,10 +139,36 @@ def resume_data(lang):
     return {'lang':lang,'name':'عثمان آصف قريشي' if lang=='ar' else 'Usman Asif Qureshi','title':text(SOURCE.select_one('.hero .title'),lang),'summary':summary,'skills':[text(x.select_one('h3'),lang)+': '+text(x.select_one('p'),lang) for x in SOURCE.select('.skill-card')],'experience':experiences,'education':education,'credentials':credentials,'projects':[{'title':p['title'][lang],'description':p['description'][lang],'url':BASE+path_for(p['path'],lang)} for p in PAGES if p['kind']=='case']}
 
 def make_diagrams():
-    labels=[('driver-onboarding-system','DOBS','Driver onboarding / offboarding',['Operational need','Central workflow','Coordinated delivery']),('driver-management-system','DMS','Driver management',['Requirements','PHP / Laravel modules','Release coordination']),('business-websites','WEB','Business website delivery',['Content and scope','Responsive implementation','Review and handover'])]
-    for slug,label,subtitle,steps in labels:
-        boxes=''.join(f'<rect x="{36+i*200}" y="190" width="176" height="66" rx="12" fill="#142c42" stroke="#3a7182"/><text x="{124+i*200}" y="228" fill="#ffffff" text-anchor="middle" font-size="12">{escape(step)}</text>' for i,step in enumerate(steps))
-        svg=f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc"><title id="title">{label} conceptual workflow</title><desc id="desc">Illustrative diagram, not an original system screen.</desc><rect width="640" height="360" fill="#091624"/><g font-family="Arial,sans-serif"><text x="36" y="72" fill="#56d8ed" font-size="36" font-weight="bold">{label}</text><text x="36" y="112" fill="#dce9f6" font-size="22">{escape(subtitle)}</text><path d="M 212 223 H 236 M 412 223 H 436" stroke="#56d8ed" stroke-width="3"/>{boxes}<text x="36" y="321" fill="#a4b6ca" font-size="13">CONCEPTUAL OVERVIEW · NOT A PRODUCT SCREEN</text></g></svg>'
+    # Conceptual art only: DMS/DOBS must never show real screens or data.
+    labels=[
+        ('driver-onboarding-system','DOBS','Driver onboarding / offboarding',['Python','Flask','MySQL'],[('Operational','need'),('Central','workflow'),('Coordinated','delivery')]),
+        ('driver-management-system','DMS','Driver management platform',['Laravel','PHP','MySQL'],[('Requirements','& scope'),('PHP / Laravel','modules'),('Release','coordination')]),
+        ('business-websites','WEB','Business website delivery',['WordPress','SEO','Responsive'],[('Content','& scope'),('Responsive','build'),('Review &','handover')]),
+    ]
+    for slug,label,subtitle,stack,steps in labels:
+        chips,x='',604
+        for tech in reversed(stack):
+            w=len(tech)*7+22; x-=w
+            chips+=f'<rect x="{x}" y="36" width="{w}" height="24" rx="12" fill="#0f2a3f" stroke="#2c6377"/><text x="{x+w/2}" y="52.5" fill="#9fe9f5" text-anchor="middle" font-size="11.5">{escape(tech)}</text>'
+            x-=8
+        cards=''
+        for i,(first,second) in enumerate(steps):
+            cx=36+i*196
+            cards+=(f'<rect x="{cx}" y="178" width="176" height="104" rx="14" fill="url(#card)" stroke="#2f6478"/>'
+                    f'<circle cx="{cx+28}" cy="206" r="14" fill="#0b3245" stroke="#56d8ed"/><text x="{cx+28}" y="210.5" fill="#56d8ed" text-anchor="middle" font-size="12" font-weight="bold">0{i+1}</text>'
+                    f'<text x="{cx+18}" y="246" fill="#ffffff" font-size="15" font-weight="bold">{escape(first)}</text><text x="{cx+18}" y="266" fill="#b9cadb" font-size="14">{escape(second)}</text>')
+            if i<2:cards+=f'<path d="M {cx+180} 230 H {cx+192}" stroke="#56d8ed" stroke-width="2.5" marker-end="url(#arrow)"/>'
+        svg=(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc"><title id="title">{label} conceptual workflow</title><desc id="desc">Illustrative diagram, not an original system screen.</desc>'
+             '<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a1828"/><stop offset="1" stop-color="#131f3d"/></linearGradient>'
+             '<radialGradient id="glow" cx="0.85" cy="0.1" r="0.6"><stop offset="0" stop-color="#1ec8e0" stop-opacity="0.22"/><stop offset="1" stop-color="#1ec8e0" stop-opacity="0"/></radialGradient>'
+             '<linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16324a"/><stop offset="1" stop-color="#10233a"/></linearGradient>'
+             '<pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M 24 0 H 0 V 24" fill="none" stroke="#56d8ed" stroke-opacity="0.06"/></pattern>'
+             '<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#56d8ed"/></marker></defs>'
+             '<rect width="640" height="360" fill="url(#bg)"/><rect width="640" height="360" fill="url(#grid)"/><rect width="640" height="360" fill="url(#glow)"/>'
+             '<g font-family="Segoe UI,Arial,sans-serif">'
+             '<rect x="36" y="36" width="92" height="24" rx="12" fill="none" stroke="#56d8ed" stroke-opacity="0.7"/><text x="82" y="52.5" fill="#56d8ed" text-anchor="middle" font-size="11" font-weight="bold" letter-spacing="1.5">CASE STUDY</text>'
+             f'{chips}<text x="36" y="118" fill="#56d8ed" font-size="44" font-weight="bold">{label}</text><text x="36" y="150" fill="#dce9f6" font-size="19">{escape(subtitle)}</text>'
+             f'{cards}<circle cx="41" cy="318" r="3" fill="#56d8ed"/><text x="52" y="322" fill="#8fa3b8" font-size="11.5" letter-spacing="1">CONCEPTUAL OVERVIEW · NOT A PRODUCT SCREEN</text></g></svg>')
         (ROOT/'assets/images'/f'{slug}.svg').write_text(svg,encoding='utf-8')
 
 def main():
