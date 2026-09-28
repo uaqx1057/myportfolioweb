@@ -1,4 +1,4 @@
-﻿# Portfolio upgrade and handoff plan
+# Portfolio upgrade and handoff plan
 
 Updated: 2026-09-29. This is an ACTIVE implementation, not a completed release.
 
@@ -88,5 +88,7 @@ git diff --check
 ## Deployment log
 - 2026-09-29: Deployed build/public_html.zip to /home/codewqgx/public_html over SSH (user codewqgx@68.65.121.163 port 21098, local key ~/.ssh/codewithusman_deploy; shell access enabled by Namecheap support). Backup of previous site: ~/public_html.bak-20260929. Mail config at ~/.config/codewithusman/mail.php (600), recipient usmanasif26261@gmail.com. Removed publicly exposed AGENTS.md, CLAUDE.md, README.md, .mcp.json, screenshots and unminified sources. Live checks passed: all routes 200, private paths 403/404, canonical redirects, contact.php 405/422 (web PHP OK). No real email sent yet.
 
+- 2026-09-29 (later): Removed all project card images and case-study diagrams at user request (user found them poor); redeployed commit 9a3920b. Do not re-add project screenshots/diagrams without asking.
+
 ## Suggested next step
-Needs user: one real contact-form test message, manual interactive browser checks, rotate any tokens that were in the formerly public .mcp.json, delete unused ~/.ssh/id_rsa on server, push to GitHub (CI), Search Console sitemap submission + analytics, screenshots for public website cards.
+Needs user: one real contact-form test message, manual interactive browser checks, rotate any tokens that were in the formerly public .mcp.json, delete unused ~/.ssh/id_rsa on server, push to GitHub (CI), Search Console sitemap submission + analytics.
