@@ -45,7 +45,7 @@ Updated: 2026-09-29. This is an ACTIVE implementation, not a completed release.
 
 ## In progress / required before completion
 - [x] Replace `contact.php` with PHPMailer SMTP, strict input validation, Unicode lengths, origin checking, atomic rate limits, safe error handling, no arbitrary-address autoresponder.
-- [x] Create example mail config and actual private config (~/.config/codewithusman/mail.php, outside repo); `tools/check-smtp.php` verifies TLS + authentication only (no message sent without explicit authorization).
+- [x] Create example mail config and actual private config (~/.config/codewithusman/mail.php, outside repo); `tools/check-smtp.php` verifies TLS + authentication only — PASSED 2026-09-29 from local machine, no email sent (no message sent without explicit authorization).
 - [x] Composer PHPMailer ^7.0 installed in vendor/ (gitignored).
 - [x] Legacy cv.html/cv-builder.js now redirect to static resumes/PDFs.
 - [x] Add `.htaccess` canonical index redirects, source/private-directory blocking, no directory listing, useful security headers, static PDF cache behavior.
@@ -86,4 +86,4 @@ git diff --check
 - Current changes are uncommitted after c348662. Keep this file updated before handoff.
 
 ## Suggested next step
-Checkpoint committed 2026-09-29 (Claude Code). Remaining: release ZIP, README/CI/AGENTS docs, browser checks, SMTP auth check (needs user OK), deployment, Search Console/analytics.
+Commits 0a8f142, 89454ad, 18162e0 (Claude Code, 2026-09-29). Remaining, all need the user: manual interactive browser checks, confirm cPanel access and deploy build/public_html.zip + create ~/.config/codewithusman/mail.php on the server, send one real test message (needs explicit OK), push to GitHub to run CI, Search Console + analytics setup, real screenshots for public website cards.
