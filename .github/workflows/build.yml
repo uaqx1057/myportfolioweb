@@ -1,0 +1,34 @@
+name: Build and check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring
+          tools: composer
+      - run: pip install -r requirements.txt
+      - run: npm ci --no-audit --no-fund
+      - run: composer install --no-dev --no-interaction --no-progress
+      - run: npm run assets --silent
+      - run: python tools/build.py
+      - name: Generated files are committed
+        run: git diff --exit-code --stat -- ':!content/build-manifest.json' ':!sitemap.xml' ':!*.pdf'
+      - run: php -l contact.php
+      - run: node --check script.js
+      - run: python -m unittest discover -s tests
+      - run: python tools/package.py

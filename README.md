@@ -1,249 +1,48 @@
-# Portfolio Website
+# Code With Usman — portfolio
 
-A modern, responsive portfolio website inspired by professional designs. Built with HTML, CSS, and JavaScript.
+Bilingual (English `/`, Arabic `/ar/`) static portfolio for https://www.codewithusman.com/, with a PHP contact endpoint. Hosted on Namecheap cPanel.
 
-## Features
+## Editing content
 
-- 🎨 Modern and clean design
-- 📱 Fully responsive (mobile, tablet, desktop)
-- ✨ Smooth scrolling and animations
-- 🌙 Dark theme with gradient accents
-- 💼 Multiple sections: Hero, About, Skills, Services, Portfolio, Reviews, Contact
-- 📄 Live CV maker with PDF download and ATS text export
-- 📧 Contact form with validation
-- 🎯 Intersection Observer for scroll animations
-- 🔗 Social media integration
-- ⚡ Fast and lightweight
+Do not edit generated HTML (`index.html`, `ar/`, `about/`, `projects/`, `resume/`, …) by hand. Edit the sources instead:
 
-## Sections
+- `content/home.html`: the homepage template. Localized text goes in `data-en` / `data-ar` attributes.
+- `content/pages.json`: case studies, technical notes, services, about and privacy pages.
+- `style.css`, `script.js`: styles and behaviour. The pages load the minified copies.
 
-1. **Hero Section** - Introduction with call-to-action buttons
-2. **About Section** - Personal information and background
-3. **Skills Section** - Technical skills and expertise
-4. **Services Section** - Services offered
-5. **Portfolio Section** - Project showcase
-6. **Reviews Section** - Client testimonials
-7. **Contact Section** - Contact form and information
-8. **Footer** - Quick links and social media
+Case studies for DMS and DOBS must never include real screens, live-system links or private data. Use the conceptual SVG diagrams only.
 
-## Live CV Maker
+## Build
 
-The website includes a separate generated CV page at `cv.html`. The public portfolio design stays unchanged, but the CV page reads the latest content from `index.html` and turns it into:
+```powershell
+.venv/Scripts/python -m pip install -r requirements.txt   # once
+npm ci --no-audit --no-fund                               # once
+composer install --no-dev                                 # once (PHPMailer)
 
-- A designed PDF CV using the existing CV-inspired layout
-- An ATS-friendly plain text export
-- English or Arabic output based on the current website language
-
-To update the CV, edit the matching website content in `index.html`:
-
-- Experience: update `.experience-card` entries
-- Projects: update `.portfolio-item` entries and `.project-link` URLs
-- Certifications: update `.cert-card` entries
-- Education: update `.education-card` entries
-- Skills: update `.skill-card` entries
-- Contact details: update the contact section
-
-The homepage Download CV button opens `cv.html?lang=en&download=pdf` or `cv.html?lang=ar&download=pdf`. If the browser blocks automatic PDF saving, the CV page shows a Download PDF button as a fallback.
-
-The PDF generator uses the browser-based `jsPDF` library loaded in `cv.html`, so no server-side PDF service is required. The ATS Text button creates a plain `.txt` export for recruiters or applicant tracking systems.
-
-When changing `cv.css` or `cv-builder.js`, update the version query strings in `cv.html` so visitors do not receive cached CV assets. When changing `script.js`, regenerate `script.min.js`:
-
-```bash
-npx terser script.js -o script.min.js --compress --mangle --format comments=false
+npm run assets --silent                  # minify script.js / style.css
+.venv/Scripts/python tools/build.py      # pages, sitemap, PDFs, text CVs
+.venv/Scripts/python -m unittest discover -s tests
 ```
 
-## Customization Guide
+`tools/build.py` generates 24 localized pages with canonical/hreflang tags, JSON-LD, `sitemap.xml`, and both CVs (`Usman_Asif_Qureshi_CV*.pdf` / `.txt`, via `tools/build_cv.py`). The contact tests run an isolated `php -S` server in test mode, so they never send email. PHP must be on `PATH` (locally: `C:\xampp\php`).
 
-### 1. Personal Information
+Local preview: `php -S 127.0.0.1:8080 tools/router.php`. The router blocks private paths the same way `.htaccess` does.
 
-Edit `index.html` and update:
-- Your name in the hero section
-- Professional title
-- About me text
-- Contact information (email, phone, location)
-- Social media links
+## Deploy (Namecheap cPanel)
 
-### 2. Colors
+1. Build and test (above), then run `.venv/Scripts/python tools/package.py`, which writes `build/public_html.zip`. The archive holds public runtime files only (an allowlist): no sources, tools, tests, docs or config.
+2. In cPanel File Manager, upload the ZIP to `public_html` and extract it over the existing files.
+3. Set up mail once, **outside** `public_html`: copy `mail-config.example.php` to `~/.config/codewithusman/mail.php` (for example `/home/<cpanel-user>/.config/codewithusman/mail.php`). Fill in the mailbox password and a random `rate_salt` (`php -r "echo bin2hex(random_bytes(32));"`), then run `chmod 600` on the file. Never commit this file or put it in the ZIP.
+4. Optional SMTP check, which sends no email: `CODEWITHUSMAN_MAIL_CONFIG=~/.config/codewithusman/mail.php php tools/check-smtp.php`. Run it from a local checkout, or upload the script outside `public_html`.
+5. Check the site in a browser: `/`, `/ar/`, `/resume/`, the PDF downloads, and a contact-form message.
+6. Search Console: submit `https://www.codewithusman.com/sitemap.xml`.
 
-Edit `style.css` to change the color scheme:
-```css
-:root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    --dark-bg: #0f172a;
-    --light-bg: #1e293b;
-    --text-primary: #ffffff;
-    --text-secondary: #cbd5e1;
-    --accent: #f59e0b;
-}
-```
+## Contact endpoint
 
-### 3. Skills
+`contact.php` sends through SMTP (`codewithusman.com:465`, implicit TLS, authenticated as `info@codewithusman.com`) to the personal Gmail inbox. It also:
 
-Update the skills section in `index.html` with your own:
-- Change skill icons (use [Font Awesome](https://fontawesome.com/))
-- Modify skill titles and descriptions
-- Add or remove skill cards
-
-### 4. Services
-
-Customize services you offer:
-- Edit service titles
-- Update descriptions
-- Change icons
-
-### 5. Portfolio Projects
-
-Add your own projects:
-- Replace placeholder icons with project images
-- Update project titles and descriptions
-- Add links to live projects or GitHub repos
-
-### 6. Client Reviews
-
-Add testimonials from your clients:
-- Replace reviewer names and companies
-- Update review text
-- Add star ratings
-
-### 7. Images
-
-Replace placeholder icons with actual images:
-- Add your profile photo to `assets/images/`
-- Add project screenshots
-- Update image paths in HTML
-
-## Installation
-
-1. Download or clone this repository
-2. Open `index.html` in your browser
-3. Customize the content as needed
-
-## File Structure
-
-```
-portfolio/
-│
-├── index.html          # Main HTML file
-├── cv.html             # Generated CV preview and download page
-├── cv.css              # CV page styles and print styles
-├── cv-builder.js       # CV content extraction and PDF/text export
-├── style.css           # Stylesheet
-├── script.js           # JavaScript functionality
-├── assets/             # Assets folder
-│   └── images/         # Images folder
-└── README.md           # This file
-```
-
-## Adding Your Own Images
-
-1. Place images in the `assets/images/` folder
-2. Update the HTML to reference your images:
-
-```html
-<!-- For profile photo -->
-<div class="hero-image">
-    <img src="assets/images/profile.jpg" alt="Your Name">
-</div>
-
-<!-- For portfolio items -->
-<div class="portfolio-image">
-    <img src="assets/images/project1.jpg" alt="Project 1">
-</div>
-```
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
-
-## Technologies Used
-
-- HTML5
-- CSS3 (Flexbox, Grid, Animations)
-- JavaScript (ES6+)
-- Font Awesome Icons
-
-## Tips for Deployment
-
-### GitHub Pages
-1. Push your code to a GitHub repository
-2. Go to Settings > Pages
-3. Select the main branch as source
-4. Your site will be live at `username.github.io/repository-name`
-
-### Netlify
-1. Create a Netlify account
-2. Drag and drop your project folder
-3. Your site will be deployed instantly
-
-### Vercel
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run `vercel` in your project directory
-3. Follow the prompts
-
-## Customization Tips
-
-1. **Change Fonts**: Add Google Fonts or other font families in the CSS
-2. **Add More Sections**: Create additional sections as needed
-3. **Connect Contact Form**: Integrate with FormSpree, Netlify Forms, or your backend
-4. **Add Blog**: Create a blog section with articles
-5. **Add Certifications**: Show your certifications and achievements
-6. **Add Timeline**: Add an experience/education timeline
-
-## Contact Form Integration
-
-To make the contact form functional, integrate with:
-
-### FormSpree
-```html
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <!-- form fields -->
-</form>
-```
-
-### Netlify Forms
-```html
-<form name="contact" netlify>
-    <!-- form fields -->
-</form>
-```
-
-### Email.js
-Add Email.js library and configure:
-```javascript
-emailjs.send("service_id", "template_id", {
-    from_name: name,
-    from_email: email,
-    message: message
-});
-```
-
-## Performance Optimization
-
-- Compress images before uploading
-- Minify CSS and JavaScript for production
-- Use lazy loading for images
-- Enable browser caching
-- Use a CDN for Font Awesome
-
-## License
-
-Free to use and modify for personal and commercial projects.
-
-## Credits
-
-- Icons: [Font Awesome](https://fontawesome.com/)
-- Inspired by modern portfolio designs
-
-## Support
-
-For issues or questions, feel free to reach out!
-
----
-
-**Made with ❤️ by You**
+- validates input and counts length in Unicode characters,
+- checks the request's Origin header,
+- rate-limits each IP to 5 requests per 15 minutes (only hashed IPs are stored),
+- uses a honeypot field (`_gotcha`),
+- never sends automatic replies to submitted addresses.

@@ -1,4 +1,4 @@
-
+﻿
 <!-- graphify-tool:routing:start -->
 ## Tool routing (token efficiency)
 - Codebase questions (architecture, "what calls X", impact analysis): run `graphify query "<question>"` FIRST. Do NOT grep or read files across the repo - the knowledge graph at graphify-out/graph.json already has the answer for ~2k tokens.
@@ -23,5 +23,10 @@ Rules:
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
 
-## CV maintenance
-- Both language CVs and ATS text exports read localized content from `index.html` through `cv-builder.js`. English PDF uses text drawing; Arabic PDF uses a canvas image and requires explicit link annotations. Keep the legacy `Usman_Asif_Qureshi_CV.pdf` and Arabic `Usman_Asif_Qureshi_CV_AR.pdf` snapshots current when updating CV content.
+## CV and site maintenance
+- Sources: `content/home.html` (data-en/data-ar attributes) and `content/pages.json`. `tools/build.py` regenerates all HTML routes, sitemap and both CVs (`tools/build_cv.py`, fpdf2 + HarfBuzz, Amiri fonts). Never hand-edit generated `index.html`, `ar/`, `resume/`, etc.
+- `cv.html` / `cv-builder.js` are only redirects for old shared URLs; the PDFs are static build outputs.
+- Arabic PDF text extraction relies on /ActualText marked content; `tests/test_site.py` asserts it. PDFs differ on every build (timestamps), so revert them if content did not change.
+- `tools/package.py` builds `build/public_html.zip` from an allowlist. Private SMTP config lives at `~/.config/codewithusman/mail.php` (outside repo/public_html); never read, print, or commit it.
+- Tests need PHP on PATH (`C:\xampp\php` locally). graphify is not installed on this machine, so `graphify query/update` fail.
+- DMS/DOBS: no real screenshots, live links or private data — conceptual diagrams only.

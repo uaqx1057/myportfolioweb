@@ -49,12 +49,12 @@ Updated: 2026-09-29. This is an ACTIVE implementation, not a completed release.
 - [x] Composer PHPMailer ^7.0 installed in vendor/ (gitignored).
 - [x] Legacy cv.html/cv-builder.js now redirect to static resumes/PDFs.
 - [x] Add `.htaccess` canonical index redirects, source/private-directory blocking, no directory listing, useful security headers, static PDF cache behavior.
-- [ ] Build deployment ZIP for Namecheap public_html; separate instructions/config step for outside public_html.
+- [x] Build deployment ZIP (tools/package.py -> build/public_html.zip) for Namecheap public_html; separate instructions/config step for outside public_html.
 - [x] Add a safe local PHP router (tools/router.php) and automated tests (tests/, 7 passing 2026-09-29): localized HTML, internal links/assets, private systems excluded, correct dates, schema, PDF text/links/page counts, contact validation/rate limiting in test-only process with no outgoing email.
 - [ ] Browser checks for EN/AR at 360/390/768/desktop; mobile menu, contact forms, light/dark, keyboard focus; inspect console errors.
 - [ ] Re-render/inspect final PDFs after fixes and run extraction checks.
 - [ ] Replace public website cards with screenshots where feasible; do not capture DMS/DOBS. Other public project links returned 403/406 to automated requests, so do not call them broken without browser verification.
-- [ ] Add README/build/deployment instructions, CI build/check workflow, AGENTS.md maintenance facts.
+- [x] Add README/build/deployment instructions, CI build/check workflow (.github/workflows/build.yml, not yet run on GitHub), AGENTS.md maintenance facts.
 - [ ] Check git diff, ensure no secrets/temp/vendor files are staged, checkpoint commits when a working state is verified.
 - [ ] Confirm deployment access with user. Do not claim live changes until deployed and verified.
 - [ ] Search Console verification/sitemap submission and analytics activation require account setup. Record what remains rather than fabricate completion.
