@@ -85,5 +85,8 @@ git diff --check
 - PageSpeed API returned HTTP 429 during audit; no verified Lighthouse score exists.
 - Current changes are uncommitted after c348662. Keep this file updated before handoff.
 
+## Deployment log
+- 2026-09-29: Deployed build/public_html.zip to /home/codewqgx/public_html over SSH (user codewqgx@68.65.121.163 port 21098, local key ~/.ssh/codewithusman_deploy; shell access enabled by Namecheap support). Backup of previous site: ~/public_html.bak-20260929. Mail config at ~/.config/codewithusman/mail.php (600), recipient usmanasif26261@gmail.com. Removed publicly exposed AGENTS.md, CLAUDE.md, README.md, .mcp.json, screenshots and unminified sources. Live checks passed: all routes 200, private paths 403/404, canonical redirects, contact.php 405/422 (web PHP OK). No real email sent yet.
+
 ## Suggested next step
-Commits 0a8f142, 89454ad, 18162e0 (Claude Code, 2026-09-29). Remaining, all need the user: manual interactive browser checks, confirm cPanel access and deploy build/public_html.zip + create ~/.config/codewithusman/mail.php on the server, send one real test message (needs explicit OK), push to GitHub to run CI, Search Console + analytics setup, real screenshots for public website cards.
+Needs user: one real contact-form test message, manual interactive browser checks, rotate any tokens that were in the formerly public .mcp.json, delete unused ~/.ssh/id_rsa on server, push to GitHub (CI), Search Console sitemap submission + analytics, screenshots for public website cards.
