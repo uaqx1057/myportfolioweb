@@ -4,7 +4,6 @@
     "kind": "case",
     "title": {"en": "DOBS: Driver Onboarding & Offboarding", "ar": "DOBS: نظام تسجيل وإيقاف السائقين"},
     "description": {"en": "A public case study of my project management and Python/Flask development work on a driver onboarding and offboarding system at iLab / SpeedLogi.", "ar": "دراسة حالة عامة عن عملي في إدارة المشاريع والتطوير باستخدام Python/Flask لنظام تسجيل وإيقاف السائقين لدى iLab / SpeedLogi."},
-    "image": "driver-onboarding-system.svg",
     "sections": [
       {"title": {"en": "The operational need", "ar": "الاحتياج التشغيلي"}, "text": {"en": "Driver onboarding and offboarding involve several people and repeated coordination. DOBS brought this work into one central workflow to reduce fragmented manual follow-up.", "ar": "تتطلب إجراءات تسجيل السائقين وإيقافهم مشاركة عدة أشخاص وتنسيقاً متكرراً. جمع نظام DOBS هذه الإجراءات ضمن تدفق مركزي لتقليل المتابعة اليدوية المتفرقة."}},
       {"title": {"en": "My contribution", "ar": "مساهمتي"}, "text": {"en": "As Project Manager & Full-Stack Developer at iLab / SpeedLogi from September 2025 to September 2026, I managed technology delivery and developed the DOBS system using Python/Flask. My responsibilities included coordinating requirements, teams, releases, and delivery across web and mobile work.", "ar": "بصفتي مدير مشاريع ومطور فل ستاك لدى iLab / SpeedLogi من سبتمبر 2025 إلى سبتمبر 2026، توليت إدارة التسليم التقني وتطوير نظام DOBS باستخدام Python/Flask. شملت مسؤولياتي تنسيق المتطلبات والفرق والإصدارات والتسليم ضمن أعمال الويب والموبايل."}},
@@ -17,7 +16,6 @@
     "kind": "case",
     "title": {"en": "DMS: Driver Management System", "ar": "DMS: نظام إدارة السائقين"},
     "description": {"en": "My delivery management and PHP/Laravel development contribution to a driver management platform used in logistics operations at iLab / SpeedLogi.", "ar": "مساهمتي في إدارة التسليم والتطوير باستخدام PHP/Laravel لمنصة إدارة سائقين مستخدمة في العمليات اللوجستية لدى iLab / SpeedLogi."},
-    "image": "driver-management-system.svg",
     "sections": [
       {"title": {"en": "The operational context", "ar": "السياق التشغيلي"}, "text": {"en": "DMS is a driver management platform used in daily logistics operations. Its delivery required coordination between operational needs, application modules, and software releases.", "ar": "DMS منصة لإدارة السائقين مستخدمة في العمليات اللوجستية اليومية. تطلب تسليمها التنسيق بين الاحتياجات التشغيلية ووحدات التطبيق وإصدارات البرمجيات."}},
       {"title": {"en": "My contribution", "ar": "مساهمتي"}, "text": {"en": "During my September 2025–September 2026 role at iLab / SpeedLogi, I managed delivery and supported development of DMS modules using PHP/Laravel. My portfolio distinguishes this contribution from claiming sole authorship of the complete platform.", "ar": "خلال عملي لدى iLab / SpeedLogi من سبتمبر 2025 إلى سبتمبر 2026، توليت إدارة التسليم ودعم تطوير وحدات DMS باستخدام PHP/Laravel. وتصف هذه الدراسة مساهمتي دون الادعاء بأنني طورت المنصة كاملة بمفردي."}},
@@ -30,7 +28,6 @@
     "kind": "case",
     "title": {"en": "Business Websites: Delivery, Performance & SEO", "ar": "مواقع الأعمال: التنفيذ والأداء وتحسين البحث"},
     "description": {"en": "An overview of my WordPress and business website work, including iLab, SpeedLogi, and team leadership at The MK Solution.", "ar": "نظرة على أعمالي في WordPress ومواقع الشركات، بما فيها iLab وSpeedLogi وقيادة الفريق لدى The MK Solution."},
-    "image": "business-websites.svg",
     "sections": [
       {"title": {"en": "Work and responsibilities", "ar": "الأعمال والمسؤوليات"}, "text": {"en": "My portfolio includes corporate website work for iLab and improvements to SpeedLogi’s website. At The MK Solution, I managed a 10-person cross-functional team and led WordPress builds using Elementor.", "ar": "يشمل ملف أعمالي العمل على موقع iLab وتحسينات لموقع SpeedLogi. ولدى The MK Solution، أدرت فريقاً متعدد التخصصات من 10 أفراد وقدت تطوير مواقع WordPress باستخدام Elementor."}},
       {"title": {"en": "Areas of focus", "ar": "مجالات التركيز"}, "text": {"en": "The work focused on service presentation, responsive design, site performance, SEO structure, and maintainability. These responsibilities connected business content with implementation and delivery standards.", "ar": "ركز العمل على عرض الخدمات والتصميم المتجاوب وأداء الموقع وبنية تحسين محركات البحث وقابلية الصيانة. وربطت هذه المسؤوليات محتوى الأعمال بالتنفيذ ومعايير التسليم."}},
