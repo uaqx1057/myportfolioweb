@@ -22,3 +22,6 @@ Rules:
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+
+## CV maintenance
+- Both language CVs and ATS text exports read localized content from `index.html` through `cv-builder.js`. English PDF uses text drawing; Arabic PDF uses a canvas image and requires explicit link annotations. Keep the legacy `Usman_Asif_Qureshi_CV.pdf` and Arabic `Usman_Asif_Qureshi_CV_AR.pdf` snapshots current when updating CV content.

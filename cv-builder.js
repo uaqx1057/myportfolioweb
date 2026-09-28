@@ -127,7 +127,7 @@ const getItems = (selector) => Array.from(sourceDocument.querySelectorAll(select
 const getContactDetails = () => {
     const details = [];
 
-    getItems('.contact-info a[href^="mailto:"]').forEach((link) => {
+    getItems('.contact-info a[href^="mailto:"], .contact-info a[href="https://www.codewithusman.com/"]').forEach((link) => {
         details.push({ text: cleanText(link.textContent), href: link.href });
     });
 
@@ -458,6 +458,16 @@ const downloadPdfFromDom = async (filename) => {
     const margin = 24;
     const renderWidth = pageWidth - margin * 2;
     const maxSlicePx = (pageHeight - margin * 2) * (canvas.width / renderWidth);
+    const pageRect = cvPage.getBoundingClientRect();
+    const linkRects = Array.from(cvPage.querySelectorAll('a[href]')).flatMap((link) =>
+        Array.from(link.getClientRects()).map((rect) => ({
+            url: link.href,
+            x: (rect.left - pageRect.left) * pxPerCssPx,
+            y: (rect.top - pageRect.top) * pxPerCssPx,
+            width: rect.width * pxPerCssPx,
+            height: rect.height * pxPerCssPx
+        }))
+    );
 
     let startPx = 0;
     let pageIndex = 0;
@@ -496,6 +506,16 @@ const downloadPdfFromDom = async (filename) => {
             renderWidth,
             sliceHeightPx / (canvas.width / renderWidth)
         );
+
+        const pointsPerPixel = renderWidth / canvas.width;
+        linkRects.forEach((rect) => {
+            const top = Math.max(rect.y, startPx);
+            const bottom = Math.min(rect.y + rect.height, startPx + sliceHeightPx);
+            if (bottom > top) {
+                pdf.link(margin + rect.x * pointsPerPixel, margin + (top - startPx) * pointsPerPixel,
+                    rect.width * pointsPerPixel, (bottom - top) * pointsPerPixel, { url: rect.url });
+            }
+        });
 
         startPx += sliceHeightPx;
         pageIndex += 1;
@@ -784,7 +804,7 @@ const downloadPdf = async () => {
     const title = cleanText(cvPage.querySelector('.cv-title')?.textContent);
     const headline = cleanText(cvPage.querySelector('.cv-headline')?.textContent);
     const contactLines = Array.from(cvPage.querySelectorAll('.cv-contact a, .cv-contact span, .cv-contact strong'))
-        .map((item) => ({ text: cleanText(item.textContent), bold: item.tagName === 'STRONG' }))
+        .map((item) => ({ text: cleanText(item.textContent), bold: item.tagName === 'STRONG', href: item.href }))
         .filter(Boolean);
     const linkedinLink = Array.from(cvPage.querySelectorAll('.cv-contact a'))
         .find((link) => cleanText(link.textContent).toLowerCase().includes('linkedin'));
@@ -836,6 +856,9 @@ const downloadPdf = async () => {
         pdf.setFontSize(8.5);
         const lines = pdf.splitTextToSize(text, contactWidth);
         pdf.text(lines, rightX, contactY);
+        if (line.href) {
+            pdf.link(rightX, contactY - 8.5, contactWidth, lines.length * 10.8, { url: line.href });
+        }
         contactY += lines.length * 10.8 + 2;
     });
 
