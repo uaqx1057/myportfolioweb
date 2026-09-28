@@ -2776,7 +2776,8 @@ html[data-theme="light"] .footer-bottom {
         font-size: 0.98rem;
     }
 
-    .about-content {
+    .about-content,
+    html[dir="ltr"] .about-content {
         grid-template-columns: 1fr;
         grid-template-areas:
             "image"

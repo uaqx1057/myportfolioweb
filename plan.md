@@ -51,7 +51,7 @@ Updated: 2026-09-29. This is an ACTIVE implementation, not a completed release.
 - [x] Add `.htaccess` canonical index redirects, source/private-directory blocking, no directory listing, useful security headers, static PDF cache behavior.
 - [x] Build deployment ZIP (tools/package.py -> build/public_html.zip) for Namecheap public_html; separate instructions/config step for outside public_html.
 - [x] Add a safe local PHP router (tools/router.php) and automated tests (tests/, 7 passing 2026-09-29): localized HTML, internal links/assets, private systems excluded, correct dates, schema, PDF text/links/page counts, contact validation/rate limiting in test-only process with no outgoing email.
-- [ ] Browser checks for EN/AR at 360/390/768/desktop; mobile menu, contact forms, light/dark, keyboard focus; inspect console errors.
+- [~] Browser checks (headless Chrome via fixed-width iframes, 2026-09-29): EN/AR layout OK at 360/390/768/1366 after fixing EN About two-column overflow at <=480px (specificity bug). STILL TODO manually: mobile menu open/close, form submit UX, light theme, keyboard focus, console errors; mobile menu, contact forms, light/dark, keyboard focus; inspect console errors.
 - [ ] Re-render/inspect final PDFs after fixes and run extraction checks.
 - [ ] Replace public website cards with screenshots where feasible; do not capture DMS/DOBS. Other public project links returned 403/406 to automated requests, so do not call them broken without browser verification.
 - [x] Add README/build/deployment instructions, CI build/check workflow (.github/workflows/build.yml, not yet run on GitHub), AGENTS.md maintenance facts.
