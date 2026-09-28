@@ -1,1 +1,9 @@
 graphify-out/
+.venv/
+node_modules/
+vendor/
+tmp/
+__pycache__/
+contact-config.php
+.env
+build/

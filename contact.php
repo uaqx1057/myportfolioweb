@@ -1,103 +1,89 @@
 <?php
-header('Content-Type: application/json');
-
-$ownerEmail = 'usmanasif26261@gmail.com';
-$fromEmail = 'info@codewithusman.com';
-
+declare(strict_types=1);
+header('Content-Type: application/json; charset=UTF-8');
+header('Cache-Control: no-store');
+header('X-Content-Type-Options: nosniff');
+function respond(int $status, bool $ok, string $error = ''): never {
+    http_response_code($status);
+    echo json_encode(['ok' => $ok, 'error' => $error]);
+    exit;
+}
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    echo json_encode(['ok' => false, 'error' => 'Method not allowed']);
-    exit;
+    header('Allow: POST'); respond(405, false, 'Method not allowed');
 }
-
-// Honeypot field - real visitors never fill this in, bots usually do.
-if (!empty($_POST['_gotcha'])) {
-    echo json_encode(['ok' => true]);
-    exit;
+if ((int) ($_SERVER['CONTENT_LENGTH'] ?? 0) > 20000) respond(413, false, 'Message too large');
+$testing = getenv('PORTFOLIO_TEST_MODE') === '1';
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+$allowedOrigins = ['https://www.codewithusman.com', 'https://codewithusman.com'];
+if ($testing) $allowedOrigins[] = 'http://127.0.0.1:8770';
+if ($origin !== '' && !in_array($origin, $allowedOrigins, true)) respond(403, false, 'Origin not allowed');
+foreach (['name', 'email', 'subject', 'message', '_gotcha', 'lang'] as $key) {
+    if (isset($_POST[$key]) && !is_string($_POST[$key])) respond(422, false, 'Invalid input');
 }
-
-function clean_header_value($value) {
-    return trim(str_replace(["\r", "\n"], '', $value));
-}
-
-function encode_subject($subject) {
-    return mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n");
-}
-
-function message_id($domain) {
-    return '<' . bin2hex(random_bytes(16)) . '@' . $domain . '>';
-}
-
-$name = clean_header_value($_POST['name'] ?? '');
-$email = clean_header_value($_POST['email'] ?? '');
-$subject = clean_header_value($_POST['subject'] ?? '');
+if (!empty($_POST['_gotcha'])) respond(200, true);
+$name = trim($_POST['name'] ?? '');
+$email = trim($_POST['email'] ?? '');
+$subject = trim($_POST['subject'] ?? '');
 $message = trim($_POST['message'] ?? '');
-$lang = ($_POST['lang'] ?? '') === 'ar' ? 'ar' : 'en';
+if ($name === '' || $email === '' || $subject === '' || $message === ''
+    || mb_strlen($name, 'UTF-8') > 100 || strlen($email) > 254
+    || mb_strlen($subject, 'UTF-8') > 160 || mb_strlen($message, 'UTF-8') > 5000
+    || preg_match('/[\r\n\x00]/', $name . $email . $subject)
+    || !filter_var($email, FILTER_VALIDATE_EMAIL)) respond(422, false, 'Invalid input');
 
-$hasInvalidLength = strlen($name) > 100
-    || strlen($email) > 254
-    || strlen($subject) > 160
-    || strlen($message) > 5000;
-
-if ($name === '' || $email === '' || $subject === '' || $message === '' || $hasInvalidLength || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    http_response_code(422);
-    echo json_encode(['ok' => false, 'error' => 'Invalid input']);
-    exit;
+// The production configuration lives OUTSIDE public_html.
+$configPath = getenv('CODEWITHUSMAN_MAIL_CONFIG') ?: dirname(__DIR__) . '/.config/codewithusman/mail.php';
+$config = is_file($configPath) ? require $configPath : [];
+if (!is_array($config)) respond(503, false, 'Contact service unavailable');
+$rateDirectory = $config['rate_directory'] ?? sys_get_temp_dir() . '/codewithusman-contact';
+if (!is_dir($rateDirectory) && !@mkdir($rateDirectory, 0700, true) && !is_dir($rateDirectory)) respond(503, false, 'Contact service unavailable');
+$salt = $config['rate_salt'] ?? '';
+if (!$testing && strlen($salt) < 32) respond(503, false, 'Contact service unavailable');
+// Atomic rate limit. Only hashed IPs and timestamps are stored, not messages.
+$ipKey = hash_hmac('sha256', $_SERVER['REMOTE_ADDR'] ?? 'unknown', $salt ?: 'local-test-only');
+$file = @fopen($rateDirectory . '/' . $ipKey . '.json', 'c+');
+if (!$file || !flock($file, LOCK_EX)) respond(503, false, 'Contact service unavailable');
+$now = time();
+$attempts = json_decode(stream_get_contents($file) ?: '[]', true);
+if (!is_array($attempts)) $attempts = [];
+$attempts = array_values(array_filter($attempts, fn($t) => is_int($t) && $t > $now - 900));
+if (count($attempts) >= 5) {
+    flock($file, LOCK_UN); fclose($file); header('Retry-After: 900');
+    respond(429, false, 'Please try again later');
 }
-
-// Notify the site owner with the visitor's message.
-$ownerBody = "New message from the portfolio contact form.\n\n"
-    . "Name: {$name}\n"
-    . "Email: {$email}\n"
-    . "Subject: {$subject}\n\n"
-    . "Message:\n{$message}\n";
-
-$ownerHeaders = [
-    'From: ' . $fromEmail,
-    'Reply-To: ' . $name . ' <' . $email . '>',
-    'Date: ' . date('r'),
-    'Message-ID: ' . message_id('codewithusman.com'),
-    'MIME-Version: 1.0',
-    'Content-Type: text/plain; charset=UTF-8'
-];
-
-$sent = @mail($ownerEmail, encode_subject('[Portfolio Contact] ' . $subject), $ownerBody, implode("\r\n", $ownerHeaders));
-
-if (!$sent) {
-    http_response_code(500);
-    echo json_encode(['ok' => false, 'error' => 'Failed to send']);
-    exit;
+$attempts[] = $now;
+ftruncate($file, 0); rewind($file); fwrite($file, json_encode($attempts)); fflush($file);
+flock($file, LOCK_UN); fclose($file);
+if (random_int(1, 50) === 1) {
+    foreach (glob($rateDirectory . '/*.json') ?: [] as $oldFile) {
+        if (filemtime($oldFile) < $now - 86400) @unlink($oldFile);
+    }
 }
-
-// Best-effort confirmation reply to the visitor - doesn't affect the success response above.
-$replySubject = $lang === 'ar' ? 'شكراً لتواصلك - عثمان آصف قريشي' : 'Thanks for reaching out - Usman Asif Qureshi';
-
-if ($lang === 'ar') {
-    $replyBody = "مرحباً {$name}،\n\n"
-        . "شكراً لتواصلك! لقد استلمت رسالتك وسأتواصل معك قريباً.\n\n"
-        . "نسخة مما أرسلته:\n"
-        . "الموضوع: {$subject}\n"
-        . "الرسالة:\n{$message}\n\n"
-        . "مع أطيب التحيات،\n"
-        . "عثمان آصف قريشي";
-} else {
-    $replyBody = "Hi {$name},\n\n"
-        . "Thanks for reaching out! I've received your message and will contact you soon.\n\n"
-        . "Here's a copy of what you sent:\n"
-        . "Subject: {$subject}\n"
-        . "Message:\n{$message}\n\n"
-        . "Best regards,\n"
-        . "Usman Asif Qureshi";
+if ($testing) respond(200, true); // Only enabled by the isolated local test process.
+if (empty($config['password']) || !is_file(__DIR__ . '/vendor/autoload.php')) {
+    error_log('Portfolio contact: SMTP configuration or dependency missing');
+    respond(503, false, 'Contact service unavailable');
 }
-
-$replyHeaders = [
-    'From: Usman Asif Qureshi <' . $fromEmail . '>',
-    'Date: ' . date('r'),
-    'Message-ID: ' . message_id('codewithusman.com'),
-    'MIME-Version: 1.0',
-    'Content-Type: text/plain; charset=UTF-8'
-];
-
-@mail($email, encode_subject($replySubject), $replyBody, implode("\r\n", $replyHeaders));
-
-echo json_encode(['ok' => true]);
+require __DIR__ . '/vendor/autoload.php';
+try {
+    $mail = new PHPMailer\PHPMailer\PHPMailer(true);
+    $mail->isSMTP();
+    $mail->Host = $config['host'] ?? 'codewithusman.com';
+    $mail->Port = (int) ($config['port'] ?? 465);
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Username = $config['username'] ?? 'info@codewithusman.com';
+    $mail->Password = $config['password'];
+    $mail->Timeout = 15; $mail->CharSet = 'UTF-8';
+    $mail->setFrom($mail->Username, 'Code With Usman');
+    $mail->addAddress($config['recipient'] ?? 'usmanasif26261@gmail.com');
+    $mail->addReplyTo($email, $name);
+    $mail->Subject = '[Portfolio] ' . $subject;
+    $mail->Body = "Name: {$name}\nEmail: {$email}\nSubject: {$subject}\n\n{$message}";
+    $mail->send();
+    // No automatic reply to arbitrary addresses: avoid an autoresponder spam relay.
+    respond(200, true);
+} catch (Throwable $error) {
+    error_log('Portfolio contact: delivery failed (' . get_class($error) . ')');
+    respond(502, false, 'Delivery failed; please use email or WhatsApp');
+}

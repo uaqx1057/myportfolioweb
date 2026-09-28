@@ -1,0 +1,95 @@
+{
+  "lang": "en",
+  "name": "Usman Asif Qureshi",
+  "title": "Project Manager & Full-Stack Developer",
+  "summary": "Full-stack developer and project manager based in Al Khobar, Saudi Arabia. Experience in logistics systems, Python/Flask, PHP/Laravel, WordPress, and team delivery. Most recently worked at iLab / SpeedLogi from September 2025 to September 2026. Actively seeking new opportunities.",
+  "skills": [
+    "Frontend: HTML, CSS, JavaScript, React, Bootstrap",
+    "Backend: PHP, Python/Flask, Node.js, Django",
+    "Databases: MySQL, PostgreSQL, MongoDB",
+    "Mobile: Flutter, Android",
+    "Tools & Productivity: Git, Postman, Figma, Jira, Trello",
+    "Adobe & MS Office: Adobe Creative Suite, Microsoft Office (Advanced)",
+    "Web Platforms: WordPress, Elementor",
+    "Project Delivery: Agile, Team Coordination, Stakeholder Management, Sprint Planning"
+  ],
+  "experience": [
+    {
+      "title": "Project Manager & Full-Stack Developer",
+      "period": "September 2025 - September 2026",
+      "company": "iLab Information Technologies / SpeedLogi - Al Khobar, Saudi Arabia",
+      "bullets": [
+        "Managed SpeedLogi technology projects from planning through delivery",
+        "Developed and maintained internal systems as a full-stack developer",
+        "Built DOBS using Python/Flask and supported DMS modules with PHP/Laravel",
+        "Coordinated teams, requirements, releases, and on-time delivery across web and mobile systems"
+      ]
+    },
+    {
+      "title": "Project Manager & Senior WordPress Developer",
+      "period": "May 2018 - March 2024",
+      "company": "The MK Solution - Rawalpindi, Punjab",
+      "bullets": [
+        "Managed a 10-person cross-functional team on high-visibility projects",
+        "Led complex WordPress builds using Elementor",
+        "Implemented SEO, security, and responsive design best practices",
+        "Mentored junior developers and improved delivery standards"
+      ]
+    },
+    {
+      "title": "WordPress Developer (Freelance)",
+      "period": "January 2020 - December 2023",
+      "company": "Upwork - Remote",
+      "bullets": [
+        "Built custom WordPress themes and designs with Elementor",
+        "Maintained multiple websites with updates and troubleshooting",
+        "Enhanced sites using HTML, CSS, PHP, and JavaScript",
+        "Delivered high-quality results on tight timelines"
+      ]
+    },
+    {
+      "title": "CSR & Technical Support Specialist",
+      "period": "February 2016 - January 2017",
+      "company": "Customer Service & Technical Support - Rawalpindi, Punjab",
+      "bullets": [
+        "Responded to technical inquiries from internal and external users",
+        "Troubleshot software and hardware issues via phone, email, and chat",
+        "Resolved technical problems efficiently to ensure satisfaction"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "title": "Bachelor of Software Engineering",
+      "detail": "Iqra University, Islamabad | 2017 - 2021"
+    },
+    {
+      "title": "Intermediate in Pre-Engineering",
+      "detail": "Askaria College, Rawalpindi | 2014 - 2016"
+    }
+  ],
+  "credentials": [
+    "Meta Back-End Developer (May 2024)",
+    "Meta Front-End Developer (May 2024)",
+    "IBM Full Stack Software Developer (May 2024)",
+    "IBM Front-End Developer (June 2024)",
+    "Google Project Management (May 2024)"
+  ],
+  "projects": [
+    {
+      "title": "DOBS: Driver Onboarding & Offboarding",
+      "description": "A public case study of my project management and Python/Flask development work on a driver onboarding and offboarding system at iLab / SpeedLogi.",
+      "url": "https://www.codewithusman.com/projects/driver-onboarding-system/"
+    },
+    {
+      "title": "DMS: Driver Management System",
+      "description": "My delivery management and PHP/Laravel development contribution to a driver management platform used in logistics operations at iLab / SpeedLogi.",
+      "url": "https://www.codewithusman.com/projects/driver-management-system/"
+    },
+    {
+      "title": "Business Websites: Delivery, Performance & SEO",
+      "description": "An overview of my WordPress and business website work, including iLab, SpeedLogi, and team leadership at The MK Solution.",
+      "url": "https://www.codewithusman.com/projects/business-websites/"
+    }
+  ]
+}

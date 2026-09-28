@@ -52,148 +52,12 @@ if (themeToggle) {
     });
 }
 
-// Language and direction
+// Language is rendered at build time. The switch is a crawlable link.
 const langToggle = document.getElementById('langToggle');
-const getBrowserLanguage = () => {
-    const preferred = (navigator.languages && navigator.languages.length)
-        ? navigator.languages[0]
-        : (navigator.language || 'en');
-    return preferred.toLowerCase();
-};
-
-const getUrlLanguage = () => {
-    const lang = new URLSearchParams(window.location.search).get('lang');
-    return lang === 'ar' || lang === 'en' ? lang : null;
-};
-
-const syncLanguageUrl = (lang) => {
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', lang);
-    window.history.replaceState({}, '', url);
-};
-
-const syncContactInfoOrder = (isArabic) => {
-    const contactInfo = document.querySelector('.contact-info');
-    if (!contactInfo) {
-        return;
-    }
-
-    const items = Array.from(contactInfo.children).filter((el) => el.classList.contains('contact-item'));
-    if (items.length === 0) {
-        return;
-    }
-
-    if (!contactInfo.dataset.orderInitialized) {
-        items.forEach((item, index) => {
-            item.dataset.orderIndex = String(index);
-        });
-        contactInfo.dataset.orderInitialized = 'true';
-    }
-
-    const ordered = items
-        .slice()
-        .sort((a, b) => Number(a.dataset.orderIndex) - Number(b.dataset.orderIndex));
-
-    const finalOrder = isArabic ? ordered.reverse() : ordered;
-    finalOrder.forEach((item) => contactInfo.appendChild(item));
-};
-
-const syncNavMenuOrder = (isArabic) => {
-    const navMenuElement = document.querySelector('.nav-menu');
-    if (!navMenuElement) {
-        return;
-    }
-
-    const items = Array.from(navMenuElement.children).filter((el) => el.tagName === 'LI');
-    if (items.length === 0) {
-        return;
-    }
-
-    if (!navMenuElement.dataset.orderInitialized) {
-        items.forEach((item, index) => {
-            item.dataset.orderIndex = String(index);
-        });
-        navMenuElement.dataset.orderInitialized = 'true';
-    }
-
-    const ordered = items
-        .slice()
-        .sort((a, b) => Number(a.dataset.orderIndex) - Number(b.dataset.orderIndex));
-
-    const finalOrder = isArabic ? ordered.reverse() : ordered;
-    finalOrder.forEach((item) => navMenuElement.appendChild(item));
-};
-
-const applyLanguage = (lang) => {
-    const isArabic = lang.startsWith('ar');
-    document.documentElement.lang = isArabic ? 'ar' : 'en';
-    document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
-    document.body.classList.toggle('lang-ar', isArabic);
-    updateThemeToggle(rootElement.getAttribute('data-theme') || 'dark');
-
-    document.querySelectorAll('.cv-download-link').forEach((cvDownloadLink) => {
-        cvDownloadLink.href = `cv.html?lang=${isArabic ? 'ar' : 'en'}&download=pdf`;
-    });
-
-    document.querySelectorAll('.whatsapp-contact-link').forEach((whatsappLink) => {
-        const message = isArabic ? whatsappLink.dataset.arMessage : whatsappLink.dataset.enMessage;
-        whatsappLink.href = `https://wa.me/966568465058?text=${encodeURIComponent(message || '')}`;
-    });
-
-    const logoName = document.getElementById('logoName');
-    if (logoName) {
-        logoName.textContent = isArabic ? logoName.dataset.ar : logoName.dataset.en;
-    }
-
-    const heroName = document.getElementById('heroName');
-    if (heroName) {
-        heroName.textContent = isArabic ? heroName.dataset.ar : heroName.dataset.en;
-    }
-
-    const titleElement = document.querySelector('title[data-en][data-ar]');
-    if (titleElement) {
-        document.title = isArabic ? titleElement.dataset.ar : titleElement.dataset.en;
-    }
-
-    document.querySelectorAll('meta[data-en-content][data-ar-content]').forEach((meta) => {
-        meta.setAttribute('content', isArabic ? meta.dataset.arContent : meta.dataset.enContent);
-    });
-
-    if (langToggle) {
-        langToggle.textContent = isArabic ? 'EN' : 'AR';
-        langToggle.setAttribute('aria-label', isArabic ? 'Switch to English' : 'Switch to Arabic');
-        langToggle.setAttribute('aria-pressed', String(isArabic));
-    }
-
-    document.querySelectorAll('[data-en][data-ar]').forEach((el) => {
-        if (el.children.length === 0) {
-            el.textContent = isArabic ? el.dataset.ar : el.dataset.en;
-        }
-    });
-
-    document.querySelectorAll('[data-en-placeholder][data-ar-placeholder]').forEach((el) => {
-        el.setAttribute('placeholder', isArabic ? el.dataset.arPlaceholder : el.dataset.enPlaceholder);
-    });
-
-    document.querySelectorAll('[data-en-aria][data-ar-aria]').forEach((el) => {
-        el.setAttribute('aria-label', isArabic ? el.dataset.arAria : el.dataset.enAria);
-    });
-
-    syncNavMenuOrder(isArabic);
-    syncContactInfoOrder(isArabic);
-};
-
-const savedLang = localStorage.getItem('lang');
-applyLanguage(getUrlLanguage() || savedLang || getBrowserLanguage());
-
-if (langToggle) {
-    langToggle.addEventListener('click', () => {
-        const current = document.documentElement.lang || 'en';
-        const nextLang = current === 'ar' ? 'en' : 'ar';
-        localStorage.setItem('lang', nextLang);
-        syncLanguageUrl(nextLang);
-        applyLanguage(nextLang);
-    });
+const legacyLanguage = new URLSearchParams(location.search).get('lang');
+if ((legacyLanguage === 'ar' && rootElement.lang !== 'ar') || (legacyLanguage === 'en' && rootElement.lang !== 'en')) {
+    const destination = document.querySelector('link[hreflang="' + legacyLanguage + '"]');
+    if (destination) location.replace(new URL(destination.href).pathname + location.hash);
 }
 
 // Mobile Menu Toggle
@@ -217,118 +81,10 @@ if (hamburger && navMenu) {
     });
 }
 
-// Inject technology logo strips into work, projects, and testimonials.
-const techIconMap = {
-    Python: 'fab fa-python',
-    Flask: 'fas fa-flask',
-    PHP: 'fab fa-php',
-    Laravel: 'fab fa-laravel',
-    WordPress: 'fab fa-wordpress',
-    Elementor: 'fas fa-layer-group',
-    JavaScript: 'fab fa-js',
-    React: 'fab fa-react',
-    Flutter: 'fas fa-mobile-screen-button',
-    Android: 'fab fa-android',
-    HTML: 'fab fa-html5',
-    CSS: 'fab fa-css3-alt',
-    SEO: 'fas fa-magnifying-glass-chart',
-    Performance: 'fas fa-gauge-high',
-    Security: 'fas fa-shield-halved',
-    Upwork: 'fas fa-briefcase',
-    Design: 'fas fa-pen-nib',
-    Support: 'fas fa-headset',
-    Management: 'fas fa-diagram-project',
-    Delivery: 'fas fa-rocket',
-    UX: 'fas fa-wand-magic-sparkles'
-};
-
-const createTechStack = (items) => {
-    const stack = document.createElement('div');
-    stack.className = 'tech-stack';
-    stack.setAttribute('aria-label', 'Technology stack');
-
-    items.forEach((item) => {
-        const pill = document.createElement('span');
-        pill.className = 'tech-pill';
-        pill.innerHTML = `<i class="${techIconMap[item] || 'fas fa-microchip'}" aria-hidden="true"></i> ${item}`;
-        stack.appendChild(pill);
-    });
-
-    return stack;
-};
-
-const addTechStack = (target, items, insertBefore = null) => {
-    if (!target || target.querySelector(':scope > .tech-stack')) {
-        return;
-    }
-
-    target.insertBefore(createTechStack(items), insertBefore);
-};
-
-document.querySelectorAll('.experience-card').forEach((card) => {
-    const title = card.querySelector('.experience-title')?.dataset.en || card.textContent;
-    const company = card.querySelector('.experience-company')?.textContent || '';
-    const list = card.querySelector('ul');
-
-    if (title.includes('Full-Stack Developer') && company.includes('SpeedLogi')) {
-        addTechStack(card, ['Python', 'Flask', 'PHP', 'Flutter', 'Management'], list);
-    } else if (title.includes('Team Lead')) {
-        addTechStack(card, ['Python', 'Flask', 'PHP', 'Flutter', 'Management'], list);
-    } else if (title.includes('Senior WordPress')) {
-        addTechStack(card, ['WordPress', 'Elementor', 'JavaScript', 'SEO', 'Delivery'], list);
-    } else if (company.includes('Upwork')) {
-        addTechStack(card, ['Upwork', 'WordPress', 'HTML', 'CSS', 'PHP'], list);
-    } else {
-        addTechStack(card, ['Support', 'Security', 'Delivery'], list);
-    }
-});
-
-document.querySelectorAll('.portfolio-item').forEach((item) => {
-    const title = item.querySelector('.portfolio-title')?.dataset.en || item.textContent;
-    const info = item.querySelector('.portfolio-info');
-    const link = item.querySelector('.project-link');
-
-    if (title.includes('DOBS')) {
-        addTechStack(info, ['Python', 'Flask', 'Management', 'Security'], link);
-    } else if (title.includes('DMS')) {
-        addTechStack(info, ['Laravel', 'PHP', 'Management'], link);
-    } else if (title.includes('iLab')) {
-        addTechStack(info, ['WordPress', 'Performance', 'SEO'], link);
-    } else if (title === 'Speed') {
-        addTechStack(info, ['Performance', 'SEO', 'WordPress'], link);
-    } else if (title.includes('SpeedPoint')) {
-        addTechStack(info, ['PHP', 'UX', 'Delivery'], link);
-    } else {
-        addTechStack(info, ['WordPress', 'Design', 'SEO'], link);
-    }
-});
-
-document.querySelectorAll('.review-card').forEach((card) => {
-    const text = card.textContent;
-    const stars = card.querySelector('.stars');
-    let items = ['Upwork', 'Delivery'];
-
-    if (text.includes('React') || text.includes('PHP/React')) {
-        items = ['Upwork', 'PHP', 'React'];
-    } else if (text.includes('Elementor')) {
-        items = ['Upwork', 'WordPress', 'Elementor'];
-    } else if (text.includes('speed optimization')) {
-        items = ['Upwork', 'WordPress', 'Performance'];
-    } else if (text.includes('graphic designing')) {
-        items = ['Upwork', 'Design', 'Delivery'];
-    } else if (text.includes('WordPress')) {
-        items = ['Upwork', 'WordPress', 'Delivery'];
-    }
-
-    if (stars && !card.querySelector(':scope > .tech-stack')) {
-        stars.insertAdjacentElement('afterend', createTechStack(items));
-    }
-});
-
 // Full-page sci-fi circuitry field behind content.
 const siteHudCanvas = document.getElementById('siteHudCanvas');
 
-if (siteHudCanvas) {
+if (siteHudCanvas && !prefersReducedMotion && window.matchMedia('(min-width: 1100px) and (pointer: fine)').matches) {
     const siteContext = siteHudCanvas.getContext('2d', { alpha: true });
     const nodes = [];
     const beams = [];
@@ -487,7 +243,7 @@ if (siteHudCanvas) {
 // Hero sci-fi starfield and constellation animation
 const heroCanvas = document.getElementById('heroCanvas');
 
-if (heroCanvas) {
+if (heroCanvas && !prefersReducedMotion && window.matchMedia('(min-width: 1100px) and (pointer: fine)').matches) {
     const heroContext = heroCanvas.getContext('2d', { alpha: true });
     const heroParticles = [];
     let heroCompact = window.innerWidth < 768;
@@ -885,11 +641,13 @@ if (contactForm) {
                 }
             });
 
-            if (response.ok) {
+            const result = await response.json();
+            if (response.ok && result.ok === true) {
                 setFormStatus(isArabic ? 'شكراً لرسالتك! سأتواصل معك قريباً.' : 'Thank you for your message! I will get back to you soon.', 'success');
                 contactForm.reset();
+                window.dispatchEvent(new CustomEvent('portfolio:conversion', {detail: {name: 'contact_success'}}));
             } else {
-                setFormStatus(isArabic ? 'حدث خطأ ما. حاول مرة أخرى لاحقاً.' : 'Something went wrong. Please try again later.', 'error');
+                setFormStatus(isArabic ? 'حدث خطأ ما. حاول مرة أخرى لاحقاً.' : (response.status === 429 ? 'Please wait a few minutes before sending another message.' : 'Your message could not be sent. Please use the email or WhatsApp link above.'), 'error');
             }
         } catch (error) {
             setFormStatus(isArabic ? 'تعذّر إرسال الرسالة حالياً. حاول مرة أخرى لاحقاً.' : 'Unable to send the message right now. Please try again later.', 'error');
@@ -920,3 +678,20 @@ buttons.forEach(button => {
 });
 
 console.log('Portfolio website loaded successfully! 🚀');
+
+// Optional analytics adapter. No form values, contact details or free text are sent.
+const trackPortfolioEvent = (name) => {
+    if (navigator.doNotTrack === '1') return;
+    if (typeof window.plausible === 'function') window.plausible(name);
+    if (typeof window.gtag === 'function') window.gtag('event', name, {language: rootElement.lang});
+};
+document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+    if (link.href.endsWith('.pdf')) trackPortfolioEvent('cv_download');
+    else if (link.href.includes('wa.me/')) trackPortfolioEvent('whatsapp_click');
+    else if (link.pathname.includes('/projects/')) trackPortfolioEvent('case_study_open');
+});
+window.addEventListener('portfolio:conversion', (event) => {
+    if (event.detail?.name === 'contact_success') trackPortfolioEvent('contact_success');
+});

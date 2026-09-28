@@ -1,0 +1,6 @@
+beautifulsoup4==4.15.0
+fpdf2==2.8.8
+uharfbuzz==0.56.2
+pypdf==6.19.0
+pypdfium2==5.13.0
+Pillow==12.3.0

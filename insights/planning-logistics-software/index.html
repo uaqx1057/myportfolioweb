@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html data-theme="dark" dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Planning a Logistics Application Before Writing Code | Usman Asif Qureshi</title>
+<meta content="A practical checklist for defining a driver operations workflow, responsibilities, exceptions, and acceptance criteria before development." name="description"/>
+<meta content="Usman Asif Qureshi" name="author"/>
+<meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots"/>
+<link href="https://www.codewithusman.com/insights/planning-logistics-software/" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Planning a Logistics Application Before Writing Code | Usman Asif Qureshi" property="og:title"/>
+<meta content="A practical checklist for defining a driver operations workflow, responsibilities, exceptions, and acceptance criteria before development." property="og:description"/>
+<meta content="https://www.codewithusman.com/insights/planning-logistics-software/" property="og:url"/>
+<meta content="Code With Usman" property="og:site_name"/>
+<meta content="https://www.codewithusman.com/assets/images/social-card.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="Usman Asif Qureshi portrait" property="og:image:alt"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Planning a Logistics Application Before Writing Code | Usman Asif Qureshi" name="twitter:title"/>
+<meta content="A practical checklist for defining a driver operations workflow, responsibilities, exceptions, and acceptance criteria before development." name="twitter:description"/>
+<meta content="https://www.codewithusman.com/assets/images/social-card.png" name="twitter:image"/>
+<meta content="Usman Asif Qureshi portrait" name="twitter:image:alt"/>
+<meta content="#050a14" name="theme-color"/>
+<link href="/assets/images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/images/favicon.svg" rel="shortcut icon"/>
+<link href="/assets/images/profile-hero.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="//fonts.gstatic.com" rel="dns-prefetch"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+
+<link as="style" href="/style.min.css?v=013a710c8629" rel="preload"/>
+<link as="font" crossorigin="" href="/assets/fonts/fa-solid-subset.woff2" rel="preload" type="font/woff2"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Tajawal:wght@400;500;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="/style.min.css?v=013a710c8629" rel="stylesheet"/>
+<link href="/assets/fonts/icons.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://www.codewithusman.com/#website", "url": "https://www.codewithusman.com/", "name": "Code With Usman", "inLanguage": ["en", "ar"]}, {"@type": "Person", "@id": "https://www.codewithusman.com/#person", "name": "Usman Asif Qureshi", "url": "https://www.codewithusman.com/", "jobTitle": "Full-Stack Developer & Project Manager", "sameAs": ["https://www.linkedin.com/in/usmanasif1057/"], "image": "https://www.codewithusman.com/assets/images/profile-hero.webp", "address": {"@type": "PostalAddress", "addressLocality": "Al Khobar", "addressCountry": "SA"}}, {"@type": "Article", "@id": "https://www.codewithusman.com/insights/planning-logistics-software/#page", "url": "https://www.codewithusman.com/insights/planning-logistics-software/", "name": "Planning a Logistics Application Before Writing Code | Usman Asif Qureshi", "description": "A practical checklist for defining a driver operations workflow, responsibilities, exceptions, and acceptance criteria before development.", "inLanguage": "en", "isPartOf": {"@id": "https://www.codewithusman.com/#website"}, "headline": "Planning a Logistics Application Before Writing Code | Usman Asif Qureshi", "author": {"@id": "https://www.codewithusman.com/#person"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.codewithusman.com/"}, {"@type": "ListItem", "position": 2, "name": "Planning a Logistics Application Before Writing Code | Usman Asif Qureshi", "item": "https://www.codewithusman.com/insights/planning-logistics-software/"}]}]}</script>
+<link href="https://www.codewithusman.com/insights/planning-logistics-software/" hreflang="en" rel="alternate"/><link href="https://www.codewithusman.com/ar/insights/planning-logistics-software/" hreflang="ar" rel="alternate"/><link href="https://www.codewithusman.com/insights/planning-logistics-software/" hreflang="x-default" rel="alternate"/></head>
+<body class="">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav aria-label="Primary navigation" class="navbar">
+<div class="container">
+<div class="logo">
+<a class="logo-name" href="/" id="logoName">Code With Usman</a>
+</div>
+<ul class="nav-menu" id="primary-navigation"><li><a href="/#portfolio">Projects</a></li><li><a href="/#experience">Experience</a></li><li><a href="/services/">Services</a></li><li><a href="/about/">About</a></li><li><a href="/#contact">Contact</a></li></ul>
+<button aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation menu" class="hamburger" type="button">
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+</button>
+<div class="nav-actions">
+<a aria-label="التبديل إلى العربية" class="lang-toggle" href="/ar/insights/planning-logistics-software/" hreflang="ar" id="langToggle" lang="ar">العربية</a>
+<button aria-label="Switch to dark theme" class="theme-toggle" id="themeToggle" type="button">
+<i aria-hidden="true" class="fas fa-moon"></i>
+</button>
+</div>
+</div>
+</nav>
+<main class="detail-main" id="main-content" tabindex="-1"><nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><span>Planning a Logistics Application Before Writing Code</span></nav><h1>Planning a Logistics Application Before Writing Code</h1><p class="lead">A practical checklist for defining a driver operations workflow, responsibilities, exceptions, and acceptance criteria before development.</p><p class="eyebrow">By Usman Asif Qureshi · Practical notes</p><section><h2>Start with one complete workflow</h2><p>Choose a concrete task such as onboarding a driver. Write down its trigger, the people involved, the information required, and the condition that means it is complete. A screen list alone does not describe an operational process.</p></section><section><h2>Make exceptions explicit</h2><p>Ask what happens when information is missing, a request is rejected, or a completed record needs correction. Agree who can act at each step and what evidence must be retained. Resolve these questions with the operations team before turning them into software rules.</p></section><section><h2>Define acceptance in observable terms</h2><p>An acceptance criterion should describe an action and its expected result. For example: an authorized reviewer can return an incomplete request with a reason, and the person responsible can see that reason. This is more useful than a requirement such as ‘the dashboard should work well’.</p></section><section><h2>Plan the handover</h2><p>Agree who owns support, how issues are reported, how users learn the workflow, and what information is needed for future maintenance. Treat these as part of the delivery scope rather than tasks left until after launch.</p></section><div class="hero-buttons"><a class="btn btn-primary" href="/#contact">Discuss an opportunity</a><a class="btn btn-secondary" href="/resume/">View resume</a></div></main><footer class="footer">
+<div class="container">
+<div class="footer-bottom">
+<p>© 2026 Usman Asif Qureshi. All rights reserved.</p>
+<p class="footer-links"><a href="/about/">About</a><a href="/resume/">Resume</a><a href="/insights/">Technical notes</a><a href="/privacy/">Privacy</a></p></div>
+</div>
+</footer>
+<script defer="" src="/script.min.js?v=6467daa08866"></script>
+</body>
+</html>
