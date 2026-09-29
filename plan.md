@@ -90,5 +90,7 @@ git diff --check
 
 - 2026-09-29 (later): Removed all project card images and case-study diagrams at user request (user found them poor); redeployed commit 9a3920b. Do not re-add project screenshots/diagrams without asking.
 
+- 2026-09-29: Rewrote DOBS/DMS case studies from source repos (DOBS-mysql-updates, DMS-development); user confirmed both are solely their work (git shows ~156 DMS backend commits by another author; user chose 'Designed & built by me'). Deployed commit 2e8788c.
+
 ## Suggested next step
 Needs user: one real contact-form test message, manual interactive browser checks, rotate any tokens that were in the formerly public .mcp.json, delete unused ~/.ssh/id_rsa on server, push to GitHub (CI), Search Console sitemap submission + analytics.
