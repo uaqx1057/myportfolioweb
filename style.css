@@ -3397,3 +3397,4 @@ section.insights { padding: 90px 0; }
 @media (prefers-reduced-motion: reduce) {
     .hero-canvas, .site-hud-canvas { display: none; }
 }
+.contact-form .cf-turnstile { margin: 4px 0 14px; min-height: 65px; }

@@ -68,7 +68,7 @@ if (preg_match_all('~https?://|www\.|\[url~i', $name . ' ' . $subject . ' ' . $m
 // Optional Cloudflare Turnstile CAPTCHA, enabled when a secret is configured.
 if (!empty($config['turnstile_secret'])) {
     $answer = $_POST['cf-turnstile-response'] ?? '';
-    $context = stream_context_create(['http' => ['method' => 'POST', 'timeout' => 8,
+    $context = stream_context_create(['http' => ['method' => 'POST', 'timeout' => 8, 'ignore_errors' => true,
         'header' => 'Content-Type: application/x-www-form-urlencoded',
         'content' => http_build_query(['secret' => $config['turnstile_secret'], 'response' => $answer, 'remoteip' => $_SERVER['REMOTE_ADDR'] ?? ''])]]);
     $verdict = $answer === '' ? null : json_decode((string) @file_get_contents('https://challenges.cloudflare.com/turnstile/v0/siteverify', false, $context), true);
