@@ -21,7 +21,7 @@
       "bullets": [
         "Managed SpeedLogi technology projects from planning through delivery",
         "Developed and maintained internal systems as a full-stack developer",
-        "Built DOBS using Python/Flask and supported DMS modules with PHP/Laravel",
+        "Designed and built DOBS (Python/Flask) and the DMS platform (Laravel) with its Flutter Android driver app",
         "Coordinated teams, requirements, releases, and on-time delivery across web and mobile systems"
       ]
     },
@@ -77,13 +77,13 @@
   ],
   "projects": [
     {
-      "title": "DOBS: Driver Onboarding & Offboarding",
-      "description": "A public case study of my project management and Python/Flask development work on a driver onboarding and offboarding system at iLab / SpeedLogi.",
+      "title": "DOBS: Driver Onboarding & Offboarding System",
+      "description": "DOBS, a Python/Flask system I designed and developed end to end to run driver onboarding and offboarding across HR, fleet, finance and operations teams.",
       "url": "https://www.codewithusman.com/projects/driver-onboarding-system/"
     },
     {
-      "title": "DMS: Driver Management System",
-      "description": "My delivery management and PHP/Laravel development contribution to a driver management platform used in logistics operations at iLab / SpeedLogi.",
+      "title": "DMS: Driver Management System & Android Driver App",
+      "description": "DMS, a Laravel platform and Flutter Android driver app I designed and developed to run daily logistics operations, covering drivers, fleet, payroll, attendance and communication.",
       "url": "https://www.codewithusman.com/projects/driver-management-system/"
     },
     {

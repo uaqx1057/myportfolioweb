@@ -28,7 +28,7 @@ September 2025 - September 2026
 
 • Developed and maintained internal systems as a full-stack developer
 
-• Built DOBS using Python/Flask and supported DMS modules with PHP/Laravel
+• Designed and built DOBS (Python/Flask) and the DMS platform (Laravel) with its Flutter Android driver app
 
 • Coordinated teams, requirements, releases, and on-time delivery across web and mobile systems
 
@@ -92,15 +92,15 @@ Project Delivery: Agile, Team Coordination, Stakeholder Management, Sprint Plann
 
 Selected projects
 
-DOBS: Driver Onboarding & Offboarding
+DOBS: Driver Onboarding & Offboarding System
 
-A public case study of my project management and Python/Flask development work on a driver onboarding and offboarding system at iLab / SpeedLogi.
+DOBS, a Python/Flask system I designed and developed end to end to run driver onboarding and offboarding across HR, fleet, finance and operations teams.
 
 www.codewithusman.com/projects/driver-onboarding-system/
 
-DMS: Driver Management System
+DMS: Driver Management System & Android Driver App
 
-My delivery management and PHP/Laravel development contribution to a driver management platform used in logistics operations at iLab / SpeedLogi.
+DMS, a Laravel platform and Flutter Android driver app I designed and developed to run daily logistics operations, covering drivers, fleet, payroll, attendance and communication.
 
 www.codewithusman.com/projects/driver-management-system/
 

@@ -2,59 +2,349 @@
   {
     "path": "projects/driver-onboarding-system",
     "kind": "case",
-    "title": {"en": "DOBS: Driver Onboarding & Offboarding", "ar": "DOBS: نظام تسجيل وإيقاف السائقين"},
-    "description": {"en": "A public case study of my project management and Python/Flask development work on a driver onboarding and offboarding system at iLab / SpeedLogi.", "ar": "دراسة حالة عامة عن عملي في إدارة المشاريع والتطوير باستخدام Python/Flask لنظام تسجيل وإيقاف السائقين لدى iLab / SpeedLogi."},
+    "title": {
+      "en": "DOBS: Driver Onboarding & Offboarding System",
+      "ar": "DOBS: نظام تسجيل السائقين وإنهاء خدماتهم"
+    },
+    "description": {
+      "en": "DOBS, a Python/Flask system I designed and developed end to end to run driver onboarding and offboarding across HR, fleet, finance and operations teams.",
+      "ar": "DOBS، نظام بلغة Python/Flask صممته وطورته بالكامل لإدارة تسجيل السائقين وإنهاء خدماتهم عبر فرق الموارد البشرية والأسطول والمالية والعمليات."
+    },
     "sections": [
-      {"title": {"en": "The operational need", "ar": "الاحتياج التشغيلي"}, "text": {"en": "Driver onboarding and offboarding involve several people and repeated coordination. DOBS brought this work into one central workflow to reduce fragmented manual follow-up.", "ar": "تتطلب إجراءات تسجيل السائقين وإيقافهم مشاركة عدة أشخاص وتنسيقاً متكرراً. جمع نظام DOBS هذه الإجراءات ضمن تدفق مركزي لتقليل المتابعة اليدوية المتفرقة."}},
-      {"title": {"en": "My contribution", "ar": "مساهمتي"}, "text": {"en": "As Project Manager & Full-Stack Developer at iLab / SpeedLogi from September 2025 to September 2026, I managed technology delivery and developed the DOBS system using Python/Flask. My responsibilities included coordinating requirements, teams, releases, and delivery across web and mobile work.", "ar": "بصفتي مدير مشاريع ومطور فل ستاك لدى iLab / SpeedLogi من سبتمبر 2025 إلى سبتمبر 2026، توليت إدارة التسليم التقني وتطوير نظام DOBS باستخدام Python/Flask. شملت مسؤولياتي تنسيق المتطلبات والفرق والإصدارات والتسليم ضمن أعمال الويب والموبايل."}},
-      {"title": {"en": "Technology and scope", "ar": "التقنيات والنطاق"}, "text": {"en": "Python, Flask, and MySQL supported the onboarding/offboarding workflow. This was part of a wider logistics technology portfolio that also included DMS and Flutter-based driver application work.", "ar": "استُخدمت Python وFlask وMySQL لدعم إجراءات تسجيل السائقين وإيقافهم. وكان النظام جزءاً من مجموعة حلول لوجستية شملت أيضاً DMS والعمل على تطبيق للسائقين باستخدام Flutter."}},
-      {"title": {"en": "What this work demonstrates", "ar": "ما توضحه هذه الخبرة"}, "text": {"en": "The project combines operational requirements, hands-on development, and delivery coordination. I can discuss my role and general engineering approach in an interview without exposing company data or private system access.", "ar": "يجمع المشروع بين المتطلبات التشغيلية والتطوير العملي وتنسيق التسليم. يمكنني مناقشة دوري والمنهج الهندسي العام في مقابلة دون كشف بيانات الشركة أو منح وصول إلى أنظمتها الخاصة."}}
+      {
+        "title": {
+          "en": "The problem",
+          "ar": "المشكلة"
+        },
+        "text": {
+          "en": "Bringing a driver in, or taking one out, touches HR, fleet, finance and several operations roles. Each team kept its own checklist, so hand-offs were slow, steps were missed, and nobody had one view of where a driver stood.",
+          "ar": "يمر تسجيل السائق أو إنهاء خدمته على الموارد البشرية والأسطول والمالية وعدة أدوار تشغيلية. كان لكل فريق قائمة مهام خاصة به، فكان التسليم بين الفرق بطيئاً وتُنسى بعض الخطوات، ولم تكن هناك رؤية واحدة لحالة السائق."
+        }
+      },
+      {
+        "title": {
+          "en": "My role",
+          "ar": "دوري"
+        },
+        "text": {
+          "en": "I designed and developed DOBS end to end as its sole developer: requirements with each department, data model, backend, bilingual interface, deployment and ongoing releases.",
+          "ar": "صممت نظام DOBS وطورته بالكامل بصفتي المطور الوحيد له: جمع المتطلبات مع كل قسم، ونموذج البيانات، والواجهة الخلفية، والواجهة ثنائية اللغة، والنشر والإصدارات المستمرة."
+        }
+      },
+      {
+        "title": {
+          "en": "What I built",
+          "ar": "ما قمت ببنائه"
+        },
+        "items": {
+          "en": [
+            "Configurable onboarding: stage sequences are stored per driver type, with skip conditions, so a new driver type or changed process is an admin setting rather than a code change.",
+            "Multi-step offboarding with approvals across operations supervisor, operations manager, fleet and finance, including vehicle and inventory return checks.",
+            "Dedicated dashboards for admin, HR, fleet, finance, operations coordinators, supervisors and managers.",
+            "Role-based access control with fine-grained permissions, plus audited admin impersonation for support.",
+            "Contract and promissory-note templates that generate Arabic and English PDFs with correct right-to-left shaping.",
+            "Driver documents, bank accounts, and uniform/equipment issuance and handover records.",
+            "Single sign-on with DMS, and a shared MySQL database so a driver moves from onboarding into daily operations without re-entry.",
+            "Full Arabic RTL and English interfaces."
+          ],
+          "ar": [
+            "تسجيل قابل للإعداد: تُحفظ تسلسلات المراحل لكل نوع سائق مع شروط تخطٍّ، فيصبح إضافة نوع سائق جديد أو تغيير الإجراء إعداداً إدارياً وليس تعديلاً برمجياً.",
+            "إنهاء خدمة متعدد الخطوات مع موافقات من مشرف العمليات ومدير العمليات والأسطول والمالية، يشمل التحقق من إرجاع المركبة والعهد.",
+            "لوحات تحكم مخصصة للإدارة والموارد البشرية والأسطول والمالية ومنسقي العمليات ومشرفيها ومديريها.",
+            "تحكم في الوصول قائم على الأدوار بصلاحيات دقيقة، مع انتحال هوية إداري خاضع للتدقيق لأغراض الدعم.",
+            "قوالب عقود وسندات لأمر تُنتج ملفات PDF بالعربية والإنجليزية مع تشكيل صحيح للنص من اليمين إلى اليسار.",
+            "مستندات السائقين وحساباتهم البنكية وسجلات تسليم واستلام الزي والعهد.",
+            "تسجيل دخول موحد مع DMS وقاعدة بيانات MySQL مشتركة، لينتقل السائق من التسجيل إلى التشغيل اليومي دون إعادة إدخال البيانات.",
+            "واجهات كاملة بالعربية (من اليمين إلى اليسار) والإنجليزية."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "Technology",
+          "ar": "التقنيات"
+        },
+        "items": {
+          "en": [
+            "Python, Flask, SQLAlchemy, Alembic migrations, MySQL",
+            "Flask-Login, Flask-WTF, Flask-Limiter rate limiting, Redis caching and sessions",
+            "Flask-Babel for localization; ReportLab, arabic-reshaper and python-bidi for Arabic PDFs",
+            "pytest test suite; Gunicorn/Passenger deployment"
+          ],
+          "ar": [
+            "Python و Flask و SQLAlchemy وترحيلات Alembic و MySQL",
+            "Flask-Login و Flask-WTF وتحديد معدل الطلبات عبر Flask-Limiter والتخزين المؤقت والجلسات عبر Redis",
+            "Flask-Babel للترجمة، و ReportLab و arabic-reshaper و python-bidi لملفات PDF العربية",
+            "اختبارات pytest، والنشر عبر Gunicorn/Passenger"
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "Engineering decisions",
+          "ar": "قرارات هندسية"
+        },
+        "text": {
+          "en": "I moved stage sequencing from hard-coded logic to data-driven templates and rolled it out in shadow mode first: the new engine logged where it would have differed from the old code before it took over, so the change reached production without disrupting live onboarding.",
+          "ar": "نقلت تسلسل المراحل من منطق مكتوب في الشيفرة إلى قوالب قائمة على البيانات، وطبقته أولاً في وضع الظل: كان المحرك الجديد يسجل الحالات التي سيختلف فيها عن الشيفرة القديمة قبل أن يتولى العمل، فوصل التغيير إلى بيئة الإنتاج دون تعطيل عمليات التسجيل الجارية."
+        }
+      }
     ]
   },
   {
     "path": "projects/driver-management-system",
     "kind": "case",
-    "title": {"en": "DMS: Driver Management System", "ar": "DMS: نظام إدارة السائقين"},
-    "description": {"en": "My delivery management and PHP/Laravel development contribution to a driver management platform used in logistics operations at iLab / SpeedLogi.", "ar": "مساهمتي في إدارة التسليم والتطوير باستخدام PHP/Laravel لمنصة إدارة سائقين مستخدمة في العمليات اللوجستية لدى iLab / SpeedLogi."},
+    "title": {
+      "en": "DMS: Driver Management System & Android Driver App",
+      "ar": "DMS: نظام إدارة السائقين وتطبيق السائق على أندرويد"
+    },
+    "description": {
+      "en": "DMS, a Laravel platform and Flutter Android driver app I designed and developed to run daily logistics operations, covering drivers, fleet, payroll, attendance and communication.",
+      "ar": "DMS، منصة Laravel وتطبيق سائق على أندرويد بتقنية Flutter صممتهما وطورتهما لإدارة العمليات اللوجستية اليومية، من السائقين والأسطول إلى الرواتب والحضور والتواصل."
+    },
     "sections": [
-      {"title": {"en": "The operational context", "ar": "السياق التشغيلي"}, "text": {"en": "DMS is a driver management platform used in daily logistics operations. Its delivery required coordination between operational needs, application modules, and software releases.", "ar": "DMS منصة لإدارة السائقين مستخدمة في العمليات اللوجستية اليومية. تطلب تسليمها التنسيق بين الاحتياجات التشغيلية ووحدات التطبيق وإصدارات البرمجيات."}},
-      {"title": {"en": "My contribution", "ar": "مساهمتي"}, "text": {"en": "During my September 2025–September 2026 role at iLab / SpeedLogi, I managed delivery and supported development of DMS modules using PHP/Laravel. My portfolio distinguishes this contribution from claiming sole authorship of the complete platform.", "ar": "خلال عملي لدى iLab / SpeedLogi من سبتمبر 2025 إلى سبتمبر 2026، توليت إدارة التسليم ودعم تطوير وحدات DMS باستخدام PHP/Laravel. وتصف هذه الدراسة مساهمتي دون الادعاء بأنني طورت المنصة كاملة بمفردي."}},
-      {"title": {"en": "Technology and delivery", "ar": "التقنيات والتسليم"}, "text": {"en": "The platform uses Laravel and PHP for database-driven operational workflows. My responsibilities covered requirements, modules, releases, and communication across the delivery team.", "ar": "تعتمد المنصة على Laravel وPHP لتدفقات تشغيلية مرتبطة بقاعدة بيانات. شملت مسؤولياتي المتطلبات والوحدات والإصدارات والتواصل بين أعضاء فريق التسليم."}},
-      {"title": {"en": "Discussing the work", "ar": "مناقشة العمل"}, "text": {"en": "I can explain the scope of my contribution and how I approach coordinating software delivery. The original screens, internal data, and live application are not part of this public portfolio.", "ar": "يمكنني شرح نطاق مساهمتي ومنهجي في تنسيق تسليم البرمجيات. الشاشات الأصلية والبيانات الداخلية والتطبيق الفعلي ليست جزءاً من ملف الأعمال العام."}}
+      {
+        "title": {
+          "en": "The problem",
+          "ar": "المشكلة"
+        },
+        "text": {
+          "en": "A last-mile logistics operation runs a large driver workforce across several delivery platforms. Assignments, vehicles, attendance, performance-based pay, deductions and communication were spread across spreadsheets and messaging groups, which made payroll slow and errors hard to trace.",
+          "ar": "تدير عمليات التوصيل للميل الأخير عدداً كبيراً من السائقين عبر عدة منصات توصيل. كانت التكليفات والمركبات والحضور والرواتب المرتبطة بالأداء والخصومات والتواصل موزعة بين جداول البيانات ومجموعات المراسلة، مما جعل إعداد الرواتب بطيئاً وتتبع الأخطاء صعباً."
+        }
+      },
+      {
+        "title": {
+          "en": "My role",
+          "ar": "دوري"
+        },
+        "text": {
+          "en": "I designed and developed DMS: the Laravel web platform, its REST API, and the Flutter Android app drivers use every day. I owned architecture, database design, backend, admin interface, mobile app, server setup and releases.",
+          "ar": "صممت نظام DMS وطورته: منصة الويب بتقنية Laravel وواجهتها البرمجية REST وتطبيق أندرويد بتقنية Flutter الذي يستخدمه السائقون يومياً. توليت البنية المعمارية وتصميم قاعدة البيانات والواجهة الخلفية وواجهة الإدارة وتطبيق الموبايل وإعداد الخوادم والإصدارات."
+        }
+      },
+      {
+        "title": {
+          "en": "Web platform",
+          "ar": "منصة الويب"
+        },
+        "items": {
+          "en": [
+            "Drivers and HR: profiles, documents, contracts, bank accounts, accommodation and visa-transfer cases.",
+            "Fleet: vehicle assignment history, inspections with photo evidence, maintenance work orders and vendors, leasing contracts, odometer and damage tracking.",
+            "Payroll engine: configurable rule profiles, tiers and target scenarios per platform, payroll batches, salary slips with an audit trail, and deduction rules including accident deductions.",
+            "Operations: daily coordinator and supervisor report imports, revenue invoice reconciliation, fuel and recharge requests with approval flows, and finance requests.",
+            "Attendance and compliance: shifts, geofenced check-in, heartbeat monitoring, anomaly detection and uniform compliance checks.",
+            "Franchise management for vehicles, drivers and platform IDs.",
+            "Security: role and module permissions, plus a complete audit and access log with field-level change history and integrity checks."
+          ],
+          "ar": [
+            "السائقون والموارد البشرية: الملفات الشخصية والمستندات والعقود والحسابات البنكية والسكن وقضايا نقل الكفالة.",
+            "الأسطول: سجل تكليف المركبات والفحوصات مع أدلة مصورة وأوامر الصيانة والموردين وعقود التأجير وتتبع عداد المسافة والأضرار.",
+            "محرك الرواتب: ملفات قواعد قابلة للإعداد وشرائح وسيناريوهات أهداف لكل منصة، ودفعات رواتب، وقسائم رواتب مع سجل تدقيق، وقواعد خصم تشمل خصومات الحوادث.",
+            "العمليات: استيراد التقارير اليومية للمنسقين والمشرفين، ومطابقة فواتير الإيرادات، وطلبات الوقود وإعادة الشحن مع مسارات موافقة، والطلبات المالية.",
+            "الحضور والالتزام: المناوبات وتسجيل الحضور ضمن نطاق جغرافي ومراقبة النبض واكتشاف الحالات الشاذة والتحقق من الالتزام بالزي.",
+            "إدارة الامتيازات للمركبات والسائقين ومعرفات المنصات.",
+            "الأمان: صلاحيات حسب الدور والوحدة، وسجل تدقيق ووصول كامل مع تاريخ التغييرات على مستوى الحقول وفحوصات السلامة."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "Android driver app",
+          "ar": "تطبيق السائق على أندرويد"
+        },
+        "items": {
+          "en": [
+            "Secure login and driver profile, with Arabic and English interfaces.",
+            "Shift check-in with face verification and liveness (anti-spoofing) checks, served by a dedicated Python face-verification service.",
+            "Background location tracking through an Android foreground service, with server-side recovery rules.",
+            "Salary slips and payroll details, orders, and fuel and recharge requests.",
+            "In-app chat and voice calls (LiveKit, with native incoming-call screens), plus push notifications through Firebase Cloud Messaging.",
+            "Over-the-air updates with Shorebird and crash reporting with Firebase Crashlytics."
+          ],
+          "ar": [
+            "تسجيل دخول آمن وملف السائق، مع واجهات بالعربية والإنجليزية.",
+            "تسجيل حضور المناوبة مع التحقق من الوجه وفحص الحيوية (منع الانتحال)، عبر خدمة Python مخصصة للتحقق من الوجه.",
+            "تتبع الموقع في الخلفية عبر خدمة أندرويد أمامية، مع قواعد استعادة من جهة الخادم.",
+            "قسائم الرواتب وتفاصيلها، والطلبات، وطلبات الوقود وإعادة الشحن.",
+            "محادثة ومكالمات صوتية داخل التطبيق (LiveKit مع شاشات مكالمات واردة أصلية)، وإشعارات فورية عبر Firebase Cloud Messaging.",
+            "تحديثات عبر الهواء باستخدام Shorebird وتقارير الأعطال عبر Firebase Crashlytics."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "Technology",
+          "ar": "التقنيات"
+        },
+        "items": {
+          "en": [
+            "Laravel 11, Livewire 3, Laravel Sanctum API, MySQL, Redis",
+            "Flutter/Dart Android app: Firebase, LiveKit, geolocation, background services",
+            "Python FastAPI face-verification service with DeepFace, running in Docker",
+            "PDF generation (DomPDF, mPDF, FPDI), Pest and Dusk tests, scheduled jobs on a Linux VPS"
+          ],
+          "ar": [
+            "Laravel 11 و Livewire 3 وواجهة Laravel Sanctum البرمجية و MySQL و Redis",
+            "تطبيق أندرويد بتقنية Flutter/Dart: Firebase و LiveKit وتحديد الموقع والخدمات الخلفية",
+            "خدمة تحقق من الوجه بلغة Python و FastAPI مع DeepFace تعمل داخل Docker",
+            "إنشاء ملفات PDF (DomPDF و mPDF و FPDI)، واختبارات Pest و Dusk، ومهام مجدولة على خادم Linux افتراضي"
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "Scale",
+          "ar": "حجم النظام"
+        },
+        "text": {
+          "en": "Over 180 data models and 360 database migrations, more than 110 automated test files, and around 50 scheduled and console jobs, delivered in about 900 commits over one year.",
+          "ar": "أكثر من 180 نموذج بيانات و360 ترحيلاً لقاعدة البيانات، وأكثر من 110 ملفات اختبار آلي، ونحو 50 مهمة مجدولة وأمر تشغيل، أُنجزت في نحو 900 عملية إيداع خلال عام واحد."
+        }
+      }
     ]
   },
   {
     "path": "projects/business-websites",
     "kind": "case",
-    "title": {"en": "Business Websites: Delivery, Performance & SEO", "ar": "مواقع الأعمال: التنفيذ والأداء وتحسين البحث"},
-    "description": {"en": "An overview of my WordPress and business website work, including iLab, SpeedLogi, and team leadership at The MK Solution.", "ar": "نظرة على أعمالي في WordPress ومواقع الشركات، بما فيها iLab وSpeedLogi وقيادة الفريق لدى The MK Solution."},
+    "title": {
+      "en": "Business Websites: Delivery, Performance & SEO",
+      "ar": "مواقع الأعمال: التنفيذ والأداء وتحسين البحث"
+    },
+    "description": {
+      "en": "An overview of my WordPress and business website work, including iLab, SpeedLogi, and team leadership at The MK Solution.",
+      "ar": "نظرة على أعمالي في WordPress ومواقع الشركات، بما فيها iLab وSpeedLogi وقيادة الفريق لدى The MK Solution."
+    },
     "sections": [
-      {"title": {"en": "Work and responsibilities", "ar": "الأعمال والمسؤوليات"}, "text": {"en": "My portfolio includes corporate website work for iLab and improvements to SpeedLogi’s website. At The MK Solution, I managed a 10-person cross-functional team and led WordPress builds using Elementor.", "ar": "يشمل ملف أعمالي العمل على موقع iLab وتحسينات لموقع SpeedLogi. ولدى The MK Solution، أدرت فريقاً متعدد التخصصات من 10 أفراد وقدت تطوير مواقع WordPress باستخدام Elementor."}},
-      {"title": {"en": "Areas of focus", "ar": "مجالات التركيز"}, "text": {"en": "The work focused on service presentation, responsive design, site performance, SEO structure, and maintainability. These responsibilities connected business content with implementation and delivery standards.", "ar": "ركز العمل على عرض الخدمات والتصميم المتجاوب وأداء الموقع وبنية تحسين محركات البحث وقابلية الصيانة. وربطت هذه المسؤوليات محتوى الأعمال بالتنفيذ ومعايير التسليم."}},
-      {"title": {"en": "How I approach a website project", "ar": "منهجي في مشاريع المواقع"}, "text": {"en": "I start with the audience and the action the page should support, agree on scope and content, then build and test the website. Before handover, I review mobile navigation, forms, page titles, image delivery, and ownership of ongoing maintenance.", "ar": "أبدأ بتحديد الجمهور والإجراء المطلوب من الصفحة، ثم أتفق على النطاق والمحتوى وأطور الموقع وأختبره. وقبل التسليم، أراجع تنقل الموبايل والنماذج وعناوين الصفحات والصور ومسؤولية الصيانة المستمرة."}}
+      {
+        "title": {
+          "en": "Work and responsibilities",
+          "ar": "الأعمال والمسؤوليات"
+        },
+        "text": {
+          "en": "My portfolio includes corporate website work for iLab and improvements to SpeedLogi’s website. At The MK Solution, I managed a 10-person cross-functional team and led WordPress builds using Elementor.",
+          "ar": "يشمل ملف أعمالي العمل على موقع iLab وتحسينات لموقع SpeedLogi. ولدى The MK Solution، أدرت فريقاً متعدد التخصصات من 10 أفراد وقدت تطوير مواقع WordPress باستخدام Elementor."
+        }
+      },
+      {
+        "title": {
+          "en": "Areas of focus",
+          "ar": "مجالات التركيز"
+        },
+        "text": {
+          "en": "The work focused on service presentation, responsive design, site performance, SEO structure, and maintainability. These responsibilities connected business content with implementation and delivery standards.",
+          "ar": "ركز العمل على عرض الخدمات والتصميم المتجاوب وأداء الموقع وبنية تحسين محركات البحث وقابلية الصيانة. وربطت هذه المسؤوليات محتوى الأعمال بالتنفيذ ومعايير التسليم."
+        }
+      },
+      {
+        "title": {
+          "en": "How I approach a website project",
+          "ar": "منهجي في مشاريع المواقع"
+        },
+        "text": {
+          "en": "I start with the audience and the action the page should support, agree on scope and content, then build and test the website. Before handover, I review mobile navigation, forms, page titles, image delivery, and ownership of ongoing maintenance.",
+          "ar": "أبدأ بتحديد الجمهور والإجراء المطلوب من الصفحة، ثم أتفق على النطاق والمحتوى وأطور الموقع وأختبره. وقبل التسليم، أراجع تنقل الموبايل والنماذج وعناوين الصفحات والصور ومسؤولية الصيانة المستمرة."
+        }
+      }
     ]
   },
   {
     "path": "insights/planning-logistics-software",
     "kind": "article",
-    "title": {"en": "Planning a Logistics Application Before Writing Code", "ar": "تخطيط تطبيق لوجستي قبل كتابة الكود"},
-    "description": {"en": "A practical checklist for defining a driver operations workflow, responsibilities, exceptions, and acceptance criteria before development.", "ar": "قائمة عملية لتحديد إجراءات تشغيل السائقين والمسؤوليات والاستثناءات ومعايير القبول قبل التطوير."},
+    "title": {
+      "en": "Planning a Logistics Application Before Writing Code",
+      "ar": "تخطيط تطبيق لوجستي قبل كتابة الكود"
+    },
+    "description": {
+      "en": "A practical checklist for defining a driver operations workflow, responsibilities, exceptions, and acceptance criteria before development.",
+      "ar": "قائمة عملية لتحديد إجراءات تشغيل السائقين والمسؤوليات والاستثناءات ومعايير القبول قبل التطوير."
+    },
     "sections": [
-      {"title": {"en": "Start with one complete workflow", "ar": "ابدأ بإجراء متكامل واحد"}, "text": {"en": "Choose a concrete task such as onboarding a driver. Write down its trigger, the people involved, the information required, and the condition that means it is complete. A screen list alone does not describe an operational process.", "ar": "اختر مهمة محددة مثل تسجيل سائق. دوّن ما يبدأها والأشخاص المشاركين والمعلومات المطلوبة والشرط الذي يعني اكتمالها. قائمة الشاشات وحدها لا تصف إجراءً تشغيلياً."}},
-      {"title": {"en": "Make exceptions explicit", "ar": "وضّح الاستثناءات"}, "text": {"en": "Ask what happens when information is missing, a request is rejected, or a completed record needs correction. Agree who can act at each step and what evidence must be retained. Resolve these questions with the operations team before turning them into software rules.", "ar": "اسأل عما يحدث عند نقص المعلومات أو رفض الطلب أو الحاجة إلى تصحيح سجل مكتمل. اتفق على صاحب الصلاحية في كل خطوة والأدلة التي يجب الاحتفاظ بها. احسم هذه الأسئلة مع فريق العمليات قبل تحويلها إلى قواعد برمجية."}},
-      {"title": {"en": "Define acceptance in observable terms", "ar": "عرّف القبول بمعايير قابلة للملاحظة"}, "text": {"en": "An acceptance criterion should describe an action and its expected result. For example: an authorized reviewer can return an incomplete request with a reason, and the person responsible can see that reason. This is more useful than a requirement such as ‘the dashboard should work well’.", "ar": "ينبغي أن يصف معيار القبول إجراءً ونتيجته المتوقعة. مثال: يستطيع المراجع المخول إعادة طلب ناقص مع توضيح السبب، ويستطيع الشخص المسؤول رؤية السبب. وهذا أدق من متطلب مثل «يجب أن تعمل لوحة التحكم جيداً»."}},
-      {"title": {"en": "Plan the handover", "ar": "خطط للتسليم"}, "text": {"en": "Agree who owns support, how issues are reported, how users learn the workflow, and what information is needed for future maintenance. Treat these as part of the delivery scope rather than tasks left until after launch.", "ar": "اتفق على مسؤولية الدعم وطريقة الإبلاغ عن المشكلات وتدريب المستخدمين والمعلومات اللازمة للصيانة المستقبلية. اجعل ذلك جزءاً من نطاق التسليم بدلاً من تأجيله إلى ما بعد الإطلاق."}}
+      {
+        "title": {
+          "en": "Start with one complete workflow",
+          "ar": "ابدأ بإجراء متكامل واحد"
+        },
+        "text": {
+          "en": "Choose a concrete task such as onboarding a driver. Write down its trigger, the people involved, the information required, and the condition that means it is complete. A screen list alone does not describe an operational process.",
+          "ar": "اختر مهمة محددة مثل تسجيل سائق. دوّن ما يبدأها والأشخاص المشاركين والمعلومات المطلوبة والشرط الذي يعني اكتمالها. قائمة الشاشات وحدها لا تصف إجراءً تشغيلياً."
+        }
+      },
+      {
+        "title": {
+          "en": "Make exceptions explicit",
+          "ar": "وضّح الاستثناءات"
+        },
+        "text": {
+          "en": "Ask what happens when information is missing, a request is rejected, or a completed record needs correction. Agree who can act at each step and what evidence must be retained. Resolve these questions with the operations team before turning them into software rules.",
+          "ar": "اسأل عما يحدث عند نقص المعلومات أو رفض الطلب أو الحاجة إلى تصحيح سجل مكتمل. اتفق على صاحب الصلاحية في كل خطوة والأدلة التي يجب الاحتفاظ بها. احسم هذه الأسئلة مع فريق العمليات قبل تحويلها إلى قواعد برمجية."
+        }
+      },
+      {
+        "title": {
+          "en": "Define acceptance in observable terms",
+          "ar": "عرّف القبول بمعايير قابلة للملاحظة"
+        },
+        "text": {
+          "en": "An acceptance criterion should describe an action and its expected result. For example: an authorized reviewer can return an incomplete request with a reason, and the person responsible can see that reason. This is more useful than a requirement such as ‘the dashboard should work well’.",
+          "ar": "ينبغي أن يصف معيار القبول إجراءً ونتيجته المتوقعة. مثال: يستطيع المراجع المخول إعادة طلب ناقص مع توضيح السبب، ويستطيع الشخص المسؤول رؤية السبب. وهذا أدق من متطلب مثل «يجب أن تعمل لوحة التحكم جيداً»."
+        }
+      },
+      {
+        "title": {
+          "en": "Plan the handover",
+          "ar": "خطط للتسليم"
+        },
+        "text": {
+          "en": "Agree who owns support, how issues are reported, how users learn the workflow, and what information is needed for future maintenance. Treat these as part of the delivery scope rather than tasks left until after launch.",
+          "ar": "اتفق على مسؤولية الدعم وطريقة الإبلاغ عن المشكلات وتدريب المستخدمين والمعلومات اللازمة للصيانة المستقبلية. اجعل ذلك جزءاً من نطاق التسليم بدلاً من تأجيله إلى ما بعد الإطلاق."
+        }
+      }
     ]
   },
   {
     "path": "insights/website-handover-checklist",
     "kind": "article",
-    "title": {"en": "A Practical Website Handover Checklist", "ar": "قائمة عملية لتسليم موقع إلكتروني"},
-    "description": {"en": "What to check before handing over a business website: content, mobile usability, contact routes, search basics, and maintenance ownership.", "ar": "ما ينبغي مراجعته قبل تسليم موقع أعمال: المحتوى وتجربة الموبايل والتواصل وأساسيات البحث ومسؤولية الصيانة."},
+    "title": {
+      "en": "A Practical Website Handover Checklist",
+      "ar": "قائمة عملية لتسليم موقع إلكتروني"
+    },
+    "description": {
+      "en": "What to check before handing over a business website: content, mobile usability, contact routes, search basics, and maintenance ownership.",
+      "ar": "ما ينبغي مراجعته قبل تسليم موقع أعمال: المحتوى وتجربة الموبايل والتواصل وأساسيات البحث ومسؤولية الصيانة."
+    },
     "sections": [
-      {"title": {"en": "Content and ownership", "ar": "المحتوى والملكية"}, "text": {"en": "Confirm names, dates, services, contact details, and image permissions. Document who owns the domain, hosting, repository, and business accounts. Transfer access through the service’s access controls, not through passwords written in project documents.", "ar": "تحقق من الأسماء والتواريخ والخدمات وبيانات التواصل وحقوق الصور. وثّق مالك النطاق والاستضافة والمستودع وحسابات الأعمال. انقل الصلاحيات عبر أدوات الخدمة، وليس بكتابة كلمات المرور في مستندات المشروع."}},
-      {"title": {"en": "Mobile and contact journeys", "ar": "الموبايل ومسارات التواصل"}, "text": {"en": "Check the main pages on a narrow screen and navigate them with a keyboard. Verify that important actions are easy to find. Test the contact form with an agreed test recipient, including its success and failure messages, and confirm actual receipt rather than relying only on a success screen.", "ar": "راجع الصفحات الرئيسية على شاشة ضيقة وتنقل باستخدام لوحة المفاتيح. تأكد من سهولة العثور على الإجراءات المهمة. اختبر نموذج التواصل مع مستلم متفق عليه، بما يشمل رسائل النجاح والفشل، وتحقق من وصول الرسالة فعلياً بدلاً من الاكتفاء بشاشة النجاح."}},
-      {"title": {"en": "Search and maintenance", "ar": "البحث والصيانة"}, "text": {"en": "Review page titles, canonical URLs, language alternatives, the sitemap, and unwanted indexing restrictions. Agree how content updates, backups, security updates, and delivery failures will be handled. Record a short release checklist that can be repeated after every significant change.", "ar": "راجع عناوين الصفحات والروابط الأساسية وبدائل اللغات وخريطة الموقع وأي قيود فهرسة غير مقصودة. اتفق على إدارة تحديثات المحتوى والنسخ الاحتياطي والتحديثات الأمنية وفشل التسليم. وثّق قائمة إصدار قصيرة تُكرر بعد كل تغيير مهم."}}
+      {
+        "title": {
+          "en": "Content and ownership",
+          "ar": "المحتوى والملكية"
+        },
+        "text": {
+          "en": "Confirm names, dates, services, contact details, and image permissions. Document who owns the domain, hosting, repository, and business accounts. Transfer access through the service’s access controls, not through passwords written in project documents.",
+          "ar": "تحقق من الأسماء والتواريخ والخدمات وبيانات التواصل وحقوق الصور. وثّق مالك النطاق والاستضافة والمستودع وحسابات الأعمال. انقل الصلاحيات عبر أدوات الخدمة، وليس بكتابة كلمات المرور في مستندات المشروع."
+        }
+      },
+      {
+        "title": {
+          "en": "Mobile and contact journeys",
+          "ar": "الموبايل ومسارات التواصل"
+        },
+        "text": {
+          "en": "Check the main pages on a narrow screen and navigate them with a keyboard. Verify that important actions are easy to find. Test the contact form with an agreed test recipient, including its success and failure messages, and confirm actual receipt rather than relying only on a success screen.",
+          "ar": "راجع الصفحات الرئيسية على شاشة ضيقة وتنقل باستخدام لوحة المفاتيح. تأكد من سهولة العثور على الإجراءات المهمة. اختبر نموذج التواصل مع مستلم متفق عليه، بما يشمل رسائل النجاح والفشل، وتحقق من وصول الرسالة فعلياً بدلاً من الاكتفاء بشاشة النجاح."
+        }
+      },
+      {
+        "title": {
+          "en": "Search and maintenance",
+          "ar": "البحث والصيانة"
+        },
+        "text": {
+          "en": "Review page titles, canonical URLs, language alternatives, the sitemap, and unwanted indexing restrictions. Agree how content updates, backups, security updates, and delivery failures will be handled. Record a short release checklist that can be repeated after every significant change.",
+          "ar": "راجع عناوين الصفحات والروابط الأساسية وبدائل اللغات وخريطة الموقع وأي قيود فهرسة غير مقصودة. اتفق على إدارة تحديثات المحتوى والنسخ الاحتياطي والتحديثات الأمنية وفشل التسليم. وثّق قائمة إصدار قصيرة تُكرر بعد كل تغيير مهم."
+        }
+      }
     ]
   }
 ]

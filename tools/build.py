@@ -149,12 +149,13 @@ def main():
         save(home,'',lang)
         for page in PAGES:
             body=''
-            if page.get('image'):
-                body=f'<img class="case-art" src="/assets/images/{page["image"]}" width="640" height="360" alt="{("رسم توضيحي عام وليس شاشة أصلية للنظام" if ar else "Conceptual workflow diagram, not an original system screen")}">'
             if page['kind']=='case' and 'business-websites' not in page['path']:
-                body+='<p class="notice">'+('هذا عرض عام للمساهمة المهنية. الشاشات الأصلية والبيانات والوصول المباشر إلى النظام غير متاحة هنا.' if ar else 'This is a public overview of my contribution. Original screens, operational data, and live system access are not shared here.')+'</p>'
+                body+='<p class="notice">'+('هذه نظرة عامة على النظام. الشاشات الأصلية والبيانات والوصول المباشر إلى النظام غير متاحة هنا.' if ar else 'This is a public overview of the system. Original screens, operational data, and live system access are not shared here.')+'</p>'
             if page['kind']=='article':body+='<p class="eyebrow">'+('بقلم عثمان آصف قريشي · ملاحظات عملية' if ar else 'By Usman Asif Qureshi · Practical notes')+'</p>'
-            for item in page['sections']:body+=section(item['title'][lang],'<p>'+escape(item['text'][lang])+'</p>')
+            for item in page['sections']:
+                content=''.join('<p>'+escape(t)+'</p>' for t in ([item['text'][lang]] if 'text' in item else []))
+                if 'items' in item:content+='<ul class="case-list">'+''.join('<li>'+escape(t)+'</li>' for t in item['items'][lang])+'</ul>'
+                body+=section(item['title'][lang],content)
             body+='<div class="hero-buttons"><a class="btn btn-primary" href="'+path_for('',lang)+'#contact">'+('ناقش فرصة عمل' if ar else 'Discuss an opportunity')+'</a><a class="btn btn-secondary" href="'+path_for('resume',lang)+'">'+('عرض السيرة الذاتية' if ar else 'View resume')+'</a></div>'
             shell(page['path'],lang,page['title'][lang],page['description'][lang],body,'Article' if page['kind']=='article' else 'WebPage')
         shell('projects',lang,'المشاريع' if ar else 'Selected Projects','دراسات حالة توضح نطاق مساهمتي وتقنيات العمل.' if ar else 'Case studies describing my contribution, technology, and delivery scope.',cards(PAGES[:3],lang))

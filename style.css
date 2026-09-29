@@ -3308,7 +3308,9 @@ html[data-theme="light"] { --text-secondary: #374967; }
 .detail-main ul { padding-inline-start: 24px; }
 .detail-main a:not(.btn) { color: var(--primary-color); text-underline-offset: 4px; }
 .detail-main section { padding: 0; content-visibility: visible; margin: 28px 0; }
-.detail-main .case-art { width: 100%; height: auto; border-radius: 20px; margin: 28px 0 8px; border: 1px solid var(--hud-line); }
+.detail-main .case-list { list-style: none; padding: 0; display: grid; gap: 10px; }
+.detail-main .case-list li { position: relative; padding: 12px 16px; padding-inline-start: 34px; border: 1px solid var(--hud-line); border-radius: 12px; background: rgba(0, 229, 255, .03); }
+.detail-main .case-list li::before { content: ""; position: absolute; inset-inline-start: 15px; top: 24px; width: 7px; height: 7px; border-radius: 50%; background: var(--primary-color); }
 .detail-main .eyebrow { color: var(--primary-color); font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; }
 .detail-main .notice { padding: 18px 22px; border-inline-start: 3px solid var(--primary-color); background: var(--light-bg); border-radius: 8px; }
 .detail-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 18px; margin: 24px 0; }

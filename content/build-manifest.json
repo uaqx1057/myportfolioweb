@@ -1,98 +1,98 @@
 {
   "/": {
-    "hash": "4c89d2e9fe9be00275f53738c5ed5e31439161268d2ac42a2fafb6c96a65dbb8",
+    "hash": "188b12c96e52dbe1bc65f13bb099c41863ccc94a3a65207b4ca602ff1b30f41c",
     "modified": "2026-09-29"
   },
   "/projects/driver-onboarding-system/": {
-    "hash": "6a115804b7662e5926946018ba5fb8c037f1ec20ee700d7e07a6efa7a6aef5b3",
+    "hash": "a349b11eb162c7b0892f4651b78dabe696df11ef85d072dcdd3ef58c686405c2",
     "modified": "2026-09-29"
   },
   "/projects/driver-management-system/": {
-    "hash": "b943cafb22f14ccae012b7eebdc6d01287703a8153f5d5503f28f8c88e52d352",
+    "hash": "7789504e4bbd80d38fb910e02a996743fc09f5c0fcd8a2ecf21c28d760d80068",
     "modified": "2026-09-29"
   },
   "/projects/business-websites/": {
-    "hash": "396ded0f4c27e4104a44c1a8d825cbbfb6a7a06b61583f8ed2487f80ddc9ebcd",
+    "hash": "83932d3e17998650e3a5616851790998f02d78baa594ce88e333585bbfba36c0",
     "modified": "2026-09-29"
   },
   "/insights/planning-logistics-software/": {
-    "hash": "480ca859d7c581704b5084cee9b42df389d3c0bbbb2eb584c872c7993e938102",
+    "hash": "f87f6b2cda5f7a4127a499046656c609685ad1dd3652d52014cf814b00b5cf55",
     "modified": "2026-09-29"
   },
   "/insights/website-handover-checklist/": {
-    "hash": "3ab6f19b1c413977b33b8cd9e5bf4102306ec7b4d8783f0ca58b12037609f3a8",
+    "hash": "65db9ec0c02c5dc73e96cf0d6469796abf94e7457600f37ead1c944e8817bb29",
     "modified": "2026-09-29"
   },
   "/projects/": {
-    "hash": "6972c393233d9385cf129f8fc565679f639f7704ca0d5e7e7836105c1d4c8c91",
+    "hash": "21ef88ea3f793b29b16ebc3843025123ed39e8fe50bc43b8524f30fbaf3384d4",
     "modified": "2026-09-29"
   },
   "/insights/": {
-    "hash": "7adc15c16c20105a8106bf2e6982a7c7a5d69cfd0ac131a74ebdc7dcd5d7f0bd",
+    "hash": "7cda093ecf1a9a8be0b24809ce8781ae09ab2840184cccd0f74d99521ee24c9f",
     "modified": "2026-09-29"
   },
   "/about/": {
-    "hash": "4b414b25ec3be32a7334ea7fe209348132af1fa6fa5680ec729cc82f6f00f8f2",
+    "hash": "2fc42c0e4726a0fed7ed1d23f59159daaa687bbce167624ebed8fd0f942056a0",
     "modified": "2026-09-29"
   },
   "/services/": {
-    "hash": "927195ca712a398a26afdf6d11f0abd1e9366dd52a4e604b7d782d7233dc3ce0",
+    "hash": "2673a4146b63cbb055df82eff284b6278bad8a0e1f2b462ed653825240b3cc02",
     "modified": "2026-09-29"
   },
   "/privacy/": {
-    "hash": "47ee2bf1b1b915cd0ae2786baeedbf5ccbfee068d65e6950959b1660fe588b2b",
+    "hash": "1b5d03e80d34c5328739f402678bf7618b9ea82b18a11aa858fbae73e56c6413",
     "modified": "2026-09-29"
   },
   "/resume/": {
-    "hash": "fbcb52d723076cb58ddc8cb4faa8c6d9623ca8113a55b0a7a8dc33f972a607a2",
+    "hash": "d84a374fa3b7938a04992c4f5fb3fdb9779bff99790d14691291ae74eb7b0dfe",
     "modified": "2026-09-29"
   },
   "/ar/": {
-    "hash": "13b5e01472fcd19705b334563009035bc1c29c60be5dae6333e13983997f0810",
+    "hash": "3f8e39833fc69cf01f02530f8d403ad1352c4f3ca9a58c0559047e5c8d6ee776",
     "modified": "2026-09-29"
   },
   "/ar/projects/driver-onboarding-system/": {
-    "hash": "c2b3c41c58356c74d02ef983c399a438746c92b792d50723fec7f63c24bc3218",
+    "hash": "8aa64a6615a55643f2c474d0894b90ba9e685b6915088ce21f662f983a39bbe7",
     "modified": "2026-09-29"
   },
   "/ar/projects/driver-management-system/": {
-    "hash": "241aa61237d90a564a26fe28fce1348086edabc4cd1a3943af173166775eacbd",
+    "hash": "750ad81ffc4565b8409a79ababaca77c7d3067eba093445d679e32d965f72cbc",
     "modified": "2026-09-29"
   },
   "/ar/projects/business-websites/": {
-    "hash": "ed96761fa4e4373b1ec2c14ab6242ef55c7bc6d662f955a4c34c4a770d5da79f",
+    "hash": "694c2e5e9a5fbc4e459bfa0149af66892629268f9adb6293e78c1bc5ed2ccfb3",
     "modified": "2026-09-29"
   },
   "/ar/insights/planning-logistics-software/": {
-    "hash": "e17663e0595e14769e80d3b88e48c2d2a18af75c21a1ac91dbf8e374c13d614c",
+    "hash": "54696bcdcc544bf2595b84f849ca84d0c1fc55b15c0e830272cf9356852f9d7c",
     "modified": "2026-09-29"
   },
   "/ar/insights/website-handover-checklist/": {
-    "hash": "9d724bebc1833d36a30b1625b507f1488707a47a9df003fb0939eaf70c91d653",
+    "hash": "a18aced7ebe654662abb7d64b6d3983f8fa51da9528dbf3e8ca6a8dd7a7018d9",
     "modified": "2026-09-29"
   },
   "/ar/projects/": {
-    "hash": "f06976d30c4d1e54e618b763667c7c005ba1040821597897e8466a0cc02c0933",
+    "hash": "3ed78ce40c563bfffadb22166b86c24cebdef0c39392e42160e7bd0048452cf9",
     "modified": "2026-09-29"
   },
   "/ar/insights/": {
-    "hash": "35a6658b5f1752d8bcaace5b0a64e42b88cee1088d7a9d87be47a1441bbfd134",
+    "hash": "4df054cb7aba4152e463de2e56e8e115e2e78112d27f3721918cd3508a84cfcf",
     "modified": "2026-09-29"
   },
   "/ar/about/": {
-    "hash": "dc626f6c6b9d34a644c017fe2f0a75ec7e4694d05a2b156406bfb4399209026d",
+    "hash": "f70ae7b3f72825911441c2e345fb889985c1294f3da3ec31dd3996ed1841bf90",
     "modified": "2026-09-29"
   },
   "/ar/services/": {
-    "hash": "91611cdbc825674a44bcf3e41746ef6a230fdd0c97e26ecb9584860a53489927",
+    "hash": "f66943f954928a3cf63d98263fe495f8042cec5040a7ebf46facc59cc19b5149",
     "modified": "2026-09-29"
   },
   "/ar/privacy/": {
-    "hash": "e1880066d14d101605fd72c296228d5fdbb8cc046d5646db27d426972da00258",
+    "hash": "3a1240358c9a7725d18bc8454156158f6093fd485ebeb420f55197c65fba90b0",
     "modified": "2026-09-29"
   },
   "/ar/resume/": {
-    "hash": "97f740c34b18af9571f47227a21db383fd715cfeffeb850e4707d5af80ebf609",
+    "hash": "5e7422f6f8404db97a8f1bc753b324e472b3aecb5bde6687c07b878df249bc99",
     "modified": "2026-09-29"
   }
 }
