@@ -7,3 +7,4 @@ __pycache__/
 contact-config.php
 .env
 build/
+client_secret*.json

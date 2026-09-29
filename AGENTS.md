@@ -30,3 +30,4 @@ Rules:
 - `tools/package.py` builds `build/public_html.zip` from an allowlist. Private SMTP config lives at `~/.config/codewithusman/mail.php` (outside repo/public_html); never read, print, or commit it.
 - Tests need PHP on PATH (`C:\xampp\php` locally). graphify is not installed on this machine, so `graphify query/update` fail.
 - DMS/DOBS: no real screenshots, live links or private data — conceptual diagrams only.
+- Search Console: `.venv/Scripts/python tools/gsc.py login|sites|submit|inspect|performance <site>`; OAuth desktop client at ~/.config/gsc-client.json, token ~/.config/gsc-token.json (Testing mode tokens expire after 7 days; rerun login). Service-account keys are blocked by the Google Cloud org policy.

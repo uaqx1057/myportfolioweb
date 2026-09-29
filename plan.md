@@ -61,7 +61,8 @@ Done and verified:
 Still open (needs the user):
 - [ ] One real contact-form message to confirm delivery to usmanasif26261@gmail.com.
 - [ ] Rotate any tokens that were in the formerly public .mcp.json; delete unused ~/.ssh/id_rsa on the server (cPanel).
-- [ ] Google Search Console: verify property and submit https://www.codewithusman.com/sitemap.xml.
+- [x] Search Console connected via OAuth (tools/gsc.py; client+token in ~/.config/gsc-*.json, never in repo). Property https://www.codewithusman.com/ (owner). Sitemap resubmitted 2026-09-29: 24 URLs, 0 errors. Inspection: homepage indexed (last crawl 2026-09-05, old version); other 23 discovered/unknown, not yet crawled.
+- [ ] User: manually "Request indexing" for priority URLs in Search Console (API cannot); re-run `python tools/gsc.py inspect https://www.codewithusman.com/` in ~1 week.
 - [ ] Optional: GA4 cookie-consent banner if targeting EU visitors (not implemented).
 
 ## Known issues / notes
