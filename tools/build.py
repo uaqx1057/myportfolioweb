@@ -107,6 +107,9 @@ def setup_head(soup, path, lang, title, description, kind='WebPage', crumbs=None
     toggle['href']=path_for(path,other);toggle['hreflang']=other;toggle['lang']=other
     toggle['aria-label']='Switch to English' if lang=='ar' else 'التبديل إلى العربية'
     toggle.string='English' if lang=='ar' else 'العربية'
+    footer_lang=soup.select_one('#footerLang')
+    if footer_lang:
+        footer_lang['href']=path_for(path,other);footer_lang['hreflang']=other;footer_lang['lang']=other
     person={'@type':'Person','@id':BASE+'/#person','name':'Usman Asif Qureshi','alternateName':'عثمان آصف قريشي','url':BASE+'/','email':'mailto:info@codewithusman.com',
             'jobTitle':'Full-Stack Developer & Project Manager','description':'Full-stack developer and project manager in Al Khobar, Saudi Arabia, building logistics platforms and web/mobile applications.',
             'knowsAbout':['Laravel','PHP','Livewire','Python','Flask','Flutter','Android','MySQL','WordPress','REST APIs','Project management','Logistics software'],
@@ -172,7 +175,15 @@ def section(title,body):
     return '<section><h2>'+escape(title)+'</h2>'+body+'</section>'
 
 def cards(pages,lang):
-    return '<div class="detail-cards">'+''.join(f'<article class="detail-card"><h2><a href="{path_for(p["path"],lang)}">{escape(p["title"][lang])}</a></h2><p>{escape(p["description"][lang])}</p></article>' for p in pages)+'</div>'
+    ar=lang=='ar'
+    kinds={'case':'دراسة حالة' if ar else 'Case study','article':'ملاحظة تقنية' if ar else 'Technical note'}
+    more='اقرأ المزيد' if ar else 'Read more'
+    # The title link is stretched over the whole card (CSS), so there is one link per card.
+    return '<div class="detail-cards">'+''.join(
+        f'<article class="detail-card"><p class="detail-kind">{kinds[p["kind"]]}</p>'
+        f'<h2><a href="{path_for(p["path"],lang)}">{escape(p["title"][lang])}</a></h2>'
+        f'<p>{escape(p["description"][lang])}</p><span class="detail-more" aria-hidden="true">{more} <i class="fas fa-arrow-right"></i></span></article>'
+        for p in pages)+'</div>'
 
 def resume_data(lang):
     experiences=[]

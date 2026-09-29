@@ -615,12 +615,38 @@ if (contactForm) {
         formStatus.dataset.state = state;
     };
 
+    // Signed, short-lived form token (and optional Turnstile CAPTCHA) from the server.
+    let formToken = '';
+    const loadFormToken = async () => {
+        try {
+            const response = await fetch(contactForm.getAttribute('action') + '?token=1', {headers: {Accept: 'application/json'}, cache: 'no-store'});
+            const data = await response.json();
+            formToken = data.token || '';
+            if (data.turnstile && !contactForm.querySelector('.cf-turnstile')) {
+                const widget = document.createElement('div');
+                widget.className = 'cf-turnstile';
+                widget.dataset.sitekey = data.turnstile;
+                widget.dataset.language = document.documentElement.lang;
+                submitButton?.before(widget);
+                const script = document.createElement('script');
+                script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+                script.async = true;
+                document.head.appendChild(script);
+            }
+        } catch (error) {
+            formToken = '';
+        }
+    };
+    loadFormToken();
+
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const isArabic = document.documentElement.lang === 'ar';
+        if (!formToken) await loadFormToken();
         const formData = new FormData(contactForm);
         formData.set('lang', isArabic ? 'ar' : 'en');
+        formData.set('token', formToken);
         const action = contactForm.getAttribute('action');
 
         if (!action) {
@@ -646,9 +672,14 @@ if (contactForm) {
                 setFormStatus(isArabic ? 'شكراً لرسالتك! سأتواصل معك قريباً.' : 'Thank you for your message! I will get back to you soon.', 'success');
                 contactForm.reset();
                 window.dispatchEvent(new CustomEvent('portfolio:conversion', {detail: {name: 'contact_success'}}));
+            } else if (response.status === 403 && ['too_fast', 'token_invalid'].includes(result.error)) {
+                // Sent within seconds of loading, or the token expired: ask for one more click.
+                if (result.error === 'token_invalid') loadFormToken();
+                setFormStatus(isArabic ? 'يرجى الانتظار لحظات ثم إعادة الإرسال.' : 'Please wait a moment and press Send again.', 'error');
             } else {
                 setFormStatus(isArabic ? 'حدث خطأ ما. حاول مرة أخرى لاحقاً.' : (response.status === 429 ? 'Please wait a few minutes before sending another message.' : 'Your message could not be sent. Please use the email or WhatsApp link above.'), 'error');
             }
+            window.turnstile?.reset?.();
         } catch (error) {
             setFormStatus(isArabic ? 'تعذّر إرسال الرسالة حالياً. حاول مرة أخرى لاحقاً.' : 'Unable to send the message right now. Please try again later.', 'error');
         } finally {
