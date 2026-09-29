@@ -17,11 +17,16 @@ $salt = $config['rate_salt'] ?? '';
 if (!$testing && strlen($salt) < 32) respond(503, false, 'Contact service unavailable');
 $secret = $salt ?: 'local-test-only';
 
-// GET ?token issues a short-lived signed form token. Bots that post directly skip it.
+$powMax = (int) ($config['pow_max'] ?? 80000);
+// GET ?token issues a short-lived signed token with a proof-of-work puzzle: the browser
+// must find the number n (0..pow_max) where sha256(salt . n) equals the challenge.
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['token'])) {
     $issued = (string) time();
-    respond(200, true, '', ['token' => $issued . '.' . hash_hmac('sha256', 'form|' . $issued, $secret),
-        'turnstile' => $config['turnstile_site_key'] ?? '']);
+    $salt = bin2hex(random_bytes(12));
+    $challenge = hash('sha256', $salt . random_int(0, $powMax));
+    $signature = hash_hmac('sha256', "form|$issued|$salt|$challenge", $secret);
+    respond(200, true, '', ['token' => "$issued.$salt.$challenge.$signature", 'max' => $powMax,
+        'turnstile' => empty($config['turnstile_secret']) ? '' : ($config['turnstile_site_key'] ?? '')]);
 }
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Allow: POST'); respond(405, false, 'Method not allowed');
@@ -38,12 +43,14 @@ foreach (['name', 'email', 'subject', 'message', '_gotcha', 'lang', 'token', 'cf
 if (!empty($_POST['_gotcha'])) respond(200, true);
 
 // Signed token: must be at least a few seconds old (humans type) and at most two hours.
-[$issued, $signature] = array_pad(explode('.', $_POST['token'] ?? '', 2), 2, '');
+[$issued, $salt, $challenge, $signature] = array_pad(explode('.', $_POST['token'] ?? '', 4), 4, '');
 $age = time() - (int) $issued;
 $minSeconds = (int) ($config['min_seconds'] ?? 3);
-if (!ctype_digit($issued) || !hash_equals(hash_hmac('sha256', 'form|' . $issued, $secret), $signature)
+if (!ctype_digit($issued) || !hash_equals(hash_hmac('sha256', "form|$issued|$salt|$challenge", $secret), $signature)
     || $age > 7200) respond(403, false, 'token_invalid');
 if ($age < $minSeconds) respond(403, false, 'too_fast');
+$answer = $_POST['pow'] ?? '';
+if (!ctype_digit($answer) || (int) $answer > $powMax || !hash_equals($challenge, hash('sha256', $salt . $answer))) respond(403, false, 'pow_failed');
 
 $name = trim($_POST['name'] ?? '');
 $email = trim($_POST['email'] ?? '');
@@ -86,6 +93,14 @@ function limited(string $directory, string $key, array $windows, int $now): bool
     flock($file, LOCK_UN); fclose($file);
     return false;
 }
+// Each solved puzzle is accepted once (stops replaying one solution many times).
+$used = @fopen($rateDirectory . '/used-puzzles.json', 'c+');
+if (!$used || !flock($used, LOCK_EX)) respond(503, false, 'Contact service unavailable');
+$seen = json_decode(stream_get_contents($used) ?: '{}', true);
+$seen = array_filter(is_array($seen) ? $seen : [], fn($t) => is_int($t) && $t > $now - 7200);
+if (isset($seen[$salt])) { flock($used, LOCK_UN); fclose($used); respond(403, false, 'token_invalid'); }
+$seen[$salt] = $now;
+ftruncate($used, 0); rewind($used); fwrite($used, json_encode($seen)); fflush($used); flock($used, LOCK_UN); fclose($used);
 $ipKey = hash_hmac('sha256', $_SERVER['REMOTE_ADDR'] ?? 'unknown', $secret);
 if (limited($rateDirectory, $ipKey, [900 => 5, 86400 => 10], $now)) { header('Retry-After: 900'); respond(429, false, 'Please try again later'); }
 // Site-wide cap so a distributed flood cannot send thousands of messages.
@@ -96,7 +111,7 @@ if (limited($rateDirectory, 'global', $global, $now)) {
 }
 if (random_int(1, 50) === 1) {
     foreach (glob($rateDirectory . '/*.json') ?: [] as $oldFile) {
-        if (basename($oldFile) !== 'global.json' && filemtime($oldFile) < $now - 172800) @unlink($oldFile);
+        if (!in_array(basename($oldFile), ['global.json', 'used-puzzles.json'], true) && filemtime($oldFile) < $now - 172800) @unlink($oldFile);
     }
 }
 if ($testing) respond(200, true); // Only enabled by the isolated local test process.

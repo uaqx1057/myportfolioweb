@@ -617,11 +617,37 @@ if (contactForm) {
 
     // Signed, short-lived form token (and optional Turnstile CAPTCHA) from the server.
     let formToken = '';
+    let puzzle = null;
+    let solution = null;
+    // Invisible proof-of-work: find n where SHA-256(salt + n) matches the challenge.
+    const solvePuzzle = async ({salt, challenge, max}) => {
+        const encoder = new TextEncoder();
+        const target = challenge.match(/../g).map(h => parseInt(h, 16));
+        for (let start = 0; start <= max; start += 500) {
+            const batch = [];
+            for (let n = start; n < Math.min(start + 500, max + 1); n++) {
+                batch.push(crypto.subtle.digest('SHA-256', encoder.encode(salt + n)).then(buffer => {
+                    const bytes = new Uint8Array(buffer);
+                    return bytes.every((b, i) => b === target[i]) ? n : -1;
+                }));
+            }
+            const found = (await Promise.all(batch)).find(n => n >= 0);
+            if (found !== undefined) return String(found);
+        }
+        return '';
+    };
+    const startSolving = () => {
+        if (puzzle && !solution) solution = solvePuzzle(puzzle);
+    };
     const loadFormToken = async () => {
         try {
             const response = await fetch(contactForm.getAttribute('action') + '?token=1', {headers: {Accept: 'application/json'}, cache: 'no-store'});
             const data = await response.json();
             formToken = data.token || '';
+            const [, salt, challenge] = formToken.split('.');
+            puzzle = salt && challenge ? {salt, challenge, max: Number(data.max) || 0} : null;
+            solution = null;
+            if (contactForm.dataset.touched) startSolving();
             if (data.turnstile && !contactForm.querySelector('.cf-turnstile')) {
                 const widget = document.createElement('div');
                 widget.className = 'cf-turnstile';
@@ -638,6 +664,11 @@ if (contactForm) {
         }
     };
     loadFormToken();
+    // Start the puzzle while the visitor types, so pressing Send stays instant.
+    contactForm.addEventListener('focusin', () => {
+        contactForm.dataset.touched = '1';
+        startSolving();
+    });
 
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -647,6 +678,8 @@ if (contactForm) {
         const formData = new FormData(contactForm);
         formData.set('lang', isArabic ? 'ar' : 'en');
         formData.set('token', formToken);
+        startSolving();
+        formData.set('pow', solution ? await solution : '');
         const action = contactForm.getAttribute('action');
 
         if (!action) {
@@ -671,11 +704,15 @@ if (contactForm) {
             if (response.ok && result.ok === true) {
                 setFormStatus(isArabic ? 'شكراً لرسالتك! سأتواصل معك قريباً.' : 'Thank you for your message! I will get back to you soon.', 'success');
                 contactForm.reset();
+                loadFormToken();
                 window.dispatchEvent(new CustomEvent('portfolio:conversion', {detail: {name: 'contact_success'}}));
             } else if (response.status === 403 && ['too_fast', 'token_invalid'].includes(result.error)) {
                 // Sent within seconds of loading, or the token expired: ask for one more click.
                 if (result.error === 'token_invalid') loadFormToken();
                 setFormStatus(isArabic ? 'يرجى الانتظار لحظات ثم إعادة الإرسال.' : 'Please wait a moment and press Send again.', 'error');
+            } else if (response.status === 403 && result.error === 'pow_failed') {
+                loadFormToken();
+                setFormStatus(isArabic ? 'يرجى الضغط على إرسال مرة أخرى.' : 'Please press Send again.', 'error');
             } else {
                 setFormStatus(isArabic ? 'حدث خطأ ما. حاول مرة أخرى لاحقاً.' : (response.status === 429 ? 'Please wait a few minutes before sending another message.' : 'Your message could not be sent. Please use the email or WhatsApp link above.'), 'error');
             }

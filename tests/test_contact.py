@@ -3,7 +3,7 @@ from pathlib import Path
 from urllib.request import Request,urlopen
 from urllib.error import HTTPError
 from urllib.parse import urlencode
-import json,os,subprocess,tempfile,time,unittest
+import hashlib,json,os,subprocess,tempfile,time,unittest
 ROOT=Path(__file__).resolve().parents[1]
 
 class ContactChecks(unittest.TestCase):
@@ -12,7 +12,7 @@ class ContactChecks(unittest.TestCase):
         cls.temp=tempfile.TemporaryDirectory(prefix='portfolio-contact-tests-')
         config=Path(cls.temp.name)/'mail.php'
         directory=(Path(cls.temp.name)/'rates').as_posix();cls.rates=Path(directory)
-        config.write_text("<?php return ['rate_directory'=>'"+directory+"','rate_salt'=>'test-only-salt','min_seconds'=>0,'global_limits'=>[3600=>8,86400=>60]];")
+        config.write_text("<?php return ['rate_directory'=>'"+directory+"','rate_salt'=>'test-only-salt','min_seconds'=>0,'pow_max'=>300,'global_limits'=>[3600=>8,86400=>60]];")
         env=os.environ.copy();env.update(PORTFOLIO_TEST_MODE='1',CODEWITHUSMAN_MAIL_CONFIG=str(config))
         cls.server=subprocess.Popen(['php','-S','127.0.0.1:8770','-t',str(ROOT),str(ROOT/'tools/router.php')],env=env,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
         for _ in range(40):
@@ -27,8 +27,12 @@ class ContactChecks(unittest.TestCase):
             if not(keep_global and f.name=='global.json'):f.unlink()
     def token(self):
         return json.load(urlopen('http://127.0.0.1:8770/contact.php?token=1',timeout=5))['token']
+    def solve(self,token):
+        _,salt,challenge,_=token.split('.')
+        return next(str(n) for n in range(301) if hashlib.sha256((salt+str(n)).encode()).hexdigest()==challenge)
     def post(self,data,origin='http://127.0.0.1:8770',token=True):
-        if token and 'token' not in data:data=dict(data,token=self.token())
+        if token and 'token' not in data:
+            t=self.token();data=dict(data,token=t,pow=self.solve(t))
         headers={'Origin':origin} if origin else {}
         request=Request('http://127.0.0.1:8770/contact.php',urlencode(data).encode(),headers=headers)
         try:response=urlopen(request,timeout=5)
@@ -41,6 +45,12 @@ class ContactChecks(unittest.TestCase):
         self.assertEqual(self.post(valid,origin=None)[0],403)
         self.assertEqual(self.post(valid,token=False),(403,{'ok':False,'error':'token_invalid'}))
         self.assertEqual(self.post(dict(valid,token='123.forged'))[0],403)
+        t=self.token()
+        self.assertEqual(self.post(dict(valid,token=t,pow='999999')),(403,{'ok':False,'error':'pow_failed'}))
+        solved=dict(valid,token=t,pow=self.solve(t))
+        self.assertEqual(self.post(solved)[0],200)
+        self.assertEqual(self.post(solved),(403,{'ok':False,'error':'token_invalid'}))  # replay
+        self.clear_rates()
         self.assertEqual(self.post(dict(valid,message='see http://a.example http://b.example http://c.example'))[0],422)
         self.assertEqual(self.post({})[0],422)
         self.assertEqual(self.post(dict(valid,name='Injected\r\nHeader'))[0],422)
