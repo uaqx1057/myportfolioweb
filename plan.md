@@ -55,7 +55,7 @@ Done and verified:
 - [x] Project images removed at user request; do not re-add without asking.
 - [x] DOBS/DMS case studies rewritten from source repos.
 - [x] SEO pass: per-page search titles/descriptions (META in build.py, seo_* fields in pages.json), richer JSON-LD (Person, WebSite, 3-level BreadcrumbList, Article dates, SoftwareApplication for DMS/DOBS), og/twitter image alt + locale alternate, localized img alt (data-en-alt/data-ar-alt), icon set + site.webmanifest, 404.html (noindex), Services h2, distinct case-study link text.
-- [x] Google Analytics GA4 tag G-5B6Q2KD7ZX in content/home.html head (every generated page); privacy page discloses it. script.js already sends cv_download / whatsapp_click / case_study_open / contact_success events (no form contents).
+- [x] Google Analytics GA4 tag G-8P6LR4C4HG in content/home.html head (every generated page); privacy page discloses it. script.js already sends cv_download / whatsapp_click / case_study_open / contact_success events (no form contents).
 - [x] Mobile menu accessibility: closed menu is visibility:hidden (not tabbable); Arabic menu stacks/centres (RTL specificity override).
 
 Still open (needs the user):

@@ -69,11 +69,51 @@
     }
   ],
   "credentials": [
-    "Meta Back-End Developer (May 2024)",
-    "Meta Front-End Developer (May 2024)",
-    "IBM Full Stack Software Developer (May 2024)",
-    "IBM Front-End Developer (June 2024)",
-    "Google Project Management (May 2024)"
+    [
+      "Meta",
+      [
+        "Meta Back-End Developer (May 2024)",
+        "Meta Front-End Developer (May 2024)"
+      ]
+    ],
+    [
+      "IBM",
+      [
+        "IBM Full Stack Software Developer (May 2024)",
+        "IBM Front-End Developer (June 2024)",
+        "Python 101 for Data Science"
+      ]
+    ],
+    [
+      "Google & University of Illinois",
+      [
+        "Google Project Management (May 2024)",
+        "Financial Analysis Specialization (June 2024)"
+      ]
+    ],
+    [
+      "Cisco & AWS",
+      [
+        "Introduction to Cybersecurity",
+        "Jr. Cybersecurity Analyst",
+        "Cloud Foundations (AWS Academy Graduate)"
+      ]
+    ]
+  ],
+  "extra": [
+    [
+      "Internships",
+      [
+        "Pakistan Electronic Media Regulatory Authority (PEMRA) - Islamabad",
+        "Election Commission of Pakistan (ECP) - Islamabad"
+      ]
+    ],
+    [
+      "Volunteering",
+      [
+        "Department of Industrial Linkages (DIL), Iqra University - Islamabad"
+      ]
+    ]
   ],
   "projects": [
     {

@@ -49,9 +49,18 @@ def localize(soup, lang):
         if href.startswith('/') and not href.startswith(('/assets/','/ar/')) and not Path(href).suffix:
             if lang == 'ar': el['href'] = '/ar' + href
         if 'cv-download-link' in el.get('class',[]):
-            el['href'] = '/Usman_Asif_Qureshi_CV' + ('_AR' if lang == 'ar' else '') + '.pdf'
-            el['download'] = 'Usman_Asif_Qureshi_CV_' + lang.upper() + '.pdf'
-            el.attrs.pop('target',None)
+            # Offer both CVs: the page language first, then the other language.
+            labels={'en':{'en':'English CV','ar':'Arabic CV'},'ar':{'ar':'السيرة بالعربية','en':'السيرة بالإنجليزية'}}[lang]
+            for cv_lang,link in [(lang,el),('en' if lang=='ar' else 'ar',copy.copy(el))]:
+                link['href'] = '/Usman_Asif_Qureshi_CV' + ('_AR' if cv_lang == 'ar' else '') + '.pdf'
+                link['download'] = 'Usman_Asif_Qureshi_CV_' + cv_lang.upper() + '.pdf'
+                link['hreflang'] = cv_lang
+                link.attrs.pop('target',None);link.attrs.pop('rel',None)
+                span=link.find('span')
+                if span:span.string=labels[cv_lang]
+                if link is not el:
+                    link.attrs.pop('id',None)
+                    el.insert_after(link)
         if 'whatsapp-contact-link' in el.get('class',[]):
             el['href'] = 'https://wa.me/966568465058?text=' + quote(el.get('data-' + lang + '-message',''))
     soup.html['lang'] = lang
@@ -172,13 +181,11 @@ def resume_data(lang):
     education=[]
     for card in SOURCE.select('.education-card'):
         education.append({'title':text(card.select_one('.education-title'),lang),'detail':' | '.join(text(x,lang) for x in card.select('p, span'))})
-    credentials=[]
-    for card in SOURCE.select('.cert-card'):
-        credentials.extend(text(x,lang) for x in card.select('li'))
-    # Keep the full credential list on About; focus the CV on relevant professional certificates.
-    credentials=[c for c in credentials if any(x in c for x in ['Meta','IBM','Google'])][:6]
-    summary={'en':'Full-stack developer and project manager based in Al Khobar, Saudi Arabia. Experience in logistics systems, Python/Flask, PHP/Laravel, WordPress, and team delivery. Most recently worked at iLab / SpeedLogi from September 2025 to September 2026. Actively seeking new opportunities.','ar':'مطور فل ستاك ومدير مشاريع مقيم في الخبر، السعودية. لدي خبرة في الأنظمة اللوجستية وPython/Flask وPHP/Laravel وWordPress وتنسيق تسليم المشاريع. عملت مؤخراً لدى iLab / SpeedLogi من سبتمبر 2025 إلى سبتمبر 2026، وأبحث عن فرص عمل جديدة.'}[lang]
-    return {'lang':lang,'name':'عثمان آصف قريشي' if lang=='ar' else 'Usman Asif Qureshi','title':text(SOURCE.select_one('.hero .title'),lang),'summary':summary,'skills':[text(x.select_one('h3'),lang)+': '+text(x.select_one('p'),lang) for x in SOURCE.select('.skill-card')],'experience':experiences,'education':education,'credentials':credentials,'projects':[{'title':p['title'][lang],'description':p['description'][lang],'url':BASE+path_for(p['path'],lang)} for p in PAGES if p['kind']=='case']}
+    # Certifications grouped by issuer, and internships/volunteering, as on the homepage.
+    credentials=[(text(card.select_one('.cert-title'),lang),[text(x,lang) for x in card.select('li')]) for card in SOURCE.select('.cert-card')]
+    extra=[(text(card.select_one('.experience-subtitle'),lang),[text(x,lang) for x in card.select('li')]) for card in SOURCE.select('.experience-subcard')]
+    summary={'en':'Full-stack developer and project manager based in Al Khobar, Saudi Arabia. Experience in logistics systems, Python/Flask, PHP/Laravel, WordPress, and team delivery. Most recently worked at iLab / SpeedLogi from September 2025 to September 2026. Actively seeking new opportunities.','ar':'مطور فل ستاك ومدير مشاريع مقيم في الخبر، السعودية. لدي خبرة في الأنظمة اللوجستية و Python/Flask و PHP/Laravel و WordPress وتنسيق تسليم المشاريع. عملت مؤخراً لدى iLab / SpeedLogi من سبتمبر 2025 إلى سبتمبر 2026، وأبحث عن فرص عمل جديدة.'}[lang]
+    return {'lang':lang,'name':'عثمان آصف قريشي' if lang=='ar' else 'Usman Asif Qureshi','title':text(SOURCE.select_one('.hero .title'),lang),'summary':summary,'skills':[text(x.select_one('h3'),lang)+': '+text(x.select_one('p'),lang) for x in SOURCE.select('.skill-card')],'experience':experiences,'education':education,'credentials':credentials,'extra':extra,'projects':[{'title':p['title'][lang],'description':p['description'][lang],'url':BASE+path_for(p['path'],lang)} for p in PAGES if p['kind']=='case']}
 
 # Search titles/descriptions for fixed pages (visible H1/lead stay shorter).
 META={

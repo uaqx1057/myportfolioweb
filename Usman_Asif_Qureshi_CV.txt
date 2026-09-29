@@ -2,27 +2,27 @@ Usman Asif Qureshi
 
 Project Manager & Full-Stack Developer
 
-Al Khobar, Saudi Arabia | Transferable Iqama
+linkedin.com/in/usmanasif1057
+
+www.codewithusman.com
 
 usmanasif26261@gmail.com
 
 +966 56 846 5058
 
-www.codewithusman.com
++92 340 501 1130
 
-linkedin.com/in/usmanasif1057
+Al Khobar, Saudi Arabia
 
-Professional summary
+Transferable Iqama
 
 Full-stack developer and project manager based in Al Khobar, Saudi Arabia. Experience in logistics systems, Python/Flask, PHP/Laravel, WordPress, and team delivery. Most recently worked at iLab / SpeedLogi from September 2025 to September 2026. Actively seeking new opportunities.
 
-Professional experience
+Professional Experience
 
 Project Manager & Full-Stack Developer
 
-iLab Information Technologies / SpeedLogi - Al Khobar, Saudi Arabia
-
-September 2025 - September 2026
+iLab Information Technologies / SpeedLogi - Al Khobar, Saudi Arabia  |  September 2025 - September 2026
 
 • Managed SpeedLogi technology projects from planning through delivery
 
@@ -34,9 +34,7 @@ September 2025 - September 2026
 
 Project Manager & Senior WordPress Developer
 
-The MK Solution - Rawalpindi, Punjab
-
-May 2018 - March 2024
+The MK Solution - Rawalpindi, Punjab  |  May 2018 - March 2024
 
 • Managed a 10-person cross-functional team on high-visibility projects
 
@@ -48,9 +46,7 @@ May 2018 - March 2024
 
 WordPress Developer (Freelance)
 
-Upwork - Remote
-
-January 2020 - December 2023
+Upwork - Remote  |  January 2020 - December 2023
 
 • Built custom WordPress themes and designs with Elementor
 
@@ -62,9 +58,7 @@ January 2020 - December 2023
 
 CSR & Technical Support Specialist
 
-Customer Service & Technical Support - Rawalpindi, Punjab
-
-February 2016 - January 2017
+Customer Service & Technical Support - Rawalpindi, Punjab  |  February 2016 - January 2017
 
 • Responded to technical inquiries from internal and external users
 
@@ -74,23 +68,75 @@ February 2016 - January 2017
 
 Skills
 
-Frontend: HTML, CSS, JavaScript, React, Bootstrap
+• Frontend: HTML, CSS, JavaScript, React, Bootstrap
 
-Backend: PHP, Python/Flask, Node.js, Django
+• Backend: PHP, Python/Flask, Node.js, Django
 
-Databases: MySQL, PostgreSQL, MongoDB
+• Databases: MySQL, PostgreSQL, MongoDB
 
-Mobile: Flutter, Android
+• Mobile: Flutter, Android
 
-Tools & Productivity: Git, Postman, Figma, Jira, Trello
+• Tools & Productivity: Git, Postman, Figma, Jira, Trello
 
-Adobe & MS Office: Adobe Creative Suite, Microsoft Office (Advanced)
+• Adobe & MS Office: Adobe Creative Suite, Microsoft Office (Advanced)
 
-Web Platforms: WordPress, Elementor
+• Web Platforms: WordPress, Elementor
 
-Project Delivery: Agile, Team Coordination, Stakeholder Management, Sprint Planning
+• Project Delivery: Agile, Team Coordination, Stakeholder Management, Sprint Planning
 
-Selected projects
+Education
+
+Bachelor of Software Engineering
+
+Iqra University, Islamabad | 2017 - 2021
+
+Intermediate in Pre-Engineering
+
+Askaria College, Rawalpindi | 2014 - 2016
+
+Certifications
+
+Meta
+
+• Meta Back-End Developer (May 2024)
+
+• Meta Front-End Developer (May 2024)
+
+IBM
+
+• IBM Full Stack Software Developer (May 2024)
+
+• IBM Front-End Developer (June 2024)
+
+• Python 101 for Data Science
+
+Google & University of Illinois
+
+• Google Project Management (May 2024)
+
+• Financial Analysis Specialization (June 2024)
+
+Cisco & AWS
+
+• Introduction to Cybersecurity
+
+• Jr. Cybersecurity Analyst
+
+• Cloud Foundations (AWS Academy Graduate)
+
+Additional Experience
+
+Internships
+
+• Pakistan Electronic Media Regulatory Authority (PEMRA) - Islamabad
+
+• Election Commission of Pakistan (ECP) - Islamabad
+
+Volunteering
+
+• Department of Industrial Linkages (DIL), Iqra University - Islamabad
+
+Selected Projects
 
 DOBS: Driver Onboarding & Offboarding System
 
@@ -109,21 +155,3 @@ Business Websites: Delivery, Performance & SEO
 An overview of my WordPress and business website work, including iLab, SpeedLogi, and team leadership at The MK Solution.
 
 www.codewithusman.com/projects/business-websites/
-
-Education
-
-Bachelor of Software Engineering | Iqra University, Islamabad | 2017 - 2021
-
-Intermediate in Pre-Engineering | Askaria College, Rawalpindi | 2014 - 2016
-
-Selected certifications
-
-• Meta Back-End Developer (May 2024)
-
-• Meta Front-End Developer (May 2024)
-
-• IBM Full Stack Software Developer (May 2024)
-
-• IBM Front-End Developer (June 2024)
-
-• Google Project Management (May 2024)
