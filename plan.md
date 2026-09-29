@@ -65,6 +65,11 @@ Still open (needs the user):
 - [ ] User: manually "Request indexing" for priority URLs in Search Console (API cannot); re-run `python tools/gsc.py inspect https://www.codewithusman.com/` in ~1 week.
 - [ ] Optional: GA4 cookie-consent banner if targeting EU visitors (not implemented).
 
+## Security incident (2026-09-29)
+- The OLD contact.php (live until 2026-09-28 ~19:18 server time) had no rate limit and auto-replied the submitted message to any address: an open spam relay. Thousands of spam notifications reached Gmail spam "from info@".
+- Replaced 2026-09-28 (no auto-reply); hardened and deployed 2026-09-29 (commit a9b3733): per-IP 5/15min + 10/day, site-wide 20/hour + 60/day, signed token (GET ?token=1, min 3s, max 2h), Origin required, >2 links rejected, optional Turnstile (config turnstile_site_key / turnstile_secret). Old copy in ~/public_html.bak-20260929 renamed contact.php.disabled-spam-relay.
+- Never add an auto-reply to user-supplied addresses.
+
 ## Known issues / notes
 - Do not claim universal ATS compatibility for the Arabic PDF; /ActualText extraction is tested.
 - Sitemap lastmod uses build date for changed pages (content/build-manifest.json keeps unchanged dates).
