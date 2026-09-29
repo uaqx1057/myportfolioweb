@@ -89,7 +89,15 @@
           "ar": "نقلت تسلسل المراحل من منطق مكتوب في الشيفرة إلى قوالب قائمة على البيانات، وطبقته أولاً في وضع الظل: كان المحرك الجديد يسجل الحالات التي سيختلف فيها عن الشيفرة القديمة قبل أن يتولى العمل، فوصل التغيير إلى بيئة الإنتاج دون تعطيل عمليات التسجيل الجارية."
         }
       }
-    ]
+    ],
+    "seo_title": {
+      "en": "DOBS Driver Onboarding System | Usman Asif Qureshi",
+      "ar": "نظام DOBS لتسجيل السائقين | عثمان آصف قريشي"
+    },
+    "software": {
+      "name": "DOBS (Driver Onboarding & Offboarding System)",
+      "os": "Web"
+    }
   },
   {
     "path": "projects/driver-management-system",
@@ -203,7 +211,19 @@
           "ar": "أكثر من 180 نموذج بيانات و360 ترحيلاً لقاعدة البيانات، وأكثر من 110 ملفات اختبار آلي، ونحو 50 مهمة مجدولة وأمر تشغيل، أُنجزت في نحو 900 عملية إيداع خلال عام واحد."
         }
       }
-    ]
+    ],
+    "seo_title": {
+      "en": "DMS Driver Management System & App | Usman Asif Qureshi",
+      "ar": "نظام DMS لإدارة السائقين وتطبيق أندرويد | عثمان آصف قريشي"
+    },
+    "seo_description": {
+      "en": "Laravel platform and Flutter Android driver app I designed and built to run logistics operations: drivers, fleet, payroll, attendance and chat.",
+      "ar": "منصة Laravel وتطبيق سائق على أندرويد بتقنية Flutter صممتهما وطورتهما لإدارة العمليات اللوجستية: السائقون والأسطول والرواتب والحضور والتواصل."
+    },
+    "software": {
+      "name": "DMS (Driver Management System) and Android driver app",
+      "os": "Web, Android"
+    }
   },
   {
     "path": "projects/business-websites",
@@ -247,7 +267,14 @@
           "ar": "أبدأ بتحديد الجمهور والإجراء المطلوب من الصفحة، ثم أتفق على النطاق والمحتوى وأطور الموقع وأختبره. وقبل التسليم، أراجع تنقل الموبايل والنماذج وعناوين الصفحات والصور ومسؤولية الصيانة المستمرة."
         }
       }
-    ]
+    ],
+    "seo_title": {
+      "en": "Business Websites: WordPress & SEO | Usman Asif Qureshi"
+    },
+    "seo_description": {
+      "en": "WordPress and business website work for iLab, SpeedLogi and The MK Solution: responsive builds, performance, SEO structure and team leadership.",
+      "ar": "أعمالي في WordPress ومواقع الشركات لـ iLab و SpeedLogi و The MK Solution: تصميم متجاوب وأداء وبنية لتحسين البحث وقيادة الفريق."
+    }
   },
   {
     "path": "insights/planning-logistics-software",
@@ -301,7 +328,14 @@
           "ar": "اتفق على مسؤولية الدعم وطريقة الإبلاغ عن المشكلات وتدريب المستخدمين والمعلومات اللازمة للصيانة المستقبلية. اجعل ذلك جزءاً من نطاق التسليم بدلاً من تأجيله إلى ما بعد الإطلاق."
         }
       }
-    ]
+    ],
+    "seo_title": {
+      "en": "Planning Logistics Software Before Code | Usman Asif Qureshi"
+    },
+    "published": "2026-09-29",
+    "seo_description": {
+      "ar": "قائمة عملية لتحديد إجراءات تشغيل السائقين والمسؤوليات والاستثناءات ومعايير القبول قبل بدء تطوير أي تطبيق لوجستي."
+    }
   },
   {
     "path": "insights/website-handover-checklist",
@@ -345,6 +379,10 @@
           "ar": "راجع عناوين الصفحات والروابط الأساسية وبدائل اللغات وخريطة الموقع وأي قيود فهرسة غير مقصودة. اتفق على إدارة تحديثات المحتوى والنسخ الاحتياطي والتحديثات الأمنية وفشل التسليم. وثّق قائمة إصدار قصيرة تُكرر بعد كل تغيير مهم."
         }
       }
-    ]
+    ],
+    "published": "2026-09-29",
+    "seo_description": {
+      "ar": "ما ينبغي مراجعته قبل تسليم موقع أعمال: المحتوى وتجربة الموبايل ومسارات التواصل وأساسيات تحسين البحث ومسؤولية الصيانة بعد الإطلاق."
+    }
   }
 ]

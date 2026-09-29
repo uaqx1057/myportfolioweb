@@ -2646,7 +2646,9 @@ html[data-theme="light"] .footer-bottom {
         max-height: calc(100dvh - 68px);
         overflow-y: auto;
         text-align: center;
-        transition: 0.3s;
+        /* Hidden (not just off-screen) while closed, so its links are not tab stops. */
+        visibility: hidden;
+        transition: 0.3s, visibility 0s linear 0.3s;
         padding: 18px 0 28px;
         justify-content: flex-start;
         gap: 8px;
@@ -2670,6 +2672,8 @@ html[data-theme="light"] .footer-bottom {
 
     .nav-menu.active {
         left: 0;
+        visibility: visible;
+        transition: 0.3s, visibility 0s;
     }
 
     body.lang-ar .nav-menu,
@@ -2691,6 +2695,20 @@ html[data-theme="light"] .footer-bottom {
     body.lang-ar .nav-menu.active,
     html[dir="rtl"] .nav-menu.active {
         right: 0;
+    }
+
+    /* Beat the desktop RTL row layout so the Arabic menu stacks like English. */
+    body.lang-ar .nav-menu,
+    html[dir="rtl"] .nav-menu {
+        flex-direction: column;
+    }
+
+    body.lang-ar .nav-menu li,
+    body.lang-ar .nav-menu li a,
+    html[dir="rtl"] .nav-menu li,
+    html[dir="rtl"] .nav-menu li a {
+        justify-content: center;
+        text-align: center;
     }
 
     .hero {

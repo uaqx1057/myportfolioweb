@@ -11,7 +11,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / 'build/public_html.zip'
 FILES = [
-    '.htaccess', 'robots.txt', 'sitemap.xml', 'index.html', 'googlead2c6a10dcba6e82.html',
+    '.htaccess', 'robots.txt', '404.html', 'site.webmanifest', 'sitemap.xml', 'index.html', 'googlead2c6a10dcba6e82.html',
     'contact.php', 'cv.html', 'cv-builder.js', 'script.min.js', 'style.min.css',
     'Usman_Asif_Qureshi_CV.pdf', 'Usman_Asif_Qureshi_CV_AR.pdf',
     'Usman_Asif_Qureshi_CV.txt', 'Usman_Asif_Qureshi_CV_AR.txt',

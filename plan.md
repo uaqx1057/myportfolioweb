@@ -43,30 +43,33 @@ Updated: 2026-09-29. This is an ACTIVE implementation, not a completed release.
 - [x] Downloaded Amiri fonts and OFL license from Google Fonts for Arabic PDFs.
 - [x] Contact credential setup questions answered for mailbox and SMTP host; Search Console unanswered.
 
-## In progress / required before completion
-- [x] Replace `contact.php` with PHPMailer SMTP, strict input validation, Unicode lengths, origin checking, atomic rate limits, safe error handling, no arbitrary-address autoresponder.
-- [x] Create example mail config and actual private config (~/.config/codewithusman/mail.php, outside repo); `tools/check-smtp.php` verifies TLS + authentication only — PASSED 2026-09-29 from local machine, no email sent (no message sent without explicit authorization).
-- [x] Composer PHPMailer ^7.0 installed in vendor/ (gitignored).
-- [x] Legacy cv.html/cv-builder.js now redirect to static resumes/PDFs.
-- [x] Add `.htaccess` canonical index redirects, source/private-directory blocking, no directory listing, useful security headers, static PDF cache behavior.
-- [x] Build deployment ZIP (tools/package.py -> build/public_html.zip) for Namecheap public_html; separate instructions/config step for outside public_html.
-- [x] Add a safe local PHP router (tools/router.php) and automated tests (tests/, 7 passing 2026-09-29): localized HTML, internal links/assets, private systems excluded, correct dates, schema, PDF text/links/page counts, contact validation/rate limiting in test-only process with no outgoing email.
-- [~] Browser checks (headless Chrome via fixed-width iframes, 2026-09-29): EN/AR layout OK at 360/390/768/1366 after fixing EN About two-column overflow at <=480px (specificity bug). STILL TODO manually: mobile menu open/close, form submit UX, light theme, keyboard focus, console errors; mobile menu, contact forms, light/dark, keyboard focus; inspect console errors.
-- [ ] Re-render/inspect final PDFs after fixes and run extraction checks.
-- [ ] Replace public website cards with screenshots where feasible; do not capture DMS/DOBS. Other public project links returned 403/406 to automated requests, so do not call them broken without browser verification.
-- [x] Add README/build/deployment instructions, CI build/check workflow (.github/workflows/build.yml, not yet run on GitHub), AGENTS.md maintenance facts.
-- [ ] Check git diff, ensure no secrets/temp/vendor files are staged, checkpoint commits when a working state is verified.
-- [ ] Confirm deployment access with user. Do not claim live changes until deployed and verified.
-- [ ] Search Console verification/sitemap submission and analytics activation require account setup. Record what remains rather than fabricate completion.
+## Status (updated 2026-09-29 by Claude Code)
+Done and verified:
+- [x] PHPMailer SMTP contact endpoint, validation, rate limiting; SMTP auth check passed (no email sent).
+- [x] Legacy cv.html / cv-builder.js redirect to static resumes/PDFs.
+- [x] .htaccess: canonical redirects, private-path blocking, headers, caching, ErrorDocument 404.
+- [x] Release ZIP (tools/package.py), README deploy docs, CI workflow (not yet run on GitHub), AGENTS.md facts.
+- [x] Tests: tests/ (7 passing). Browser checks with Playwright (local .venv, channel=chrome) 20/20: console errors, mobile menu EN/AR, theme toggle, keyboard focus + skip link, contact form validation/success (test mode), language switch.
+- [x] Both CV PDFs re-rendered and inspected visually (2 pages each) after DMS/DOBS text change.
+- [x] Deployed to Namecheap over SSH; live checks pass (see Deployment log).
+- [x] Project images removed at user request; do not re-add without asking.
+- [x] DOBS/DMS case studies rewritten from source repos.
+- [x] SEO pass: per-page search titles/descriptions (META in build.py, seo_* fields in pages.json), richer JSON-LD (Person, WebSite, 3-level BreadcrumbList, Article dates, SoftwareApplication for DMS/DOBS), og/twitter image alt + locale alternate, localized img alt (data-en-alt/data-ar-alt), icon set + site.webmanifest, 404.html (noindex), Services h2, distinct case-study link text.
+- [x] Google Analytics GA4 tag G-5B6Q2KD7ZX in content/home.html head (every generated page); privacy page discloses it. script.js already sends cv_download / whatsapp_click / case_study_open / contact_success events (no form contents).
+- [x] Mobile menu accessibility: closed menu is visibility:hidden (not tabbable); Arabic menu stacks/centres (RTL specificity override).
 
-## Known issues to resolve
-- Arabic PDF: fpdf2 shaped decorative glyphs have empty Unicode tuples. `tools/build_cv.py` maps these to U+200D to avoid control characters. PDFium sees dates and Laravel; pypdf extraction of mixed Arabic/Latin still truncates some spans. Need robust semantic extraction, preferably ActualText support or an alternative validated rendering path. Do not claim universal ATS compatibility.
-- PDF education dates were initially omitted; extraction now includes p and span in education cards (fixed in build.py).
-- Migration used BeautifulSoup on all strings, which turned HTML comments into visible plain-text section labels in `content/home.html` (e.g. `Education Section`). Remove these stray labels before finalizing.
-- Build currently uses current date for changed sitemap entries. Generated `content/build-manifest.json` preserves unchanged dates.
-- `tools/build.py` currently generates diagrams each run; branded social preview was generated once by tmp/review-new.py, should gain a reproducible build step.
-- New article copy is original draft content based on general practice, not claims of specific unverified project results.
-- Source templates should be blocked from HTTP and excluded from release ZIP.
+Still open (needs the user):
+- [ ] One real contact-form message to confirm delivery to usmanasif26261@gmail.com.
+- [ ] Rotate any tokens that were in the formerly public .mcp.json; delete unused ~/.ssh/id_rsa on the server (cPanel).
+- [ ] Google Search Console: verify property and submit https://www.codewithusman.com/sitemap.xml.
+- [ ] Optional: GA4 cookie-consent banner if targeting EU visitors (not implemented).
+
+## Known issues / notes
+- Do not claim universal ATS compatibility for the Arabic PDF; /ActualText extraction is tested.
+- Sitemap lastmod uses build date for changed pages (content/build-manifest.json keeps unchanged dates).
+- social-card.png was generated once by a temporary script (not part of the build).
+- Article dates are set to 2026-09-29 in pages.json (published field).
+- Headless Chrome enforces a ~500px minimum window; use Playwright viewports or fixed-width iframes for phone widths.
 
 ## Commands and runtime notes
 ```powershell
@@ -93,4 +96,4 @@ git diff --check
 - 2026-09-29: Rewrote DOBS/DMS case studies from source repos (DOBS-mysql-updates, DMS-development); user confirmed both are solely their work (git shows ~156 DMS backend commits by another author; user chose 'Designed & built by me'). Deployed commit 2e8788c.
 
 ## Suggested next step
-Needs user: one real contact-form test message, manual interactive browser checks, rotate any tokens that were in the formerly public .mcp.json, delete unused ~/.ssh/id_rsa on server, push to GitHub (CI), Search Console sitemap submission + analytics.
+See "Still open" above.

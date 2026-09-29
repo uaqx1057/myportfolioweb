@@ -1,0 +1,16 @@
+{
+  "name": "Code With Usman — Usman Asif Qureshi",
+  "short_name": "Code With Usman",
+  "description": "Portfolio of Usman Asif Qureshi, full-stack developer and project manager in Al Khobar, Saudi Arabia.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#050a14",
+  "theme_color": "#050a14",
+  "lang": "en",
+  "icons": [
+    { "src": "/assets/images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/images/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/images/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -1,5 +1,6 @@
 AddDefaultCharset UTF-8
 Options -Indexes
+ErrorDocument 404 /404.html
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
@@ -19,6 +20,7 @@ Options -Indexes
 </IfModule>
 
 <IfModule mod_mime.c>
+    AddType application/manifest+json .webmanifest
     AddType "text/html; charset=UTF-8" .html .htm
     AddCharset UTF-8 .html .htm .css .js .json .xml .txt
 </IfModule>
