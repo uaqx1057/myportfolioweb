@@ -663,6 +663,16 @@ if (contactForm) {
             formToken = '';
         }
     };
+    // Code field shown only when the server asks for email verification (unusual load).
+    const showCodeField = (isArabic) => {
+        if (contactForm.querySelector('.otp-group')) return;
+        const group = document.createElement('div');
+        group.className = 'form-group otp-group';
+        group.innerHTML = '<label for="contactOtp"></label><input id="contactOtp" name="otp" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required>';
+        group.querySelector('label').textContent = isArabic ? 'رمز التحقق (6 أرقام)' : 'Verification code (6 digits)';
+        (contactForm.querySelector('.cf-turnstile') || submitButton)?.before(group);
+        group.querySelector('input').focus();
+    };
     loadFormToken();
     // Start the puzzle while the visitor types, so pressing Send stays instant.
     contactForm.addEventListener('focusin', () => {
@@ -701,21 +711,28 @@ if (contactForm) {
             });
 
             const result = await response.json();
+            const say = (en, ar) => setFormStatus(isArabic ? ar : en, 'error');
             if (response.ok && result.ok === true) {
                 setFormStatus(isArabic ? 'شكراً لرسالتك! سأتواصل معك قريباً.' : 'Thank you for your message! I will get back to you soon.', 'success');
                 contactForm.reset();
-                loadFormToken();
+                contactForm.querySelector('.otp-group')?.remove();
                 window.dispatchEvent(new CustomEvent('portfolio:conversion', {detail: {name: 'contact_success'}}));
-            } else if (response.status === 403 && ['too_fast', 'token_invalid'].includes(result.error)) {
-                // Sent within seconds of loading, or the token expired: ask for one more click.
-                if (result.error === 'token_invalid') loadFormToken();
-                setFormStatus(isArabic ? 'يرجى الانتظار لحظات ثم إعادة الإرسال.' : 'Please wait a moment and press Send again.', 'error');
-            } else if (response.status === 403 && result.error === 'pow_failed') {
-                loadFormToken();
-                setFormStatus(isArabic ? 'يرجى الضغط على إرسال مرة أخرى.' : 'Please press Send again.', 'error');
+            } else if (result.error === 'verify_email') {
+                showCodeField(isArabic);
+                setFormStatus(isArabic ? 'أرسلنا رمزاً من 6 أرقام إلى بريدك الإلكتروني. أدخله أدناه ثم اضغط إرسال مرة أخرى.' : 'We emailed you a 6-digit code. Enter it below and press Send again.', 'pending');
+            } else if (result.error === 'otp_invalid') {
+                say('That code is not correct or has expired. Check your email and try again.', 'الرمز غير صحيح أو منتهي الصلاحية. تحقق من بريدك وحاول مرة أخرى.');
+            } else if (result.error === 'email_domain') {
+                say('Please use an email address you can receive mail at.', 'يرجى استخدام بريد إلكتروني حقيقي يمكنك استلام الرسائل عليه.');
+            } else if (['too_fast', 'token_invalid', 'pow_failed'].includes(result.error)) {
+                // Sent within seconds of loading, or the puzzle expired: one more click.
+                say('Please wait a moment and press Send again.', 'يرجى الانتظار لحظات ثم إعادة الإرسال.');
             } else {
-                setFormStatus(isArabic ? 'حدث خطأ ما. حاول مرة أخرى لاحقاً.' : (response.status === 429 ? 'Please wait a few minutes before sending another message.' : 'Your message could not be sent. Please use the email or WhatsApp link above.'), 'error');
+                say(response.status === 429 ? 'Please wait a few minutes before sending another message.' : 'Your message could not be sent. Please use the email or WhatsApp link above.',
+                    response.status === 429 ? 'يرجى الانتظار بضع دقائق قبل إرسال رسالة أخرى.' : 'تعذّر إرسال رسالتك. يرجى استخدام البريد الإلكتروني أو واتساب أعلاه.');
             }
+            // Each puzzle is single-use on the server; prepare a fresh one (except when only too fast).
+            if (result.error !== 'too_fast') loadFormToken();
             window.turnstile?.reset?.();
         } catch (error) {
             setFormStatus(isArabic ? 'تعذّر إرسال الرسالة حالياً. حاول مرة أخرى لاحقاً.' : 'Unable to send the message right now. Please try again later.', 'error');
