@@ -229,51 +229,158 @@
     "path": "projects/business-websites",
     "kind": "case",
     "title": {
-      "en": "Business Websites: Delivery, Performance & SEO",
-      "ar": "مواقع الأعمال: التنفيذ والأداء وتحسين البحث"
+      "en": "Business Websites: WordPress Delivery, Performance & SEO",
+      "ar": "مواقع الأعمال: تنفيذ WordPress والأداء وتحسين البحث"
     },
     "description": {
-      "en": "An overview of my WordPress and business website work, including iLab, SpeedLogi, and team leadership at The MK Solution.",
-      "ar": "نظرة على أعمالي في WordPress ومواقع الشركات، بما فيها iLab وSpeedLogi وقيادة الفريق لدى The MK Solution."
+      "en": "Business websites I built and led since 2018: iLab, SpeedLogi, SpeedPoint, The MK Solution and Sagal Energy, with my WordPress, performance and SEO approach.",
+      "ar": "مواقع أعمال طورتها وقدت تنفيذها منذ 2018: iLab و SpeedLogi و SpeedPoint و The MK Solution و Sagal Energy، مع منهجي في WordPress والأداء وتحسين البحث."
     },
     "sections": [
       {
         "title": {
-          "en": "Work and responsibilities",
-          "ar": "الأعمال والمسؤوليات"
+          "en": "Overview",
+          "ar": "نظرة عامة"
         },
         "text": {
-          "en": "My portfolio includes corporate website work for iLab and improvements to SpeedLogi’s website. At The MK Solution, I managed a 10-person cross-functional team and led WordPress builds using Elementor.",
-          "ar": "يشمل ملف أعمالي العمل على موقع iLab وتحسينات لموقع SpeedLogi. ولدى The MK Solution، أدرت فريقاً متعدد التخصصات من 10 أفراد وقدت تطوير مواقع WordPress باستخدام Elementor."
+          "en": "Since 2018 I have built and managed business websites: as Project Manager & Senior WordPress Developer at The MK Solution (2018–2024), as a freelance WordPress developer on Upwork (2020–2023), and on company websites at iLab Information Technologies / SpeedLogi in Al Khobar (2025–2026). The work ranges from corporate sites to service pages for logistics and energy businesses.",
+          "ar": "منذ عام 2018 أعمل على بناء مواقع الأعمال وإدارتها: بصفتي مدير مشاريع ومطور WordPress أول لدى The MK Solution (2018–2024)، ومطور WordPress مستقلاً عبر Upwork (2020–2023)، وعلى مواقع الشركة لدى iLab لتقنية المعلومات / SpeedLogi في الخبر (2025–2026). تتنوع الأعمال بين مواقع الشركات وصفحات الخدمات لشركات في مجالي الخدمات اللوجستية والطاقة."
         }
       },
       {
         "title": {
-          "en": "Areas of focus",
-          "ar": "مجالات التركيز"
+          "en": "Selected websites",
+          "ar": "مواقع مختارة"
         },
-        "text": {
-          "en": "The work focused on service presentation, responsive design, site performance, SEO structure, and maintainability. These responsibilities connected business content with implementation and delivery standards.",
-          "ar": "ركز العمل على عرض الخدمات والتصميم المتجاوب وأداء الموقع وبنية تحسين محركات البحث وقابلية الصيانة. وربطت هذه المسؤوليات محتوى الأعمال بالتنفيذ ومعايير التسليم."
+        "items": {
+          "en": [
+            "iLab Information Technologies: corporate website work focused on credibility, site speed, SEO structure and clear service presentation.",
+            "SpeedLogi: website improvements for brand presence, performance and clearer discovery of logistics services.",
+            "SpeedPoint: an operational platform addition for the SpeedLogi ecosystem, with delivery-oriented UX and structured workflows.",
+            "The MK Solution: corporate website delivery for a digital services firm.",
+            "Sagal Energy Associates: a business website with a clean user experience and organised content structure."
+          ],
+          "ar": [
+            "iLab لتقنية المعلومات: عمل على موقع الشركة مع التركيز على المصداقية وسرعة الموقع وبنية تحسين محركات البحث ووضوح عرض الخدمات.",
+            "SpeedLogi: تحسينات على الموقع لتعزيز الحضور التجاري والأداء وتسهيل الوصول إلى الخدمات اللوجستية.",
+            "SpeedPoint: منصة تشغيلية مضافة إلى منظومة SpeedLogi بتجربة استخدام موجهة للتسليم وتدفقات عمل منظمة.",
+            "The MK Solution: تنفيذ موقع شركة متخصصة في الخدمات الرقمية.",
+            "Sagal Energy Associates: موقع أعمال بتجربة استخدام واضحة وبنية محتوى منظمة."
+          ]
         }
       },
       {
         "title": {
-          "en": "How I approach a website project",
-          "ar": "منهجي في مشاريع المواقع"
+          "en": "Leading website delivery at The MK Solution",
+          "ar": "قيادة تنفيذ المواقع لدى The MK Solution"
         },
-        "text": {
-          "en": "I start with the audience and the action the page should support, agree on scope and content, then build and test the website. Before handover, I review mobile navigation, forms, page titles, image delivery, and ownership of ongoing maintenance.",
-          "ar": "أبدأ بتحديد الجمهور والإجراء المطلوب من الصفحة، ثم أتفق على النطاق والمحتوى وأطور الموقع وأختبره. وقبل التسليم، أراجع تنقل الموبايل والنماذج وعناوين الصفحات والصور ومسؤولية الصيانة المستمرة."
+        "items": {
+          "en": [
+            "Managed a 10-person cross-functional team on high-visibility client projects.",
+            "Led complex WordPress builds using Elementor, from structure to launch.",
+            "Implemented SEO, security and responsive design best practices across projects.",
+            "Mentored junior developers and improved the team’s delivery standards."
+          ],
+          "ar": [
+            "إدارة فريق متعدد التخصصات من 10 أفراد في مشاريع عملاء عالية الأهمية.",
+            "قيادة تطوير مواقع WordPress معقدة باستخدام Elementor من بناء الهيكل حتى الإطلاق.",
+            "تطبيق أفضل ممارسات تحسين محركات البحث والأمان والتصميم المتجاوب في المشاريع.",
+            "توجيه المطورين المبتدئين ورفع معايير التسليم لدى الفريق."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "Freelance WordPress work",
+          "ar": "أعمال WordPress المستقلة"
+        },
+        "items": {
+          "en": [
+            "Built custom WordPress themes and designs with Elementor for clients on Upwork.",
+            "Maintained multiple live websites with updates and troubleshooting.",
+            "Extended sites with custom HTML, CSS, PHP and JavaScript where page builders were not enough.",
+            "Delivered on tight timelines while keeping quality consistent."
+          ],
+          "ar": [
+            "بناء قوالب وتصاميم WordPress مخصصة باستخدام Elementor لعملاء عبر Upwork.",
+            "صيانة عدة مواقع منشورة مع التحديثات وحل المشكلات.",
+            "توسيع المواقع بشيفرة مخصصة بلغات HTML و CSS و PHP و JavaScript عندما لا تكفي أدوات بناء الصفحات.",
+            "التسليم ضمن جداول زمنية ضيقة مع الحفاظ على جودة ثابتة."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "What I focus on",
+          "ar": "ما أركز عليه"
+        },
+        "items": {
+          "en": [
+            "Clear service presentation: visitors should understand what the business offers and how to get in touch within seconds.",
+            "Performance: optimised images, lean pages and caching so sites load quickly on mobile networks.",
+            "Search structure: unique titles and descriptions, sensible headings, clean URLs and a sitemap.",
+            "Responsive design: layouts, navigation and forms that work on phones first.",
+            "Security and maintainability: updates, sensible plugins and clear ownership after launch."
+          ],
+          "ar": [
+            "عرض واضح للخدمات: أن يفهم الزائر خلال ثوانٍ ما يقدمه النشاط وكيف يتواصل معه.",
+            "الأداء: صور محسّنة وصفحات خفيفة وتخزين مؤقت لتحميل سريع على شبكات الجوال.",
+            "بنية البحث: عناوين وأوصاف فريدة وعناوين فرعية منطقية وروابط واضحة وخريطة موقع.",
+            "التصميم المتجاوب: تخطيط وتنقل ونماذج تعمل على الهاتف أولاً.",
+            "الأمان وسهولة الصيانة: التحديثات واختيار إضافات مناسبة ومسؤولية واضحة بعد الإطلاق."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "How I run a website project",
+          "ar": "كيف أدير مشروع موقع"
+        },
+        "items": {
+          "en": [
+            "Discovery: agree on the audience, the main action each page should drive, and the scope.",
+            "Structure and content: plan pages and navigation, and collect the real content before design.",
+            "Build: implement in WordPress/Elementor or custom code, mobile first.",
+            "Test: check navigation, forms, page titles, images and speed on real devices.",
+            "Launch and handover: confirm contact routes, search basics and who maintains the site afterwards."
+          ],
+          "ar": [
+            "الاستكشاف: الاتفاق على الجمهور والإجراء الرئيسي المطلوب من كل صفحة ونطاق العمل.",
+            "الهيكل والمحتوى: تخطيط الصفحات والتنقل وجمع المحتوى الحقيقي قبل التصميم.",
+            "التطوير: التنفيذ باستخدام WordPress و Elementor أو بشيفرة مخصصة مع إعطاء الأولوية للجوال.",
+            "الاختبار: مراجعة التنقل والنماذج وعناوين الصفحات والصور والسرعة على أجهزة حقيقية.",
+            "الإطلاق والتسليم: التأكد من وسائل التواصل وأساسيات البحث وتحديد المسؤول عن الصيانة بعد ذلك."
+          ]
+        }
+      },
+      {
+        "title": {
+          "en": "Technology",
+          "ar": "التقنيات"
+        },
+        "items": {
+          "en": [
+            "WordPress, Elementor and custom themes",
+            "HTML, CSS, JavaScript and PHP",
+            "On-page SEO, sitemaps and search console setup",
+            "Responsive layouts and performance optimisation"
+          ],
+          "ar": [
+            "WordPress و Elementor والقوالب المخصصة",
+            "HTML و CSS و JavaScript و PHP",
+            "تحسين محركات البحث داخل الصفحة وخرائط المواقع وإعداد Search Console",
+            "التخطيط المتجاوب وتحسين الأداء"
+          ]
         }
       }
     ],
     "seo_title": {
-      "en": "Business Websites: WordPress & SEO | Usman Asif Qureshi"
+      "en": "Business Websites: WordPress & SEO | Usman Asif Qureshi",
+      "ar": "مواقع الأعمال و WordPress | عثمان آصف قريشي"
     },
     "seo_description": {
-      "en": "WordPress and business website work for iLab, SpeedLogi and The MK Solution: responsive builds, performance, SEO structure and team leadership.",
-      "ar": "أعمالي في WordPress ومواقع الشركات لـ iLab و SpeedLogi و The MK Solution: تصميم متجاوب وأداء وبنية لتحسين البحث وقيادة الفريق."
+      "en": "Business websites I built and led since 2018: iLab, SpeedLogi, SpeedPoint, The MK Solution and Sagal Energy, with my WordPress, performance and SEO approach.",
+      "ar": "مواقع أعمال طورتها وقدت تنفيذها منذ 2018: iLab و SpeedLogi و SpeedPoint و The MK Solution و Sagal Energy، مع منهجي في WordPress والأداء وتحسين البحث."
     }
   },
   {

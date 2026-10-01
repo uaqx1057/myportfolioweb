@@ -150,8 +150,8 @@ DMS, a Laravel platform and Flutter Android driver app I designed and developed 
 
 www.codewithusman.com/projects/driver-management-system/
 
-Business Websites: Delivery, Performance & SEO
+Business Websites: WordPress Delivery, Performance & SEO
 
-An overview of my WordPress and business website work, including iLab, SpeedLogi, and team leadership at The MK Solution.
+Business websites I built and led since 2018: iLab, SpeedLogi, SpeedPoint, The MK Solution and Sagal Energy, with my WordPress, performance and SEO approach.
 
 www.codewithusman.com/projects/business-websites/
