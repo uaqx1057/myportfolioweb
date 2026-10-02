@@ -3398,3 +3398,16 @@ section.insights { padding: 90px 0; }
     .hero-canvas, .site-hud-canvas { display: none; }
 }
 .contact-form .cf-turnstile { margin: 4px 0 14px; min-height: 65px; }
+.svg-icon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.125em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.service-card .service-title a { color: inherit; text-decoration: none; }
+.service-card .service-title a::after { content: ""; position: absolute; inset: 0; }
+.service-card { position: relative; }
+.service-card:focus-within { outline: 2px solid var(--primary-color); outline-offset: 3px; }
+.services-more { text-align: center; margin-top: 36px; }
+.service-index ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 8px; }
+.service-index a { display: inline-block; padding: 7px 14px; border: 1px solid var(--hud-line); border-radius: 999px; font-size: .88rem; color: var(--text-secondary); text-decoration: none; }
+.service-index a:hover { border-color: var(--primary-color); color: var(--primary-color); }
+.detail-main .service-detail { scroll-margin-top: 90px; padding-top: 8px; border-top: 1px solid var(--hud-line); }
+.detail-main .service-detail h2 { display: flex; align-items: center; gap: 12px; }
+.detail-main .service-detail h2 i, .detail-main .service-detail h2 .svg-icon { color: var(--primary-color); font-size: 1.2em; }
+.detail-main .service-detail .detail-kind { margin: 14px 0 8px; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent, #f59e0b); }

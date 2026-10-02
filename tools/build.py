@@ -21,6 +21,34 @@ from build_cv import build_cv
 BASE = 'https://www.codewithusman.com'
 SOURCE = BeautifulSoup((ROOT / 'content/home.html').read_text(encoding='utf-8'), 'html.parser')
 PAGES = json.loads((ROOT / 'content/pages.json').read_text(encoding='utf-8'))
+SERVICES = json.loads((ROOT / 'content/services.json').read_text(encoding='utf-8'))
+# Inline icons for glyphs missing from the Font Awesome subset.
+SVG_ICONS = {
+    'cart': '<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 11.4a1.5 1.5 0 0 0 1.5 1.1h8.6a1.5 1.5 0 0 0 1.5-1.1L21 7H6"/>',
+    'bag': '<path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>',
+    'chat': '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/>',
+    'truck': '<path d="M3 6h11v10H3z"/><path d="M14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/>',
+}
+
+def icon_html(icon):
+    if icon.startswith('svg:'):
+        return f'<svg aria-hidden="true" class="svg-icon" viewBox="0 0 24 24">{SVG_ICONS[icon[4:]]}</svg>'
+    return f'<i aria-hidden="true" class="{icon}"></i>'
+
+def service_cards_html():
+    # Bilingual source markup (data-en/data-ar); localize() picks the language.
+    return ''.join(
+        f'<div class="service-card" id="service-{x["id"]}"><div class="service-icon">{icon_html(x["icon"])}</div>'
+        f'<h3 class="service-title"><a href="/services/#{x["id"]}" data-en="{escape(x["title"]["en"])}" data-ar="{escape(x["title"]["ar"])}">{escape(x["title"]["en"])}</a></h3>'
+        f'<p data-en="{escape(x["short"]["en"])}" data-ar="{escape(x["short"]["ar"])}">{escape(x["short"]["en"])}</p></div>'
+        for x in SERVICES['services'] if x.get('featured'))
+
+grid = SOURCE.select_one('.services-grid')
+grid.clear()
+grid.append(BeautifulSoup(service_cards_html(), 'html.parser'))
+grid.insert_after(BeautifulSoup('<p class="services-more"><a class="btn btn-secondary" data-ar="كل الخدمات بالتفصيل" data-en="All services in detail" href="/services/">All services in detail</a></p>', 'html.parser'))
+for old_icon in SOURCE.select('i.fa-whatsapp'):
+    old_icon.replace_with(BeautifulSoup(icon_html('svg:chat'), 'html.parser'))
 MANIFEST_PATH = ROOT / 'content/build-manifest.json'
 old_manifest = json.loads(MANIFEST_PATH.read_text()) if MANIFEST_PATH.exists() else {}
 manifest = {}
@@ -206,8 +234,8 @@ META={
              'ar':dict(seo_title='ملاحظات تقنية عن البرمجيات والمواقع | عثمان آصف قريشي',seo_description='ملاحظات عملية عن تخطيط البرمجيات اللوجستية وتسليم مواقع الأعمال، بقلم مطور فل ستاك ومدير مشاريع في الخبر بالسعودية.')},
  'about':{'en':dict(seo_description='About Usman Asif Qureshi, a full-stack developer and project manager in Al Khobar, Saudi Arabia: experience, education, certifications and skills.'),
           'ar':dict(seo_description='نبذة عن عثمان آصف قريشي، مطور فل ستاك ومدير مشاريع في الخبر بالسعودية: الخبرات العملية والتعليم والشهادات والمهارات التقنية.')},
- 'services':{'en':dict(seo_title='Web & Mobile Development Services | Usman Asif Qureshi',seo_description='Laravel, Python/Flask and WordPress development, Flutter mobile apps, and technical project delivery for businesses in Saudi Arabia and remote clients.'),
-             'ar':dict(seo_title='خدمات تطوير الويب والموبايل | عثمان آصف قريشي',seo_description='تطوير Laravel و Python/Flask و WordPress، وتطبيقات موبايل بتقنية Flutter، وإدارة التسليم التقني للشركات في السعودية والعملاء عن بُعد.')},
+ 'services':{'en':dict(seo_title='Web, App & E-commerce Development Services | Usman Qureshi',seo_description='WordPress and Salla stores, Android and iOS apps, WhatsApp chatbots and IVR with Twilio, AI and API integrations, and logistics software in Saudi Arabia.'),
+             'ar':dict(seo_title='خدمات تطوير المواقع والمتاجر والتطبيقات | عثمان آصف قريشي',seo_description='متاجر سلة و WordPress، وتطبيقات أندرويد و iOS، وروبوتات واتساب و IVR عبر Twilio، وربط الأنظمة والذكاء الاصطناعي، وبرمجيات لوجستية في السعودية.')},
  'privacy':{'en':dict(seo_title='Privacy Policy | Usman Asif Qureshi',seo_description='How Code With Usman handles contact form messages, theme preferences, Google Analytics measurement, hosting logs and links to external services.'),
             'ar':dict(seo_title='سياسة الخصوصية | عثمان آصف قريشي',seo_description='كيف يتعامل موقع Code With Usman مع رسائل نموذج التواصل وتفضيلات المظهر وقياس Google Analytics وسجلات الاستضافة والخدمات الخارجية.')},
  'resume':{'en':dict(seo_title='Resume: Full-Stack Developer & PM | Usman Asif Qureshi',seo_description='Resume of Usman Asif Qureshi, full-stack developer and project manager in Al Khobar: Laravel, Python/Flask, Flutter and WordPress. Download the PDF.'),
@@ -244,9 +272,22 @@ def main():
         body+='<p><a href="https://www.linkedin.com/in/usmanasif1057/">LinkedIn</a> · <a href="'+path_for('resume',lang)+'">'+('السيرة الذاتية' if ar else 'Resume')+'</a></p>'
         shell('about',lang,'نبذة عن عثمان آصف قريشي' if ar else 'About Usman Asif Qureshi','مطور فل ستاك ومدير مشاريع مقيم في الخبر، السعودية، ومتاح لفرص عمل جديدة.' if ar else 'Full-stack developer and project manager in Al Khobar, Saudi Arabia, available for new opportunities.',body,'ProfilePage',**META['about'][lang])
         services=localize(copy.deepcopy(SOURCE),lang)
-        body=section('الخدمات' if ar else 'What I offer',str(services.select_one('.services-grid')))+section('طريقة العمل' if ar else 'How we work together',str(services.select_one('.process-grid')))
-        body+=cards(PAGES[:3],lang)+'<a class="btn btn-primary" href="'+path_for('',lang)+'#contact">'+('تواصل لمناقشة المتطلبات' if ar else 'Discuss your requirements')+'</a>'
-        shell('services',lang,'تطوير الويب وإدارة التسليم' if ar else 'Web Development & Technical Delivery','تطوير Laravel وPython/Flask وWordPress، ودعم تطبيقات Flutter وتنسيق المشاريع.' if ar else 'Laravel, Python/Flask and WordPress development, Flutter application support, and project coordination.',body,**META['services'][lang])
+        body='<p>'+escape(SERVICES['intro'][lang])+'</p>'
+        body+='<nav class="service-index" aria-label="'+('قائمة الخدمات' if ar else 'Services list')+'"><ul>'+''.join(f'<li><a href="#{x["id"]}">{escape(x["title"][lang])}</a></li>' for x in SERVICES['services'])+'</ul></nav>'
+        for x in SERVICES['services']:
+            body+=(f'<section class="service-detail" id="{x["id"]}"><h2>{icon_html(x["icon"])} {escape(x["title"][lang])}</h2><p>{escape(x["detail"][lang])}</p>'
+                   f'<p class="detail-kind">{"يشمل" if ar else "Includes"}</p><ul class="case-list">'+''.join('<li>'+escape(i)+'</li>' for i in x['includes'][lang])+'</ul></section>')
+        body+=section('طريقة العمل' if ar else 'How we work together',str(services.select_one('.process-grid')))
+        body+=section('أسئلة شائعة' if ar else 'Frequently asked questions',''.join(f'<h3>{escape(f["q"][lang])}</h3><p>{escape(f["a"][lang])}</p>' for f in SERVICES['faq']))
+        body+=section('أعمال ذات صلة' if ar else 'Related work',cards(PAGES[:3],lang))
+        body+='<a class="btn btn-primary" href="'+path_for('',lang)+'#contact">'+('تواصل لمناقشة المتطلبات' if ar else 'Discuss your requirements')+'</a>'
+        catalog={'@type':'OfferCatalog','name':'خدمات عثمان آصف قريشي' if ar else 'Services by Usman Asif Qureshi','itemListElement':[
+            {'@type':'Offer','itemOffered':{'@type':'Service','name':x['title'][lang],'description':x['detail'][lang],'url':BASE+path_for('services',lang)+'#'+x['id'],
+             'provider':{'@id':BASE+'/#person'},'areaServed':[{'@type':'Country','name':'Saudi Arabia'},'Worldwide']}} for x in SERVICES['services']]}
+        shell('services',lang,'خدمات تطوير الويب والموبايل والأنظمة' if ar else 'Web, Mobile & Business System Services',
+              'مواقع WordPress ومتاجر سلة و WooCommerce وتطبيقات أندرويد و iOS وروبوتات واتساب وأنظمة IVR عبر Twilio والربط والذكاء الاصطناعي والأنظمة اللوجستية.' if ar else
+              'WordPress websites, Salla and WooCommerce stores, Android and iOS apps, Twilio WhatsApp chatbots and IVR, integrations, AI and logistics systems.',
+              body,about=catalog,**META['services'][lang])
         privacy=[('بيانات التواصل' if ar else 'Contact details','تُستخدم البيانات التي ترسلها للرد على استفسارك. تصل الرسالة إلى البريد الذي يديره صاحب الموقع. لا ترسل معلومات سرية أو كلمات مرور.' if ar else 'The details you submit are used to respond to your enquiry. Messages are delivered to the site owner’s mailbox. Do not include passwords or confidential information.'),('التخزين والخدمات الخارجية' if ar else 'Storage and external services','يتذكر المتصفح اختيار المظهر. قد تحتفظ الاستضافة بسجلات الوصول والأمان. تُحمّل خطوط الموقع من Google Fonts. يستخدم نموذج التواصل خدمة Cloudflare Turnstile لمنع الرسائل المزعجة الآلية، وقد تعالج Cloudflare بيانات تقنية مثل عنوان IP وبيانات المتصفح لهذا التحقق. الروابط الخارجية مثل WhatsApp وLinkedIn تخضع لسياسات تلك الخدمات.' if ar else 'Your browser remembers your theme preference. Hosting may retain access and security logs. Website fonts load from Google Fonts. The contact form uses Cloudflare Turnstile to block spam bots; Cloudflare may process technical data such as your IP address and browser details for this check. External links such as WhatsApp and LinkedIn are governed by those services’ policies.'),('القياس والطلبات' if ar else 'Measurement and requests','يستخدم الموقع Google Analytics لقياس الزيارات بشكل إجمالي، مثل الصفحات التي تُزار وتنزيلات السيرة الذاتية ونقرات واتساب. قد يضع Google Analytics ملفات تعريف ارتباط ويعالج بيانات تقنية مثل نوع الجهاز والموقع التقريبي. لا تُرسل محتويات نموذج التواصل أو بيانات الاتصال إلى أدوات القياس. يمكنك إيقاف ذلك عبر إعدادات ملفات تعريف الارتباط في متصفحك أو إضافة إلغاء الاشتراك من Google. لطلب حذف رسالة أو الاستفسار عن بياناتك، راسل info@codewithusman.com.' if ar else 'This site uses Google Analytics to measure visits in aggregate, such as pages viewed, CV downloads and WhatsApp clicks. Google Analytics may set cookies and processes technical data such as device type and approximate location. Contact form contents and contact details are never sent to analytics. You can opt out with your browser cookie settings or the Google Analytics opt-out add-on. To request deletion of a message or ask about your details, contact info@codewithusman.com.')]
         shell('privacy',lang,'الخصوصية' if ar else 'Privacy','كيف تُستخدم بيانات التواصل والتفضيلات على هذا الموقع.' if ar else 'How contact information and preferences are used on this website.',''.join(section(t,'<p>'+escape(b)+'</p>') for t,b in privacy),**META['privacy'][lang])
         data=resume_data(lang)

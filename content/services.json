@@ -1,0 +1,676 @@
+{
+  "intro": {
+    "en": "I help businesses in Saudi Arabia and abroad plan, build and run their websites, online stores, mobile apps and business systems. You work directly with the developer who also manages the project, from the first requirements call to launch and support.",
+    "ar": "أساعد الشركات في السعودية وخارجها على تخطيط وبناء وتشغيل مواقعها ومتاجرها الإلكترونية وتطبيقاتها وأنظمة أعمالها. تتعامل مباشرة مع المطور الذي يدير المشروع أيضاً، من أول اجتماع للمتطلبات حتى الإطلاق والدعم."
+  },
+  "services": [
+    {
+      "id": "wordpress-websites",
+      "icon": "fab fa-wordpress",
+      "title": {
+        "en": "WordPress Websites",
+        "ar": "مواقع WordPress"
+      },
+      "short": {
+        "en": "Fast, secure business websites you can edit yourself.",
+        "ar": "مواقع أعمال سريعة وآمنة يمكنك تعديلها بنفسك."
+      },
+      "detail": {
+        "en": "Company websites built on WordPress with Elementor or custom themes, designed around your services and the action you want visitors to take. You get a site your team can update without a developer.",
+        "ar": "مواقع شركات مبنية على WordPress باستخدام Elementor أو قوالب مخصصة، مصممة حول خدماتك والإجراء الذي تريده من الزائر. تحصل على موقع يستطيع فريقك تحديثه دون الحاجة إلى مطور."
+      },
+      "includes": {
+        "en": [
+          "Custom design or theme setup",
+          "Responsive, mobile-first pages",
+          "On-page SEO, sitemap and speed optimisation",
+          "Contact forms with spam protection",
+          "Training and handover"
+        ],
+        "ar": [
+          "تصميم مخصص أو إعداد قالب",
+          "صفحات متجاوبة تعطي الأولوية للجوال",
+          "تحسين محركات البحث داخل الصفحات وخريطة الموقع وتحسين السرعة",
+          "نماذج تواصل محمية من الرسائل المزعجة",
+          "التدريب والتسليم"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "wordpress-ecommerce",
+      "icon": "svg:cart",
+      "title": {
+        "en": "WordPress E-commerce (WooCommerce)",
+        "ar": "متاجر WordPress الإلكترونية (WooCommerce)"
+      },
+      "short": {
+        "en": "Online stores with payments, shipping and stock.",
+        "ar": "متاجر إلكترونية مع الدفع والشحن والمخزون."
+      },
+      "detail": {
+        "en": "WooCommerce stores with product catalogues, payment gateways, shipping rules and order management, set up so the store is easy to run day to day.",
+        "ar": "متاجر WooCommerce مع كتالوج المنتجات وبوابات الدفع وقواعد الشحن وإدارة الطلبات، مُعدّة لتكون سهلة الإدارة يومياً."
+      },
+      "includes": {
+        "en": [
+          "Product, category and variation setup",
+          "Payment gateway and shipping configuration",
+          "Arabic and English storefronts",
+          "Order emails and basic reporting",
+          "Performance and security hardening"
+        ],
+        "ar": [
+          "إعداد المنتجات والتصنيفات والخيارات",
+          "إعداد بوابات الدفع والشحن",
+          "واجهات متجر بالعربية والإنجليزية",
+          "رسائل الطلبات وتقارير أساسية",
+          "تحسين الأداء وتعزيز الأمان"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "salla-stores",
+      "icon": "svg:bag",
+      "title": {
+        "en": "Salla Stores for Saudi Arabia",
+        "ar": "متاجر سلة في السعودية"
+      },
+      "short": {
+        "en": "Salla store setup, theming and integrations for the Saudi market.",
+        "ar": "إعداد متاجر سلة وتخصيص تصميمها وربطها للسوق السعودي."
+      },
+      "detail": {
+        "en": "Launch or improve a store on Salla, the e-commerce platform built for Saudi businesses: store setup, theme customisation, product data, and connecting the apps and services you use.",
+        "ar": "إطلاق متجرك على منصة سلة المصممة للأعمال السعودية أو تطويره: إعداد المتجر وتخصيص القالب وبيانات المنتجات وربط التطبيقات والخدمات التي تستخدمها."
+      },
+      "includes": {
+        "en": [
+          "Store setup and configuration",
+          "Theme customisation in Arabic and English",
+          "Product import and catalogue structure",
+          "Payment, shipping and app integrations",
+          "Store SEO basics"
+        ],
+        "ar": [
+          "إعداد المتجر وتهيئته",
+          "تخصيص القالب بالعربية والإنجليزية",
+          "استيراد المنتجات وتنظيم الكتالوج",
+          "ربط الدفع والشحن والتطبيقات",
+          "أساسيات تحسين المتجر لمحركات البحث"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "html-css-websites",
+      "icon": "fab fa-html5",
+      "title": {
+        "en": "HTML & CSS Websites",
+        "ar": "مواقع HTML و CSS"
+      },
+      "short": {
+        "en": "Lightweight hand-coded sites and landing pages.",
+        "ar": "مواقع وصفحات هبوط خفيفة مكتوبة يدوياً."
+      },
+      "detail": {
+        "en": "Hand-coded websites and landing pages with HTML, CSS and JavaScript: very fast, secure and inexpensive to host, ideal when you do not need a full CMS.",
+        "ar": "مواقع وصفحات هبوط مكتوبة يدوياً باستخدام HTML و CSS و JavaScript: سريعة جداً وآمنة وقليلة تكلفة الاستضافة، ومناسبة عندما لا تحتاج إلى نظام إدارة محتوى كامل."
+      },
+      "includes": {
+        "en": [
+          "Pixel-accurate, responsive layouts",
+          "Bilingual Arabic/English pages",
+          "Accessibility and SEO structure",
+          "Hosting setup and deployment"
+        ],
+        "ar": [
+          "تخطيطات دقيقة ومتجاوبة",
+          "صفحات ثنائية اللغة بالعربية والإنجليزية",
+          "بنية مراعية لسهولة الوصول ولمحركات البحث",
+          "إعداد الاستضافة والنشر"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "cms-development",
+      "icon": "fas fa-layer-group",
+      "title": {
+        "en": "CMS Development",
+        "ar": "تطوير أنظمة إدارة المحتوى"
+      },
+      "short": {
+        "en": "Custom content management for your team.",
+        "ar": "إدارة محتوى مخصصة لفريقك."
+      },
+      "detail": {
+        "en": "Content management tailored to how your team works: custom WordPress post types and admin screens, or a lightweight Laravel-based CMS when off-the-shelf tools do not fit.",
+        "ar": "إدارة محتوى مصممة حسب طريقة عمل فريقك: أنواع محتوى وشاشات إدارة مخصصة في WordPress، أو نظام إدارة محتوى خفيف مبني على Laravel عندما لا تناسبك الأدوات الجاهزة."
+      },
+      "includes": {
+        "en": [
+          "Content model and editor workflow",
+          "User roles and permissions",
+          "Multilingual content",
+          "Migration from an existing site"
+        ],
+        "ar": [
+          "نموذج المحتوى وسير عمل التحرير",
+          "أدوار المستخدمين والصلاحيات",
+          "محتوى متعدد اللغات",
+          "الترحيل من موقع حالي"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "custom-web-apps",
+      "icon": "fas fa-laptop-code",
+      "title": {
+        "en": "Custom Web Applications",
+        "ar": "تطبيقات ويب مخصصة"
+      },
+      "short": {
+        "en": "Laravel and Python/Flask platforms built for your process.",
+        "ar": "منصات Laravel و Python/Flask مبنية حسب إجراءاتك."
+      },
+      "detail": {
+        "en": "Business platforms, portals and dashboards built with Laravel or Python/Flask when spreadsheets and off-the-shelf tools no longer fit how your business works.",
+        "ar": "منصات أعمال وبوابات ولوحات تحكم مبنية باستخدام Laravel أو Python/Flask عندما لا تعود جداول البيانات والأدوات الجاهزة مناسبة لطريقة عملك."
+      },
+      "includes": {
+        "en": [
+          "Requirements and data modelling",
+          "Role-based access and audit trails",
+          "Reports, exports and PDFs",
+          "Deployment, backups and support"
+        ],
+        "ar": [
+          "تحليل المتطلبات ونمذجة البيانات",
+          "صلاحيات حسب الأدوار وسجلات التدقيق",
+          "التقارير والتصدير وملفات PDF",
+          "النشر والنسخ الاحتياطي والدعم"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "mobile-apps",
+      "icon": "fas fa-mobile-screen-button",
+      "title": {
+        "en": "Android & iOS App Development",
+        "ar": "تطوير تطبيقات أندرويد و iOS"
+      },
+      "short": {
+        "en": "Cross-platform apps with Flutter, connected to your backend.",
+        "ar": "تطبيقات متعددة المنصات بتقنية Flutter متصلة بأنظمتك."
+      },
+      "detail": {
+        "en": "Android and iOS apps built with Flutter from one codebase, connected to your backend: login, notifications, location, payments, chat and offline-friendly workflows.",
+        "ar": "تطبيقات أندرويد و iOS مبنية بتقنية Flutter من شيفرة واحدة ومتصلة بأنظمتك: تسجيل الدخول والإشعارات والموقع والدفع والمحادثة وتدفقات تعمل مع ضعف الاتصال."
+      },
+      "includes": {
+        "en": [
+          "App design and Flutter development",
+          "REST API and backend integration",
+          "Push notifications and crash reporting",
+          "Google Play and App Store release support"
+        ],
+        "ar": [
+          "تصميم التطبيق وتطويره بتقنية Flutter",
+          "الربط بالواجهات البرمجية والأنظمة الخلفية",
+          "الإشعارات الفورية وتقارير الأعطال",
+          "دعم النشر على Google Play و App Store"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "desktop-apps",
+      "icon": "fas fa-laptop-code",
+      "title": {
+        "en": "Desktop Applications",
+        "ar": "تطبيقات سطح المكتب"
+      },
+      "short": {
+        "en": "Windows and macOS apps for internal tools and offline work.",
+        "ar": "تطبيقات لنظامي Windows و macOS للأدوات الداخلية والعمل دون اتصال."
+      },
+      "detail": {
+        "en": "Desktop applications for Windows and macOS built with Flutter or web technologies, for internal tools, kiosks and work that has to continue offline, sharing logic and data with your web and mobile apps.",
+        "ar": "تطبيقات سطح مكتب لنظامي Windows و macOS مبنية بتقنية Flutter أو تقنيات الويب، للأدوات الداخلية وأجهزة الخدمة الذاتية والعمل الذي يجب أن يستمر دون اتصال، مع مشاركة المنطق والبيانات مع تطبيقات الويب والموبايل."
+      },
+      "includes": {
+        "en": [
+          "Windows and macOS builds",
+          "Offline storage and sync",
+          "Shared code with web and mobile apps",
+          "Installer and update setup"
+        ],
+        "ar": [
+          "إصدارات Windows و macOS",
+          "تخزين دون اتصال ومزامنة",
+          "شيفرة مشتركة مع تطبيقات الويب والموبايل",
+          "إعداد ملف التثبيت والتحديثات"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "whatsapp-chatbots",
+      "icon": "svg:chat",
+      "title": {
+        "en": "WhatsApp Chatbots (Twilio)",
+        "ar": "روبوتات محادثة واتساب (Twilio)"
+      },
+      "short": {
+        "en": "Automated WhatsApp replies, bookings and updates.",
+        "ar": "ردود وحجوزات وتحديثات آلية عبر واتساب."
+      },
+      "detail": {
+        "en": "WhatsApp Business chatbots built on Twilio that answer common questions, take bookings or orders, send status updates and hand over to a person when needed.",
+        "ar": "روبوتات محادثة لواتساب للأعمال مبنية على Twilio تجيب عن الأسئلة الشائعة وتستقبل الحجوزات أو الطلبات وترسل تحديثات الحالة وتحوّل المحادثة إلى موظف عند الحاجة."
+      },
+      "includes": {
+        "en": [
+          "Conversation design in Arabic and English",
+          "Twilio WhatsApp setup and message templates",
+          "Connection to your system or database",
+          "Human hand-off and reporting"
+        ],
+        "ar": [
+          "تصميم المحادثة بالعربية والإنجليزية",
+          "إعداد واتساب عبر Twilio وقوالب الرسائل",
+          "الربط بنظامك أو قاعدة بياناتك",
+          "التحويل إلى موظف والتقارير"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "twilio-ivr",
+      "icon": "fas fa-headset",
+      "title": {
+        "en": "Twilio IVR & Voice",
+        "ar": "أنظمة IVR والمكالمات عبر Twilio"
+      },
+      "short": {
+        "en": "Phone menus, call routing and voice automation.",
+        "ar": "قوائم هاتفية وتوجيه المكالمات وأتمتة صوتية."
+      },
+      "detail": {
+        "en": "Interactive voice response (IVR) systems on Twilio: phone menus, call routing to the right team, after-hours messages, callbacks and call logging connected to your system.",
+        "ar": "أنظمة الرد الصوتي التفاعلي (IVR) عبر Twilio: قوائم هاتفية وتوجيه المكالمات إلى الفريق المناسب ورسائل خارج أوقات العمل وطلبات معاودة الاتصال وتسجيل المكالمات في نظامك."
+      },
+      "includes": {
+        "en": [
+          "Call flow design",
+          "Twilio number and voice setup",
+          "Routing, queues and voicemail",
+          "Integration with your CRM or system"
+        ],
+        "ar": [
+          "تصميم مسار المكالمات",
+          "إعداد الأرقام والمكالمات في Twilio",
+          "التوجيه وقوائم الانتظار والبريد الصوتي",
+          "الربط بنظام إدارة العملاء أو نظامك"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "integrations",
+      "icon": "fas fa-diagram-project",
+      "title": {
+        "en": "API & System Integrations",
+        "ar": "ربط الأنظمة والواجهات البرمجية"
+      },
+      "short": {
+        "en": "Connect your website, apps and business tools.",
+        "ar": "ربط موقعك وتطبيقاتك وأدوات عملك."
+      },
+      "detail": {
+        "en": "Connect the systems you already use, such as payment gateways, shipping and delivery platforms, ERPs, CRMs and messaging, so data flows automatically instead of being copied by hand.",
+        "ar": "ربط الأنظمة التي تستخدمها مثل بوابات الدفع ومنصات الشحن والتوصيل وأنظمة تخطيط الموارد وإدارة العملاء والمراسلة، لتنتقل البيانات تلقائياً بدل نسخها يدوياً."
+      },
+      "includes": {
+        "en": [
+          "REST API and webhook integrations",
+          "Data imports, exports and sync jobs",
+          "Error handling and monitoring",
+          "Integration documentation"
+        ],
+        "ar": [
+          "الربط عبر الواجهات البرمجية و Webhooks",
+          "استيراد البيانات وتصديرها ومزامنتها",
+          "معالجة الأخطاء والمراقبة",
+          "توثيق عمليات الربط"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "ai-integrations",
+      "icon": "fas fa-wand-magic-sparkles",
+      "title": {
+        "en": "AI Integrations",
+        "ar": "دمج الذكاء الاصطناعي"
+      },
+      "short": {
+        "en": "Practical AI features inside your product or workflow.",
+        "ar": "ميزات ذكاء اصطناعي عملية داخل منتجك أو سير عملك."
+      },
+      "detail": {
+        "en": "Add AI where it saves real time: assistants grounded in your own content, document and data extraction, summaries, classification and translation, with limits that keep costs and quality under control.",
+        "ar": "إضافة الذكاء الاصطناعي حيث يوفر وقتاً فعلياً: مساعدات تعتمد على محتواك، واستخراج البيانات من المستندات، والتلخيص والتصنيف والترجمة، مع ضوابط تحافظ على التكلفة والجودة."
+      },
+      "includes": {
+        "en": [
+          "Use-case assessment",
+          "Assistants grounded in your data",
+          "Document and data extraction",
+          "Cost limits, logging and review"
+        ],
+        "ar": [
+          "تقييم حالات الاستخدام",
+          "مساعدات تعتمد على بياناتك",
+          "استخراج البيانات من المستندات",
+          "حدود التكلفة والسجلات والمراجعة"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "automation",
+      "icon": "fas fa-server",
+      "title": {
+        "en": "Business Automation",
+        "ar": "أتمتة الأعمال"
+      },
+      "short": {
+        "en": "Remove repetitive manual work with scheduled jobs and workflows.",
+        "ar": "التخلص من العمل اليدوي المتكرر بالمهام المجدولة وسير العمل الآلي."
+      },
+      "detail": {
+        "en": "Automate the repetitive parts of your operations: scheduled reports, data imports and reconciliations, notifications, approvals and document generation, built as reliable scripts and scheduled jobs.",
+        "ar": "أتمتة الأجزاء المتكررة من عملياتك: التقارير المجدولة واستيراد البيانات ومطابقتها والإشعارات والموافقات وإنشاء المستندات، كبرامج ومهام مجدولة موثوقة."
+      },
+      "includes": {
+        "en": [
+          "Workflow review to find what to automate",
+          "Scheduled jobs, imports and reconciliations",
+          "Email, WhatsApp and push notifications",
+          "Automatic PDF, report and document generation"
+        ],
+        "ar": [
+          "مراجعة سير العمل لتحديد ما يمكن أتمتته",
+          "مهام مجدولة واستيراد ومطابقة البيانات",
+          "إشعارات عبر البريد وواتساب والإشعارات الفورية",
+          "إنشاء ملفات PDF والتقارير والمستندات تلقائياً"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "logistics-software",
+      "icon": "svg:truck",
+      "title": {
+        "en": "Logistics Software & Systems",
+        "ar": "البرمجيات والأنظمة اللوجستية"
+      },
+      "short": {
+        "en": "Driver, fleet, payroll and operations platforms.",
+        "ar": "منصات السائقين والأسطول والرواتب والعمليات."
+      },
+      "detail": {
+        "en": "Operations software for delivery and logistics companies, based on my experience designing and building DOBS and DMS: driver onboarding, fleet and maintenance, attendance, performance-based payroll and driver apps.",
+        "ar": "برمجيات تشغيلية لشركات التوصيل والخدمات اللوجستية مبنية على خبرتي في تصميم وتطوير نظامي DOBS و DMS: تسجيل السائقين والأسطول والصيانة والحضور والرواتب المرتبطة بالأداء وتطبيقات السائقين."
+      },
+      "includes": {
+        "en": [
+          "Driver onboarding and offboarding",
+          "Fleet, inspections and maintenance",
+          "Attendance, shifts and payroll",
+          "Driver mobile apps and dashboards"
+        ],
+        "ar": [
+          "تسجيل السائقين وإنهاء خدماتهم",
+          "الأسطول والفحوصات والصيانة",
+          "الحضور والمناوبات والرواتب",
+          "تطبيقات السائقين ولوحات التحكم"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "debugging",
+      "icon": "fas fa-code",
+      "title": {
+        "en": "Debugging & Bug Fixing",
+        "ar": "تتبع الأخطاء وإصلاحها"
+      },
+      "short": {
+        "en": "Find and fix errors in websites, apps and backends.",
+        "ar": "اكتشاف الأخطاء وإصلاحها في المواقع والتطبيقات والأنظمة الخلفية."
+      },
+      "detail": {
+        "en": "Find and fix what is broken in an existing website, app or system: errors, crashes, slow pages, failed integrations or features that stopped working after an update, with a clear explanation of the cause.",
+        "ar": "اكتشاف ما تعطل في موقع أو تطبيق أو نظام قائم وإصلاحه: الأخطاء والأعطال والصفحات البطيئة وعمليات الربط الفاشلة أو الميزات التي توقفت بعد تحديث، مع شرح واضح للسبب."
+      },
+      "includes": {
+        "en": [
+          "Error and crash investigation",
+          "PHP, Laravel, Python, JavaScript and Flutter fixes",
+          "WordPress plugin and theme conflicts",
+          "A short report of the cause and the fix"
+        ],
+        "ar": [
+          "تحليل الأخطاء والأعطال",
+          "إصلاحات في PHP و Laravel و Python و JavaScript و Flutter",
+          "حل تعارضات إضافات وقوالب WordPress",
+          "تقرير مختصر عن السبب والإصلاح"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "maintenance-support",
+      "icon": "fas fa-headset",
+      "title": {
+        "en": "Website Maintenance & Support",
+        "ar": "صيانة المواقع والدعم"
+      },
+      "short": {
+        "en": "Updates, backups, security and fixes after launch.",
+        "ar": "التحديثات والنسخ الاحتياطي والأمان والإصلاحات بعد الإطلاق."
+      },
+      "detail": {
+        "en": "Ongoing care for live websites and stores: core, theme and plugin updates, backups, security checks, uptime fixes and small content changes, so the site keeps working without surprises.",
+        "ar": "رعاية مستمرة للمواقع والمتاجر المنشورة: تحديث النظام والقوالب والإضافات والنسخ الاحتياطي وفحوصات الأمان وإصلاح الأعطال والتعديلات البسيطة على المحتوى، ليستمر الموقع في العمل دون مفاجآت."
+      },
+      "includes": {
+        "en": [
+          "Regular updates and backups",
+          "Security hardening and monitoring",
+          "Troubleshooting and quick fixes",
+          "Small content and design changes"
+        ],
+        "ar": [
+          "تحديثات ونسخ احتياطي منتظمة",
+          "تعزيز الأمان والمراقبة",
+          "حل المشكلات والإصلاحات السريعة",
+          "تعديلات بسيطة على المحتوى والتصميم"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "seo-performance",
+      "icon": "fas fa-gauge-high",
+      "title": {
+        "en": "SEO & Performance Optimization",
+        "ar": "تحسين محركات البحث والأداء"
+      },
+      "short": {
+        "en": "Faster pages and better search visibility.",
+        "ar": "صفحات أسرع وظهور أفضل في نتائج البحث."
+      },
+      "detail": {
+        "en": "Technical SEO and speed work for existing sites: page titles and descriptions, structured data, sitemaps and Search Console, image and caching optimisation, and Core Web Vitals improvements.",
+        "ar": "تحسين تقني لمحركات البحث والسرعة للمواقع القائمة: عناوين الصفحات وأوصافها والبيانات المنظمة وخرائط الموقع و Search Console وتحسين الصور والتخزين المؤقت ومؤشرات أداء الويب الأساسية."
+      },
+      "includes": {
+        "en": [
+          "Technical SEO audit and fixes",
+          "Search Console and sitemap setup",
+          "Image, caching and speed optimisation",
+          "Arabic and English SEO with hreflang"
+        ],
+        "ar": [
+          "تدقيق تقني لمحركات البحث وإصلاحه",
+          "إعداد Search Console وخريطة الموقع",
+          "تحسين الصور والتخزين المؤقت والسرعة",
+          "تحسين البحث بالعربية والإنجليزية مع hreflang"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "hosting-devops",
+      "icon": "fas fa-server",
+      "title": {
+        "en": "Hosting, Deployment & DevOps",
+        "ar": "الاستضافة والنشر و DevOps"
+      },
+      "short": {
+        "en": "Servers, deployments, scheduled jobs and backups.",
+        "ar": "الخوادم والنشر والمهام المجدولة والنسخ الاحتياطي."
+      },
+      "detail": {
+        "en": "Set up and run where your software lives: cPanel or Linux VPS hosting, domains, SSL and email, safe deployments, scheduled jobs, backups and monitoring.",
+        "ar": "إعداد وتشغيل البيئة التي تعمل عليها برمجياتك: استضافة cPanel أو خوادم Linux الافتراضية والنطاقات وشهادات SSL والبريد والنشر الآمن والمهام المجدولة والنسخ الاحتياطي والمراقبة."
+      },
+      "includes": {
+        "en": [
+          "cPanel and Linux VPS setup",
+          "Domain, SSL and email configuration",
+          "Deployment process and rollbacks",
+          "Backups, scheduled jobs and monitoring"
+        ],
+        "ar": [
+          "إعداد cPanel وخوادم Linux الافتراضية",
+          "إعداد النطاق وشهادة SSL والبريد",
+          "آلية النشر والتراجع",
+          "النسخ الاحتياطي والمهام المجدولة والمراقبة"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "software-documentation",
+      "icon": "fas fa-clipboard-list",
+      "title": {
+        "en": "Software Documentation",
+        "ar": "توثيق البرمجيات"
+      },
+      "short": {
+        "en": "Clear technical and user documentation.",
+        "ar": "توثيق تقني وأدلة استخدام واضحة."
+      },
+      "detail": {
+        "en": "Documentation that keeps your software maintainable: requirements and specifications, architecture overviews, API references, deployment runbooks and user guides in English or Arabic.",
+        "ar": "توثيق يحافظ على قابلية صيانة برمجياتك: المتطلبات والمواصفات، ونظرة عامة على البنية، ومراجع الواجهات البرمجية، وأدلة النشر والتشغيل، وأدلة المستخدم بالعربية أو الإنجليزية."
+      },
+      "includes": {
+        "en": [
+          "Requirements and specifications",
+          "Architecture and API documentation",
+          "Deployment and operations runbooks",
+          "User and admin guides"
+        ],
+        "ar": [
+          "المتطلبات والمواصفات",
+          "توثيق البنية والواجهات البرمجية",
+          "أدلة النشر والتشغيل",
+          "أدلة المستخدمين والمسؤولين"
+        ]
+      },
+      "featured": false
+    },
+    {
+      "id": "project-management",
+      "icon": "fas fa-project-diagram",
+      "title": {
+        "en": "Project Management & Delivery",
+        "ar": "إدارة المشاريع والتسليم"
+      },
+      "short": {
+        "en": "Planning, coordination and on-time releases.",
+        "ar": "التخطيط والتنسيق والإصدارات في موعدها."
+      },
+      "detail": {
+        "en": "Technical project management for web and mobile work: scoping, planning, coordinating developers and stakeholders, and keeping releases on schedule, the role I held at iLab / SpeedLogi and The MK Solution.",
+        "ar": "إدارة تقنية لمشاريع الويب والموبايل: تحديد النطاق والتخطيط وتنسيق المطورين وأصحاب المصلحة والالتزام بمواعيد الإصدارات، وهو الدور الذي توليته لدى iLab / SpeedLogi و The MK Solution."
+      },
+      "includes": {
+        "en": [
+          "Scope, estimates and roadmap",
+          "Sprint planning and progress tracking",
+          "Stakeholder updates",
+          "Release and quality coordination"
+        ],
+        "ar": [
+          "النطاق والتقديرات وخطة العمل",
+          "تخطيط مراحل العمل ومتابعة التقدم",
+          "تحديثات لأصحاب المصلحة",
+          "تنسيق الإصدارات والجودة"
+        ]
+      },
+      "featured": true
+    }
+  ],
+  "faq": [
+    {
+      "q": {
+        "en": "Do you work with clients outside Saudi Arabia?",
+        "ar": "هل تعمل مع عملاء خارج السعودية؟"
+      },
+      "a": {
+        "en": "Yes. I am based in Al Khobar and work with clients in Saudi Arabia and remotely worldwide.",
+        "ar": "نعم. أنا مقيم في الخبر وأعمل مع عملاء في السعودية وعن بُعد حول العالم."
+      }
+    },
+    {
+      "q": {
+        "en": "Can you build in Arabic and English?",
+        "ar": "هل يمكنك بناء المواقع بالعربية والإنجليزية؟"
+      },
+      "a": {
+        "en": "Yes. Websites, stores and apps can be fully bilingual, with right-to-left Arabic layouts.",
+        "ar": "نعم. يمكن أن تكون المواقع والمتاجر والتطبيقات ثنائية اللغة بالكامل مع تخطيط عربي من اليمين إلى اليسار."
+      }
+    },
+    {
+      "q": {
+        "en": "How do we start?",
+        "ar": "كيف نبدأ؟"
+      },
+      "a": {
+        "en": "Send a short message about what you need through the contact form or WhatsApp. I will reply with questions, a suggested approach and an estimate.",
+        "ar": "أرسل رسالة قصيرة عما تحتاجه عبر نموذج التواصل أو واتساب، وسأرد بأسئلة ونهج مقترح وتقدير للتكلفة والمدة."
+      }
+    },
+    {
+      "q": {
+        "en": "Do you offer support after launch?",
+        "ar": "هل تقدم دعماً بعد الإطلاق؟"
+      },
+      "a": {
+        "en": "Yes. Maintenance, updates and improvements can continue after launch, and every project includes a handover so you are never locked in.",
+        "ar": "نعم. يمكن أن تستمر الصيانة والتحديثات والتحسينات بعد الإطلاق، ويتضمن كل مشروع تسليماً كاملاً حتى لا تكون مقيداً بي."
+      }
+    }
+  ]
+}
