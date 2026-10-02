@@ -3404,10 +3404,36 @@ section.insights { padding: 90px 0; }
 .service-card { position: relative; }
 .service-card:focus-within { outline: 2px solid var(--primary-color); outline-offset: 3px; }
 .services-more { text-align: center; margin-top: 36px; }
-.service-index ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 8px; }
-.service-index a { display: inline-block; padding: 7px 14px; border: 1px solid var(--hud-line); border-radius: 999px; font-size: .88rem; color: var(--text-secondary); text-decoration: none; }
-.service-index a:hover { border-color: var(--primary-color); color: var(--primary-color); }
-.detail-main .service-detail { scroll-margin-top: 90px; padding-top: 8px; border-top: 1px solid var(--hud-line); }
-.detail-main .service-detail h2 { display: flex; align-items: center; gap: 12px; }
-.detail-main .service-detail h2 i, .detail-main .service-detail h2 .svg-icon { color: var(--primary-color); font-size: 1.2em; }
-.detail-main .service-detail .detail-kind { margin: 14px 0 8px; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent, #f59e0b); }
+
+/* Services page: sticky sidebar menu + two-column service cards. */
+.detail-main:has(.services-layout) { max-width: 1240px; }
+.services-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 28px; align-items: start; margin: 28px 0 12px; }
+.service-index { position: sticky; top: 96px; max-height: calc(100vh - 116px); overflow-y: auto; padding: 18px 12px; border: 1px solid var(--hud-line); border-radius: 16px; background: var(--light-bg); }
+.service-index-title { margin: 0 8px 10px; font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent, #f59e0b); }
+.service-index ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.detail-main .service-index a { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; font-size: .9rem; line-height: 1.35; color: var(--text-secondary); text-decoration: none; transition: background .2s ease, color .2s ease; }
+.service-index a i, .service-index a .svg-icon { flex: 0 0 18px; width: 18px; text-align: center; color: var(--primary-color); font-size: .95rem; }
+.detail-main .service-index a:hover, .detail-main .service-index a:focus-visible { background: rgba(0, 229, 255, .08); color: var(--text-primary); }
+.service-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.detail-main .service-detail { display: flex; flex-direction: column; padding: 22px; border: 1px solid var(--hud-line); border-radius: 16px; background: linear-gradient(160deg, var(--light-bg), rgba(0, 229, 255, .04)); scroll-margin-top: 100px; }
+.detail-main .service-detail:target { border-color: var(--primary-color); box-shadow: 0 0 0 1px var(--primary-color); }
+.detail-main .service-detail h2 { display: flex; align-items: center; gap: 12px; margin: 0 0 10px; font-size: 1.12rem; line-height: 1.35; }
+.service-detail-icon { flex: 0 0 40px; height: 40px; display: grid; place-items: center; border-radius: 12px; background: rgba(0, 229, 255, .08); color: var(--primary-color); font-size: 1.15rem; }
+.detail-main .service-detail > p { margin: 0; font-size: .95rem; line-height: 1.7; }
+.detail-main .service-detail .detail-kind { margin: 14px 0 6px; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent, #f59e0b); }
+.service-includes { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.service-includes li { position: relative; padding-inline-start: 18px; font-size: .9rem; line-height: 1.6; color: var(--text-secondary); }
+.service-includes li::before { content: ""; position: absolute; inset-inline-start: 2px; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--primary-color); }
+@media (max-width: 1024px) {
+    .services-layout { grid-template-columns: 1fr; }
+    /* Sidebar becomes one swipeable row of services under the header. */
+    .service-index { position: sticky; top: 68px; z-index: 5; max-height: none; overflow: hidden; padding: 8px; border-radius: 12px; }
+    .service-index-title { display: none; }
+    .service-index ul { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .service-index ul::-webkit-scrollbar { display: none; }
+    .detail-main .service-index a { white-space: nowrap; padding: 7px 12px; border: 1px solid var(--hud-line); border-radius: 999px; font-size: .85rem; }
+    .detail-main .service-detail { scroll-margin-top: 140px; }
+}
+@media (max-width: 700px) {
+    .service-details { grid-template-columns: 1fr; }
+}

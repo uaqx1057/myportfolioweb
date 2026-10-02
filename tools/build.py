@@ -273,10 +273,13 @@ def main():
         shell('about',lang,'نبذة عن عثمان آصف قريشي' if ar else 'About Usman Asif Qureshi','مطور فل ستاك ومدير مشاريع مقيم في الخبر، السعودية، ومتاح لفرص عمل جديدة.' if ar else 'Full-stack developer and project manager in Al Khobar, Saudi Arabia, available for new opportunities.',body,'ProfilePage',**META['about'][lang])
         services=localize(copy.deepcopy(SOURCE),lang)
         body='<p>'+escape(SERVICES['intro'][lang])+'</p>'
-        body+='<nav class="service-index" aria-label="'+('قائمة الخدمات' if ar else 'Services list')+'"><ul>'+''.join(f'<li><a href="#{x["id"]}">{escape(x["title"][lang])}</a></li>' for x in SERVICES['services'])+'</ul></nav>'
+        # Sidebar menu (sticky on desktop, one swipeable row on mobile) + two-column service cards.
+        body+='<div class="services-layout"><nav class="service-index" aria-label="'+('قائمة الخدمات' if ar else 'Services list')+'"><p class="service-index-title">'+('الخدمات' if ar else 'Services')+'</p><ul>'
+        body+=''.join(f'<li><a href="#{x["id"]}">{icon_html(x["icon"])}<span>{escape(x["title"][lang])}</span></a></li>' for x in SERVICES['services'])+'</ul></nav><div class="service-details">'
         for x in SERVICES['services']:
-            body+=(f'<section class="service-detail" id="{x["id"]}"><h2>{icon_html(x["icon"])} {escape(x["title"][lang])}</h2><p>{escape(x["detail"][lang])}</p>'
-                   f'<p class="detail-kind">{"يشمل" if ar else "Includes"}</p><ul class="case-list">'+''.join('<li>'+escape(i)+'</li>' for i in x['includes'][lang])+'</ul></section>')
+            body+=(f'<article class="service-detail" id="{x["id"]}"><h2><span class="service-detail-icon">{icon_html(x["icon"])}</span>{escape(x["title"][lang])}</h2><p>{escape(x["detail"][lang])}</p>'
+                   f'<p class="detail-kind">{"يشمل" if ar else "Includes"}</p><ul class="service-includes">'+''.join('<li>'+escape(i)+'</li>' for i in x['includes'][lang])+'</ul></article>')
+        body+='</div></div>'
         body+=section('طريقة العمل' if ar else 'How we work together',str(services.select_one('.process-grid')))
         body+=section('أسئلة شائعة' if ar else 'Frequently asked questions',''.join(f'<h3>{escape(f["q"][lang])}</h3><p>{escape(f["a"][lang])}</p>' for f in SERVICES['faq']))
         body+=section('أعمال ذات صلة' if ar else 'Related work',cards(PAGES[:3],lang))
