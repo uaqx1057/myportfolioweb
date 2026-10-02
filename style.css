@@ -3437,3 +3437,16 @@ section.insights { padding: 90px 0; }
 @media (max-width: 700px) {
     .service-details { grid-template-columns: 1fr; }
 }
+/* FAQ accordion */
+.faq-list { display: grid; gap: 12px; margin-top: 18px; }
+.faq-item { border: 1px solid var(--hud-line); border-radius: 14px; background: var(--light-bg); transition: border-color .2s ease; }
+.faq-item[open] { border-color: var(--primary-color); }
+.faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 22px; cursor: pointer; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 2px; border-radius: 14px; }
+.detail-main .faq-item h3 { margin: 0; font-size: 1.02rem; line-height: 1.5; color: var(--text-primary); }
+.faq-toggle { position: relative; flex: 0 0 26px; height: 26px; border-radius: 50%; border: 1px solid var(--hud-line); }
+.faq-toggle::before, .faq-toggle::after { content: ""; position: absolute; top: 50%; left: 50%; width: 11px; height: 2px; background: var(--primary-color); transform: translate(-50%, -50%); transition: transform .2s ease; }
+.faq-toggle::after { transform: translate(-50%, -50%) rotate(90deg); }
+.faq-item[open] .faq-toggle::after { transform: translate(-50%, -50%) rotate(0deg); }
+.detail-main .faq-item p { margin: 0; padding: 0 22px 20px; line-height: 1.75; }

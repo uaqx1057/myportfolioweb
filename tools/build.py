@@ -281,7 +281,7 @@ def main():
                    f'<p class="detail-kind">{"يشمل" if ar else "Includes"}</p><ul class="service-includes">'+''.join('<li>'+escape(i)+'</li>' for i in x['includes'][lang])+'</ul></article>')
         body+='</div></div>'
         body+=section('طريقة العمل' if ar else 'How we work together',str(services.select_one('.process-grid')))
-        body+=section('أسئلة شائعة' if ar else 'Frequently asked questions',''.join(f'<h3>{escape(f["q"][lang])}</h3><p>{escape(f["a"][lang])}</p>' for f in SERVICES['faq']))
+        body+=section('أسئلة شائعة' if ar else 'Frequently asked questions','<div class="faq-list">'+''.join(f'<details class="faq-item"{" open" if i == 0 else ""}><summary><h3>{escape(f["q"][lang])}</h3><span class="faq-toggle" aria-hidden="true"></span></summary><p>{escape(f["a"][lang])}</p></details>' for i, f in enumerate(SERVICES['faq']))+'</div>')
         body+=section('أعمال ذات صلة' if ar else 'Related work',cards(PAGES[:3],lang))
         body+='<a class="btn btn-primary" href="'+path_for('',lang)+'#contact">'+('تواصل لمناقشة المتطلبات' if ar else 'Discuss your requirements')+'</a>'
         catalog={'@type':'OfferCatalog','name':'خدمات عثمان آصف قريشي' if ar else 'Services by Usman Asif Qureshi','itemListElement':[
