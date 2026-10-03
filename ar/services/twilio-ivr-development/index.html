@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html data-theme="dark" dir="rtl" lang="ar">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8P6LR4C4HG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8P6LR4C4HG');
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>تطوير أنظمة IVR والرد الآلي عبر Twilio | عثمان قريشي</title>
+<meta content="تطوير أنظمة الرد الآلي IVR عبر Twilio: قوائم هاتفية وتوجيه المكالمات وقوائم الانتظار والبريد الصوتي وطلبات معاودة الاتصال وتسجيل المكالمات في نظامك." name="description"/>
+<meta content="عثمان آصف قريشي" name="author"/>
+<meta content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots"/>
+<link href="https://www.codewithusman.com/ar/services/twilio-ivr-development/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="تطوير أنظمة IVR والرد الآلي عبر Twilio | عثمان قريشي" property="og:title"/>
+<meta content="تطوير أنظمة الرد الآلي IVR عبر Twilio: قوائم هاتفية وتوجيه المكالمات وقوائم الانتظار والبريد الصوتي وطلبات معاودة الاتصال وتسجيل المكالمات في نظامك." property="og:description"/>
+<meta content="https://www.codewithusman.com/ar/services/twilio-ivr-development/" property="og:url"/>
+<meta content="Code With Usman" property="og:site_name"/>
+<meta content="https://www.codewithusman.com/assets/images/social-card.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="Code With Usman: عثمان آصف قريشي، مطور فل ستاك ومدير مشاريع" property="og:image:alt"/>
+<meta content="ar_SA" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="تطوير أنظمة IVR والرد الآلي عبر Twilio | عثمان قريشي" name="twitter:title"/>
+<meta content="تطوير أنظمة الرد الآلي IVR عبر Twilio: قوائم هاتفية وتوجيه المكالمات وقوائم الانتظار والبريد الصوتي وطلبات معاودة الاتصال وتسجيل المكالمات في نظامك." name="twitter:description"/>
+<meta content="https://www.codewithusman.com/assets/images/social-card.png" name="twitter:image"/>
+<meta content="Code With Usman: عثمان آصف قريشي، مطور فل ستاك ومدير مشاريع" name="twitter:image:alt"/>
+<meta content="#050a14" name="theme-color"/>
+<link href="/assets/images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/assets/images/favicon.svg" rel="shortcut icon"/>
+
+<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="//fonts.gstatic.com" rel="dns-prefetch"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+
+<link as="style" href="/style.min.css?v=0801c901b1a4" rel="preload"/>
+<link as="font" crossorigin="" href="/assets/fonts/fa-solid-subset.woff2" rel="preload" type="font/woff2"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Tajawal:wght@400;500;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="/style.min.css?v=0801c901b1a4" rel="stylesheet"/>
+<link href="/assets/fonts/icons.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://www.codewithusman.com/#website", "url": "https://www.codewithusman.com/", "name": "Code With Usman", "alternateName": "Usman Asif Qureshi", "description": "Portfolio of Usman Asif Qureshi, full-stack developer and project manager in Al Khobar, Saudi Arabia.", "inLanguage": ["en", "ar"], "publisher": {"@id": "https://www.codewithusman.com/#person"}}, {"@type": "Person", "@id": "https://www.codewithusman.com/#person", "name": "Usman Asif Qureshi", "alternateName": "عثمان آصف قريشي", "url": "https://www.codewithusman.com/", "email": "mailto:info@codewithusman.com", "jobTitle": "Full-Stack Developer & Project Manager", "description": "Full-stack developer and project manager in Al Khobar, Saudi Arabia, building logistics platforms and web/mobile applications.", "knowsAbout": ["Laravel", "PHP", "Livewire", "Python", "Flask", "Flutter", "Android", "iOS", "MySQL", "WordPress", "WooCommerce", "Salla", "Twilio", "WhatsApp chatbots", "IVR", "REST APIs", "AI integrations", "Website design", "Mobile app development", "Fleet management software", "Logistics software", "Project management"], "sameAs": ["https://www.linkedin.com/in/usmanasif1057/"], "image": {"@type": "ImageObject", "url": "https://www.codewithusman.com/assets/images/profile-hero.webp", "width": 520, "height": 520}, "address": {"@type": "PostalAddress", "addressLocality": "Al Khobar", "addressRegion": "Eastern Province", "addressCountry": "SA"}}, {"@type": "WebPage", "@id": "https://www.codewithusman.com/ar/services/twilio-ivr-development/#page", "url": "https://www.codewithusman.com/ar/services/twilio-ivr-development/", "name": "تطوير أنظمة IVR والرد الآلي عبر Twilio | عثمان قريشي", "description": "تطوير أنظمة الرد الآلي IVR عبر Twilio: قوائم هاتفية وتوجيه المكالمات وقوائم الانتظار والبريد الصوتي وطلبات معاودة الاتصال وتسجيل المكالمات في نظامك.", "inLanguage": "ar", "isPartOf": {"@id": "https://www.codewithusman.com/#website"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://www.codewithusman.com/assets/images/social-card.png", "width": 1200, "height": 630}, "author": {"@id": "https://www.codewithusman.com/#person"}, "about": {"@type": "Service", "@id": "https://www.codewithusman.com/ar/services/twilio-ivr-development/#service", "name": "أنظمة IVR والرد الآلي عبر Twilio", "serviceType": "أنظمة IVR والرد الآلي عبر Twilio", "description": "تطوير أنظمة الرد الآلي IVR عبر Twilio: قوائم هاتفية وتوجيه المكالمات وقوائم الانتظار والبريد الصوتي وطلبات معاودة الاتصال وتسجيل المكالمات في نظامك.", "url": "https://www.codewithusman.com/ar/services/twilio-ivr-development/", "provider": {"@id": "https://www.codewithusman.com/#person"}, "areaServed": [{"@type": "Country", "name": "Saudi Arabia"}, "Worldwide"], "availableLanguage": ["ar", "en"]}, "breadcrumb": {"@id": "https://www.codewithusman.com/ar/services/twilio-ivr-development/#breadcrumb"}}, {"@type": "BreadcrumbList", "@id": "https://www.codewithusman.com/ar/services/twilio-ivr-development/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.codewithusman.com/ar/"}, {"@type": "ListItem", "position": 2, "name": "الخدمات", "item": "https://www.codewithusman.com/ar/services/"}, {"@type": "ListItem", "position": 3, "name": "تطوير أنظمة IVR والرد الآلي عبر Twilio", "item": "https://www.codewithusman.com/ar/services/twilio-ivr-development/"}]}, {"@type": "FAQPage", "@id": "https://www.codewithusman.com/ar/services/twilio-ivr-development/#faq", "mainEntity": [{"@type": "Question", "name": "هل يمكنني الاحتفاظ برقمي الحالي؟", "acceptedAnswer": {"@type": "Answer", "text": "غالباً نعم عبر نقل الرقم أو تحويل المكالمات، ويعتمد ذلك على مزود الخدمة وأنظمة الدولة."}}, {"@type": "Question", "name": "هل يمكن للمتصل اختيار العربية أو الإنجليزية؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم. يمكن أن تعرض القائمة الأولى اختيار اللغة مع تسجيلات باللغتين."}}, {"@type": "Question", "name": "كيف تُحتسب رسوم Twilio؟", "acceptedAnswer": {"@type": "Answer", "text": "تحتسب Twilio رسوماً للأرقام ولكل دقيقة مكالمة، وأقدّر التكلفة الشهرية حسب حجم مكالماتك."}}]}]}</script>
+<link href="https://www.codewithusman.com/services/twilio-ivr-development/" hreflang="en" rel="alternate"/><link href="https://www.codewithusman.com/ar/services/twilio-ivr-development/" hreflang="ar" rel="alternate"/><link href="https://www.codewithusman.com/services/twilio-ivr-development/" hreflang="x-default" rel="alternate"/><meta content="en_US" property="og:locale:alternate"/><link href="/assets/images/icon-180.png" rel="apple-touch-icon" sizes="180x180"/><link href="/site.webmanifest" rel="manifest"/></head>
+<body class="lang-ar">
+<a class="skip-link" href="#main-content">تخطي إلى المحتوى الرئيسي</a>
+<nav aria-label="التنقل الرئيسي" class="navbar">
+<div class="container">
+<div class="logo">
+<a class="logo-name" href="/ar/" id="logoName">Code With Usman</a>
+</div>
+<ul class="nav-menu" id="primary-navigation"><li><a href="/ar/#portfolio">المشاريع</a></li><li><a href="/ar/#experience">الخبرات</a></li><li><a href="/ar/services/">الخدمات</a></li><li><a href="/ar/about/">نبذة عني</a></li><li><a href="/ar/#contact">تواصل</a></li></ul>
+<button aria-controls="primary-navigation" aria-expanded="false" aria-label="تبديل قائمة التنقل" class="hamburger" type="button">
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+<span aria-hidden="true"></span>
+</button>
+<div class="nav-actions">
+<a aria-label="Switch to English" class="lang-toggle" href="/services/twilio-ivr-development/" hreflang="en" id="langToggle" lang="en">English</a>
+<button aria-label="Switch to dark theme" class="theme-toggle" id="themeToggle" type="button">
+<i aria-hidden="true" class="fas fa-moon"></i>
+</button>
+</div>
+</div>
+</nav>
+<main class="detail-main" id="main-content" tabindex="-1"><nav aria-label="مسار التنقل" class="breadcrumbs"><a href="/ar/">الرئيسية</a><span aria-hidden="true">/</span><a href="/ar/services/">الخدمات</a><span aria-hidden="true">/</span><span aria-current="page">أنظمة IVR والرد الآلي عبر Twilio</span></nav><h1>أنظمة IVR والرد الآلي عبر Twilio</h1><p class="lead">تطوير أنظمة الرد الآلي IVR عبر Twilio: قوائم هاتفية وتوجيه المكالمات وقوائم الانتظار والبريد الصوتي وطلبات معاودة الاتصال وتسجيل المكالمات في نظامك.</p><p>يستقبل نظام الرد الصوتي التفاعلي (IVR) المتصلين ويعرض قائمة ويوجه كل مكالمة إلى الشخص أو القسم المناسب، فيتوقف انتظار العملاء ويتوقف تحويل الموظفين للمكالمات يدوياً. أبني أنظمة IVR عبر Twilio مع توجيه المكالمات وقوائم الانتظار ورسائل خارج أوقات العمل والبريد الصوتي وطلبات معاودة الاتصال.</p><p>ولأن Twilio قابلة للبرمجة بالكامل، يستطيع نظام الهاتف التعامل مع بيانات عملك: التعرف على العملاء العائدين، وقراءة حالة الطلب أو الحجز، وتسجيل كل مكالمة في نظام إدارة العملاء أو نظامك الداخلي.</p><div class="hero-buttons service-cta"><a class="btn btn-primary" href="https://wa.me/966568465058?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A3%D9%86%D8%B8%D9%85%D8%A9%20IVR%20%D9%88%D8%A7%D9%84%D8%B1%D8%AF%20%D8%A7%D9%84%D8%A2%D9%84%D9%8A%20%D8%B9%D8%A8%D8%B1%20Twilio." rel="noopener" target="_blank">تواصل عبر واتساب</a><a class="btn btn-secondary" href="/ar/#contact">اطلب عرض سعر</a></div><section><h2>ما تشمله خدمة أنظمة IVR والرد الآلي عبر Twilio</h2><ul class="service-includes two-col"><li>تصميم مسار المكالمات</li><li>إعداد الأرقام والمكالمات في Twilio</li><li>التوجيه وقوائم الانتظار والبريد الصوتي</li><li>الربط بنظام إدارة العملاء أو نظامك</li></ul></section><section><h2>لمن هذه الخدمة</h2><ul class="service-includes"><li>الأنشطة التي لديها عدة أقسام برقم واحد</li><li>خطوط الدعم التي تحتاج إلى قوائم انتظار ومعالجة خارج أوقات العمل</li><li>الشركات التي تريد تسجيل المكالمات في نظامها</li><li>الفرق التي تستبدل نظام هاتف تقليدياً مكلفاً</li></ul></section><section><h2>خطوات العمل</h2><ol class="service-steps"><li>رسم مسار المكالمات خلال الدوام وخارجه</li><li>تصميم قائمة IVR والرسائل بالعربية والإنجليزية</li><li>إعداد أرقام Twilio ومسارات الصوت والتوجيه</li><li>ربط بيانات المكالمات بنظام إدارة العملاء أو نظامك</li><li>الاختبار بمكالمات حقيقية والتشغيل</li></ol></section><section><h2>لماذا تعمل معي</h2><ul class="service-includes"><li>خبرة في بناء المكالمات الصوتية الفورية في تطبيق يعمل فعلياً</li><li>مهارات ربط الأنظمة لوصل المكالمات ببيانات العمل</li><li>تصميم واضح لمسار المكالمات قبل كتابة الشيفرة</li><li>قوائم وتسجيلات ثنائية اللغة</li></ul></section><section><h2>التقنيات المستخدمة</h2><ul class="tech-list"><li>Twilio Voice</li><li>TwiML</li><li>Twilio Studio</li><li>Webhooks</li><li>Laravel</li><li>Python</li></ul></section><section><h2>أسئلة شائعة عن أنظمة IVR والرد الآلي عبر Twilio</h2><div class="faq-list"><details class="faq-item" open=""><summary><h3>هل يمكنني الاحتفاظ برقمي الحالي؟</h3><span aria-hidden="true" class="faq-toggle"></span></summary><p>غالباً نعم عبر نقل الرقم أو تحويل المكالمات، ويعتمد ذلك على مزود الخدمة وأنظمة الدولة.</p></details><details class="faq-item"><summary><h3>هل يمكن للمتصل اختيار العربية أو الإنجليزية؟</h3><span aria-hidden="true" class="faq-toggle"></span></summary><p>نعم. يمكن أن تعرض القائمة الأولى اختيار اللغة مع تسجيلات باللغتين.</p></details><details class="faq-item"><summary><h3>كيف تُحتسب رسوم Twilio؟</h3><span aria-hidden="true" class="faq-toggle"></span></summary><p>تحتسب Twilio رسوماً للأرقام ولكل دقيقة مكالمة، وأقدّر التكلفة الشهرية حسب حجم مكالماتك.</p></details></div></section><section><h2>خدمات ذات صلة</h2><div class="detail-cards"><article class="detail-card"><p class="detail-kind">خدمة</p><h2><a href="/ar/services/whatsapp-chatbot-development/">شات بوت واتساب للأعمال (Twilio)</a></h2><p>ردود وحجوزات وتحديثات آلية عبر واتساب.</p><span aria-hidden="true" class="detail-more">اقرأ المزيد <i class="fas fa-arrow-right"></i></span></article><article class="detail-card"><p class="detail-kind">خدمة</p><h2><a href="/ar/services/api-integration-services/">ربط الأنظمة والواجهات البرمجية</a></h2><p>ربط موقعك وتطبيقاتك وأدوات عملك.</p><span aria-hidden="true" class="detail-more">اقرأ المزيد <i class="fas fa-arrow-right"></i></span></article><article class="detail-card"><p class="detail-kind">خدمة</p><h2><a href="/ar/services/business-process-automation/">أتمتة الأعمال</a></h2><p>التخلص من العمل اليدوي المتكرر بالمهام المجدولة وسير العمل الآلي.</p><span aria-hidden="true" class="detail-more">اقرأ المزيد <i class="fas fa-arrow-right"></i></span></article></div></section><section><h2>لنبدأ مشروعك</h2><p>أرسل وصفاً مختصراً لما تحتاجه، وسأرد بأسئلة ونهج مقترح وتقدير للتكلفة والمدة.</p><div class="hero-buttons service-cta"><a class="btn btn-primary" href="https://wa.me/966568465058?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A3%D9%86%D8%B8%D9%85%D8%A9%20IVR%20%D9%88%D8%A7%D9%84%D8%B1%D8%AF%20%D8%A7%D9%84%D8%A2%D9%84%D9%8A%20%D8%B9%D8%A8%D8%B1%20Twilio." rel="noopener" target="_blank">تواصل عبر واتساب</a><a class="btn btn-secondary" href="/ar/#contact">اطلب عرض سعر</a></div></section></main><footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-section footer-brand">
+<a class="footer-logo" href="/ar/">Code With Usman</a>
+<p>مطور فل ستاك ومدير مشاريع في الخبر بالسعودية. أبني منصات لوجستية وتطبيقات ويب وتطبيقات أندرويد.</p>
+<p class="footer-status"><span aria-hidden="true" class="status-dot"></span><span>متاح لفرص عمل جديدة</span></p>
+</div>
+<nav aria-label="روابط التذييل" class="footer-section">
+<h3>تصفح</h3>
+<ul>
+<li><a href="/ar/projects/">المشاريع</a></li><li><a href="/ar/services/">الخدمات</a></li><li><a href="/ar/about/">نبذة عني</a></li><li><a href="/ar/resume/">السيرة الذاتية</a></li><li><a href="/ar/insights/">ملاحظات تقنية</a></li>
+</ul>
+</nav>
+<nav aria-label="خدمات رئيسية" class="footer-section">
+<h3>خدمات رئيسية</h3>
+<ul>
+<li><a href="/ar/services/salla-store-design/">تصميم متجر سلة احترافي</a></li><li><a href="/ar/services/wordpress-website-development/">تصميم مواقع ووردبريس (WordPress)</a></li><li><a href="/ar/services/mobile-app-development/">تصميم وبرمجة تطبيقات الجوال (أندرويد و iOS)</a></li><li><a href="/ar/services/whatsapp-chatbot-development/">شات بوت واتساب للأعمال (Twilio)</a></li><li><a href="/ar/services/fleet-management-software/">برامج إدارة أسطول السيارات والسائقين</a></li><li><a href="/ar/services/laravel-web-application-development/">برمجة تطبيقات ويب مخصصة (لارافيل و Python)</a></li>
+</ul>
+</nav>
+<div class="footer-section">
+<h3>تواصل</h3>
+<ul class="footer-contact">
+<li><i aria-hidden="true" class="fas fa-envelope"></i><a dir="ltr" href="mailto:usmanasif26261@gmail.com">usmanasif26261@gmail.com</a></li>
+<li><i aria-hidden="true" class="fas fa-phone"></i><a dir="ltr" href="https://wa.me/966568465058">+966 56 846 5058</a> <span>(واتساب)</span></li>
+<li><i aria-hidden="true" class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/usmanasif1057/" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
+<li><i aria-hidden="true" class="fas fa-map-marker-alt"></i><span>الخبر، السعودية</span></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 عثمان آصف قريشي. جميع الحقوق محفوظة.</p>
+<p class="footer-links"><a href="/ar/privacy/">الخصوصية</a><a href="/services/twilio-ivr-development/" hreflang="en" id="footerLang" lang="en">English</a></p>
+</div>
+</div>
+</footer>
+<script defer="" src="/script.min.js?v=6d86a8cc11f3"></script>
+</body>
+</html>

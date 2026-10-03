@@ -1,98 +1,258 @@
 {
   "/": {
-    "hash": "e5b8feb6cc2ad588ede63609079e639990bd127e7dd41800a7c047db7c3dff37",
+    "hash": "0529626b1d1948229d9c2c48b6081b0d581da8a5f1cec1774b6121ad96ef1311",
     "modified": "2026-10-03"
   },
   "/projects/driver-onboarding-system/": {
-    "hash": "d4a9a9800509a3395cd4896c437341c3773c9df8f422d1cc0b85b0c25606b66c",
+    "hash": "e44e8a02fdc42c9e94e2e2fd7b4cc8a15be504befea3a6772fb4c724eee77224",
     "modified": "2026-10-03"
   },
   "/projects/driver-management-system/": {
-    "hash": "d05c3ceed021e5f0eccf170352cc8f7579b48dd76807c4666a6343b9784de4a1",
+    "hash": "43c37d7c01ecf2ff19026082ba686d35ea3e0e6438d93f22f864897ffcdd4955",
     "modified": "2026-10-03"
   },
   "/projects/business-websites/": {
-    "hash": "160da18fd39dee6f17ac9a15a54453fff8b804fb4bf1b03b0f5e41c0674f5272",
+    "hash": "5c5f3f1c9dc6c4148d8f7674590a1100641c7679bdf2387bb2bc664ba595fec0",
     "modified": "2026-10-03"
   },
   "/insights/planning-logistics-software/": {
-    "hash": "169cd9b97ef960243419290a6e2aca83d212408a50dfecb56485aedfedbb61ba",
+    "hash": "0976e12256208ed6ed1a700e213bed8c5bfd4a6a4c599f950f1119565969817f",
     "modified": "2026-10-03"
   },
   "/insights/website-handover-checklist/": {
-    "hash": "c5ce62901e19d8e36277c48cce70913288e4727222feec9532d077a9a906191a",
+    "hash": "140ccfea7fd48711f8fdb5607e66cdaf1a4b09968e3caca5110eae8d341fd393",
     "modified": "2026-10-03"
   },
   "/projects/": {
-    "hash": "31924a9f99bca1713eb4dc9799cec5d80e121709d041c54fc5966fd78783390c",
+    "hash": "8e83e9c65c89aab5977f7384e7d5c8500b6a10f025a300237199b8469203bc2e",
     "modified": "2026-10-03"
   },
   "/insights/": {
-    "hash": "a39c258f8f282da715679591ebf0b416f14c105664ca1dc0ef36358ca00a20ad",
+    "hash": "fda5564eaeb4bd46da29e927f03f2f78ef79fd716d122aa0c25e80f32bb2c45f",
     "modified": "2026-10-03"
   },
   "/about/": {
-    "hash": "1638df0b14e7c1777ebbe4b05d0e6487dd55d7de3dcf42f967bb703c195d76c5",
+    "hash": "baa735de5ac1f8b8fe31e5fb99874013d0647fd519fe13d3dc5db9d966e54d6f",
     "modified": "2026-10-03"
   },
   "/services/": {
-    "hash": "6474b8c733ddba91b54037e191702f6205c4f894b5d3abe01b5b048ad6675d9c",
+    "hash": "cf5324754b5987b3fc796652c7c08e84afa8642a021deeeb628c5de1f24c9ace",
+    "modified": "2026-10-03"
+  },
+  "/services/wordpress-website-development/": {
+    "hash": "4c6c7a7f0ceb4516a6c260d1c043c7de648eec80bd55d7d8798fea0c5eded062",
+    "modified": "2026-10-03"
+  },
+  "/services/woocommerce-ecommerce-development/": {
+    "hash": "029882b3dddd91e46fff24c6bdcc581e50aeb2421e4400dd4607b4fc66d7a6ae",
+    "modified": "2026-10-03"
+  },
+  "/services/salla-store-design/": {
+    "hash": "5a8f0a61813a518ed792067520dd949eeb196499eb6f21b93dc0308d5cad2925",
+    "modified": "2026-10-03"
+  },
+  "/services/html-css-website-design/": {
+    "hash": "9914c4c7699bf952f14f7d9a3c220b8bcb20368dbae2e7c83c4ee321d1948dd5",
+    "modified": "2026-10-03"
+  },
+  "/services/cms-development/": {
+    "hash": "5c093575c157ac29f33a7caf2c93f129fff5bed3b7c2265da67c5d9e3e0f34f8",
+    "modified": "2026-10-03"
+  },
+  "/services/laravel-web-application-development/": {
+    "hash": "fb6b662c4dc565a204ad10dcda5432f0e9e04cc0ca25e8fa1371f853fbdc8bd3",
+    "modified": "2026-10-03"
+  },
+  "/services/mobile-app-development/": {
+    "hash": "db9970145874fbfab5cd8114d22d806f4a4b857c024c71d3ab44545ff6358a3a",
+    "modified": "2026-10-03"
+  },
+  "/services/desktop-application-development/": {
+    "hash": "22f2f5e17968162e38c551483f2972966ec8e7ab3ffeb03691b7300a34fbf307",
+    "modified": "2026-10-03"
+  },
+  "/services/whatsapp-chatbot-development/": {
+    "hash": "6cec9d4a2dd0c58c9f0f3195cbebfa16ba8eb30756bbc916a7761dd6ea945220",
+    "modified": "2026-10-03"
+  },
+  "/services/twilio-ivr-development/": {
+    "hash": "08117b8f829bde76ff469bc0931d9b583b0246c9e29660dca47f726f6ac5e68e",
+    "modified": "2026-10-03"
+  },
+  "/services/api-integration-services/": {
+    "hash": "b598baabea40d4fa294c6dfab0bdb78e7bf91ed64251575de41ee55e2916244d",
+    "modified": "2026-10-03"
+  },
+  "/services/ai-integration-services/": {
+    "hash": "2d613dbc662b872f486b58821c2162f1fe5f2c696a52b30809c1d95459678144",
+    "modified": "2026-10-03"
+  },
+  "/services/business-process-automation/": {
+    "hash": "b8d59cee02305a92e6463280bbf03b03204966921f43b813317e096385ca6f3d",
+    "modified": "2026-10-03"
+  },
+  "/services/fleet-management-software/": {
+    "hash": "10f140dc9c6a5ba1a298c15e8149f826e6504b722ebc8cd875b584b5414015e3",
+    "modified": "2026-10-03"
+  },
+  "/services/debugging-bug-fixing/": {
+    "hash": "782d9f4cfe84532b578334aa8608e33872886fb109b5b4762badcaaf8bb122cb",
+    "modified": "2026-10-03"
+  },
+  "/services/website-maintenance-support/": {
+    "hash": "824bfe90ec77fb835f451d8252abcb41dd279600779f69357a664dd687e982e6",
+    "modified": "2026-10-03"
+  },
+  "/services/seo-performance-optimization/": {
+    "hash": "ebaa66366fec5c91a7c39dac8d9ddcb3243fcfda5808254490660d02ef7fc221",
+    "modified": "2026-10-03"
+  },
+  "/services/hosting-deployment-devops/": {
+    "hash": "f2227b4f8100712700744c23554e1464ea14f85773faf510b31b1d7a7b6058cd",
+    "modified": "2026-10-03"
+  },
+  "/services/software-documentation/": {
+    "hash": "7970d5c13b7ffcbf01fd8cc3e4cf52dfcf4f20721e22bfddf7ee3bcf59c96fdd",
+    "modified": "2026-10-03"
+  },
+  "/services/it-project-management/": {
+    "hash": "f6bee266246b4f293821bc3eeaec8d775e849b5e501b47c3dfd0b74fb6ce115c",
     "modified": "2026-10-03"
   },
   "/privacy/": {
-    "hash": "f8837380c3b17604163a0f86b4928d494f28ed60321849203592541c3b9a72a5",
+    "hash": "8ca3b93e0ba513fadaf9d27a88de211043c1fa34e055ecb66dc58983ae7a602f",
     "modified": "2026-10-03"
   },
   "/resume/": {
-    "hash": "ec68f8e87f63a1d437e561c29b13ec5617e5b80b5d27b2e60a888d5bbac77fea",
+    "hash": "10f08a2b0a9af29b37884fd0297be65246983cc9b819f68fd81709d3a927d2fb",
     "modified": "2026-10-03"
   },
   "/ar/": {
-    "hash": "dd9d062adf728d05e9339d7da61da43566b57e9c8187e262123d8b93093ce447",
+    "hash": "0cf51e3d4d92de97818e5e0b5bb256b2275bc88496386863f5fc1de9a51a4d71",
     "modified": "2026-10-03"
   },
   "/ar/projects/driver-onboarding-system/": {
-    "hash": "4d59eda9af87ad2daa543f442586eb313c3ca34ee85486263b4e3fe516e63b66",
+    "hash": "dcd71a519c1ebd46173eb96a6da32ec85778363d963477214d94bd14bfafcca1",
     "modified": "2026-10-03"
   },
   "/ar/projects/driver-management-system/": {
-    "hash": "c0e15596c810e664f01d8d4e739539e3dd91715d3f30a9f47c0b67d6c4d8971f",
+    "hash": "bf7f0cb9c22b1de3feb6ffddbf68761b429ba7195dac384e052496cc4a9a9afb",
     "modified": "2026-10-03"
   },
   "/ar/projects/business-websites/": {
-    "hash": "276017242b640aa8fdf831cfcd7ccc357345a33f7d988e71cb76219664bc38c8",
+    "hash": "6b776d209f0fb8b1db1c4c4528ef617703a14d598f4f00754e35a1f36d2b623c",
     "modified": "2026-10-03"
   },
   "/ar/insights/planning-logistics-software/": {
-    "hash": "8032f4bb7f18cac000072fcd57f95ba04ae485b3890ee327ec5883fa52fa8b28",
+    "hash": "00611b11c9f950f9a04108a594494898afbe64529620c034e4f35eceb16c860e",
     "modified": "2026-10-03"
   },
   "/ar/insights/website-handover-checklist/": {
-    "hash": "87e5bc243d7e7c7d9c8d6863c26530a3c3bb14efca4fcf9ce2b3eff64b166f47",
+    "hash": "8923ba6e84f35dc4bc1e9d8a302a0cd13a271cd1b50a2dbc7007e08b665ac132",
     "modified": "2026-10-03"
   },
   "/ar/projects/": {
-    "hash": "1556f006ab0344a33f8f05705b9e3c725a564f958620524080b70added04c71b",
+    "hash": "d46c42188f44ffda1e001eddd85767fc40a45c0353a6516611b080ce8e92bd9a",
     "modified": "2026-10-03"
   },
   "/ar/insights/": {
-    "hash": "91fe00008d5e795bd139e4e35271f6d4336847374bc79924ba235231891fefe3",
+    "hash": "ae69ed8f6bcdbfae08d5b5450d10a277ca4ffc8433bad2c3863b1bf8c019101f",
     "modified": "2026-10-03"
   },
   "/ar/about/": {
-    "hash": "d637daff8e4776625402faab9015ee76f6af7fba4be396aa43f04f02cf5f0a62",
+    "hash": "67f4f0f15109ac8e96d260b59b99a726bc41110750b02cd732c2747fd230c83a",
     "modified": "2026-10-03"
   },
   "/ar/services/": {
-    "hash": "1cba86acb94fe739bfd01508d582814a9279b98cfa14296e9a1c0af0bd8c9a93",
+    "hash": "542cbf4fc11a56a6f557c7d7668511dbae9e51793e0bee445f8ae284ae6bf1e5",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/wordpress-website-development/": {
+    "hash": "f5af007d821a3d250607584c3a938486a23ec826da8ce0ca25d4ad69eaaa6c10",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/woocommerce-ecommerce-development/": {
+    "hash": "82a55c360cf704e24c60621e9a47cb1a40f5531ef47298bb92f737d1613049d2",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/salla-store-design/": {
+    "hash": "90317e364fa8d3d62e934d4baeaa803ca95918e39949af9c6622891cdcd26a64",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/html-css-website-design/": {
+    "hash": "412babe853911c13a192c2bb0aa798b10ed8c4af730f3f29c0915079a7716167",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/cms-development/": {
+    "hash": "b31c1850da271d0db40c6ce80adf2ed5bcdc06ece154ea0ec6c85f184a69ddd7",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/laravel-web-application-development/": {
+    "hash": "dfda4d71a57996fd2fc6000714561cb2a6f4f84b5f091698035278a86bb7f638",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/mobile-app-development/": {
+    "hash": "98e71693d07876b55f3fc0709e353256da684618ae68ba3a03071eb0e5f163fa",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/desktop-application-development/": {
+    "hash": "de22d2d5803b5925c86d66fefe01b8371144724f7a60f923b40f28e2ab697d4f",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/whatsapp-chatbot-development/": {
+    "hash": "276d20df64d77b4ff930828e7078bfd38dcca081afd68d9839d3d225612be41b",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/twilio-ivr-development/": {
+    "hash": "83264c6e1ef6df8028504edd435b6c6692c65f28a1146f1736bed98c9f494218",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/api-integration-services/": {
+    "hash": "74040ea9f7a43aa59e54bd365b5fec95369fbe7cc6ee50a219e247d5a21355b8",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/ai-integration-services/": {
+    "hash": "d567d0f545ae57e497ff26150a607503debbdbcdcaa41a1510fb41c59bfe8701",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/business-process-automation/": {
+    "hash": "3ad715574d02e0eec5b0b49b06104f3de9d4d7bc5f6e883b3282cb3c8fd70bf0",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/fleet-management-software/": {
+    "hash": "9711d1a5da3dba59ed0c534a917f5bfae518bc711848d75b259895d20901ab1f",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/debugging-bug-fixing/": {
+    "hash": "988e7d50b3e98bd01b7c0e730270cebaed75c212d11ac86a8e027ae5ee77f2ab",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/website-maintenance-support/": {
+    "hash": "3bc7062e30f63cbc1807ea58a2fc95206ab9908137f9d49e7fe1f049cb7cd306",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/seo-performance-optimization/": {
+    "hash": "d72508efa76166cfc6e3aeb0f4a1f611b788fe47ea0b40fa0ce6a4c5f945d4a0",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/hosting-deployment-devops/": {
+    "hash": "1044ebb29e50a286108004607e9b5f43691f54fe27dd67d936280f979d657b5a",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/software-documentation/": {
+    "hash": "758e4d9183f2579cfa27b04708036c79f3157c01f663fa0e9ee6d7e170bc825e",
+    "modified": "2026-10-03"
+  },
+  "/ar/services/it-project-management/": {
+    "hash": "e8a9cbddb1e87f9952bfec0d7a32ba3c7dc5a6036e0e03fdf099ade051aa5a2b",
     "modified": "2026-10-03"
   },
   "/ar/privacy/": {
-    "hash": "815c4acb4fd2a26efbd4d8670be4cda57d34cd6860f80056e8798502602b01fd",
+    "hash": "56b7bfcbada2c2ff7919e996581d74b41e60867c8a657551453ddef814f5452f",
     "modified": "2026-10-03"
   },
   "/ar/resume/": {
-    "hash": "df9c279f90f61a4a9677829913aea1ffdc828585834fdf08b288c879bf617087",
+    "hash": "3b3f9ddab230777f4ac0e1887235d9896b63163471655b94655ae8be9abb3c3f",
     "modified": "2026-10-03"
   }
 }

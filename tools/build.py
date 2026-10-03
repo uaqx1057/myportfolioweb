@@ -22,6 +22,11 @@ BASE = 'https://www.codewithusman.com'
 SOURCE = BeautifulSoup((ROOT / 'content/home.html').read_text(encoding='utf-8'), 'html.parser')
 PAGES = json.loads((ROOT / 'content/pages.json').read_text(encoding='utf-8'))
 SERVICES = json.loads((ROOT / 'content/services.json').read_text(encoding='utf-8'))
+SERVICE_PAGES = json.loads((ROOT / 'content/service-pages.json').read_text(encoding='utf-8'))
+SERVICE_BY_ID = {x['id']: x for x in SERVICES['services']}
+
+def service_path(service_id):
+    return 'services/' + SERVICE_PAGES[service_id]['slug']
 # Inline icons for glyphs missing from the Font Awesome subset.
 SVG_ICONS = {
     'cart': '<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 11.4a1.5 1.5 0 0 0 1.5 1.1h8.6a1.5 1.5 0 0 0 1.5-1.1L21 7H6"/>',
@@ -39,7 +44,7 @@ def service_cards_html():
     # Bilingual source markup (data-en/data-ar); localize() picks the language.
     return ''.join(
         f'<div class="service-card" id="service-{x["id"]}"><div class="service-icon">{icon_html(x["icon"])}</div>'
-        f'<h3 class="service-title"><a href="/services/#{x["id"]}" data-en="{escape(x["title"]["en"])}" data-ar="{escape(x["title"]["ar"])}">{escape(x["title"]["en"])}</a></h3>'
+        f'<h3 class="service-title"><a href="/{service_path(x["id"])}/" data-en="{escape(x["title"]["en"])}" data-ar="{escape(x["title"]["ar"])}">{escape(x["title"]["en"])}</a></h3>'
         f'<p data-en="{escape(x["short"]["en"])}" data-ar="{escape(x["short"]["ar"])}">{escape(x["short"]["en"])}</p></div>'
         for x in SERVICES['services'] if x.get('featured'))
 
@@ -109,7 +114,7 @@ def meta(soup, attr, key, value):
         soup.head.append(tag)
     tag['content'] = value
 
-def setup_head(soup, path, lang, title, description, kind='WebPage', crumbs=None, about=None, published=None):
+def setup_head(soup, path, lang, title, description, kind='WebPage', crumbs=None, about=None, published=None, extra=None):
     ar = lang == 'ar'
     soup.title.string = title
     soup.select_one('meta[name="description"]')['content'] = description
@@ -156,6 +161,7 @@ def setup_head(soup, path, lang, title, description, kind='WebPage', crumbs=None
         trail=[('الرئيسية' if ar else 'Home',BASE+path_for('',lang))]+(crumbs or [])+[(title.split(' | ')[0],url)]
         graph.append({'@type':'BreadcrumbList','@id':url+'#breadcrumb','itemListElement':[{'@type':'ListItem','position':i+1,'name':n,'item':u} for i,(n,u) in enumerate(trail)]})
         page['breadcrumb']={'@id':url+'#breadcrumb'}
+    graph.extend(extra or [])
     soup.select_one('script[type="application/ld+json"]').string=json.dumps({'@context':'https://schema.org','@graph':graph},ensure_ascii=False)
     for asset in soup.select('link[href^="/style.min.css"],script[src^="/script.min.js"]'):
         key='src' if asset.name=='script' else 'href'
@@ -175,9 +181,9 @@ def save(soup,path,lang):
     output.write_text(html,encoding='utf-8')
     urls.append((path,lang,modified))
 
-SECTIONS={'projects':('المشاريع','Projects'),'insights':('ملاحظات تقنية','Technical Notes')}
+SECTIONS={'projects':('المشاريع','Projects'),'insights':('ملاحظات تقنية','Technical Notes'),'services':('الخدمات','Services')}
 
-def shell(path,lang,title,description,body,kind='WebPage',seo_title=None,seo_description=None,about=None,published=None,output=None):
+def shell(path,lang,title,description,body,kind='WebPage',seo_title=None,seo_description=None,about=None,published=None,output=None,extra=None):
     ar=lang=='ar'
     soup=localize(copy.deepcopy(SOURCE),lang)
     main=soup.select_one('main');main.clear();main['class']=['detail-main']
@@ -191,7 +197,7 @@ def shell(path,lang,title,description,body,kind='WebPage',seo_title=None,seo_des
     trail=f'<a href="{path_for("",lang)}">{"الرئيسية" if ar else "Home"}</a>'+''.join(f'{sep}<a href="{u.replace(BASE,"")}">{escape(n)}</a>' for n,u in crumbs)
     main.append(BeautifulSoup(f'<nav class="breadcrumbs" aria-label="{"مسار التنقل" if ar else "Breadcrumb"}">{trail}{sep}<span aria-current="page">{escape(title)}</span></nav><h1>{escape(title)}</h1><p class="lead">{escape(description)}</p>'+body,'html.parser'))
     head_title=seo_title or title+' | '+('عثمان آصف قريشي' if ar else 'Usman Asif Qureshi')
-    setup_head(soup,path,lang,head_title,seo_description or description,kind,crumbs,about,published)
+    setup_head(soup,path,lang,head_title,seo_description or description,kind,crumbs,about,published,extra)
     if output:
         # Error pages: not indexable, no canonical/hreflang, not in the sitemap.
         soup.select_one('meta[name="robots"]')['content']='noindex, follow'
@@ -199,6 +205,36 @@ def shell(path,lang,title,description,body,kind='WebPage',seo_title=None,seo_des
         (ROOT/output).write_text(str(soup),encoding='utf-8')
         return
     save(soup,path,lang)
+
+def faq_html(items,lang):
+    return '<div class="faq-list">'+''.join(f'<details class="faq-item"{" open" if i == 0 else ""}><summary><h3>{escape(f["q"][lang])}</h3><span class="faq-toggle" aria-hidden="true"></span></summary><p>{escape(f["a"][lang])}</p></details>' for i, f in enumerate(items))+'</div>'
+
+def bullet_list(items,cls='service-includes'):
+    return f'<ul class="{cls}">'+''.join('<li>'+escape(i)+'</li>' for i in items)+'</ul>'
+
+def service_page(service_id,lang):
+    ar=lang=='ar'; x=SERVICE_BY_ID[service_id]; sp=SERVICE_PAGES[service_id]; name=x['title'][lang]
+    wa='https://wa.me/966568465058?text='+quote(f'مرحباً عثمان، أنا مهتم بخدمة {name}.' if ar else f'Hi Usman, I am interested in {name}.')
+    cta=(f'<div class="hero-buttons service-cta"><a class="btn btn-primary" href="{wa}" rel="noopener" target="_blank">'+('تواصل عبر واتساب' if ar else 'Chat on WhatsApp')+'</a>'
+         f'<a class="btn btn-secondary" href="{path_for("",lang)}#contact">'+('اطلب عرض سعر' if ar else 'Request a quote')+'</a></div>')
+    body=''.join('<p>'+escape(t)+'</p>' for t in sp['intro'][lang])+cta
+    body+=section(f'ما تشمله خدمة {name}' if ar else f'What {name} includes',bullet_list(x['includes'][lang],'service-includes two-col'))
+    body+=section('لمن هذه الخدمة' if ar else 'Who this service is for',bullet_list(sp['who'][lang]))
+    body+=section('خطوات العمل' if ar else 'How the work runs','<ol class="service-steps">'+''.join('<li>'+escape(t)+'</li>' for t in sp['steps'][lang])+'</ol>')
+    body+=section('لماذا تعمل معي' if ar else 'Why work with me',bullet_list(sp['why'][lang]))
+    body+=section('التقنيات المستخدمة' if ar else 'Technologies','<ul class="tech-list">'+''.join('<li>'+escape(t)+'</li>' for t in sp['tech'])+'</ul>')
+    if sp['cases']:
+        body+=section('أعمال ذات صلة' if ar else 'Related case studies',cards([pg for pg in PAGES if pg['path'] in sp['cases']],lang))
+    body+=section(f'أسئلة شائعة عن {name}' if ar else f'{name}: frequently asked questions',faq_html(sp['faq'],lang))
+    related=''.join(f'<article class="detail-card"><p class="detail-kind">{"خدمة" if ar else "Service"}</p><h2><a href="{path_for(service_path(r),lang)}">{escape(SERVICE_BY_ID[r]["title"][lang])}</a></h2>'
+                    f'<p>{escape(SERVICE_BY_ID[r]["short"][lang])}</p><span class="detail-more" aria-hidden="true">{"اقرأ المزيد" if ar else "Read more"} <i class="fas fa-arrow-right"></i></span></article>' for r in sp['related'])
+    body+=section('خدمات ذات صلة' if ar else 'Related services','<div class="detail-cards">'+related+'</div>')
+    body+=section('لنبدأ مشروعك' if ar else 'Start your project','<p>'+escape('أرسل وصفاً مختصراً لما تحتاجه، وسأرد بأسئلة ونهج مقترح وتقدير للتكلفة والمدة.' if ar else 'Send a short description of what you need, and I will reply with questions, a suggested approach and an estimate.')+'</p>'+cta)
+    url=BASE+path_for(service_path(service_id),lang)
+    service_node={'@type':'Service','@id':url+'#service','name':sp['h1'][lang],'serviceType':name,'description':sp['seo_description'][lang],'url':url,
+                  'provider':{'@id':BASE+'/#person'},'areaServed':[{'@type':'Country','name':'Saudi Arabia'},'Worldwide'],'availableLanguage':['ar','en']}
+    faq_node={'@type':'FAQPage','@id':url+'#faq','mainEntity':[{'@type':'Question','name':f['q'][lang],'acceptedAnswer':{'@type':'Answer','text':f['a'][lang]}} for f in sp['faq']]}
+    shell(service_path(service_id),lang,sp['h1'][lang],sp['seo_description'][lang],body,seo_title=sp['seo_title'][lang],seo_description=sp['seo_description'][lang],about=service_node,extra=[faq_node])
 
 def section(title,body):
     return '<section><h2>'+escape(title)+'</h2>'+body+'</section>'
@@ -280,20 +316,23 @@ def main():
         body+='<div class="services-layout"><nav class="service-index" aria-label="'+('قائمة الخدمات' if ar else 'Services list')+'"><p class="service-index-title">'+('الخدمات' if ar else 'Services')+'</p><ul>'
         body+=''.join(f'<li><a href="#{x["id"]}">{icon_html(x["icon"])}<span>{escape(x["title"][lang])}</span></a></li>' for x in SERVICES['services'])+'</ul></nav><div class="service-details">'
         for x in SERVICES['services']:
-            body+=(f'<article class="service-detail" id="{x["id"]}"><h2><span class="service-detail-icon">{icon_html(x["icon"])}</span>{escape(x["title"][lang])}</h2><p>{escape(x["detail"][lang])}</p>'
-                   f'<p class="detail-kind">{"يشمل" if ar else "Includes"}</p><ul class="service-includes">'+''.join('<li>'+escape(i)+'</li>' for i in x['includes'][lang])+'</ul></article>')
+            body+=(f'<article class="service-detail" id="{x["id"]}"><h2><span class="service-detail-icon">{icon_html(x["icon"])}</span><a href="{path_for(service_path(x["id"]),lang)}">{escape(x["title"][lang])}</a></h2><p>{escape(x["detail"][lang])}</p>'
+                   f'<p class="detail-kind">{"يشمل" if ar else "Includes"}</p><ul class="service-includes">'+''.join('<li>'+escape(i)+'</li>' for i in x['includes'][lang])+'</ul>'
+                   f'<a class="service-more" href="{path_for(service_path(x["id"]),lang)}">{"تفاصيل الخدمة" if ar else "Service details"} <i class="fas fa-arrow-right" aria-hidden="true"></i></a></article>')
         body+='</div></div>'
         body+=section('طريقة العمل' if ar else 'How we work together',str(services.select_one('.process-grid')))
-        body+=section('أسئلة شائعة' if ar else 'Frequently asked questions','<div class="faq-list">'+''.join(f'<details class="faq-item"{" open" if i == 0 else ""}><summary><h3>{escape(f["q"][lang])}</h3><span class="faq-toggle" aria-hidden="true"></span></summary><p>{escape(f["a"][lang])}</p></details>' for i, f in enumerate(SERVICES['faq']))+'</div>')
+        body+=section('أسئلة شائعة' if ar else 'Frequently asked questions',faq_html(SERVICES['faq'],lang))
         body+=section('أعمال ذات صلة' if ar else 'Related work',cards(PAGES[:3],lang))
         body+='<a class="btn btn-primary" href="'+path_for('',lang)+'#contact">'+('تواصل لمناقشة المتطلبات' if ar else 'Discuss your requirements')+'</a>'
         catalog={'@type':'OfferCatalog','name':'خدمات عثمان آصف قريشي' if ar else 'Services by Usman Asif Qureshi','itemListElement':[
-            {'@type':'Offer','itemOffered':{'@type':'Service','name':x['title'][lang],'description':x['detail'][lang],'url':BASE+path_for('services',lang)+'#'+x['id'],
+            {'@type':'Offer','itemOffered':{'@type':'Service','name':x['title'][lang],'description':x['detail'][lang],'url':BASE+path_for(service_path(x['id']),lang),
              'provider':{'@id':BASE+'/#person'},'areaServed':[{'@type':'Country','name':'Saudi Arabia'},'Worldwide']}} for x in SERVICES['services']]}
         shell('services',lang,'خدمات تطوير الويب والموبايل والأنظمة' if ar else 'Web, Mobile & Business System Services',
               'مواقع WordPress ومتاجر سلة و WooCommerce وتطبيقات أندرويد و iOS وروبوتات واتساب وأنظمة IVR عبر Twilio والربط والذكاء الاصطناعي والأنظمة اللوجستية.' if ar else
               'WordPress websites, Salla and WooCommerce stores, Android and iOS apps, Twilio WhatsApp chatbots and IVR, integrations, AI and logistics systems.',
               body,about=catalog,**META['services'][lang])
+        for service in SERVICES['services']:
+            service_page(service['id'],lang)
         privacy=[('بيانات التواصل' if ar else 'Contact details','تُستخدم البيانات التي ترسلها للرد على استفسارك. تصل الرسالة إلى البريد الذي يديره صاحب الموقع. لا ترسل معلومات سرية أو كلمات مرور.' if ar else 'The details you submit are used to respond to your enquiry. Messages are delivered to the site owner’s mailbox. Do not include passwords or confidential information.'),('التخزين والخدمات الخارجية' if ar else 'Storage and external services','يتذكر المتصفح اختيار المظهر. قد تحتفظ الاستضافة بسجلات الوصول والأمان. تُحمّل خطوط الموقع من Google Fonts. يستخدم نموذج التواصل خدمة Cloudflare Turnstile لمنع الرسائل المزعجة الآلية، وقد تعالج Cloudflare بيانات تقنية مثل عنوان IP وبيانات المتصفح لهذا التحقق. الروابط الخارجية مثل WhatsApp وLinkedIn تخضع لسياسات تلك الخدمات.' if ar else 'Your browser remembers your theme preference. Hosting may retain access and security logs. Website fonts load from Google Fonts. The contact form uses Cloudflare Turnstile to block spam bots; Cloudflare may process technical data such as your IP address and browser details for this check. External links such as WhatsApp and LinkedIn are governed by those services’ policies.'),('القياس والطلبات' if ar else 'Measurement and requests','يستخدم الموقع Google Analytics لقياس الزيارات بشكل إجمالي، مثل الصفحات التي تُزار وتنزيلات السيرة الذاتية ونقرات واتساب. قد يضع Google Analytics ملفات تعريف ارتباط ويعالج بيانات تقنية مثل نوع الجهاز والموقع التقريبي. لا تُرسل محتويات نموذج التواصل أو بيانات الاتصال إلى أدوات القياس. يمكنك إيقاف ذلك عبر إعدادات ملفات تعريف الارتباط في متصفحك أو إضافة إلغاء الاشتراك من Google. لطلب حذف رسالة أو الاستفسار عن بياناتك، راسل info@codewithusman.com.' if ar else 'This site uses Google Analytics to measure visits in aggregate, such as pages viewed, CV downloads and WhatsApp clicks. Google Analytics may set cookies and processes technical data such as device type and approximate location. Contact form contents and contact details are never sent to analytics. You can opt out with your browser cookie settings or the Google Analytics opt-out add-on. To request deletion of a message or ask about your details, contact info@codewithusman.com.')]
         shell('privacy',lang,'الخصوصية' if ar else 'Privacy','كيف تُستخدم بيانات التواصل والتفضيلات على هذا الموقع.' if ar else 'How contact information and preferences are used on this website.',''.join(section(t,'<p>'+escape(b)+'</p>') for t,b in privacy),**META['privacy'][lang])
         data=resume_data(lang)

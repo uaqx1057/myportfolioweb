@@ -1,0 +1,2341 @@
+{
+  "wordpress-websites": {
+    "slug": "wordpress-website-development",
+    "seo_title": {
+      "en": "WordPress Website Development in Saudi Arabia | Usman Qureshi",
+      "ar": "تصميم مواقع ووردبريس احترافية في السعودية | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "WordPress website design and development in Saudi Arabia: fast, secure, bilingual Arabic/English business websites you can edit yourself.",
+      "ar": "تصميم وتطوير مواقع ووردبريس احترافية في السعودية: مواقع شركات سريعة وآمنة بالعربية والإنجليزية يمكنك تعديلها بنفسك، في الخبر والدمام وكل المملكة."
+    },
+    "h1": {
+      "en": "WordPress Website Development in Saudi Arabia",
+      "ar": "تصميم مواقع ووردبريس احترافية في السعودية"
+    },
+    "intro": {
+      "en": [
+        "A WordPress website is the fastest way for most businesses to get a professional online presence that the team can update without a developer. I design and build WordPress websites for companies in Saudi Arabia and abroad, planned around your services, your customers and the action you want visitors to take: a call, a WhatsApp message or a quote request.",
+        "I have built and led WordPress projects since 2018, including client websites delivered by a 10-person team I managed at The MK Solution and custom Elementor builds for freelance clients on Upwork. Every site is responsive, bilingual when you need it, tuned for speed and search engines, and handed over with training."
+      ],
+      "ar": [
+        "موقع ووردبريس هو أسرع طريقة لمعظم الشركات للحصول على حضور احترافي على الإنترنت يستطيع الفريق تحديثه دون مطور. أصمم وأطور مواقع ووردبريس للشركات في السعودية وخارجها، مخططة حول خدماتك وعملائك والإجراء الذي تريده من الزائر: اتصال أو رسالة واتساب أو طلب عرض سعر.",
+        "أعمل على مشاريع ووردبريس وأقودها منذ عام 2018، ومنها مواقع عملاء نفذها فريق من 10 أفراد أدرته لدى The MK Solution، ومواقع مخصصة باستخدام Elementor لعملاء عبر Upwork. كل موقع متجاوب، وثنائي اللغة عند الحاجة، ومحسّن للسرعة ومحركات البحث، ويُسلَّم مع التدريب."
+      ]
+    },
+    "who": {
+      "en": [
+        "Companies that need a credible corporate website",
+        "Service businesses that want more enquiries from Google and WhatsApp",
+        "Teams replacing an old, slow or hard-to-edit website",
+        "Businesses that need Arabic and English versions"
+      ],
+      "ar": [
+        "الشركات التي تحتاج إلى موقع رسمي موثوق",
+        "الأنشطة الخدمية التي تريد استفسارات أكثر من Google وواتساب",
+        "الفرق التي تستبدل موقعاً قديماً أو بطيئاً أو صعب التعديل",
+        "الأنشطة التي تحتاج إلى نسختين عربية وإنجليزية"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Discovery call: goals, audience, pages and content",
+        "Site structure, page plan and design direction",
+        "Build in WordPress with Elementor or a custom theme",
+        "Speed, SEO and mobile testing on real devices",
+        "Launch, training and handover"
+      ],
+      "ar": [
+        "اجتماع أولي: الأهداف والجمهور والصفحات والمحتوى",
+        "هيكل الموقع وخطة الصفحات واتجاه التصميم",
+        "التطوير على ووردبريس باستخدام Elementor أو قالب مخصص",
+        "اختبار السرعة ومحركات البحث والجوال على أجهزة حقيقية",
+        "الإطلاق والتدريب والتسليم"
+      ]
+    },
+    "why": {
+      "en": [
+        "Building WordPress websites since 2018, including leading a 10-person delivery team",
+        "SEO, security and responsive design built in from the start",
+        "Native Arabic right-to-left and English layouts",
+        "You work directly with the developer building your site"
+      ],
+      "ar": [
+        "خبرة في بناء مواقع ووردبريس منذ 2018، منها قيادة فريق تنفيذ من 10 أفراد",
+        "تحسين محركات البحث والأمان والتصميم المتجاوب من البداية",
+        "تخطيط عربي أصيل من اليمين إلى اليسار وتخطيط إنجليزي",
+        "تتعامل مباشرة مع المطور الذي يبني موقعك"
+      ]
+    },
+    "tech": [
+      "WordPress",
+      "Elementor",
+      "PHP",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MySQL"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "How long does a WordPress website take?",
+          "ar": "كم يستغرق تصميم موقع ووردبريس؟"
+        },
+        "a": {
+          "en": "A typical business website usually takes two to four weeks, depending on the number of pages and how ready the content is.",
+          "ar": "يستغرق موقع الأعمال المعتاد عادة من أسبوعين إلى أربعة أسابيع حسب عدد الصفحات وجاهزية المحتوى."
+        }
+      },
+      {
+        "q": {
+          "en": "Can I edit the website myself?",
+          "ar": "هل يمكنني تعديل الموقع بنفسي؟"
+        },
+        "a": {
+          "en": "Yes. You get an easy editor and a short training session, so your team can update text, images and pages.",
+          "ar": "نعم. تحصل على محرر سهل وجلسة تدريب قصيرة ليتمكن فريقك من تحديث النصوص والصور والصفحات."
+        }
+      },
+      {
+        "q": {
+          "en": "Do you set up hosting, domain and email?",
+          "ar": "هل تتولى إعداد الاستضافة والنطاق والبريد؟"
+        },
+        "a": {
+          "en": "Yes. I can set up hosting, the domain, SSL and business email, or work with your current provider.",
+          "ar": "نعم. يمكنني إعداد الاستضافة والنطاق وشهادة SSL وبريد الأعمال، أو العمل مع مزود الخدمة الحالي لديك."
+        }
+      }
+    ],
+    "related": [
+      "wordpress-ecommerce",
+      "seo-performance",
+      "maintenance-support"
+    ],
+    "cases": [
+      "projects/business-websites"
+    ]
+  },
+  "wordpress-ecommerce": {
+    "slug": "woocommerce-ecommerce-development",
+    "seo_title": {
+      "en": "WooCommerce E-commerce Website Development | Usman Qureshi",
+      "ar": "تصميم متجر إلكتروني ووكومرس احترافي | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "WooCommerce e-commerce website development in Saudi Arabia: online stores with payment gateways, shipping, Arabic/English storefronts and easy order management.",
+      "ar": "تصميم متجر إلكتروني احترافي على ووكومرس في السعودية: بوابات دفع وشحن وواجهة عربية وإنجليزية وإدارة سهلة للطلبات والمنتجات."
+    },
+    "h1": {
+      "en": "WooCommerce E-commerce Website Development",
+      "ar": "تصميم متجر إلكتروني احترافي على ووكومرس"
+    },
+    "intro": {
+      "en": [
+        "WooCommerce turns a WordPress website into a complete online store that you own and control. I build WooCommerce stores with product catalogues, payment gateways, shipping rules, discounts and order management, set up so the store is simple to run every day.",
+        "Choose WooCommerce when you want full ownership of your store, deep customisation or integration with your existing website and systems. If you prefer a fully hosted Saudi platform, I also build stores on Salla, and I will recommend the option that fits your products and budget."
+      ],
+      "ar": [
+        "يحوّل ووكومرس موقع ووردبريس إلى متجر إلكتروني متكامل تملكه وتتحكم فيه. أبني متاجر ووكومرس مع كتالوج المنتجات وبوابات الدفع وقواعد الشحن والخصومات وإدارة الطلبات، مُعدّة لتكون إدارة المتجر يومياً سهلة.",
+        "اختر ووكومرس عندما تريد ملكية كاملة لمتجرك أو تخصيصاً عميقاً أو ربطاً بموقعك وأنظمتك الحالية. وإذا كنت تفضل منصة سعودية مستضافة بالكامل، فأنا أبني المتاجر على سلة أيضاً، وأرشح لك الخيار الأنسب لمنتجاتك وميزانيتك."
+      ]
+    },
+    "who": {
+      "en": [
+        "Retailers moving from social media selling to their own store",
+        "Businesses that need custom product options or pricing",
+        "Companies that want the store inside their existing website",
+        "Brands selling in Arabic and English"
+      ],
+      "ar": [
+        "المتاجر التي تنتقل من البيع عبر وسائل التواصل إلى متجر خاص",
+        "الأنشطة التي تحتاج إلى خيارات أو تسعير مخصص للمنتجات",
+        "الشركات التي تريد المتجر داخل موقعها الحالي",
+        "العلامات التجارية التي تبيع بالعربية والإنجليزية"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Catalogue, payment and shipping requirements",
+        "Store design and product structure",
+        "WooCommerce setup, payment gateway and shipping configuration",
+        "Test orders, emails and mobile checkout",
+        "Launch, training and support"
+      ],
+      "ar": [
+        "متطلبات الكتالوج والدفع والشحن",
+        "تصميم المتجر وهيكل المنتجات",
+        "إعداد ووكومرس وبوابة الدفع والشحن",
+        "تجربة الطلبات والرسائل والدفع عبر الجوال",
+        "الإطلاق والتدريب والدعم"
+      ]
+    },
+    "why": {
+      "en": [
+        "Years of WordPress and Elementor work, so the store and website are one system",
+        "Checkout tested on mobile, where most orders happen",
+        "Performance and security hardening included",
+        "Honest advice on WooCommerce versus Salla"
+      ],
+      "ar": [
+        "سنوات من العمل على ووردبريس و Elementor، فيكون المتجر والموقع نظاماً واحداً",
+        "اختبار الدفع على الجوال حيث تتم معظم الطلبات",
+        "تحسين الأداء وتعزيز الأمان ضمن العمل",
+        "نصيحة صادقة في المقارنة بين ووكومرس وسلة"
+      ]
+    },
+    "tech": [
+      "WooCommerce",
+      "WordPress",
+      "Elementor",
+      "PHP",
+      "Payment gateways",
+      "MySQL"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Should I choose WooCommerce or Salla?",
+          "ar": "هل أختار ووكومرس أم سلة؟"
+        },
+        "a": {
+          "en": "WooCommerce gives you full ownership and flexibility; Salla is fully hosted and built for the Saudi market. I can explain the trade-offs for your products.",
+          "ar": "يمنحك ووكومرس ملكية ومرونة كاملة، بينما سلة مستضافة بالكامل ومصممة للسوق السعودي. أشرح لك الفروق حسب منتجاتك."
+        }
+      },
+      {
+        "q": {
+          "en": "Which payment methods can I accept?",
+          "ar": "ما طرق الدفع التي يمكنني قبولها؟"
+        },
+        "a": {
+          "en": "It depends on the payment gateway you choose; common options support cards and local payment methods. I configure and test the gateway you select.",
+          "ar": "يعتمد ذلك على بوابة الدفع التي تختارها، والخيارات الشائعة تدعم البطاقات وطرق الدفع المحلية. أتولى إعداد البوابة التي تختارها واختبارها."
+        }
+      },
+      {
+        "q": {
+          "en": "Can you migrate my existing products?",
+          "ar": "هل يمكنك نقل منتجاتي الحالية؟"
+        },
+        "a": {
+          "en": "Yes. Products can be imported from a spreadsheet or another platform, with categories and images.",
+          "ar": "نعم. يمكن استيراد المنتجات من جدول بيانات أو منصة أخرى مع التصنيفات والصور."
+        }
+      }
+    ],
+    "related": [
+      "salla-stores",
+      "wordpress-websites",
+      "integrations"
+    ],
+    "cases": [
+      "projects/business-websites"
+    ]
+  },
+  "salla-stores": {
+    "slug": "salla-store-design",
+    "seo_title": {
+      "en": "Salla Store Design & Development in Saudi Arabia | Usman Qureshi",
+      "ar": "تصميم متجر سلة احترافي | مبرمج سلة | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Professional Salla store design and development in Saudi Arabia: store setup, theme customisation, product catalogue, payments, shipping and app integrations.",
+      "ar": "تصميم متجر سلة احترافي في السعودية: إعداد المتجر وتخصيص القالب وتنظيم المنتجات وربط الدفع والشحن والتطبيقات، مع مبرمج سلة يدير متجرك من البداية."
+    },
+    "h1": {
+      "en": "Salla Store Design & Development",
+      "ar": "تصميم متجر سلة احترافي"
+    },
+    "intro": {
+      "en": [
+        "Salla is the e-commerce platform many Saudi businesses choose because it handles hosting, payments and local requirements for you. I help you launch a Salla store that looks professional and sells: store setup, theme customisation, a clear product catalogue and the integrations your business needs.",
+        "Whether you are opening your first online store or improving an existing one, I focus on what affects sales: a clean storefront in Arabic and English, easy navigation on mobile, trustworthy product pages and smooth checkout."
+      ],
+      "ar": [
+        "سلة هي منصة التجارة الإلكترونية التي تختارها كثير من الأنشطة السعودية لأنها تتولى الاستضافة والدفع والمتطلبات المحلية. أساعدك على إطلاق متجر على سلة يبدو احترافياً ويحقق المبيعات: إعداد المتجر وتخصيص القالب وكتالوج منتجات واضح والربط مع ما يحتاجه نشاطك.",
+        "سواء كنت تفتح متجرك الإلكتروني الأول أو تطور متجراً قائماً، أركز على ما يؤثر في المبيعات: واجهة متجر واضحة بالعربية والإنجليزية، وتنقل سهل على الجوال، وصفحات منتجات موثوقة، وإتمام شراء سلس."
+      ]
+    },
+    "who": {
+      "en": [
+        "New sellers launching their first online store in Saudi Arabia",
+        "Businesses moving from Instagram or WhatsApp selling to a real store",
+        "Existing Salla stores that need a better design or structure",
+        "Brands that need custom theme changes or app integrations"
+      ],
+      "ar": [
+        "البائعون الجدد الذين يطلقون متجرهم الأول في السعودية",
+        "الأنشطة التي تنتقل من البيع عبر إنستغرام أو واتساب إلى متجر حقيقي",
+        "متاجر سلة القائمة التي تحتاج إلى تصميم أو تنظيم أفضل",
+        "العلامات التجارية التي تحتاج إلى تعديلات على القالب أو ربط تطبيقات"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Review your products, brand and goals",
+        "Store structure, categories and design direction",
+        "Salla setup and theme customisation",
+        "Products, payments, shipping and apps",
+        "Test orders, launch and handover"
+      ],
+      "ar": [
+        "مراجعة منتجاتك وعلامتك التجارية وأهدافك",
+        "هيكل المتجر والتصنيفات واتجاه التصميم",
+        "إعداد سلة وتخصيص القالب",
+        "المنتجات والدفع والشحن والتطبيقات",
+        "تجربة الطلبات والإطلاق والتسليم"
+      ]
+    },
+    "why": {
+      "en": [
+        "Based in Al Khobar and familiar with the Saudi market",
+        "E-commerce and business website experience since 2018",
+        "Fluent Arabic and English store content and layouts",
+        "Can connect your store to other systems through APIs"
+      ],
+      "ar": [
+        "مقيم في الخبر ومطلع على السوق السعودي",
+        "خبرة في التجارة الإلكترونية ومواقع الأعمال منذ 2018",
+        "محتوى وتخطيط متجر متقن بالعربية والإنجليزية",
+        "قادر على ربط متجرك بأنظمة أخرى عبر الواجهات البرمجية"
+      ]
+    },
+    "tech": [
+      "Salla",
+      "Salla themes",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "REST APIs"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Do I need a commercial registration for Salla?",
+          "ar": "هل أحتاج إلى سجل تجاري لفتح متجر على سلة؟"
+        },
+        "a": {
+          "en": "Salla sets its own registration requirements for each plan and payment method; I help you complete the setup with the documents you have.",
+          "ar": "تحدد سلة متطلبات التسجيل لكل باقة وطريقة دفع، وأساعدك على إكمال الإعداد بالمستندات المتوفرة لديك."
+        }
+      },
+      {
+        "q": {
+          "en": "Can you customise my Salla theme?",
+          "ar": "هل يمكنك تخصيص قالب متجري على سلة؟"
+        },
+        "a": {
+          "en": "Yes. I can adjust layouts, colours, sections and styling to match your brand within what the Salla theme system allows.",
+          "ar": "نعم. يمكنني تعديل التخطيط والألوان والأقسام والتنسيق ليناسب علامتك التجارية ضمن ما يتيحه نظام قوالب سلة."
+        }
+      },
+      {
+        "q": {
+          "en": "Can you improve an existing Salla store?",
+          "ar": "هل يمكنك تطوير متجر سلة قائم؟"
+        },
+        "a": {
+          "en": "Yes. I review the current store and improve structure, product pages, speed and design without rebuilding from scratch.",
+          "ar": "نعم. أراجع المتجر الحالي وأحسّن الهيكل وصفحات المنتجات والسرعة والتصميم دون إعادة البناء من الصفر."
+        }
+      }
+    ],
+    "related": [
+      "wordpress-ecommerce",
+      "integrations",
+      "seo-performance"
+    ],
+    "cases": [
+      "projects/business-websites"
+    ]
+  },
+  "html-css-websites": {
+    "slug": "html-css-website-design",
+    "seo_title": {
+      "en": "HTML & CSS Website Design and Landing Pages | Usman Qureshi",
+      "ar": "تصميم مواقع HTML و CSS وصفحات الهبوط | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Hand-coded HTML and CSS websites and landing pages: very fast, secure, bilingual Arabic/English and inexpensive to host. No CMS overhead.",
+      "ar": "تصميم مواقع وصفحات هبوط مكتوبة يدوياً باستخدام HTML و CSS: سريعة جداً وآمنة وثنائية اللغة بالعربية والإنجليزية وقليلة تكلفة الاستضافة."
+    },
+    "h1": {
+      "en": "HTML & CSS Website Design",
+      "ar": "تصميم مواقع HTML و CSS"
+    },
+    "intro": {
+      "en": [
+        "Not every website needs a content management system. A hand-coded HTML and CSS website loads almost instantly, has very little to hack, and costs less to host and maintain. It is ideal for landing pages, campaign sites, portfolios and small company websites that change occasionally.",
+        "I write clean, semantic HTML, responsive CSS and lightweight JavaScript, with Arabic right-to-left layouts, accessibility and search engine structure built in. This website is an example: a static bilingual site with structured data and near-instant pages."
+      ],
+      "ar": [
+        "ليس كل موقع بحاجة إلى نظام إدارة محتوى. موقع HTML و CSS المكتوب يدوياً يُحمَّل بشكل شبه فوري، ونقاط اختراقه قليلة جداً، وتكلفة استضافته وصيانته أقل. وهو مثالي لصفحات الهبوط ومواقع الحملات والملفات الشخصية ومواقع الشركات الصغيرة التي تتغير أحياناً.",
+        "أكتب HTML منظماً و CSS متجاوباً و JavaScript خفيفاً، مع تخطيط عربي من اليمين إلى اليسار وسهولة الوصول وبنية مناسبة لمحركات البحث. هذا الموقع مثال على ذلك: موقع ثابت ثنائي اللغة مع بيانات منظمة وصفحات سريعة جداً."
+      ]
+    },
+    "who": {
+      "en": [
+        "Campaigns and product launches that need a fast landing page",
+        "Professionals and small companies with mostly fixed content",
+        "Businesses that want maximum speed and minimal maintenance",
+        "Teams that need a design converted precisely into code"
+      ],
+      "ar": [
+        "الحملات وإطلاق المنتجات التي تحتاج إلى صفحة هبوط سريعة",
+        "المهنيون والشركات الصغيرة ذات المحتوى الثابت غالباً",
+        "الأنشطة التي تريد أقصى سرعة وأقل صيانة",
+        "الفرق التي تحتاج إلى تحويل تصميم إلى شيفرة بدقة"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Agree on pages, content and design",
+        "Build semantic, responsive HTML and CSS",
+        "Add forms, analytics and structured data",
+        "Test speed, accessibility and browsers",
+        "Deploy to your hosting"
+      ],
+      "ar": [
+        "الاتفاق على الصفحات والمحتوى والتصميم",
+        "بناء HTML منظم و CSS متجاوب",
+        "إضافة النماذج والتحليلات والبيانات المنظمة",
+        "اختبار السرعة وسهولة الوصول والمتصفحات",
+        "النشر على الاستضافة الخاصة بك"
+      ]
+    },
+    "why": {
+      "en": [
+        "Pixel-accurate, responsive front-end work",
+        "Bilingual RTL/LTR layouts done properly",
+        "Search structure, hreflang and structured data included",
+        "Secure contact forms with spam protection"
+      ],
+      "ar": [
+        "تنفيذ واجهات دقيق ومتجاوب",
+        "تخطيط ثنائي الاتجاه للعربية والإنجليزية بشكل صحيح",
+        "بنية محركات البحث و hreflang والبيانات المنظمة ضمن العمل",
+        "نماذج تواصل آمنة محمية من الرسائل المزعجة"
+      ]
+    },
+    "tech": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP forms",
+      "Schema.org",
+      "Google Analytics"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Can I update an HTML website myself?",
+          "ar": "هل يمكنني تحديث موقع HTML بنفسي؟"
+        },
+        "a": {
+          "en": "Small text changes are simple; for frequent updates a CMS such as WordPress may suit you better, and I will tell you which fits.",
+          "ar": "التعديلات النصية البسيطة سهلة، أما للتحديثات المتكررة فقد يناسبك نظام إدارة محتوى مثل ووردبريس، وسأوضح لك الأنسب."
+        }
+      },
+      {
+        "q": {
+          "en": "Is an HTML website good for SEO?",
+          "ar": "هل موقع HTML جيد لمحركات البحث؟"
+        },
+        "a": {
+          "en": "Yes. Fast, clean pages with correct titles, headings and structured data are an excellent base for search rankings.",
+          "ar": "نعم. الصفحات السريعة والمنظمة بعناوين ورؤوس وبيانات منظمة صحيحة أساس ممتاز للظهور في نتائج البحث."
+        }
+      },
+      {
+        "q": {
+          "en": "Can you convert my Figma or image design to code?",
+          "ar": "هل يمكنك تحويل تصميمي من Figma أو صورة إلى شيفرة؟"
+        },
+        "a": {
+          "en": "Yes. I convert designs into responsive, accessible HTML and CSS that matches the original closely.",
+          "ar": "نعم. أحوّل التصاميم إلى HTML و CSS متجاوب ومراعٍ لسهولة الوصول ومطابق للتصميم الأصلي."
+        }
+      }
+    ],
+    "related": [
+      "wordpress-websites",
+      "seo-performance",
+      "hosting-devops"
+    ],
+    "cases": [
+      "projects/business-websites"
+    ]
+  },
+  "cms-development": {
+    "slug": "cms-development",
+    "seo_title": {
+      "en": "Custom CMS Development: WordPress and Laravel | Usman Qureshi",
+      "ar": "تطوير أنظمة إدارة المحتوى المخصصة | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Custom CMS development with WordPress or Laravel: content models, editor workflows, user roles and multilingual Arabic/English content for your team.",
+      "ar": "تطوير أنظمة إدارة محتوى مخصصة باستخدام ووردبريس أو لارافيل: نماذج المحتوى وسير التحرير وصلاحيات المستخدمين ومحتوى عربي وإنجليزي لفريقك."
+    },
+    "h1": {
+      "en": "Custom CMS Development",
+      "ar": "تطوير أنظمة إدارة المحتوى"
+    },
+    "intro": {
+      "en": [
+        "A content management system should match how your team works, not force you into workarounds. I build content management around your real content: custom post types and admin screens in WordPress, or a lightweight Laravel-based CMS when off-the-shelf tools do not fit.",
+        "The result is a back office where editors find what they need, permissions are clear, Arabic and English content stay in sync, and publishing does not require a developer."
+      ],
+      "ar": [
+        "يجب أن يناسب نظام إدارة المحتوى طريقة عمل فريقك لا أن يفرض عليك حلولاً ملتوية. أبني إدارة المحتوى حول محتواك الفعلي: أنواع محتوى وشاشات إدارة مخصصة في ووردبريس، أو نظام إدارة محتوى خفيف مبني على لارافيل عندما لا تناسبك الأدوات الجاهزة.",
+        "والنتيجة لوحة إدارة يجد فيها المحررون ما يحتاجونه، وصلاحيات واضحة، ومحتوى عربي وإنجليزي متزامن، ونشر لا يحتاج إلى مطور."
+      ]
+    },
+    "who": {
+      "en": [
+        "Organisations with many content types, such as services, branches or products",
+        "Teams with several editors and approval steps",
+        "Bilingual websites that must keep Arabic and English aligned",
+        "Businesses outgrowing a basic website builder"
+      ],
+      "ar": [
+        "الجهات ذات أنواع المحتوى المتعددة مثل الخدمات أو الفروع أو المنتجات",
+        "الفرق التي تضم عدة محررين وخطوات موافقة",
+        "المواقع ثنائية اللغة التي يجب أن يبقى فيها المحتوى العربي والإنجليزي متوافقاً",
+        "الأنشطة التي تجاوزت أدوات بناء المواقع البسيطة"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Map your content types and who edits them",
+        "Design the content model and admin screens",
+        "Build in WordPress or Laravel",
+        "Migrate existing content",
+        "Train editors and hand over"
+      ],
+      "ar": [
+        "حصر أنواع المحتوى ومن يحررها",
+        "تصميم نموذج المحتوى وشاشات الإدارة",
+        "البناء على ووردبريس أو لارافيل",
+        "ترحيل المحتوى الحالي",
+        "تدريب المحررين والتسليم"
+      ]
+    },
+    "why": {
+      "en": [
+        "Experience with both WordPress and Laravel back offices",
+        "Role-based permissions and audit trails from production systems",
+        "Bilingual content handled from the data model up",
+        "Clear documentation for future developers"
+      ],
+      "ar": [
+        "خبرة في لوحات الإدارة على ووردبريس ولارافيل",
+        "صلاحيات حسب الأدوار وسجلات تدقيق من أنظمة تعمل فعلياً",
+        "محتوى ثنائي اللغة مدروس من نموذج البيانات",
+        "توثيق واضح للمطورين لاحقاً"
+      ]
+    },
+    "tech": [
+      "WordPress",
+      "Laravel",
+      "Livewire",
+      "PHP",
+      "MySQL"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "WordPress or a custom Laravel CMS?",
+          "ar": "ووردبريس أم نظام مخصص على لارافيل؟"
+        },
+        "a": {
+          "en": "WordPress is faster and cheaper for most websites; a custom Laravel CMS makes sense for complex workflows or when content is tied to business data.",
+          "ar": "ووردبريس أسرع وأقل تكلفة لمعظم المواقع، أما النظام المخصص على لارافيل فيناسب سير العمل المعقد أو المحتوى المرتبط ببيانات الأعمال."
+        }
+      },
+      {
+        "q": {
+          "en": "Can different staff have different permissions?",
+          "ar": "هل يمكن منح الموظفين صلاحيات مختلفة؟"
+        },
+        "a": {
+          "en": "Yes. Roles control who can create, edit, approve or publish each type of content.",
+          "ar": "نعم. تحدد الأدوار من يستطيع إنشاء كل نوع من المحتوى أو تعديله أو اعتماده أو نشره."
+        }
+      },
+      {
+        "q": {
+          "en": "Can you move content from my current site?",
+          "ar": "هل يمكنك نقل المحتوى من موقعي الحالي؟"
+        },
+        "a": {
+          "en": "Yes. Content can be migrated with its structure, images and, where possible, existing URLs.",
+          "ar": "نعم. يمكن ترحيل المحتوى مع هيكله وصوره وروابطه الحالية قدر الإمكان."
+        }
+      }
+    ],
+    "related": [
+      "wordpress-websites",
+      "custom-web-apps",
+      "software-documentation"
+    ],
+    "cases": [
+      "projects/driver-onboarding-system"
+    ]
+  },
+  "custom-web-apps": {
+    "slug": "laravel-web-application-development",
+    "seo_title": {
+      "en": "Laravel & Python Web Application Development | Usman Qureshi",
+      "ar": "برمجة تطبيقات ويب مخصصة بلارافيل | مطور لارافيل | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Custom web application development with Laravel and Python/Flask in Saudi Arabia: business platforms, portals and dashboards with roles, audit trails and reports.",
+      "ar": "برمجة تطبيقات ويب مخصصة بلارافيل و Python/Flask في السعودية: منصات أعمال وبوابات ولوحات تحكم مع صلاحيات وسجلات تدقيق وتقارير، مع مطور لارافيل محترف."
+    },
+    "h1": {
+      "en": "Custom Web Application Development (Laravel & Python)",
+      "ar": "برمجة تطبيقات ويب مخصصة بلارافيل و Python"
+    },
+    "intro": {
+      "en": [
+        "When spreadsheets, WhatsApp groups and off-the-shelf tools stop keeping up with your operations, a custom web application brings the work into one system built around your process. I design and develop business platforms, portals and dashboards with Laravel and Python/Flask.",
+        "This is the work behind DMS and DOBS, two production systems I designed and built: more than 180 data models, role-based access, audit logging, payroll calculations, PDF documents and integrations with mobile apps. I bring the same structure to your project, scaled to what you need."
+      ],
+      "ar": [
+        "عندما تعجز جداول البيانات ومجموعات واتساب والأدوات الجاهزة عن مواكبة عملياتك، يجمع تطبيق الويب المخصص العمل في نظام واحد مبني حول إجراءاتك. أصمم وأطور منصات أعمال وبوابات ولوحات تحكم باستخدام لارافيل و Python/Flask.",
+        "هذا هو العمل الذي يقف خلف نظامي DMS و DOBS اللذين صممتهما وطورتهما ويعملان فعلياً: أكثر من 180 نموذج بيانات وصلاحيات حسب الأدوار وسجلات تدقيق وحسابات رواتب ومستندات PDF وربط مع تطبيقات الجوال. وأقدم البنية نفسها لمشروعك بالحجم الذي تحتاجه."
+      ]
+    },
+    "who": {
+      "en": [
+        "Operations teams running critical work in spreadsheets",
+        "Companies that need an internal portal or admin dashboard",
+        "Startups building a web platform or MVP",
+        "Businesses replacing a legacy system"
+      ],
+      "ar": [
+        "فرق العمليات التي تدير أعمالاً حساسة عبر جداول البيانات",
+        "الشركات التي تحتاج إلى بوابة داخلية أو لوحة تحكم",
+        "الشركات الناشئة التي تبني منصة ويب أو نسخة أولية",
+        "الأنشطة التي تستبدل نظاماً قديماً"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Requirements workshop and process mapping",
+        "Data model, roles and screen design",
+        "Iterative development with regular demos",
+        "Testing, data migration and deployment",
+        "Training, documentation and support"
+      ],
+      "ar": [
+        "ورشة متطلبات ورسم الإجراءات",
+        "نموذج البيانات والأدوار وتصميم الشاشات",
+        "تطوير على مراحل مع عروض منتظمة",
+        "الاختبار وترحيل البيانات والنشر",
+        "التدريب والتوثيق والدعم"
+      ]
+    },
+    "why": {
+      "en": [
+        "Designed and built two production operations platforms end to end",
+        "Laravel 11, Livewire 3 and Python/Flask in daily use",
+        "Security built in: permissions, audit trails, rate limits",
+        "Project manager and developer in one, so requirements are not lost"
+      ],
+      "ar": [
+        "صممت وطورت منصتين تشغيليتين تعملان فعلياً من البداية إلى النهاية",
+        "استخدام يومي للارافيل 11 و Livewire 3 و Python/Flask",
+        "أمان مدمج: صلاحيات وسجلات تدقيق وحدود للطلبات",
+        "مدير مشروع ومطور في شخص واحد فلا تضيع المتطلبات"
+      ]
+    },
+    "tech": [
+      "Laravel",
+      "Livewire",
+      "PHP",
+      "Python",
+      "Flask",
+      "MySQL",
+      "Redis",
+      "REST APIs"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Laravel or Python for my project?",
+          "ar": "لارافيل أم Python لمشروعي؟"
+        },
+        "a": {
+          "en": "Both are excellent; I choose based on your team, existing systems and integrations, and explain the reasons.",
+          "ar": "كلاهما ممتاز، وأختار حسب فريقك وأنظمتك الحالية وعمليات الربط، مع شرح الأسباب."
+        }
+      },
+      {
+        "q": {
+          "en": "Can you start with a smaller first version?",
+          "ar": "هل يمكن البدء بنسخة أولى أصغر؟"
+        },
+        "a": {
+          "en": "Yes. Starting with the most important workflow and expanding in phases is usually the best approach.",
+          "ar": "نعم. البدء بأهم سير عمل ثم التوسع على مراحل هو غالباً النهج الأفضل."
+        }
+      },
+      {
+        "q": {
+          "en": "Who owns the code?",
+          "ar": "من يملك الشيفرة البرمجية؟"
+        },
+        "a": {
+          "en": "You do. You receive the source code, documentation and access to everything needed to run the system.",
+          "ar": "أنت. تستلم الشيفرة المصدرية والتوثيق وكل ما يلزم لتشغيل النظام."
+        }
+      }
+    ],
+    "related": [
+      "logistics-software",
+      "integrations",
+      "automation"
+    ],
+    "cases": [
+      "projects/driver-management-system",
+      "projects/driver-onboarding-system"
+    ]
+  },
+  "mobile-apps": {
+    "slug": "mobile-app-development",
+    "seo_title": {
+      "en": "Mobile App Development in Saudi Arabia (Android & iOS) | Usman",
+      "ar": "تصميم وبرمجة تطبيقات الجوال في السعودية | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Mobile app development in Saudi Arabia with Flutter: Android and iOS apps with login, notifications, location, chat and backend integration.",
+      "ar": "تصميم وبرمجة تطبيقات الجوال في السعودية بتقنية Flutter: تطبيقات أندرويد و iOS مع تسجيل الدخول والإشعارات وتحديد الموقع والمحادثة والربط بأنظمتك."
+    },
+    "h1": {
+      "en": "Mobile App Development (Android & iOS)",
+      "ar": "تصميم وبرمجة تطبيقات الجوال (أندرويد و iOS)"
+    },
+    "intro": {
+      "en": [
+        "I build Android and iOS apps with Flutter, so one codebase powers both platforms and your app reaches users faster at lower cost. The app connects to your backend for login, data, notifications and payments, and is designed for real-world use: weak connections, background tasks and many users.",
+        "I designed and developed the DMS Android driver app used in daily logistics operations: shift check-in with face verification, background location tracking, payroll slips, requests, in-app chat and voice calls, push notifications and over-the-air updates."
+      ],
+      "ar": [
+        "أبني تطبيقات أندرويد و iOS بتقنية Flutter، فتعمل شيفرة واحدة على المنصتين ويصل تطبيقك إلى المستخدمين أسرع وبتكلفة أقل. يتصل التطبيق بنظامك لتسجيل الدخول والبيانات والإشعارات والدفع، ومصمم للاستخدام الحقيقي: ضعف الاتصال والمهام في الخلفية وكثرة المستخدمين.",
+        "صممت وطورت تطبيق أندرويد للسائقين ضمن نظام DMS المستخدم يومياً في العمليات اللوجستية: تسجيل الحضور مع التحقق من الوجه، وتتبع الموقع في الخلفية، وقسائم الرواتب، والطلبات، والمحادثة والمكالمات الصوتية داخل التطبيق، والإشعارات الفورية، والتحديثات عبر الهواء."
+      ]
+    },
+    "who": {
+      "en": [
+        "Businesses that need an app for customers or field staff",
+        "Logistics and delivery companies with drivers or couriers",
+        "Startups launching a mobile-first product",
+        "Companies adding a mobile app to an existing web system"
+      ],
+      "ar": [
+        "الأنشطة التي تحتاج إلى تطبيق للعملاء أو الموظفين الميدانيين",
+        "شركات النقل والتوصيل التي لديها سائقون أو مندوبون",
+        "الشركات الناشئة التي تطلق منتجاً يعتمد على الجوال",
+        "الشركات التي تضيف تطبيقاً لنظام ويب قائم"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Define users, screens and features",
+        "Design the app flow and connect it to the backend API",
+        "Develop with Flutter and test on real devices",
+        "Prepare Google Play and App Store releases",
+        "Monitor crashes and ship updates"
+      ],
+      "ar": [
+        "تحديد المستخدمين والشاشات والميزات",
+        "تصميم مسار التطبيق وربطه بالواجهة البرمجية للنظام",
+        "التطوير بتقنية Flutter والاختبار على أجهزة حقيقية",
+        "تجهيز الإصدار على Google Play و App Store",
+        "متابعة الأعطال وإصدار التحديثات"
+      ]
+    },
+    "why": {
+      "en": [
+        "Built a production Flutter driver app with background services",
+        "Experience with Firebase, push notifications, Crashlytics and in-app calls",
+        "Can build the backend and API as well as the app",
+        "Arabic and English app interfaces"
+      ],
+      "ar": [
+        "بنيت تطبيق سائقين يعمل فعلياً بتقنية Flutter مع خدمات في الخلفية",
+        "خبرة في Firebase والإشعارات الفورية و Crashlytics والمكالمات داخل التطبيق",
+        "قادر على بناء النظام الخلفي والواجهة البرمجية إلى جانب التطبيق",
+        "واجهات تطبيق بالعربية والإنجليزية"
+      ]
+    },
+    "tech": [
+      "Flutter",
+      "Dart",
+      "Android",
+      "iOS",
+      "Firebase",
+      "REST APIs",
+      "Laravel"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Do you build for both Android and iPhone?",
+          "ar": "هل تبني التطبيق لأندرويد وآيفون معاً؟"
+        },
+        "a": {
+          "en": "Yes. Flutter produces native Android and iOS apps from one codebase.",
+          "ar": "نعم. تنتج تقنية Flutter تطبيقات أصلية لأندرويد و iOS من شيفرة واحدة."
+        }
+      },
+      {
+        "q": {
+          "en": "Can you also build the backend for my app?",
+          "ar": "هل يمكنك بناء النظام الخلفي لتطبيقي أيضاً؟"
+        },
+        "a": {
+          "en": "Yes. I can build the API, admin dashboard and database the app needs, usually with Laravel.",
+          "ar": "نعم. يمكنني بناء الواجهة البرمجية ولوحة الإدارة وقاعدة البيانات التي يحتاجها التطبيق، غالباً باستخدام لارافيل."
+        }
+      },
+      {
+        "q": {
+          "en": "Will you publish the app to the stores?",
+          "ar": "هل تتولى نشر التطبيق على المتاجر؟"
+        },
+        "a": {
+          "en": "I prepare the release and guide the Google Play and App Store submission under your developer accounts.",
+          "ar": "أجهز الإصدار وأتولى إرشاد عملية النشر على Google Play و App Store باستخدام حسابات المطور الخاصة بك."
+        }
+      }
+    ],
+    "related": [
+      "custom-web-apps",
+      "desktop-apps",
+      "integrations"
+    ],
+    "cases": [
+      "projects/driver-management-system"
+    ]
+  },
+  "desktop-apps": {
+    "slug": "desktop-application-development",
+    "seo_title": {
+      "en": "Desktop Application Development for Windows & macOS | Usman",
+      "ar": "تطوير تطبيقات سطح المكتب لويندوز وماك | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Desktop application development for Windows and macOS with Flutter or web technologies: internal tools, kiosks and offline-capable apps that sync with your systems.",
+      "ar": "تطوير تطبيقات سطح المكتب لنظامي ويندوز وماك بتقنية Flutter أو تقنيات الويب: أدوات داخلية وأجهزة خدمة ذاتية وتطبيقات تعمل دون اتصال وتتزامن مع أنظمتك."
+    },
+    "h1": {
+      "en": "Desktop Application Development",
+      "ar": "تطوير تطبيقات سطح المكتب"
+    },
+    "intro": {
+      "en": [
+        "Some work belongs on a desktop: internal tools used all day, kiosks and counters, label and report printing, or tasks that must keep going when the internet drops. I build desktop applications for Windows and macOS with Flutter or web technologies, sharing logic and data with your web and mobile apps.",
+        "Because the same technology powers your mobile app and web system, features and fixes reach every platform without being written three times, and your data stays consistent."
+      ],
+      "ar": [
+        "بعض الأعمال مكانها سطح المكتب: أدوات داخلية تُستخدم طوال اليوم، وأجهزة الخدمة الذاتية ونقاط الخدمة، وطباعة الملصقات والتقارير، أو مهام يجب أن تستمر عند انقطاع الإنترنت. أبني تطبيقات سطح مكتب لويندوز وماك بتقنية Flutter أو تقنيات الويب، مع مشاركة المنطق والبيانات مع تطبيقات الويب والجوال.",
+        "ولأن التقنية نفسها تشغّل تطبيق الجوال ونظام الويب، تصل الميزات والإصلاحات إلى كل المنصات دون كتابتها ثلاث مرات، وتبقى بياناتك متسقة."
+      ]
+    },
+    "who": {
+      "en": [
+        "Teams that need a fast internal tool on office PCs",
+        "Kiosks, counters and reception desks",
+        "Work that must continue offline and sync later",
+        "Businesses that already have a web or mobile system"
+      ],
+      "ar": [
+        "الفرق التي تحتاج إلى أداة داخلية سريعة على أجهزة المكتب",
+        "أجهزة الخدمة الذاتية ونقاط الخدمة ومكاتب الاستقبال",
+        "الأعمال التي يجب أن تستمر دون اتصال ثم تتزامن لاحقاً",
+        "الأنشطة التي لديها نظام ويب أو جوال بالفعل"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Define users, devices and offline needs",
+        "Design screens and the sync approach",
+        "Build and test on Windows and macOS",
+        "Package the installer and update mechanism",
+        "Roll out and support"
+      ],
+      "ar": [
+        "تحديد المستخدمين والأجهزة واحتياجات العمل دون اتصال",
+        "تصميم الشاشات وطريقة المزامنة",
+        "التطوير والاختبار على ويندوز وماك",
+        "تجهيز ملف التثبيت وآلية التحديث",
+        "التعميم والدعم"
+      ]
+    },
+    "why": {
+      "en": [
+        "Flutter experience from a production mobile app",
+        "Backend and API skills to keep desktop data in sync",
+        "Focus on reliability for all-day use",
+        "One developer across desktop, web and mobile"
+      ],
+      "ar": [
+        "خبرة في Flutter من تطبيق جوال يعمل فعلياً",
+        "مهارات في الأنظمة الخلفية والواجهات البرمجية لمزامنة البيانات",
+        "تركيز على الاعتمادية للاستخدام طوال اليوم",
+        "مطور واحد لسطح المكتب والويب والجوال"
+      ]
+    },
+    "tech": [
+      "Flutter",
+      "Dart",
+      "Windows",
+      "macOS",
+      "SQLite",
+      "REST APIs"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Can the desktop app work without internet?",
+          "ar": "هل يعمل تطبيق سطح المكتب دون إنترنت؟"
+        },
+        "a": {
+          "en": "Yes. Data can be stored locally and synchronised when the connection returns.",
+          "ar": "نعم. يمكن حفظ البيانات محلياً ومزامنتها عند عودة الاتصال."
+        }
+      },
+      {
+        "q": {
+          "en": "Windows only, or macOS too?",
+          "ar": "لويندوز فقط أم لماك أيضاً؟"
+        },
+        "a": {
+          "en": "Both can be supported from the same codebase; we start with the platform your team uses.",
+          "ar": "يمكن دعم النظامين من شيفرة واحدة، ونبدأ بالنظام الذي يستخدمه فريقك."
+        }
+      },
+      {
+        "q": {
+          "en": "How are updates delivered?",
+          "ar": "كيف تصل التحديثات؟"
+        },
+        "a": {
+          "en": "I set up an installer and an update process so new versions reach users without manual reinstalling.",
+          "ar": "أجهز ملف تثبيت وآلية تحديث لتصل الإصدارات الجديدة إلى المستخدمين دون إعادة تثبيت يدوية."
+        }
+      }
+    ],
+    "related": [
+      "mobile-apps",
+      "custom-web-apps",
+      "automation"
+    ],
+    "cases": []
+  },
+  "whatsapp-chatbots": {
+    "slug": "whatsapp-chatbot-development",
+    "seo_title": {
+      "en": "WhatsApp Chatbot for Business in Saudi Arabia (Twilio) | Usman",
+      "ar": "شات بوت واتساب للأعمال في السعودية | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "WhatsApp chatbot development for businesses in Saudi Arabia using Twilio: automated replies, bookings, order updates and hand-off to staff, in Arabic and English.",
+      "ar": "تطوير شات بوت واتساب للأعمال في السعودية عبر Twilio: ردود آلية وحجوزات وتحديثات للطلبات وتحويل المحادثة إلى موظف، بالعربية والإنجليزية."
+    },
+    "h1": {
+      "en": "WhatsApp Chatbots for Business (Twilio)",
+      "ar": "شات بوت واتساب للأعمال (Twilio)"
+    },
+    "intro": {
+      "en": [
+        "Your customers already message you on WhatsApp. A WhatsApp chatbot answers the common questions instantly, day and night, takes bookings or orders, sends status updates and passes the conversation to a person when it needs a human. I build WhatsApp Business chatbots on Twilio, connected to your own system.",
+        "The bot can look up real data, such as order status, appointment times or account details, and every conversation can be logged so your team sees what customers ask most. Conversations are designed in Arabic and English."
+      ],
+      "ar": [
+        "عملاؤك يراسلونك عبر واتساب بالفعل. يجيب شات بوت واتساب عن الأسئلة الشائعة فوراً ليلاً ونهاراً، ويستقبل الحجوزات أو الطلبات، ويرسل تحديثات الحالة، ويحوّل المحادثة إلى موظف عندما تحتاج إلى شخص. أبني روبوتات محادثة لواتساب للأعمال عبر Twilio متصلة بنظامك.",
+        "يستطيع الروبوت الاستعلام عن بيانات حقيقية مثل حالة الطلب أو مواعيد الحجز أو بيانات الحساب، ويمكن تسجيل كل محادثة ليرى فريقك أكثر ما يسأل عنه العملاء. وتُصمم المحادثات بالعربية والإنجليزية."
+      ]
+    },
+    "who": {
+      "en": [
+        "Shops and e-commerce stores answering order questions",
+        "Clinics, salons and services taking appointments",
+        "Logistics companies sending delivery updates",
+        "Support teams that want fewer repetitive messages"
+      ],
+      "ar": [
+        "المتاجر والمتاجر الإلكترونية التي تجيب عن أسئلة الطلبات",
+        "العيادات والصالونات والخدمات التي تستقبل المواعيد",
+        "شركات النقل التي ترسل تحديثات التوصيل",
+        "فرق الدعم التي تريد تقليل الرسائل المتكررة"
+      ]
+    },
+    "steps": {
+      "en": [
+        "List the questions and tasks the bot should handle",
+        "Design the conversation flows in Arabic and English",
+        "Set up Twilio, the WhatsApp sender and message templates",
+        "Connect the bot to your system or database",
+        "Test, launch and review the conversation logs"
+      ],
+      "ar": [
+        "حصر الأسئلة والمهام التي سيتولاها الروبوت",
+        "تصميم مسارات المحادثة بالعربية والإنجليزية",
+        "إعداد Twilio ورقم واتساب وقوالب الرسائل",
+        "ربط الروبوت بنظامك أو قاعدة بياناتك",
+        "الاختبار والإطلاق ومراجعة سجلات المحادثات"
+      ]
+    },
+    "why": {
+      "en": [
+        "Experience building messaging, chat and voice features in production apps",
+        "Backend skills to connect the bot to real business data",
+        "Spam and abuse protection designed in",
+        "Bilingual conversation design"
+      ],
+      "ar": [
+        "خبرة في بناء ميزات المراسلة والمحادثة والصوت في تطبيقات تعمل فعلياً",
+        "مهارات في الأنظمة الخلفية لربط الروبوت ببيانات العمل الحقيقية",
+        "حماية من الرسائل المزعجة وإساءة الاستخدام مدمجة في التصميم",
+        "تصميم محادثات ثنائي اللغة"
+      ]
+    },
+    "tech": [
+      "Twilio",
+      "WhatsApp Business API",
+      "Laravel",
+      "Python",
+      "Webhooks",
+      "MySQL"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Do I need a WhatsApp Business account?",
+          "ar": "هل أحتاج إلى حساب واتساب للأعمال؟"
+        },
+        "a": {
+          "en": "Yes. The bot uses an approved WhatsApp Business sender through Twilio, and I guide you through the registration steps.",
+          "ar": "نعم. يستخدم الروبوت رقماً معتمداً لواتساب للأعمال عبر Twilio، وأرشدك خلال خطوات التسجيل."
+        }
+      },
+      {
+        "q": {
+          "en": "Can a person take over the chat?",
+          "ar": "هل يمكن لموظف تولي المحادثة؟"
+        },
+        "a": {
+          "en": "Yes. The bot can hand the conversation to your team when a request needs a human.",
+          "ar": "نعم. يمكن للروبوت تحويل المحادثة إلى فريقك عندما يحتاج الطلب إلى شخص."
+        }
+      },
+      {
+        "q": {
+          "en": "What does it cost to run?",
+          "ar": "ما تكلفة التشغيل؟"
+        },
+        "a": {
+          "en": "Twilio and WhatsApp charge per conversation or message; I estimate running costs for your expected volume before we start.",
+          "ar": "تحتسب Twilio وواتساب الرسوم لكل محادثة أو رسالة، وأقدّر لك تكلفة التشغيل حسب حجم الرسائل المتوقع قبل البدء."
+        }
+      }
+    ],
+    "related": [
+      "twilio-ivr",
+      "ai-integrations",
+      "integrations"
+    ],
+    "cases": [
+      "projects/driver-management-system"
+    ]
+  },
+  "twilio-ivr": {
+    "slug": "twilio-ivr-development",
+    "seo_title": {
+      "en": "Twilio IVR System Development and Call Routing | Usman Qureshi",
+      "ar": "تطوير أنظمة IVR والرد الآلي عبر Twilio | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Twilio IVR system development: phone menus, call routing, queues, voicemail, callbacks and call logging connected to your CRM or business system.",
+      "ar": "تطوير أنظمة الرد الآلي IVR عبر Twilio: قوائم هاتفية وتوجيه المكالمات وقوائم الانتظار والبريد الصوتي وطلبات معاودة الاتصال وتسجيل المكالمات في نظامك."
+    },
+    "h1": {
+      "en": "Twilio IVR Systems & Voice Automation",
+      "ar": "أنظمة IVR والرد الآلي عبر Twilio"
+    },
+    "intro": {
+      "en": [
+        "An interactive voice response (IVR) system greets callers, offers a menu and sends each call to the right person or department, so customers stop waiting and staff stop transferring calls by hand. I build IVR systems on Twilio with call routing, queues, after-hours messages, voicemail and callbacks.",
+        "Because Twilio is fully programmable, the phone system can talk to your business data: recognise returning customers, read out order or booking status, and log every call in your CRM or internal system."
+      ],
+      "ar": [
+        "يستقبل نظام الرد الصوتي التفاعلي (IVR) المتصلين ويعرض قائمة ويوجه كل مكالمة إلى الشخص أو القسم المناسب، فيتوقف انتظار العملاء ويتوقف تحويل الموظفين للمكالمات يدوياً. أبني أنظمة IVR عبر Twilio مع توجيه المكالمات وقوائم الانتظار ورسائل خارج أوقات العمل والبريد الصوتي وطلبات معاودة الاتصال.",
+        "ولأن Twilio قابلة للبرمجة بالكامل، يستطيع نظام الهاتف التعامل مع بيانات عملك: التعرف على العملاء العائدين، وقراءة حالة الطلب أو الحجز، وتسجيل كل مكالمة في نظام إدارة العملاء أو نظامك الداخلي."
+      ]
+    },
+    "who": {
+      "en": [
+        "Businesses with several departments sharing one number",
+        "Support lines that need queues and after-hours handling",
+        "Companies that want calls logged in their system",
+        "Teams replacing an expensive traditional phone system"
+      ],
+      "ar": [
+        "الأنشطة التي لديها عدة أقسام برقم واحد",
+        "خطوط الدعم التي تحتاج إلى قوائم انتظار ومعالجة خارج أوقات العمل",
+        "الشركات التي تريد تسجيل المكالمات في نظامها",
+        "الفرق التي تستبدل نظام هاتف تقليدياً مكلفاً"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Map how calls should flow today and after hours",
+        "Design the IVR menu and messages in Arabic and English",
+        "Set up Twilio numbers, voice flows and routing",
+        "Connect call data to your CRM or system",
+        "Test with real calls and go live"
+      ],
+      "ar": [
+        "رسم مسار المكالمات خلال الدوام وخارجه",
+        "تصميم قائمة IVR والرسائل بالعربية والإنجليزية",
+        "إعداد أرقام Twilio ومسارات الصوت والتوجيه",
+        "ربط بيانات المكالمات بنظام إدارة العملاء أو نظامك",
+        "الاختبار بمكالمات حقيقية والتشغيل"
+      ]
+    },
+    "why": {
+      "en": [
+        "Experience building real-time voice calling in a production app",
+        "Backend integration skills to connect calls with business data",
+        "Clear call-flow design before any code",
+        "Bilingual menus and recordings"
+      ],
+      "ar": [
+        "خبرة في بناء المكالمات الصوتية الفورية في تطبيق يعمل فعلياً",
+        "مهارات ربط الأنظمة لوصل المكالمات ببيانات العمل",
+        "تصميم واضح لمسار المكالمات قبل كتابة الشيفرة",
+        "قوائم وتسجيلات ثنائية اللغة"
+      ]
+    },
+    "tech": [
+      "Twilio Voice",
+      "TwiML",
+      "Twilio Studio",
+      "Webhooks",
+      "Laravel",
+      "Python"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Can I keep my current phone number?",
+          "ar": "هل يمكنني الاحتفاظ برقمي الحالي؟"
+        },
+        "a": {
+          "en": "Often yes, through number porting or call forwarding; it depends on your provider and country rules.",
+          "ar": "غالباً نعم عبر نقل الرقم أو تحويل المكالمات، ويعتمد ذلك على مزود الخدمة وأنظمة الدولة."
+        }
+      },
+      {
+        "q": {
+          "en": "Can callers choose Arabic or English?",
+          "ar": "هل يمكن للمتصل اختيار العربية أو الإنجليزية؟"
+        },
+        "a": {
+          "en": "Yes. The first menu can offer a language choice, with recordings in both languages.",
+          "ar": "نعم. يمكن أن تعرض القائمة الأولى اختيار اللغة مع تسجيلات باللغتين."
+        }
+      },
+      {
+        "q": {
+          "en": "How is Twilio billed?",
+          "ar": "كيف تُحتسب رسوم Twilio؟"
+        },
+        "a": {
+          "en": "Twilio charges for numbers and per minute of calls; I estimate the monthly cost from your call volume.",
+          "ar": "تحتسب Twilio رسوماً للأرقام ولكل دقيقة مكالمة، وأقدّر التكلفة الشهرية حسب حجم مكالماتك."
+        }
+      }
+    ],
+    "related": [
+      "whatsapp-chatbots",
+      "integrations",
+      "automation"
+    ],
+    "cases": []
+  },
+  "integrations": {
+    "slug": "api-integration-services",
+    "seo_title": {
+      "en": "API Integration Services: Connect Your Systems | Usman Qureshi",
+      "ar": "خدمات ربط الأنظمة والواجهات البرمجية API | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "API integration services in Saudi Arabia: connect payment gateways, delivery platforms, ERPs, CRMs and messaging with webhooks, sync jobs and monitoring.",
+      "ar": "خدمات ربط الأنظمة والواجهات البرمجية في السعودية: ربط بوابات الدفع ومنصات التوصيل وأنظمة تخطيط الموارد وإدارة العملاء والمراسلة مع المزامنة والمراقبة."
+    },
+    "h1": {
+      "en": "API & System Integration Services",
+      "ar": "خدمات ربط الأنظمة والواجهات البرمجية"
+    },
+    "intro": {
+      "en": [
+        "Most businesses run on several systems that do not talk to each other, so staff copy data between them by hand. I connect your website, apps and business tools through APIs and webhooks, so orders, payments, deliveries and customer records move automatically and stay consistent.",
+        "I have built integrations between web platforms, mobile apps, payroll calculations, imported partner reports and messaging services, including handling the hard parts: retries, duplicates, mismatched data and monitoring when something fails."
+      ],
+      "ar": [
+        "تعمل معظم الأنشطة على عدة أنظمة لا تتواصل مع بعضها، فينسخ الموظفون البيانات بينها يدوياً. أربط موقعك وتطبيقاتك وأدوات عملك عبر الواجهات البرمجية و Webhooks لتنتقل الطلبات والمدفوعات والتوصيل وبيانات العملاء تلقائياً وتبقى متسقة.",
+        "بنيت عمليات ربط بين منصات الويب وتطبيقات الجوال وحسابات الرواتب وتقارير الشركاء المستوردة وخدمات المراسلة، مع معالجة الأجزاء الصعبة: إعادة المحاولة والتكرار وعدم تطابق البيانات والمراقبة عند حدوث خلل."
+      ]
+    },
+    "who": {
+      "en": [
+        "Stores connecting payments, shipping and accounting",
+        "Companies syncing a website or app with an ERP or CRM",
+        "Operations importing reports from partner platforms",
+        "Teams replacing manual copy-and-paste between systems"
+      ],
+      "ar": [
+        "المتاجر التي تربط الدفع والشحن والمحاسبة",
+        "الشركات التي تزامن موقعاً أو تطبيقاً مع نظام تخطيط موارد أو إدارة عملاء",
+        "فرق العمليات التي تستورد تقارير من منصات الشركاء",
+        "الفرق التي تستبدل النسخ واللصق اليدوي بين الأنظمة"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Map the systems, data and direction of each flow",
+        "Review the available APIs and access",
+        "Build the integration with error handling and logging",
+        "Test with real data and edge cases",
+        "Monitor, document and hand over"
+      ],
+      "ar": [
+        "حصر الأنظمة والبيانات واتجاه كل تدفق",
+        "مراجعة الواجهات البرمجية المتاحة وصلاحيات الوصول",
+        "بناء الربط مع معالجة الأخطاء والسجلات",
+        "الاختبار ببيانات حقيقية وحالات استثنائية",
+        "المراقبة والتوثيق والتسليم"
+      ]
+    },
+    "why": {
+      "en": [
+        "Production integrations across web, mobile and partner data",
+        "Careful handling of duplicates, retries and data mismatches",
+        "Every integration documented for your team",
+        "Laravel, Python and webhook experience"
+      ],
+      "ar": [
+        "عمليات ربط تعمل فعلياً بين الويب والجوال وبيانات الشركاء",
+        "معالجة دقيقة للتكرار وإعادة المحاولة وعدم تطابق البيانات",
+        "توثيق كل عملية ربط لفريقك",
+        "خبرة في لارافيل و Python و Webhooks"
+      ]
+    },
+    "tech": [
+      "REST APIs",
+      "Webhooks",
+      "Laravel",
+      "Python",
+      "JSON",
+      "Scheduled jobs"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "What if the other system has no API?",
+          "ar": "ماذا لو لم يكن للنظام الآخر واجهة برمجية؟"
+        },
+        "a": {
+          "en": "Often data can still be exchanged through exports, imports or scheduled file transfers; I find the most reliable option.",
+          "ar": "يمكن غالباً تبادل البيانات عبر التصدير والاستيراد أو نقل الملفات المجدول، وأختار الطريقة الأكثر موثوقية."
+        }
+      },
+      {
+        "q": {
+          "en": "What happens when an integration fails?",
+          "ar": "ماذا يحدث عند فشل عملية الربط؟"
+        },
+        "a": {
+          "en": "Failures are logged, retried where safe, and reported so nothing is silently lost.",
+          "ar": "تُسجَّل الأخطاء ويُعاد المحاولة حيث يكون ذلك آمناً ويُبلَّغ عنها حتى لا يضيع شيء دون علم."
+        }
+      },
+      {
+        "q": {
+          "en": "Can you integrate with Saudi delivery and payment platforms?",
+          "ar": "هل يمكنك الربط مع منصات الدفع والتوصيل السعودية؟"
+        },
+        "a": {
+          "en": "Yes, when the platform provides API or partner access; I review their documentation first.",
+          "ar": "نعم، عندما توفر المنصة واجهة برمجية أو وصولاً للشركاء، وأراجع توثيقها أولاً."
+        }
+      }
+    ],
+    "related": [
+      "automation",
+      "custom-web-apps",
+      "ai-integrations"
+    ],
+    "cases": [
+      "projects/driver-management-system"
+    ]
+  },
+  "ai-integrations": {
+    "slug": "ai-integration-services",
+    "seo_title": {
+      "en": "AI Integration Services for Business Apps | Usman Qureshi",
+      "ar": "خدمات دمج الذكاء الاصطناعي في الأعمال | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "AI integration services: assistants grounded in your content, document data extraction, summaries, classification and translation, with cost controls.",
+      "ar": "خدمات دمج الذكاء الاصطناعي: مساعدات تعتمد على محتواك، واستخراج البيانات من المستندات، والتلخيص والتصنيف والترجمة، مع ضوابط للتكلفة والجودة."
+    },
+    "h1": {
+      "en": "AI Integration Services",
+      "ar": "خدمات دمج الذكاء الاصطناعي"
+    },
+    "intro": {
+      "en": [
+        "AI is most useful when it removes a specific, repeated task: answering the same questions, reading documents, sorting requests or summarising long text. I add practical AI features to your website, app or internal system, grounded in your own data and limited so costs and answers stay under control.",
+        "Good AI integration is mostly careful engineering: choosing the right model, giving it the right context, checking its output, protecting data and setting usage limits. I start with a small, measurable use case and expand once it proves its value."
+      ],
+      "ar": [
+        "يكون الذكاء الاصطناعي أكثر فائدة عندما يزيل مهمة محددة ومتكررة: الإجابة عن الأسئلة نفسها، أو قراءة المستندات، أو فرز الطلبات، أو تلخيص النصوص الطويلة. أضيف ميزات ذكاء اصطناعي عملية إلى موقعك أو تطبيقك أو نظامك الداخلي، تعتمد على بياناتك ومضبوطة لتبقى التكلفة والإجابات تحت السيطرة.",
+        "الدمج الجيد للذكاء الاصطناعي هو في معظمه هندسة دقيقة: اختيار النموذج المناسب، وتزويده بالسياق الصحيح، والتحقق من مخرجاته، وحماية البيانات، ووضع حدود للاستخدام. أبدأ بحالة استخدام صغيرة وقابلة للقياس ثم أتوسع بعد إثبات قيمتها."
+      ]
+    },
+    "who": {
+      "en": [
+        "Support teams answering the same questions repeatedly",
+        "Operations reading invoices, forms or reports by hand",
+        "Products that need search, summaries or translation",
+        "Businesses exploring AI without a large budget"
+      ],
+      "ar": [
+        "فرق الدعم التي تجيب عن الأسئلة نفسها مراراً",
+        "فرق العمليات التي تقرأ الفواتير أو النماذج أو التقارير يدوياً",
+        "المنتجات التي تحتاج إلى بحث أو تلخيص أو ترجمة",
+        "الأنشطة التي تستكشف الذكاء الاصطناعي دون ميزانية كبيرة"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Pick one use case and how success will be measured",
+        "Prepare the content and data the AI may use",
+        "Build the feature with limits, logging and review",
+        "Test answers against real examples",
+        "Launch, monitor quality and cost"
+      ],
+      "ar": [
+        "اختيار حالة استخدام واحدة وطريقة قياس النجاح",
+        "تجهيز المحتوى والبيانات التي يستخدمها الذكاء الاصطناعي",
+        "بناء الميزة مع حدود وسجلات ومراجعة",
+        "اختبار الإجابات على أمثلة حقيقية",
+        "الإطلاق ومتابعة الجودة والتكلفة"
+      ]
+    },
+    "why": {
+      "en": [
+        "Practical, measurable use cases instead of hype",
+        "Backend experience to connect AI with your real data",
+        "Cost limits, rate limits and abuse protection by default",
+        "Arabic and English content handling"
+      ],
+      "ar": [
+        "حالات استخدام عملية وقابلة للقياس بدلاً من المبالغة",
+        "خبرة في الأنظمة الخلفية لربط الذكاء الاصطناعي ببياناتك الحقيقية",
+        "حدود للتكلفة والطلبات وحماية من إساءة الاستخدام افتراضياً",
+        "معالجة المحتوى بالعربية والإنجليزية"
+      ]
+    },
+    "tech": [
+      "LLM APIs",
+      "Python",
+      "Laravel",
+      "Embeddings",
+      "REST APIs",
+      "Prompt design"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Will the AI make up answers?",
+          "ar": "هل سيختلق الذكاء الاصطناعي إجابات؟"
+        },
+        "a": {
+          "en": "The risk is reduced by limiting it to your own content and instructing it to say when it does not know; important outputs can be reviewed by staff.",
+          "ar": "يُقلَّل ذلك بحصره في محتواك وتوجيهه بأن يصرّح عندما لا يعرف، ويمكن أن يراجع الموظفون المخرجات المهمة."
+        }
+      },
+      {
+        "q": {
+          "en": "Is my data safe?",
+          "ar": "هل بياناتي آمنة؟"
+        },
+        "a": {
+          "en": "We decide together which data the AI may see, and sensitive information can be excluded or masked.",
+          "ar": "نحدد معاً البيانات التي يمكن للذكاء الاصطناعي الاطلاع عليها، ويمكن استبعاد المعلومات الحساسة أو إخفاؤها."
+        }
+      },
+      {
+        "q": {
+          "en": "How much does AI cost to run?",
+          "ar": "ما تكلفة تشغيل الذكاء الاصطناعي؟"
+        },
+        "a": {
+          "en": "Usage is billed per request; I estimate the cost for your volume and add daily limits so it cannot run away.",
+          "ar": "يُحتسب الاستخدام لكل طلب، وأقدّر التكلفة حسب حجم استخدامك وأضيف حدوداً يومية حتى لا تخرج عن السيطرة."
+        }
+      }
+    ],
+    "related": [
+      "whatsapp-chatbots",
+      "automation",
+      "integrations"
+    ],
+    "cases": []
+  },
+  "automation": {
+    "slug": "business-process-automation",
+    "seo_title": {
+      "en": "Business Process Automation Services | Usman Qureshi",
+      "ar": "خدمات أتمتة الأعمال وسير العمل | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Business process automation: scheduled reports, data imports, reconciliation, notifications, approvals and automatic documents that save hours of work.",
+      "ar": "أتمتة الأعمال وسير العمل: تقارير مجدولة واستيراد البيانات ومطابقتها وإشعارات وموافقات وإنشاء مستندات تلقائياً يوفر ساعات من العمل اليدوي."
+    },
+    "h1": {
+      "en": "Business Process Automation",
+      "ar": "أتمتة الأعمال وسير العمل"
+    },
+    "intro": {
+      "en": [
+        "Repetitive manual work, such as copying data between files, building the same report every week or chasing approvals by message, costs hours and causes errors. I automate those tasks with reliable scripts and scheduled jobs that run on their own and tell you when something needs attention.",
+        "In the DMS platform I built, around 50 scheduled and console jobs handle tasks such as imports, payroll preparation, anomaly checks and notifications. The same approach can remove manual steps from your operations."
+      ],
+      "ar": [
+        "العمل اليدوي المتكرر، مثل نسخ البيانات بين الملفات أو إعداد التقرير نفسه كل أسبوع أو ملاحقة الموافقات عبر الرسائل، يستهلك الساعات ويسبب الأخطاء. أؤتمت هذه المهام ببرامج ومهام مجدولة موثوقة تعمل تلقائياً وتنبهك عندما يحتاج شيء إلى انتباهك.",
+        "في منصة DMS التي بنيتها، تتولى نحو 50 مهمة مجدولة وأمر تشغيل أعمالاً مثل الاستيراد وتجهيز الرواتب والتحقق من الحالات الشاذة والإشعارات. ويمكن للنهج نفسه إزالة الخطوات اليدوية من عملياتك."
+      ]
+    },
+    "who": {
+      "en": [
+        "Teams building the same reports every week",
+        "Operations importing and reconciling data from partners",
+        "Processes that depend on approvals by email or chat",
+        "Businesses that generate many documents or PDFs"
+      ],
+      "ar": [
+        "الفرق التي تعد التقارير نفسها كل أسبوع",
+        "فرق العمليات التي تستورد بيانات الشركاء وتطابقها",
+        "الإجراءات التي تعتمد على الموافقات عبر البريد أو المحادثات",
+        "الأنشطة التي تنشئ مستندات أو ملفات PDF كثيرة"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Review your workflow and pick the highest-value task",
+        "Design the automation and its checks",
+        "Build and run it alongside the manual process",
+        "Switch over once results match",
+        "Monitor and extend to the next task"
+      ],
+      "ar": [
+        "مراجعة سير العمل واختيار المهمة الأعلى قيمة",
+        "تصميم الأتمتة وطرق التحقق منها",
+        "البناء والتشغيل بالتوازي مع العمل اليدوي",
+        "الانتقال الكامل بعد تطابق النتائج",
+        "المراقبة والتوسع إلى المهمة التالية"
+      ]
+    },
+    "why": {
+      "en": [
+        "Around 50 production scheduled jobs built for DMS",
+        "Automations run in parallel first, so nothing breaks",
+        "Alerts when an automation needs attention",
+        "Experience with PDFs, imports, payroll and notifications"
+      ],
+      "ar": [
+        "نحو 50 مهمة مجدولة تعمل فعلياً بنيتها لنظام DMS",
+        "تعمل الأتمتة بالتوازي أولاً حتى لا يتعطل شيء",
+        "تنبيهات عندما تحتاج الأتمتة إلى انتباه",
+        "خبرة في ملفات PDF والاستيراد والرواتب والإشعارات"
+      ]
+    },
+    "tech": [
+      "Laravel scheduler",
+      "Python",
+      "Cron",
+      "PDF generation",
+      "Email",
+      "WhatsApp notifications"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Which tasks can be automated?",
+          "ar": "ما المهام التي يمكن أتمتتها؟"
+        },
+        "a": {
+          "en": "Anything rule-based and repeated: reports, imports, reconciliations, reminders, approvals and document creation.",
+          "ar": "أي مهمة متكررة تخضع لقواعد واضحة: التقارير والاستيراد والمطابقة والتذكيرات والموافقات وإنشاء المستندات."
+        }
+      },
+      {
+        "q": {
+          "en": "Do I need a new system for this?",
+          "ar": "هل أحتاج إلى نظام جديد لذلك؟"
+        },
+        "a": {
+          "en": "Not necessarily. Many automations work with your existing files, spreadsheets and tools.",
+          "ar": "ليس بالضرورة. كثير من الأتمتة يعمل مع ملفاتك وجداول بياناتك وأدواتك الحالية."
+        }
+      },
+      {
+        "q": {
+          "en": "What if the automation makes a mistake?",
+          "ar": "ماذا لو أخطأت الأتمتة؟"
+        },
+        "a": {
+          "en": "Each automation includes checks and logs, and runs alongside the manual process until the results are proven.",
+          "ar": "تتضمن كل أتمتة فحوصات وسجلات، وتعمل بالتوازي مع العمل اليدوي حتى تثبت صحة النتائج."
+        }
+      }
+    ],
+    "related": [
+      "integrations",
+      "ai-integrations",
+      "custom-web-apps"
+    ],
+    "cases": [
+      "projects/driver-management-system"
+    ]
+  },
+  "logistics-software": {
+    "slug": "fleet-management-software",
+    "seo_title": {
+      "en": "Fleet & Driver Management Software in Saudi Arabia | Usman",
+      "ar": "برامج إدارة أسطول السيارات والسائقين في السعودية | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Fleet management and driver management software for logistics companies in Saudi Arabia: onboarding, fleet, maintenance, attendance, payroll and driver apps.",
+      "ar": "برامج إدارة أسطول السيارات والسائقين لشركات النقل والتوصيل في السعودية: تسجيل السائقين والأسطول والصيانة والحضور والرواتب وتطبيقات السائقين."
+    },
+    "h1": {
+      "en": "Fleet & Driver Management Software",
+      "ar": "برامج إدارة أسطول السيارات والسائقين"
+    },
+    "intro": {
+      "en": [
+        "Delivery and logistics companies manage drivers, vehicles, shifts, platforms and performance-based pay, usually across spreadsheets and messaging groups. I build fleet and driver management software that brings all of it into one system, with a mobile app for drivers.",
+        "This is not theory: I designed and built DMS, a driver and fleet management platform with a Flutter driver app used in daily last-mile operations in Saudi Arabia, and DOBS, the onboarding and offboarding system that feeds it. I can build or adapt the same capabilities for your operation."
+      ],
+      "ar": [
+        "تدير شركات التوصيل والخدمات اللوجستية السائقين والمركبات والمناوبات والمنصات والرواتب المرتبطة بالأداء، غالباً عبر جداول البيانات ومجموعات المراسلة. أبني برامج لإدارة الأسطول والسائقين تجمع كل ذلك في نظام واحد مع تطبيق جوال للسائقين.",
+        "هذا ليس كلاماً نظرياً: صممت وطورت نظام DMS لإدارة السائقين والأسطول مع تطبيق للسائقين بتقنية Flutter يُستخدم يومياً في عمليات التوصيل للميل الأخير في السعودية، ونظام DOBS لتسجيل السائقين وإنهاء خدماتهم المرتبط به. ويمكنني بناء القدرات نفسها لعملياتك أو تكييفها."
+      ]
+    },
+    "who": {
+      "en": [
+        "Last-mile delivery companies working with several platforms",
+        "Fleet operators managing vehicles, inspections and maintenance",
+        "Companies paying drivers by targets, orders or performance",
+        "Operations that need a driver app with check-in and location"
+      ],
+      "ar": [
+        "شركات التوصيل للميل الأخير التي تعمل مع عدة منصات",
+        "مشغلو الأساطيل الذين يديرون المركبات والفحوصات والصيانة",
+        "الشركات التي تدفع للسائقين حسب الأهداف أو الطلبات أو الأداء",
+        "العمليات التي تحتاج إلى تطبيق سائقين مع تسجيل الحضور وتحديد الموقع"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Map your operation: drivers, vehicles, platforms and pay rules",
+        "Prioritise modules: onboarding, fleet, attendance, payroll",
+        "Build the web platform and driver app in phases",
+        "Import existing data and run alongside current tools",
+        "Train supervisors and drivers, then support"
+      ],
+      "ar": [
+        "رسم عملياتك: السائقون والمركبات والمنصات وقواعد الدفع",
+        "ترتيب أولويات الوحدات: التسجيل والأسطول والحضور والرواتب",
+        "بناء منصة الويب وتطبيق السائقين على مراحل",
+        "استيراد البيانات الحالية والتشغيل بالتوازي مع الأدوات الحالية",
+        "تدريب المشرفين والسائقين ثم الدعم"
+      ]
+    },
+    "why": {
+      "en": [
+        "Designed and built a production driver and fleet management platform",
+        "Driver app with face-verified check-in, location tracking and payroll",
+        "Deep understanding of Saudi last-mile delivery operations",
+        "Configurable payroll rules, audit trails and role-based access"
+      ],
+      "ar": [
+        "صممت وطورت منصة لإدارة السائقين والأسطول تعمل فعلياً",
+        "تطبيق سائقين مع تسجيل حضور بالتحقق من الوجه وتتبع الموقع والرواتب",
+        "فهم عميق لعمليات التوصيل للميل الأخير في السعودية",
+        "قواعد رواتب قابلة للإعداد وسجلات تدقيق وصلاحيات حسب الأدوار"
+      ]
+    },
+    "tech": [
+      "Laravel",
+      "Livewire",
+      "Flutter",
+      "Python",
+      "MySQL",
+      "Firebase",
+      "Face verification"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Can the system calculate driver pay automatically?",
+          "ar": "هل يحسب النظام رواتب السائقين تلقائياً؟"
+        },
+        "a": {
+          "en": "Yes. Pay rules, targets, tiers and deductions can be configured per platform, with salary slips and an audit trail.",
+          "ar": "نعم. يمكن إعداد قواعد الرواتب والأهداف والشرائح والخصومات لكل منصة مع قسائم الرواتب وسجل التدقيق."
+        }
+      },
+      {
+        "q": {
+          "en": "Does it include a mobile app for drivers?",
+          "ar": "هل يتضمن تطبيقاً للسائقين؟"
+        },
+        "a": {
+          "en": "Yes. Drivers can check in, share location, see payroll and send requests from an Android app.",
+          "ar": "نعم. يستطيع السائقون تسجيل الحضور ومشاركة الموقع والاطلاع على الرواتب وإرسال الطلبات عبر تطبيق أندرويد."
+        }
+      },
+      {
+        "q": {
+          "en": "Can it be adapted to my company?",
+          "ar": "هل يمكن تكييفه لشركتي؟"
+        },
+        "a": {
+          "en": "Yes. Modules, roles and rules are configured around your operation rather than forcing a fixed process.",
+          "ar": "نعم. تُعد الوحدات والأدوار والقواعد حسب عملياتك بدلاً من فرض إجراءات ثابتة."
+        }
+      }
+    ],
+    "related": [
+      "custom-web-apps",
+      "mobile-apps",
+      "automation"
+    ],
+    "cases": [
+      "projects/driver-management-system",
+      "projects/driver-onboarding-system"
+    ]
+  },
+  "debugging": {
+    "slug": "debugging-bug-fixing",
+    "seo_title": {
+      "en": "Website & App Debugging and Bug Fixing Services | Usman Qureshi",
+      "ar": "خدمات تتبع وإصلاح أخطاء المواقع والتطبيقات | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Debugging and bug fixing for websites, apps and backends: PHP, Laravel, WordPress, Python, JavaScript and Flutter errors and slow pages, with a clear report.",
+      "ar": "تتبع وإصلاح أخطاء المواقع والتطبيقات والأنظمة الخلفية: أعطال PHP ولارافيل وووردبريس و Python و JavaScript و Flutter والصفحات البطيئة، مع تقرير واضح."
+    },
+    "h1": {
+      "en": "Debugging & Bug Fixing Services",
+      "ar": "خدمات تتبع الأخطاء وإصلاحها"
+    },
+    "intro": {
+      "en": [
+        "When something breaks, such as an error page, a crash after an update, a payment that fails or a feature that quietly stopped working, you need it found and fixed quickly, without new problems. I investigate issues in websites, apps and backends, fix the root cause and explain what happened.",
+        "I work across PHP, Laravel, WordPress, Python, JavaScript and Flutter, and I am used to debugging live production systems carefully: reproducing the issue, reading logs, testing the fix and keeping a backup path."
+      ],
+      "ar": [
+        "عندما يتعطل شيء ما، مثل صفحة خطأ أو عطل بعد تحديث أو دفع يفشل أو ميزة توقفت دون إنذار، تحتاج إلى اكتشافه وإصلاحه بسرعة دون مشكلات جديدة. أتتبع المشكلات في المواقع والتطبيقات والأنظمة الخلفية، وأصلح السبب الجذري، وأشرح ما حدث.",
+        "أعمل على PHP ولارافيل وووردبريس و Python و JavaScript و Flutter، ومعتاد على تتبع الأخطاء في أنظمة تعمل فعلياً بحذر: إعادة إنتاج المشكلة وقراءة السجلات واختبار الإصلاح والاحتفاظ بطريقة للتراجع."
+      ]
+    },
+    "who": {
+      "en": [
+        "Website owners with errors after a plugin or theme update",
+        "Businesses whose original developer is no longer available",
+        "Apps with crashes or features that stopped working",
+        "Teams that need a second pair of eyes on a hard bug"
+      ],
+      "ar": [
+        "أصحاب المواقع الذين ظهرت لديهم أخطاء بعد تحديث إضافة أو قالب",
+        "الأنشطة التي لم يعد مطورها الأصلي متاحاً",
+        "التطبيقات التي تتعطل أو توقفت فيها ميزات",
+        "الفرق التي تحتاج إلى رأي ثانٍ في خطأ صعب"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Describe the problem and share access",
+        "Reproduce the issue and read the logs",
+        "Find the root cause",
+        "Fix, test and back up",
+        "Short report of the cause and how to prevent it"
+      ],
+      "ar": [
+        "وصف المشكلة ومشاركة صلاحيات الوصول",
+        "إعادة إنتاج المشكلة وقراءة السجلات",
+        "تحديد السبب الجذري",
+        "الإصلاح والاختبار والنسخ الاحتياطي",
+        "تقرير مختصر عن السبب وطريقة منع تكراره"
+      ]
+    },
+    "why": {
+      "en": [
+        "Experience maintaining large production systems",
+        "Wide stack: PHP, Laravel, WordPress, Python, JavaScript, Flutter",
+        "Careful changes with backups and rollback plans",
+        "Clear explanations, not just quick patches"
+      ],
+      "ar": [
+        "خبرة في صيانة أنظمة كبيرة تعمل فعلياً",
+        "تقنيات متنوعة: PHP ولارافيل وووردبريس و Python و JavaScript و Flutter",
+        "تغييرات حذرة مع نسخ احتياطي وخطط للتراجع",
+        "شرح واضح لا مجرد حلول سريعة مؤقتة"
+      ]
+    },
+    "tech": [
+      "PHP",
+      "Laravel",
+      "WordPress",
+      "Python",
+      "JavaScript",
+      "Flutter",
+      "MySQL"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "How fast can you fix my issue?",
+          "ar": "ما سرعة إصلاح مشكلتي؟"
+        },
+        "a": {
+          "en": "Simple issues are often fixed the same day; complex ones start with an investigation and an estimate.",
+          "ar": "تُصلح المشكلات البسيطة غالباً في اليوم نفسه، أما المعقدة فتبدأ بالتحليل ثم تقدير للوقت."
+        }
+      },
+      {
+        "q": {
+          "en": "Do you need access to my server?",
+          "ar": "هل تحتاج إلى الوصول إلى الخادم؟"
+        },
+        "a": {
+          "en": "Usually access to the hosting or code and logs is needed; access can be limited and removed after the fix.",
+          "ar": "يلزم غالباً الوصول إلى الاستضافة أو الشيفرة والسجلات، ويمكن تقييد الوصول وإلغاؤه بعد الإصلاح."
+        }
+      },
+      {
+        "q": {
+          "en": "Can you fix code written by someone else?",
+          "ar": "هل يمكنك إصلاح شيفرة كتبها شخص آخر؟"
+        },
+        "a": {
+          "en": "Yes. Most debugging work is on existing code; I read it first and change only what is needed.",
+          "ar": "نعم. معظم أعمال تتبع الأخطاء تكون على شيفرة قائمة، فأقرؤها أولاً ولا أغير إلا ما يلزم."
+        }
+      }
+    ],
+    "related": [
+      "maintenance-support",
+      "seo-performance",
+      "hosting-devops"
+    ],
+    "cases": []
+  },
+  "maintenance-support": {
+    "slug": "website-maintenance-support",
+    "seo_title": {
+      "en": "Website Maintenance & WordPress Support Services | Usman Qureshi",
+      "ar": "صيانة مواقع ووردبريس والدعم الفني | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Website maintenance and WordPress support: updates, backups, security hardening, monitoring, quick fixes and small content changes for live sites and stores.",
+      "ar": "صيانة المواقع ودعم ووردبريس: التحديثات والنسخ الاحتياطي وتعزيز الأمان والمراقبة والإصلاحات السريعة والتعديلات البسيطة للمواقع والمتاجر المنشورة."
+    },
+    "h1": {
+      "en": "Website Maintenance & Support",
+      "ar": "صيانة المواقع والدعم الفني"
+    },
+    "intro": {
+      "en": [
+        "A website is not finished at launch. Plugins and themes need updates, backups need testing, security needs watching, and small changes come up every month. I look after live websites and stores so they stay fast, secure and working, and you have one person to call when something needs fixing.",
+        "I have maintained multiple live client websites, handling updates, troubleshooting and improvements, and I bring the same discipline to every site: change carefully, back up first and keep a record."
+      ],
+      "ar": [
+        "لا ينتهي العمل على الموقع عند إطلاقه. تحتاج الإضافات والقوالب إلى تحديث، والنسخ الاحتياطية إلى اختبار، والأمان إلى مراقبة، وتظهر تعديلات بسيطة كل شهر. أتولى رعاية المواقع والمتاجر المنشورة لتبقى سريعة وآمنة وتعمل، ويكون لديك شخص واحد تتصل به عند الحاجة إلى إصلاح.",
+        "توليت صيانة عدة مواقع عملاء منشورة، من التحديثات وحل المشكلات إلى التحسينات، وأطبق الانضباط نفسه على كل موقع: التغيير بحذر والنسخ الاحتياطي أولاً وتوثيق ما يتم."
+      ]
+    },
+    "who": {
+      "en": [
+        "Businesses without an in-house developer",
+        "WordPress and WooCommerce sites that need regular updates",
+        "Owners worried about security or downtime",
+        "Teams with small monthly changes to content or design"
+      ],
+      "ar": [
+        "الأنشطة التي ليس لديها مطور داخلي",
+        "مواقع ووردبريس و WooCommerce التي تحتاج إلى تحديثات منتظمة",
+        "أصحاب المواقع القلقون من الأمان أو التوقف",
+        "الفرق التي لديها تعديلات شهرية بسيطة على المحتوى أو التصميم"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Initial health check: updates, backups, security, speed",
+        "Fix urgent issues and set up backups and monitoring",
+        "Regular updates and checks",
+        "Small changes on request",
+        "Short monthly summary"
+      ],
+      "ar": [
+        "فحص أولي: التحديثات والنسخ الاحتياطي والأمان والسرعة",
+        "إصلاح المشكلات العاجلة وإعداد النسخ الاحتياطي والمراقبة",
+        "تحديثات وفحوصات منتظمة",
+        "تعديلات بسيطة عند الطلب",
+        "ملخص شهري مختصر"
+      ]
+    },
+    "why": {
+      "en": [
+        "Hands-on experience maintaining multiple live websites",
+        "Backups before every change",
+        "Security hardening and spam protection",
+        "Fast, direct communication"
+      ],
+      "ar": [
+        "خبرة عملية في صيانة عدة مواقع منشورة",
+        "نسخ احتياطي قبل كل تغيير",
+        "تعزيز الأمان والحماية من الرسائل المزعجة",
+        "تواصل مباشر وسريع"
+      ]
+    },
+    "tech": [
+      "WordPress",
+      "WooCommerce",
+      "cPanel",
+      "PHP",
+      "MySQL",
+      "Cloudflare"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Can you maintain a site you did not build?",
+          "ar": "هل يمكنك صيانة موقع لم تبنه؟"
+        },
+        "a": {
+          "en": "Yes. I start with a health check of the existing site and fix any risks I find.",
+          "ar": "نعم. أبدأ بفحص شامل للموقع الحالي وأعالج أي مخاطر أجدها."
+        }
+      },
+      {
+        "q": {
+          "en": "Is maintenance monthly or on demand?",
+          "ar": "هل الصيانة شهرية أم عند الطلب؟"
+        },
+        "a": {
+          "en": "Both are possible: a regular monthly plan, or help when you need it.",
+          "ar": "كلاهما ممكن: خطة شهرية منتظمة أو مساعدة عند الحاجة."
+        }
+      },
+      {
+        "q": {
+          "en": "What if my site gets hacked?",
+          "ar": "ماذا لو تعرض موقعي للاختراق؟"
+        },
+        "a": {
+          "en": "I clean the site, restore from a safe backup where possible, close the weakness and harden security.",
+          "ar": "أنظف الموقع وأستعيده من نسخة احتياطية سليمة إن أمكن وأغلق الثغرة وأعزز الأمان."
+        }
+      }
+    ],
+    "related": [
+      "debugging",
+      "seo-performance",
+      "hosting-devops"
+    ],
+    "cases": [
+      "projects/business-websites"
+    ]
+  },
+  "seo-performance": {
+    "slug": "seo-performance-optimization",
+    "seo_title": {
+      "en": "Technical SEO & Website Speed Optimization | Usman Qureshi",
+      "ar": "تحسين محركات البحث وسرعة المواقع | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Technical SEO and website speed optimization in Saudi Arabia: titles, structured data, sitemaps, Search Console, Arabic/English hreflang and Core Web Vitals.",
+      "ar": "تحسين تقني لمحركات البحث وسرعة المواقع في السعودية: العناوين والبيانات المنظمة وخرائط الموقع و Search Console و hreflang للعربية والإنجليزية ومؤشرات الأداء."
+    },
+    "h1": {
+      "en": "Technical SEO & Performance Optimization",
+      "ar": "تحسين محركات البحث وسرعة المواقع"
+    },
+    "intro": {
+      "en": [
+        "A website only brings customers if search engines can find, understand and trust it, and if pages load fast on a phone. I fix the technical side of SEO and performance: page titles and descriptions, headings, structured data, sitemaps, Search Console, image and caching optimisation, and Core Web Vitals.",
+        "Bilingual sites need extra care: Arabic and English pages must be linked correctly with hreflang and written with the words each audience actually searches. This website is built that way, with keyword research for Saudi searches in both languages."
+      ],
+      "ar": [
+        "لا يجلب الموقع العملاء إلا إذا استطاعت محركات البحث العثور عليه وفهمه والثقة به، وإذا كانت صفحاته سريعة على الجوال. أعالج الجانب التقني من تحسين محركات البحث والأداء: عناوين الصفحات وأوصافها والعناوين الفرعية والبيانات المنظمة وخرائط الموقع و Search Console وتحسين الصور والتخزين المؤقت ومؤشرات أداء الويب الأساسية.",
+        "تحتاج المواقع ثنائية اللغة إلى عناية إضافية: يجب ربط الصفحات العربية والإنجليزية بشكل صحيح عبر hreflang وكتابتها بالكلمات التي يبحث بها كل جمهور فعلاً. وهذا الموقع مبني بهذه الطريقة مع بحث عن كلمات البحث السعودية باللغتين."
+      ]
+    },
+    "who": {
+      "en": [
+        "Websites that are not appearing on Google",
+        "Slow sites losing visitors on mobile",
+        "Bilingual Arabic/English sites with indexing problems",
+        "Businesses launching a new site that should rank from day one"
+      ],
+      "ar": [
+        "المواقع التي لا تظهر في Google",
+        "المواقع البطيئة التي تفقد الزوار على الجوال",
+        "المواقع ثنائية اللغة التي تواجه مشكلات في الفهرسة",
+        "الأنشطة التي تطلق موقعاً جديداً وتريد ظهوره من اليوم الأول"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Audit: indexing, titles, structure, speed",
+        "Keyword research for your market in Arabic and English",
+        "Fix technical issues and page metadata",
+        "Set up Search Console, sitemap and structured data",
+        "Track results and adjust monthly"
+      ],
+      "ar": [
+        "تدقيق: الفهرسة والعناوين والبنية والسرعة",
+        "بحث الكلمات المفتاحية لسوقك بالعربية والإنجليزية",
+        "إصلاح المشكلات التقنية وبيانات الصفحات",
+        "إعداد Search Console وخريطة الموقع والبيانات المنظمة",
+        "متابعة النتائج والتعديل شهرياً"
+      ]
+    },
+    "why": {
+      "en": [
+        "SEO, security and responsive best practices applied on client projects since 2018",
+        "Arabic and English keyword research for Saudi search",
+        "Hands-on with Search Console and structured data",
+        "Speed work grounded in real measurements"
+      ],
+      "ar": [
+        "تطبيق أفضل ممارسات تحسين البحث والأمان والتصميم المتجاوب في مشاريع العملاء منذ 2018",
+        "بحث كلمات مفتاحية عربية وإنجليزية لعمليات البحث السعودية",
+        "خبرة عملية في Search Console والبيانات المنظمة",
+        "تحسين السرعة بناءً على قياسات حقيقية"
+      ]
+    },
+    "tech": [
+      "Google Search Console",
+      "Schema.org",
+      "hreflang",
+      "Core Web Vitals",
+      "Google Analytics",
+      "WordPress SEO"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "How long until I see results?",
+          "ar": "متى أرى النتائج؟"
+        },
+        "a": {
+          "en": "Technical fixes help within weeks; ranking for competitive searches usually takes several months and good content.",
+          "ar": "تساعد الإصلاحات التقنية خلال أسابيع، أما الظهور في عمليات البحث التنافسية فيحتاج عادة إلى عدة أشهر ومحتوى جيد."
+        }
+      },
+      {
+        "q": {
+          "en": "Can you guarantee first place on Google?",
+          "ar": "هل تضمن المركز الأول في Google؟"
+        },
+        "a": {
+          "en": "No one can honestly guarantee rankings; I fix what helps search engines and track the results transparently.",
+          "ar": "لا يمكن لأحد ضمان الترتيب بصدق، لكنني أصلح ما يساعد محركات البحث وأتابع النتائج بشفافية."
+        }
+      },
+      {
+        "q": {
+          "en": "Do you optimise Arabic websites?",
+          "ar": "هل تحسّن المواقع العربية؟"
+        },
+        "a": {
+          "en": "Yes, including Arabic keyword research, right-to-left structure and correct language linking.",
+          "ar": "نعم، بما في ذلك بحث الكلمات المفتاحية العربية والبنية من اليمين إلى اليسار والربط الصحيح بين اللغات."
+        }
+      }
+    ],
+    "related": [
+      "wordpress-websites",
+      "maintenance-support",
+      "html-css-websites"
+    ],
+    "cases": [
+      "projects/business-websites"
+    ]
+  },
+  "hosting-devops": {
+    "slug": "hosting-deployment-devops",
+    "seo_title": {
+      "en": "Hosting, Deployment & DevOps Services: cPanel and VPS | Usman",
+      "ar": "خدمات الاستضافة والنشر و DevOps | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Hosting, deployment and DevOps services: cPanel and Linux VPS setup, domains, SSL, business email, safe deployments, scheduled jobs, backups and monitoring.",
+      "ar": "خدمات الاستضافة والنشر و DevOps: إعداد cPanel وخوادم Linux الافتراضية والنطاقات وشهادات SSL وبريد الأعمال والنشر الآمن والمهام المجدولة والنسخ الاحتياطي والمراقبة."
+    },
+    "h1": {
+      "en": "Hosting, Deployment & DevOps",
+      "ar": "الاستضافة والنشر و DevOps"
+    },
+    "intro": {
+      "en": [
+        "Good software still fails on poor hosting: expired SSL, missing backups, risky manual deployments or jobs that run twice. I set up and run the environment your website or application lives on, from shared cPanel hosting to Linux VPS servers, with safe deployments, scheduled jobs, backups and monitoring.",
+        "For DMS I managed VPS deployments, scheduled jobs and a self-hosted real-time calling server, and this website runs on cPanel with automated packaging, private configuration outside the web root and tested releases."
+      ],
+      "ar": [
+        "حتى البرمجيات الجيدة تتعطل مع استضافة ضعيفة: شهادات SSL منتهية أو نسخ احتياطية مفقودة أو نشر يدوي محفوف بالمخاطر أو مهام تعمل مرتين. أعد وأدير البيئة التي يعمل عليها موقعك أو تطبيقك، من استضافة cPanel المشتركة إلى خوادم Linux الافتراضية، مع نشر آمن ومهام مجدولة ونسخ احتياطي ومراقبة.",
+        "في نظام DMS توليت النشر على الخوادم الافتراضية والمهام المجدولة وخادم مكالمات فورية مستضاف ذاتياً، وهذا الموقع يعمل على cPanel مع تجهيز آلي للإصدارات وإعدادات خاصة خارج المجلد العام وإصدارات مختبرة."
+      ]
+    },
+    "who": {
+      "en": [
+        "Businesses moving to new hosting or a VPS",
+        "Applications that need reliable deployments and backups",
+        "Sites with SSL, email or domain problems",
+        "Teams without a dedicated server administrator"
+      ],
+      "ar": [
+        "الأنشطة التي تنتقل إلى استضافة جديدة أو خادم افتراضي",
+        "التطبيقات التي تحتاج إلى نشر ونسخ احتياطي موثوق",
+        "المواقع التي تواجه مشكلات في SSL أو البريد أو النطاق",
+        "الفرق التي ليس لديها مسؤول خوادم متفرغ"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Review current hosting, domain and email",
+        "Plan the environment and deployment process",
+        "Set up servers, SSL, email and backups",
+        "Automate deployments and scheduled jobs",
+        "Monitor and document"
+      ],
+      "ar": [
+        "مراجعة الاستضافة والنطاق والبريد الحالي",
+        "تخطيط البيئة وآلية النشر",
+        "إعداد الخوادم وشهادة SSL والبريد والنسخ الاحتياطي",
+        "أتمتة النشر والمهام المجدولة",
+        "المراقبة والتوثيق"
+      ]
+    },
+    "why": {
+      "en": [
+        "Production VPS and cPanel experience",
+        "Secrets kept out of code and public folders",
+        "Backups and rollback plans before changes",
+        "Clear runbooks your team can follow"
+      ],
+      "ar": [
+        "خبرة في خوادم افتراضية واستضافات cPanel تعمل فعلياً",
+        "إبقاء البيانات السرية خارج الشيفرة والمجلدات العامة",
+        "نسخ احتياطي وخطط تراجع قبل أي تغيير",
+        "أدلة تشغيل واضحة يستطيع فريقك اتباعها"
+      ]
+    },
+    "tech": [
+      "cPanel",
+      "Linux",
+      "Nginx",
+      "Apache",
+      "SSL",
+      "Cron",
+      "Git"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Can you move my site to new hosting?",
+          "ar": "هل يمكنك نقل موقعي إلى استضافة جديدة؟"
+        },
+        "a": {
+          "en": "Yes, with a backup first and minimal downtime, including email and DNS changes.",
+          "ar": "نعم، مع نسخة احتياطية أولاً وأقل توقف ممكن، بما في ذلك البريد وإعدادات DNS."
+        }
+      },
+      {
+        "q": {
+          "en": "Shared hosting or VPS?",
+          "ar": "استضافة مشتركة أم خادم افتراضي؟"
+        },
+        "a": {
+          "en": "Shared hosting suits most websites; applications with background jobs or heavy traffic often need a VPS.",
+          "ar": "تناسب الاستضافة المشتركة معظم المواقع، أما التطبيقات ذات المهام الخلفية أو الزيارات الكبيرة فتحتاج غالباً إلى خادم افتراضي."
+        }
+      },
+      {
+        "q": {
+          "en": "Do you set up business email?",
+          "ar": "هل تعد بريد الأعمال؟"
+        },
+        "a": {
+          "en": "Yes, including the DNS records that help your email avoid spam folders.",
+          "ar": "نعم، بما في ذلك سجلات DNS التي تساعد رسائلك على تجنب مجلد الرسائل المزعجة."
+        }
+      }
+    ],
+    "related": [
+      "maintenance-support",
+      "debugging",
+      "custom-web-apps"
+    ],
+    "cases": [
+      "projects/driver-management-system"
+    ]
+  },
+  "software-documentation": {
+    "slug": "software-documentation",
+    "seo_title": {
+      "en": "Software Documentation Services: Specs, API & User Guides | Usman",
+      "ar": "خدمات توثيق البرمجيات وأدلة المستخدم | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Software documentation services: requirements and specifications, architecture overviews, API references, deployment runbooks and user guides in Arabic or English.",
+      "ar": "خدمات توثيق البرمجيات: المتطلبات والمواصفات ونظرة عامة على البنية ومراجع الواجهات البرمجية وأدلة النشر والتشغيل وأدلة المستخدم بالعربية أو الإنجليزية."
+    },
+    "h1": {
+      "en": "Software Documentation Services",
+      "ar": "خدمات توثيق البرمجيات"
+    },
+    "intro": {
+      "en": [
+        "Undocumented software becomes expensive the moment a developer leaves or a new team member joins. I write documentation that keeps systems understandable and maintainable: what the software must do, how it is built, how to deploy and run it, and how people use it.",
+        "As a project manager and developer I write requirements before building and leave runbooks after launch, so documentation reflects how the system really works rather than how it was once planned."
+      ],
+      "ar": [
+        "تصبح البرمجيات غير الموثقة مكلفة لحظة مغادرة المطور أو انضمام عضو جديد إلى الفريق. أكتب توثيقاً يجعل الأنظمة مفهومة وقابلة للصيانة: ما يجب أن تفعله البرمجيات، وكيف بُنيت، وكيف تُنشر وتُشغَّل، وكيف يستخدمها الناس.",
+        "بصفتي مدير مشاريع ومطوراً، أكتب المتطلبات قبل البناء وأترك أدلة التشغيل بعد الإطلاق، فيعكس التوثيق طريقة عمل النظام فعلاً لا كما خُطط له يوماً."
+      ]
+    },
+    "who": {
+      "en": [
+        "Teams inheriting a system with little documentation",
+        "Companies preparing a software tender or new build",
+        "APIs that partners or other developers will use",
+        "Operations staff who need clear user guides"
+      ],
+      "ar": [
+        "الفرق التي ورثت نظاماً بتوثيق محدود",
+        "الشركات التي تجهز لمناقصة برمجية أو مشروع جديد",
+        "الواجهات البرمجية التي سيستخدمها الشركاء أو مطورون آخرون",
+        "موظفو العمليات الذين يحتاجون إلى أدلة استخدام واضحة"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Agree who the documentation is for",
+        "Review the system, code and current processes",
+        "Write and illustrate the documents",
+        "Review with your team",
+        "Deliver in your format and keep it updatable"
+      ],
+      "ar": [
+        "الاتفاق على الجمهور المستهدف بالتوثيق",
+        "مراجعة النظام والشيفرة والإجراءات الحالية",
+        "كتابة المستندات وتوضيحها",
+        "المراجعة مع فريقك",
+        "التسليم بالصيغة التي تريدها مع إمكانية التحديث"
+      ]
+    },
+    "why": {
+      "en": [
+        "Developer who can read the code and document it accurately",
+        "Project management experience writing requirements",
+        "Bilingual Arabic and English writing",
+        "Documentation organised for real readers"
+      ],
+      "ar": [
+        "مطور قادر على قراءة الشيفرة وتوثيقها بدقة",
+        "خبرة في إدارة المشاريع وكتابة المتطلبات",
+        "كتابة ثنائية اللغة بالعربية والإنجليزية",
+        "توثيق منظم للقراء الفعليين"
+      ]
+    },
+    "tech": [
+      "Markdown",
+      "OpenAPI",
+      "Diagrams",
+      "Google Docs",
+      "Word",
+      "PDF"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Can you document an existing system?",
+          "ar": "هل يمكنك توثيق نظام قائم؟"
+        },
+        "a": {
+          "en": "Yes. I review the code, database and processes and document how the system works today.",
+          "ar": "نعم. أراجع الشيفرة وقاعدة البيانات والإجراءات وأوثق طريقة عمل النظام حالياً."
+        }
+      },
+      {
+        "q": {
+          "en": "Which format will I receive?",
+          "ar": "بأي صيغة أستلم التوثيق؟"
+        },
+        "a": {
+          "en": "Whatever suits your team: Word, PDF, Google Docs or Markdown in your code repository.",
+          "ar": "بالصيغة التي تناسب فريقك: Word أو PDF أو Google Docs أو Markdown داخل مستودع الشيفرة."
+        }
+      },
+      {
+        "q": {
+          "en": "Do you write user guides in Arabic?",
+          "ar": "هل تكتب أدلة المستخدم بالعربية؟"
+        },
+        "a": {
+          "en": "Yes. User and admin guides can be written in Arabic, English or both.",
+          "ar": "نعم. يمكن كتابة أدلة المستخدمين والمسؤولين بالعربية أو الإنجليزية أو باللغتين."
+        }
+      }
+    ],
+    "related": [
+      "project-management",
+      "custom-web-apps",
+      "integrations"
+    ],
+    "cases": []
+  },
+  "project-management": {
+    "slug": "it-project-management",
+    "seo_title": {
+      "en": "IT Project Management for Web & Mobile Projects | Usman Qureshi",
+      "ar": "إدارة المشاريع التقنية لمشاريع الويب والجوال | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "IT project management for web and mobile projects in Saudi Arabia: scope, estimates, sprints, developer coordination, updates and on-time releases.",
+      "ar": "إدارة المشاريع التقنية لمشاريع الويب والجوال في السعودية: النطاق والتقديرات وتخطيط مراحل العمل وتنسيق المطورين وتحديث أصحاب المصلحة والإصدارات في موعدها."
+    },
+    "h1": {
+      "en": "IT Project Management & Delivery",
+      "ar": "إدارة المشاريع التقنية والتسليم"
+    },
+    "intro": {
+      "en": [
+        "Software projects rarely fail because of code alone. They fail on unclear scope, missed hand-offs and surprises late in the schedule. I manage web and mobile projects from planning to release: defining scope, estimating, coordinating developers and stakeholders, and keeping delivery predictable.",
+        "I have done this as Project Manager & Full-Stack Developer at iLab Information Technologies / SpeedLogi and as Project Manager & Senior WordPress Developer at The MK Solution, where I managed a 10-person cross-functional team. Because I am also a developer, technical risks are spotted early."
+      ],
+      "ar": [
+        "نادراً ما تفشل المشاريع البرمجية بسبب الشيفرة وحدها، بل بسبب غموض النطاق وضياع التسليمات بين الفرق والمفاجآت المتأخرة في الجدول. أدير مشاريع الويب والجوال من التخطيط حتى الإصدار: تحديد النطاق والتقدير وتنسيق المطورين وأصحاب المصلحة والحفاظ على تسليم يمكن التنبؤ به.",
+        "قمت بذلك بصفتي مدير مشاريع ومطور فل ستاك لدى iLab لتقنية المعلومات / SpeedLogi، ومدير مشاريع ومطور ووردبريس أول لدى The MK Solution حيث أدرت فريقاً متعدد التخصصات من 10 أفراد. ولأنني مطور أيضاً، تُكتشف المخاطر التقنية مبكراً."
+      ]
+    },
+    "who": {
+      "en": [
+        "Companies outsourcing development to several vendors",
+        "Internal teams that need structure and regular releases",
+        "Founders who need a technical lead to manage the build",
+        "Projects that are late and need recovery"
+      ],
+      "ar": [
+        "الشركات التي تسند التطوير إلى عدة جهات",
+        "الفرق الداخلية التي تحتاج إلى تنظيم وإصدارات منتظمة",
+        "المؤسسون الذين يحتاجون إلى قائد تقني لإدارة البناء",
+        "المشاريع المتأخرة التي تحتاج إلى استعادة المسار"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Clarify goals, scope and constraints",
+        "Plan milestones, estimates and risks",
+        "Run sprints with demos and progress tracking",
+        "Coordinate testing and releases",
+        "Handover, documentation and review"
+      ],
+      "ar": [
+        "توضيح الأهداف والنطاق والقيود",
+        "تخطيط المراحل والتقديرات والمخاطر",
+        "إدارة مراحل العمل مع عروض ومتابعة التقدم",
+        "تنسيق الاختبار والإصدارات",
+        "التسليم والتوثيق والمراجعة"
+      ]
+    },
+    "why": {
+      "en": [
+        "Project management roles at iLab / SpeedLogi and The MK Solution",
+        "Managed a 10-person cross-functional team",
+        "Developer background, so estimates and risks are realistic",
+        "Google Project Management certificate"
+      ],
+      "ar": [
+        "أدوار إدارة مشاريع لدى iLab / SpeedLogi و The MK Solution",
+        "إدارة فريق متعدد التخصصات من 10 أفراد",
+        "خلفية مطور تجعل التقديرات والمخاطر واقعية",
+        "شهادة Google في إدارة المشاريع"
+      ]
+    },
+    "tech": [
+      "Agile",
+      "Scrum",
+      "Jira",
+      "Trello",
+      "Figma",
+      "Git"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "Can you manage a team I already have?",
+          "ar": "هل يمكنك إدارة فريق لدي بالفعل؟"
+        },
+        "a": {
+          "en": "Yes. I can work with your developers or vendors and add structure without replacing them.",
+          "ar": "نعم. يمكنني العمل مع مطوريك أو مزوديك وإضافة التنظيم دون استبدالهم."
+        }
+      },
+      {
+        "q": {
+          "en": "Do you also write code on the project?",
+          "ar": "هل تكتب الشيفرة أيضاً في المشروع؟"
+        },
+        "a": {
+          "en": "I can combine management with hands-on development, or focus only on management, depending on the project.",
+          "ar": "يمكنني الجمع بين الإدارة والتطوير العملي أو التركيز على الإدارة فقط حسب المشروع."
+        }
+      },
+      {
+        "q": {
+          "en": "How do you report progress?",
+          "ar": "كيف تتابع التقدم وتبلغ عنه؟"
+        },
+        "a": {
+          "en": "Through regular demos and short written updates covering progress, risks and next steps.",
+          "ar": "من خلال عروض منتظمة وتحديثات مكتوبة مختصرة تغطي التقدم والمخاطر والخطوات التالية."
+        }
+      }
+    ],
+    "related": [
+      "custom-web-apps",
+      "software-documentation",
+      "logistics-software"
+    ],
+    "cases": [
+      "projects/driver-management-system",
+      "projects/business-websites"
+    ]
+  }
+}
