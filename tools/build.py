@@ -140,7 +140,8 @@ def setup_head(soup, path, lang, title, description, kind='WebPage', crumbs=None
         footer_lang['href']=path_for(path,other);footer_lang['hreflang']=other;footer_lang['lang']=other
     person={'@type':'Person','@id':BASE+'/#person','name':'Usman Asif Qureshi','alternateName':'عثمان آصف قريشي','url':BASE+'/','email':'mailto:info@codewithusman.com',
             'jobTitle':'Full-Stack Developer & Project Manager','description':'Full-stack developer and project manager in Al Khobar, Saudi Arabia, building logistics platforms and web/mobile applications.',
-            'knowsAbout':['Laravel','PHP','Livewire','Python','Flask','Flutter','Android','MySQL','WordPress','REST APIs','Project management','Logistics software'],
+            'knowsAbout':['Laravel','PHP','Livewire','Python','Flask','Flutter','Android','iOS','MySQL','WordPress','WooCommerce','Salla','Twilio','WhatsApp chatbots','IVR',
+                          'REST APIs','AI integrations','Website design','Mobile app development','Fleet management software','Logistics software','Project management'],
             'sameAs':['https://www.linkedin.com/in/usmanasif1057/'],
             'image':{'@type':'ImageObject','url':BASE+'/assets/images/profile-hero.webp','width':520,'height':520},
             'address':{'@type':'PostalAddress','addressLocality':'Al Khobar','addressRegion':'Eastern Province','addressCountry':'SA'}}
@@ -232,14 +233,14 @@ META={
              'ar':dict(seo_title='المشاريع: أنظمة لوجستية ومواقع أعمال | عثمان آصف قريشي',seo_description='دراسات حالة لأنظمة صممتها وطورتها: نظام DOBS لتسجيل السائقين، ومنصة DMS مع تطبيق السائق على أندرويد، ومواقع الأعمال.')},
  'insights':{'en':dict(seo_title='Technical Notes on Software & Websites | Usman Asif Qureshi',seo_description='Practical notes on planning logistics software and handing over business websites, written by a full-stack developer and project manager in Al Khobar.'),
              'ar':dict(seo_title='ملاحظات تقنية عن البرمجيات والمواقع | عثمان آصف قريشي',seo_description='ملاحظات عملية عن تخطيط البرمجيات اللوجستية وتسليم مواقع الأعمال، بقلم مطور فل ستاك ومدير مشاريع في الخبر بالسعودية.')},
- 'about':{'en':dict(seo_description='About Usman Asif Qureshi, a full-stack developer and project manager in Al Khobar, Saudi Arabia: experience, education, certifications and skills.'),
+ 'about':{'en':dict(seo_description='About Usman Asif Qureshi, a freelance full-stack developer and project manager in Al Khobar, Saudi Arabia: experience, education and skills.'),
           'ar':dict(seo_description='نبذة عن عثمان آصف قريشي، مطور فل ستاك ومدير مشاريع في الخبر بالسعودية: الخبرات العملية والتعليم والشهادات والمهارات التقنية.')},
- 'services':{'en':dict(seo_title='Web, App & E-commerce Development Services | Usman Qureshi',seo_description='WordPress and Salla stores, Android and iOS apps, WhatsApp chatbots and IVR with Twilio, AI and API integrations, and logistics software in Saudi Arabia.'),
-             'ar':dict(seo_title='خدمات تطوير المواقع والمتاجر والتطبيقات | عثمان آصف قريشي',seo_description='متاجر سلة و WordPress، وتطبيقات أندرويد و iOS، وروبوتات واتساب و IVR عبر Twilio، وربط الأنظمة والذكاء الاصطناعي، وبرمجيات لوجستية في السعودية.')},
+ 'services':{'en':dict(seo_title='Web & App Development Services, Saudi Arabia | Usman Qureshi',seo_description='WordPress and Salla store design, mobile app development, WhatsApp chatbots, Twilio IVR, Laravel web apps and fleet management software in Saudi Arabia.'),
+             'ar':dict(seo_title='تصميم مواقع ومتاجر سلة وبرمجة تطبيقات | عثمان آصف قريشي',seo_description='تصميم مواقع ووردبريس ومتاجر سلة احترافية، وبرمجة تطبيقات الجوال، وشات بوت واتساب، وأنظمة IVR، وبرامج إدارة أسطول السيارات للشركات في الخبر والدمام والسعودية.')},
  'privacy':{'en':dict(seo_title='Privacy Policy | Usman Asif Qureshi',seo_description='How Code With Usman handles contact form messages, theme preferences, Google Analytics measurement, hosting logs and links to external services.'),
             'ar':dict(seo_title='سياسة الخصوصية | عثمان آصف قريشي',seo_description='كيف يتعامل موقع Code With Usman مع رسائل نموذج التواصل وتفضيلات المظهر وقياس Google Analytics وسجلات الاستضافة والخدمات الخارجية.')},
- 'resume':{'en':dict(seo_title='Resume: Full-Stack Developer & PM | Usman Asif Qureshi',seo_description='Resume of Usman Asif Qureshi, full-stack developer and project manager in Al Khobar: Laravel, Python/Flask, Flutter and WordPress. Download the PDF.'),
-           'ar':dict(seo_title='السيرة الذاتية: مطور فل ستاك ومدير مشاريع | عثمان آصف قريشي',seo_description='السيرة الذاتية لعثمان آصف قريشي، مطور فل ستاك ومدير مشاريع في الخبر: Laravel و Python/Flask و Flutter و WordPress. حمّل ملف PDF.')},
+ 'resume':{'en':dict(seo_title='Full-Stack Developer Resume, Saudi Arabia | Usman Asif Qureshi',seo_description='Resume of Usman Asif Qureshi, full-stack developer and project manager in Saudi Arabia: Laravel, PHP, Python/Flask, Flutter and WordPress. Download the PDF.'),
+           'ar':dict(seo_title='السيرة الذاتية لمطور فل ستاك في السعودية | عثمان آصف قريشي',seo_description='السيرة الذاتية لعثمان آصف قريشي، مطور فل ستاك ومدير مشاريع في السعودية: لارافيل و PHP و Python/Flask و Flutter و ووردبريس. حمّل ملف PDF.')},
 }
 
 def main():
@@ -249,7 +250,9 @@ def main():
         # Add discoverable links to the new pages without duplicating the homepage narrative.
         block=BeautifulSoup('<section class="insights"><div class="container"><div class="section-header"><h2>'+('من المشاريع إلى المعرفة' if ar else 'Projects & practical notes')+'</h2></div>'+cards([PAGES[2]]+PAGES[3:],lang)+'</div></section>','html.parser')
         home.select_one('main').insert(-1,block)
-        setup_head(home,'',lang,'عثمان آصف قريشي | مطور فل ستاك ومدير مشاريع في الخبر' if ar else 'Usman Asif Qureshi | Full-Stack Developer in Al Khobar','مطور فل ستاك ومدير مشاريع في الخبر، السعودية. خبرة في Laravel وPython/Flask والأنظمة اللوجستية. استعرض المشاريع وحمّل السيرة الذاتية.' if ar else 'Full-stack developer and project manager in Al Khobar, Saudi Arabia. Laravel, Python/Flask and logistics systems. Explore projects and download my CV.','ProfilePage')
+        setup_head(home,'',lang,'عثمان آصف قريشي | مبرمج مواقع وتطبيقات في السعودية' if ar else 'Usman Asif Qureshi | Full-Stack Web & App Developer, Saudi Arabia',
+                   'مبرمج مواقع وتطبيقات ومطور فل ستاك في الخبر: تصميم مواقع ووردبريس ومتاجر سلة وتطبيقات الجوال وأنظمة لارافيل والأنظمة اللوجستية. استعرض المشاريع والسيرة الذاتية.' if ar else
+                   'Full-stack developer in Al Khobar, Saudi Arabia: WordPress and Salla stores, Laravel web apps, Flutter mobile apps and logistics systems. See projects and CV.','ProfilePage')
         save(home,'',lang)
         for page in PAGES:
             body=''

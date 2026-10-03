@@ -91,8 +91,8 @@
       }
     ],
     "seo_title": {
-      "en": "DOBS Driver Onboarding System | Usman Asif Qureshi",
-      "ar": "نظام DOBS لتسجيل السائقين | عثمان آصف قريشي"
+      "en": "Driver Onboarding System (DOBS) | Usman Asif Qureshi",
+      "ar": "نظام تسجيل السائقين DOBS | عثمان آصف قريشي"
     },
     "software": {
       "name": "DOBS (Driver Onboarding & Offboarding System)",
@@ -213,12 +213,12 @@
       }
     ],
     "seo_title": {
-      "en": "DMS Driver Management System & App | Usman Asif Qureshi",
-      "ar": "نظام DMS لإدارة السائقين وتطبيق أندرويد | عثمان آصف قريشي"
+      "en": "Driver & Fleet Management System (DMS) | Usman Asif Qureshi",
+      "ar": "نظام إدارة السائقين والأسطول DMS | عثمان آصف قريشي"
     },
     "seo_description": {
-      "en": "Laravel platform and Flutter Android driver app I designed and built to run logistics operations: drivers, fleet, payroll, attendance and chat.",
-      "ar": "منصة Laravel وتطبيق سائق على أندرويد بتقنية Flutter صممتهما وطورتهما لإدارة العمليات اللوجستية: السائقون والأسطول والرواتب والحضور والتواصل."
+      "en": "Driver and fleet management system I designed and built: a Laravel platform plus Flutter Android driver app for payroll, fleet, attendance and chat.",
+      "ar": "نظام إدارة السائقين والأسطول صممته وطورته: منصة لارافيل وتطبيق أندرويد بتقنية Flutter للرواتب وإدارة أسطول السيارات والحضور والتواصل."
     },
     "software": {
       "name": "DMS (Driver Management System) and Android driver app",
@@ -375,12 +375,12 @@
       }
     ],
     "seo_title": {
-      "en": "Business Websites: WordPress & SEO | Usman Asif Qureshi",
-      "ar": "مواقع الأعمال و WordPress | عثمان آصف قريشي"
+      "en": "WordPress Website Design for Businesses | Usman Asif Qureshi",
+      "ar": "تصميم مواقع ووردبريس للشركات | عثمان آصف قريشي"
     },
     "seo_description": {
-      "en": "Business websites I built and led since 2018: iLab, SpeedLogi, SpeedPoint, The MK Solution and Sagal Energy, with my WordPress, performance and SEO approach.",
-      "ar": "مواقع أعمال طورتها وقدت تنفيذها منذ 2018: iLab و SpeedLogi و SpeedPoint و The MK Solution و Sagal Energy، مع منهجي في WordPress والأداء وتحسين البحث."
+      "en": "WordPress website design and development for businesses since 2018: iLab, SpeedLogi, SpeedPoint, The MK Solution and Sagal Energy, with SEO and performance.",
+      "ar": "تصميم وتطوير مواقع ووردبريس للشركات منذ 2018: iLab و SpeedLogi و SpeedPoint و The MK Solution و Sagal Energy، مع تحسين محركات البحث والأداء."
     }
   },
   {

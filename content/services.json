@@ -8,8 +8,8 @@
       "id": "wordpress-websites",
       "icon": "fab fa-wordpress",
       "title": {
-        "en": "WordPress Websites",
-        "ar": "مواقع WordPress"
+        "en": "WordPress Website Development",
+        "ar": "تصميم مواقع ووردبريس (WordPress)"
       },
       "short": {
         "en": "Fast, secure business websites you can edit yourself.",
@@ -41,8 +41,8 @@
       "id": "wordpress-ecommerce",
       "icon": "svg:cart",
       "title": {
-        "en": "WordPress E-commerce (WooCommerce)",
-        "ar": "متاجر WordPress الإلكترونية (WooCommerce)"
+        "en": "WooCommerce E-commerce Websites",
+        "ar": "تصميم متجر إلكتروني ووكومرس (WooCommerce)"
       },
       "short": {
         "en": "Online stores with payments, shipping and stock.",
@@ -74,8 +74,8 @@
       "id": "salla-stores",
       "icon": "svg:bag",
       "title": {
-        "en": "Salla Stores for Saudi Arabia",
-        "ar": "متاجر سلة في السعودية"
+        "en": "Salla Store Design & Development",
+        "ar": "تصميم متجر سلة احترافي"
       },
       "short": {
         "en": "Salla store setup, theming and integrations for the Saudi market.",
@@ -107,8 +107,8 @@
       "id": "html-css-websites",
       "icon": "fab fa-html5",
       "title": {
-        "en": "HTML & CSS Websites",
-        "ar": "مواقع HTML و CSS"
+        "en": "HTML & CSS Website Design",
+        "ar": "تصميم مواقع HTML و CSS"
       },
       "short": {
         "en": "Lightweight hand-coded sites and landing pages.",
@@ -169,8 +169,8 @@
       "id": "custom-web-apps",
       "icon": "fas fa-laptop-code",
       "title": {
-        "en": "Custom Web Applications",
-        "ar": "تطبيقات ويب مخصصة"
+        "en": "Custom Web Apps (Laravel & Python)",
+        "ar": "برمجة تطبيقات ويب مخصصة (لارافيل و Python)"
       },
       "short": {
         "en": "Laravel and Python/Flask platforms built for your process.",
@@ -200,8 +200,8 @@
       "id": "mobile-apps",
       "icon": "fas fa-mobile-screen-button",
       "title": {
-        "en": "Android & iOS App Development",
-        "ar": "تطوير تطبيقات أندرويد و iOS"
+        "en": "Mobile App Development (Android & iOS)",
+        "ar": "تصميم وبرمجة تطبيقات الجوال (أندرويد و iOS)"
       },
       "short": {
         "en": "Cross-platform apps with Flutter, connected to your backend.",
@@ -262,8 +262,8 @@
       "id": "whatsapp-chatbots",
       "icon": "svg:chat",
       "title": {
-        "en": "WhatsApp Chatbots (Twilio)",
-        "ar": "روبوتات محادثة واتساب (Twilio)"
+        "en": "WhatsApp Chatbots for Business (Twilio)",
+        "ar": "شات بوت واتساب للأعمال (Twilio)"
       },
       "short": {
         "en": "Automated WhatsApp replies, bookings and updates.",
@@ -293,8 +293,8 @@
       "id": "twilio-ivr",
       "icon": "fas fa-headset",
       "title": {
-        "en": "Twilio IVR & Voice",
-        "ar": "أنظمة IVR والمكالمات عبر Twilio"
+        "en": "Twilio IVR Systems & Voice",
+        "ar": "أنظمة IVR والرد الآلي عبر Twilio"
       },
       "short": {
         "en": "Phone menus, call routing and voice automation.",
@@ -417,8 +417,8 @@
       "id": "logistics-software",
       "icon": "svg:truck",
       "title": {
-        "en": "Logistics Software & Systems",
-        "ar": "البرمجيات والأنظمة اللوجستية"
+        "en": "Logistics & Fleet Management Software",
+        "ar": "برامج إدارة أسطول السيارات والسائقين"
       },
       "short": {
         "en": "Driver, fleet, payroll and operations platforms.",
