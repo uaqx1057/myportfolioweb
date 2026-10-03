@@ -2337,5 +2337,124 @@
       "projects/driver-management-system",
       "projects/business-websites"
     ]
+  },
+  "fix-your-project": {
+    "slug": "fix-your-project",
+    "seo_title": {
+      "en": "Fix Your Project: Rescue Stalled Websites & Apps | Usman Qureshi",
+      "ar": "إصلاح وإنقاذ المشاريع البرمجية المتعثرة | عثمان قريشي"
+    },
+    "seo_description": {
+      "en": "Project rescue for stalled or broken websites, apps and systems: code audit, critical fixes, finishing incomplete features and a clean handover.",
+      "ar": "إنقاذ المشاريع المتعثرة أو المعطلة من مواقع وتطبيقات وأنظمة: مراجعة الشيفرة وإصلاح الأخطاء الحرجة وإكمال الميزات الناقصة وتسليم منظم."
+    },
+    "h1": {
+      "en": "Fix Your Project: Website, App & Software Rescue",
+      "ar": "إصلاح وإنقاذ مشروعك البرمجي"
+    },
+    "intro": {
+      "en": [
+        "Many projects get stuck: the previous developer stopped responding, the code works only sometimes, features are half-built, nobody has the passwords, or every release breaks something else. I take over stalled or troubled websites, apps and systems, find out exactly where they stand, and get them stable, finished and launched.",
+        "I start with an honest audit, not a sales pitch: what works, what is broken, what is risky and what it will take to finish. Sometimes the best answer is targeted fixes; sometimes a part has to be rebuilt. You get the facts and a clear plan before any larger commitment."
+      ],
+      "ar": [
+        "تتعثر مشاريع كثيرة: توقف المطور السابق عن الرد، أو الشيفرة تعمل أحياناً فقط، أو الميزات نصف منجزة، أو لا أحد يملك كلمات المرور، أو كل إصدار يعطل شيئاً آخر. أستلم المواقع والتطبيقات والأنظمة المتعثرة، وأحدد وضعها بدقة، وأجعلها مستقرة ومكتملة وجاهزة للإطلاق.",
+        "أبدأ بمراجعة صادقة لا بعرض بيع: ما الذي يعمل، وما المعطل، وما المخاطر، وما يلزم لإكمال المشروع. أحياناً يكون الحل إصلاحات محددة، وأحياناً يجب إعادة بناء جزء منه. تحصل على الحقائق وخطة واضحة قبل أي التزام أكبر."
+      ]
+    },
+    "who": {
+      "en": [
+        "Business owners whose developer or agency disappeared",
+        "Projects that are months late or stuck before launch",
+        "Systems that crash, lose data or break after each change",
+        "Teams that inherited code nobody understands"
+      ],
+      "ar": [
+        "أصحاب الأعمال الذين اختفى مطورهم أو الوكالة المسؤولة",
+        "المشاريع المتأخرة شهوراً أو المتوقفة قبل الإطلاق",
+        "الأنظمة التي تتعطل أو تفقد البيانات أو تنهار بعد كل تعديل",
+        "الفرق التي ورثت شيفرة لا يفهمها أحد"
+      ]
+    },
+    "steps": {
+      "en": [
+        "Collect access: code, hosting, domains and accounts",
+        "Audit the code, data, security and remaining work",
+        "Agree a rescue plan with priorities and estimates",
+        "Stabilise first, then finish the missing features",
+        "Launch, document and hand over"
+      ],
+      "ar": [
+        "جمع صلاحيات الوصول: الشيفرة والاستضافة والنطاقات والحسابات",
+        "مراجعة الشيفرة والبيانات والأمان والأعمال المتبقية",
+        "الاتفاق على خطة إنقاذ بأولويات وتقديرات",
+        "التثبيت أولاً ثم إكمال الميزات الناقصة",
+        "الإطلاق والتوثيق والتسليم"
+      ]
+    },
+    "why": {
+      "en": [
+        "Experience running and maintaining large production systems",
+        "Project manager and developer in one: plan and fix together",
+        "Honest audit before any big commitment",
+        "Wide stack: PHP, Laravel, WordPress, Python, JavaScript, Flutter"
+      ],
+      "ar": [
+        "خبرة في تشغيل وصيانة أنظمة كبيرة تعمل فعلياً",
+        "مدير مشروع ومطور في شخص واحد: التخطيط والإصلاح معاً",
+        "مراجعة صادقة قبل أي التزام كبير",
+        "تقنيات متنوعة: PHP ولارافيل وووردبريس و Python و JavaScript و Flutter"
+      ]
+    },
+    "tech": [
+      "PHP",
+      "Laravel",
+      "WordPress",
+      "Python",
+      "JavaScript",
+      "Flutter",
+      "MySQL",
+      "Git"
+    ],
+    "faq": [
+      {
+        "q": {
+          "en": "My developer disappeared. Can you continue the project?",
+          "ar": "اختفى مطوري. هل يمكنك متابعة المشروع؟"
+        },
+        "a": {
+          "en": "Usually yes. If you have access to the code and hosting, I can audit it and continue; I also help recover access where possible.",
+          "ar": "نعم غالباً. إذا كان لديك وصول إلى الشيفرة والاستضافة، أستطيع مراجعتها والمتابعة، وأساعد أيضاً في استعادة الوصول قدر الإمكان."
+        }
+      },
+      {
+        "q": {
+          "en": "Will you rebuild everything from scratch?",
+          "ar": "هل ستعيد بناء كل شيء من الصفر؟"
+        },
+        "a": {
+          "en": "Only if the audit shows it is cheaper or safer. Most projects are rescued with targeted fixes and finishing work.",
+          "ar": "فقط إذا أظهرت المراجعة أن ذلك أقل تكلفة أو أكثر أماناً. معظم المشاريع تُنقذ بإصلاحات محددة وإكمال العمل."
+        }
+      },
+      {
+        "q": {
+          "en": "How much does a project rescue cost?",
+          "ar": "ما تكلفة إنقاذ المشروع؟"
+        },
+        "a": {
+          "en": "It depends on the state of the project. The audit comes first and gives you a clear estimate before the main work starts.",
+          "ar": "يعتمد ذلك على حالة المشروع. تأتي المراجعة أولاً وتمنحك تقديراً واضحاً قبل بدء العمل الأساسي."
+        }
+      }
+    ],
+    "related": [
+      "debugging",
+      "maintenance-support",
+      "project-management"
+    ],
+    "cases": [
+      "projects/driver-management-system"
+    ]
   }
 }

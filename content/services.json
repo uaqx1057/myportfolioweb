@@ -318,7 +318,7 @@
           "الربط بنظام إدارة العملاء أو نظامك"
         ]
       },
-      "featured": true
+      "featured": false
     },
     {
       "id": "integrations",
@@ -440,6 +440,37 @@
           "الأسطول والفحوصات والصيانة",
           "الحضور والمناوبات والرواتب",
           "تطبيقات السائقين ولوحات التحكم"
+        ]
+      },
+      "featured": true
+    },
+    {
+      "id": "fix-your-project",
+      "icon": "svg:wrench",
+      "title": {
+        "en": "Fix Your Project (Project Rescue)",
+        "ar": "إصلاح وإنقاذ مشروعك البرمجي"
+      },
+      "short": {
+        "en": "Take over and finish stalled or broken projects.",
+        "ar": "استلام المشاريع المتعثرة أو المعطلة وإكمالها."
+      },
+      "detail": {
+        "en": "Rescue a website, app or system that is stuck: a developer disappeared, the code is unstable, features are half-built or the launch keeps slipping. I audit it, stabilise it and get it finished.",
+        "ar": "إنقاذ موقع أو تطبيق أو نظام متعثر: اختفى المطور، أو الشيفرة غير مستقرة، أو الميزات نصف منجزة، أو موعد الإطلاق يتأخر باستمرار. أراجعه وأثبّته وأكمله."
+      },
+      "includes": {
+        "en": [
+          "Code and project audit with a clear report",
+          "Stabilising critical bugs and security issues",
+          "Finishing incomplete features",
+          "Deployment, documentation and handover"
+        ],
+        "ar": [
+          "مراجعة الشيفرة والمشروع مع تقرير واضح",
+          "معالجة الأخطاء الحرجة ومشكلات الأمان",
+          "إكمال الميزات غير المنجزة",
+          "النشر والتوثيق والتسليم"
         ]
       },
       "featured": true
