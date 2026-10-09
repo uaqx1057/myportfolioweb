@@ -62,7 +62,11 @@ Still open (needs the user):
 - [ ] One real contact-form message to confirm delivery to usmanasif26261@gmail.com.
 - [ ] Rotate any tokens that were in the formerly public .mcp.json; delete unused ~/.ssh/id_rsa on the server (cPanel).
 - [x] Search Console connected via OAuth (tools/gsc.py; client+token in ~/.config/gsc-*.json, never in repo). Property https://www.codewithusman.com/ (owner). Sitemap resubmitted 2026-09-29: 24 URLs, 0 errors. Inspection: homepage indexed (last crawl 2026-09-05, old version); other 23 discovered/unknown, not yet crawled.
-- [ ] User: manually "Request indexing" for priority URLs in Search Console (API cannot); re-run `python tools/gsc.py inspect https://www.codewithusman.com/` in ~1 week.
+- [ ] User: manually "Request indexing" for priority URLs in Search Console (API cannot, ~10/day); re-run `.venv/Scripts/python tools/gsc.py inspect https://www.codewithusman.com/` (takes >5 min, run in background) to check.
+  - 2026-10-10 inspect: 22/66 indexed (all non-service pages incl. /ar/); all 44 service URLs not crawled.
+  - Requested 2026-10-08: whatsapp-chatbot, laravel, woocommerce, twilio-ivr (EN+AR), /ar/, EN ai-integration, EN fix-your-project.
+  - Requested 2026-10-10: /services/, /ar/services/, salla-store-design, wordpress-website-development, mobile-app-development, fleet-management-software (EN+AR).
+  - Still to request (Day 2): AR fix-your-project, AR ai-integration, html-css-website-design, business-process-automation, api-integration-services, debugging-bug-fixing (EN+AR). Day 3: website-maintenance-support, seo-performance-optimization, cms-development, desktop-application-development, hosting-deployment-devops (EN+AR). Optional: it-project-management, software-documentation (EN+AR).
 - [ ] Optional: GA4 cookie-consent banner if targeting EU visitors (not implemented).
 
 ## Security incident (2026-09-29)
