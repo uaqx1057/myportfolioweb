@@ -68,7 +68,8 @@ Still open (needs the user):
   - Requested 2026-10-10: /services/, /ar/services/, salla-store-design, wordpress-website-development, mobile-app-development, fleet-management-software (EN+AR).
   - Requested 2026-10-11: AR fix-your-project, AR ai-integration, html-css-website-design, business-process-automation, api-integration-services, debugging-bug-fixing (EN+AR).
   - Requested 2026-10-12: website-maintenance-support, seo-performance-optimization, cms-development, desktop-application-development, hosting-deployment-devops (EN+AR).
-  - Still to request (optional): it-project-management, software-documentation (EN+AR).
+  - Requested 2026-10-12 (later): it-project-management (EN+AR).
+  - Still to request: software-documentation (EN+AR).
 - [ ] Optional: GA4 cookie-consent banner if targeting EU visitors (not implemented).
 
 ## Security incident (2026-09-29)
