@@ -70,6 +70,7 @@ Still open (needs the user):
   - Requested 2026-10-12: website-maintenance-support, seo-performance-optimization, cms-development, desktop-application-development, hosting-deployment-devops (EN+AR).
   - Requested 2026-10-12 (later): it-project-management (EN+AR).
   - Still to request: software-documentation (EN+AR).
+  - 2026-10-14 inspect: still 22/66; 0 service pages crawled (incl. 10-08 requests). Live pages OK (200, index/follow, self-canonical, hreflang, robots allows, linked from home); sitemap downloaded 2026-10-13, 66 submitted, 0 errors. Status flips between 'Discovered' and 'unknown' run to run, so treat it as noise. Likely a crawl-priority delay on a new, low-authority site, not a technical block.
 - [ ] Optional: GA4 cookie-consent banner if targeting EU visitors (not implemented).
 
 ## Security incident (2026-09-29)
